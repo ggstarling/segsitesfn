@@ -9,17 +9,17 @@ const Services = () => {
   const services = [
     {
       id: "data-collection",
-      title: "Coleta de dados Estruturais",
+      title: "Monitoramento Estrutural",
       description: "Coletamos dados precisos de estruturas para monitoramento avançado."
     },
     {
       id: "diagnostics",
-      title: "Diagnósticos Estruturais",
+      title: "B-WIM",
       description: "Analisamos dados para identificar riscos e necessidades de manutenção."
     },
     {
       id: "dashboards",
-      title: "Dashboards",
+      title: "Modelos de Desempenho",
       description: "Visualização intuitiva e interativa de informações estruturais em tempo real."
     }
   ];

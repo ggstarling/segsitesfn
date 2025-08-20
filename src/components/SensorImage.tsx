@@ -11,6 +11,14 @@ const SensorImage = () => {
       <p className="mt-4 text-muted-foreground">
         Sensor de alta precisão para monitoramento estrutural avançado
       </p>
+      
+      <div className="mt-8">
+        <img
+          src="/lovable-uploads/c11fb548-4954-4a0f-a0bc-c3eb4e54166d.png"
+          alt="Sensor Device"
+          className="w-full max-w-xs mx-auto"
+        />
+      </div>
     </div>
   );
 };
