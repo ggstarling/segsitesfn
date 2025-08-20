@@ -8,9 +8,9 @@ const Footer = () => {
           {/* Logo */}
           <div className="flex justify-center mb-4">
             <img
-              src="/lovable-uploads/62544400-24a0-4258-9953-944418b5c9e5.png"
+              src="/lovable-uploads/87d20fcc-812a-4521-8932-0a450382ade8.png"
               alt="Safena Logo"
-              className="h-6 w-auto"
+              className="h-12 w-auto"
             />
           </div>
 
