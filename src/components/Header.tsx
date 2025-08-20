@@ -21,7 +21,7 @@ const Header = () => {
             behavior: "smooth"
           });
         }
-      }, 100);
+      }, 300);
     } else {
       const element = document.getElementById(sectionId);
       if (element) {
