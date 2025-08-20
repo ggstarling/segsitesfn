@@ -1,15 +1,20 @@
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, Globe } from "lucide-react";
 
 const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   const scrollToSection = (sectionId: string) => {
     if (location.pathname !== "/") {
-      window.location.href = `/#${sectionId}`;
+      navigate("/");
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        element?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
     } else {
       const element = document.getElementById(sectionId);
       element?.scrollIntoView({ behavior: "smooth" });
@@ -18,11 +23,14 @@ const Header = () => {
 
   const scrollToTop = () => {
     if (location.pathname !== "/") {
-      window.location.href = "/";
+      navigate("/");
     } else {
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
+
+  const isServicesActive = location.pathname === "/" && location.hash === "#services";
+  const isSensorsActive = location.pathname === "/" && location.hash === "#sensors";
 
   return (
     <header className="fixed top-0 w-full bg-white border-b border-gray-200 z-50">
@@ -81,17 +89,17 @@ const Header = () => {
 
             <button
               onClick={() => scrollToSection("services")}
-              className="text-gray-500 hover:text-blue-600 transition-colors font-medium text-base"
+              className={`transition-colors font-medium text-base ${isServicesActive ? "text-[#3481bd]" : "text-gray-500 hover:text-blue-600"}`}
             >
               Serviços
             </button>
 
             <button
               onClick={() => scrollToSection("sensors")}
-              className="text-gray-500 hover:text-blue-600 transition-colors font-medium text-base"
+              className={`transition-colors font-medium text-base ${isSensorsActive ? "text-[#3481bd]" : "text-gray-500 hover:text-blue-600"}`}
             >
               Sensores
-              </button>
+            </button>
             </div>
           </div>
 
