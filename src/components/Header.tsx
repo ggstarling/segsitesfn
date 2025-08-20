@@ -97,13 +97,13 @@ const Header = () => {
 
           {/* Right side menu */}
           <div className="hidden md:flex items-center space-x-6 mr-4">
-            <a href="#" className="text-[hsl(var(--brand-blue))] hover:text-[hsl(var(--brand-blue))] transition-colors">
+            <a href="#" className="text-primary hover:text-primary/90 transition-colors">
               <Linkedin className="h-5 w-5" />
             </a>
 
             <Button 
               onClick={() => scrollToSection("contact")} 
-              className="bg-[hsl(var(--brand-blue))] hover:bg-[hsl(var(--brand-blue))]/90 text-white border-0"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground border-0"
             >
               Saiba Mais
             </Button>
