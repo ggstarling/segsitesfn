@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -35,9 +36,19 @@ const Header = () => {
     }
   };
 
+  const navigateToPage = (path: string) => {
+    navigate(path);
+    // Reset scroll position to top immediately
+    window.scrollTo(0, 0);
+  };
+
   const scrollToTop = () => {
     if (location.pathname !== "/") {
       navigate("/");
+      // Reset scroll position to top immediately after navigation
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+      }, 0);
     } else {
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
@@ -79,18 +90,18 @@ const Header = () => {
 
               {isDropdownOpen && (
                 <div className="absolute top-full left-0 bg-white border border-gray-200 rounded-md shadow-lg py-2 z-50 min-w-[200px]">
-                  <Link 
-                    to="/about" 
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors"
+                  <button 
+                    onClick={() => navigateToPage("/about")}
+                    className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors"
                   >
                     Sobre
-                  </Link>
-                  <Link 
-                    to="/blog" 
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors"
+                  </button>
+                  <button 
+                    onClick={() => navigateToPage("/blog")}
+                    className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors"
                   >
                     Blog
-                  </Link>
+                  </button>
                   <button
                     onClick={() => scrollToSection("contact")}
                     className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors"
