@@ -26,7 +26,7 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 w-full bg-white border-b border-gray-200 z-50">
-      <div className="w-full px-6 py-3">
+      <div className="w-full px-6 py-4">
         <nav className="flex items-center justify-between">
           {/* Left side menu */}
           <div className="flex items-center ml-8">
@@ -40,7 +40,7 @@ const Header = () => {
             </button>
 
             <div className="flex items-center space-x-8">
-              <button onClick={scrollToTop} className="text-gray-700 hover:text-blue-600 transition-colors font-semibold text-lg">
+              <button onClick={scrollToTop} className="text-gray-500 hover:text-blue-600 transition-colors font-semibold text-lg">
                 Home
               </button>
 
@@ -50,7 +50,7 @@ const Header = () => {
               onMouseEnter={() => setIsDropdownOpen(true)}
               onMouseLeave={() => setIsDropdownOpen(false)}
             >
-              <button className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors font-semibold text-lg">
+              <button className="flex items-center space-x-1 text-gray-500 hover:text-blue-600 transition-colors font-semibold text-lg">
                 <span>Sobre Nós</span>
                 <ChevronDown className="w-4 h-4" />
               </button>
@@ -81,14 +81,14 @@ const Header = () => {
 
             <button
               onClick={() => scrollToSection("services")}
-              className="text-gray-700 hover:text-blue-600 transition-colors font-semibold text-lg"
+              className="text-gray-500 hover:text-blue-600 transition-colors font-semibold text-lg"
             >
               Serviços
             </button>
 
             <button
               onClick={() => scrollToSection("sensors")}
-              className="text-gray-700 hover:text-blue-600 transition-colors font-semibold text-lg"
+              className="text-gray-500 hover:text-blue-600 transition-colors font-semibold text-lg"
             >
               Sensores
               </button>
@@ -103,7 +103,7 @@ const Header = () => {
 
             <Button 
               onClick={() => scrollToSection("contact")} 
-              className="bg-primary hover:bg-primary/90 text-primary-foreground border-0"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground border-0 text-lg"
             >
               Saiba Mais
             </Button>
