@@ -29,9 +29,9 @@ const Header = () => {
       <div className="w-full px-6 py-3">
         <nav className="flex items-center justify-between">
           {/* Left side menu */}
-          <div className="flex items-center">
+          <div className="flex items-center ml-4">
             {/* Logo */}
-            <button onClick={scrollToTop} className="flex items-center mr-12">
+            <button onClick={scrollToTop} className="flex items-center mr-16">
               <img
                 src="/lovable-uploads/81b574cd-6dab-4603-aa73-5b5fc5e0766e.png"
                 alt="Safena Logo"
