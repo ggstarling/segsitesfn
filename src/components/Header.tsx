@@ -40,7 +40,7 @@ const Header = () => {
             </button>
 
             <div className="flex items-center space-x-8">
-              <button onClick={scrollToTop} className="text-gray-500 hover:text-blue-600 transition-colors font-semibold text-lg">
+              <button onClick={scrollToTop} className="text-gray-400 hover:text-blue-600 transition-colors font-semibold text-base">
                 Home
               </button>
 
@@ -50,7 +50,7 @@ const Header = () => {
               onMouseEnter={() => setIsDropdownOpen(true)}
               onMouseLeave={() => setIsDropdownOpen(false)}
             >
-              <button className="flex items-center space-x-1 text-gray-500 hover:text-blue-600 transition-colors font-semibold text-lg">
+              <button className="flex items-center space-x-1 text-gray-400 hover:text-blue-600 transition-colors font-semibold text-base">
                 <span>Sobre Nós</span>
                 <ChevronDown className="w-4 h-4" />
               </button>
@@ -81,14 +81,14 @@ const Header = () => {
 
             <button
               onClick={() => scrollToSection("services")}
-              className="text-gray-500 hover:text-blue-600 transition-colors font-semibold text-lg"
+              className="text-gray-400 hover:text-blue-600 transition-colors font-semibold text-base"
             >
               Serviços
             </button>
 
             <button
               onClick={() => scrollToSection("sensors")}
-              className="text-gray-500 hover:text-blue-600 transition-colors font-semibold text-lg"
+              className="text-gray-400 hover:text-blue-600 transition-colors font-semibold text-base"
             >
               Sensores
               </button>
@@ -101,12 +101,12 @@ const Header = () => {
               <Linkedin className="h-5 w-5" />
             </a>
 
-            <Button 
+            <button 
               onClick={() => scrollToSection("contact")} 
-              className="bg-primary hover:bg-primary/90 text-primary-foreground border-0 text-lg"
+              className="text-white hover:text-blue-600 transition-colors font-semibold text-base bg-primary hover:bg-primary/90 px-4 py-2 rounded-md"
             >
               Saiba Mais
-            </Button>
+            </button>
           </div>
         </nav>
       </div>
