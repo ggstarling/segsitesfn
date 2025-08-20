@@ -40,8 +40,8 @@ const Header = () => {
             </button>
 
             <div className="flex items-center space-x-10">
-              <button onClick={scrollToTop} className="text-gray-500 hover:text-blue-600 transition-colors font-medium text-base">
-                Home
+              <button onClick={scrollToTop} className={`transition-colors font-medium text-base ${location.pathname === "/" ? "text-[#3481bd]" : "text-gray-500 hover:text-blue-600"}`}>
+                Início
               </button>
 
             {/* Sobre Nós Dropdown */}
@@ -50,7 +50,7 @@ const Header = () => {
               onMouseEnter={() => setIsDropdownOpen(true)}
               onMouseLeave={() => setIsDropdownOpen(false)}
             >
-              <button className="flex items-center space-x-1 text-gray-500 hover:text-blue-600 transition-colors font-medium text-base">
+              <button className={`flex items-center space-x-1 transition-colors font-medium text-base ${(location.pathname === "/about" || location.pathname === "/blog") ? "text-[#3481bd]" : "text-gray-500 hover:text-blue-600"}`}>
                 <span>Sobre Nós</span>
                 <ChevronDown className="w-4 h-4" />
               </button>
