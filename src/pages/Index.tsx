@@ -1,12 +1,28 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState } from "react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import Hero from "@/components/Hero";
+import Partners from "@/components/Partners";
+import Services from "@/components/Services";
+import Sensors from "@/components/Sensors";
+import Posts from "@/components/Posts";
+import ContactForm from "@/components/ContactForm";
+import ContactModal from "@/components/ContactModal";
 
 const Index = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      <Header />
+      <Hero onOpenModal={() => setIsModalOpen(true)} />
+      <Partners />
+      <Services />
+      <Sensors />
+      <Posts />
+      <ContactForm />
+      <Footer />
+      <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   );
 };
