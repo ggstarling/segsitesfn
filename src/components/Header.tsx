@@ -26,12 +26,12 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 w-full bg-white border-b border-gray-200 z-50">
-      <div className="max-w-7xl mx-auto px-4 py-3">
+      <div className="w-full px-6 py-3">
         <nav className="flex items-center justify-between">
           {/* Left side menu */}
-          <div className="flex items-center space-x-8">
+          <div className="flex items-center">
             {/* Logo */}
-            <button onClick={scrollToTop} className="flex items-center">
+            <button onClick={scrollToTop} className="flex items-center mr-12">
               <img
                 src="/lovable-uploads/81b574cd-6dab-4603-aa73-5b5fc5e0766e.png"
                 alt="Safena Logo"
@@ -39,9 +39,10 @@ const Header = () => {
               />
             </button>
 
-            <button onClick={scrollToTop} className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-              Home
-            </button>
+            <div className="flex items-center space-x-8">
+              <button onClick={scrollToTop} className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+                Home
+              </button>
 
             {/* Sobre Nós Dropdown */}
             <div
@@ -90,11 +91,12 @@ const Header = () => {
               className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
             >
               Sensores
-            </button>
+              </button>
+            </div>
           </div>
 
           {/* Right side menu */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden md:flex items-center space-x-6 mr-4">
             <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors">
               <Linkedin className="h-5 w-5" />
             </a>
