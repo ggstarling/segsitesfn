@@ -8,7 +8,7 @@ const ContactForm = () => {
   return (
     <section id="contact" className="py-16 bg-muted/30">
       <div className="max-w-3xl mx-auto px-4">
-        <h2 className="text-3xl text-center mb-12">Contato</h2>
+        <h2 className="text-2xl text-center mb-12">Contato</h2>
         
         <form className="space-y-6">
           <div className="grid md:grid-cols-2 gap-4">

@@ -27,7 +27,7 @@ const Services = () => {
   return (
     <section id="services" className="py-16">
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl text-center mb-12">Serviços</h2>
+        <h2 className="text-2xl text-center mb-12">Serviços</h2>
 
         <div className="grid md:grid-cols-3 gap-8">
           {services.map((service, index) => {

@@ -131,7 +131,7 @@ const Header = () => {
           {/* Right side menu */}
           <div className="hidden md:flex items-center space-x-6 mr-4">
             <button className="flex items-center space-x-1 text-gray-500 hover:text-blue-600 transition-colors">
-              <Globe className="h-4 w-4" />
+              <Globe className="h-5 w-5" />
               <ChevronDown className="w-3 h-3" />
             </button>
 
