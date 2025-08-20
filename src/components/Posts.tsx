@@ -1,32 +1,11 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { posts } from "@/data/posts";
 
 const Posts = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-
-  const posts = [
-    {
-      id: 1,
-      title: "SHM no Setor Ferroviário: Da Inspeção Visual ao Monitoramento Inteligente",
-      image: "https://images.unsplash.com/photo-1729606883845-95ded8f9e3c5?q=80&w=1167&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    },
-    {
-      id: 2,
-      title: "Gêmeos Digitais na Engenharia: Ponte entre o Físico e o Digital",
-      image: "https://images.unsplash.com/photo-1620103658516-86f82c9ded4b?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    },
-    {
-      id: 3,
-      title: "Indústria 4.0: a Evolução que Está Transformando a Engenharia",
-      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    },
-    {
-      id: 4,
-      title: "A Importância da Manutenção Preditiva e do Monitoramento Contínuo em Infraestruturas",
-      image: "https://images.unsplash.com/photo-1485310818226-f01c4269687f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    },
-  ];
 
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev + 1) % posts.length);
@@ -48,7 +27,11 @@ const Posts = () => {
         <div className="relative">
           <div className="grid md:grid-cols-3 gap-6">
             {visiblePosts.map((post, index) => (
-              <div key={`${post.id}-${index}`} className="bg-card rounded-lg overflow-hidden shadow-md">
+              <Link 
+                key={`${post.id}-${index}`} 
+                to={`/article/${post.slug}`}
+                className="bg-card rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow cursor-pointer"
+              >
                 <img
                   src={post.image}
                   alt={post.title}
@@ -59,7 +42,7 @@ const Posts = () => {
                     {post.title}
                   </h3>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
 
