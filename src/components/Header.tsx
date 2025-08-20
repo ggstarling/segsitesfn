@@ -39,8 +39,8 @@ const Header = () => {
               />
             </button>
 
-            <div className="flex items-center space-x-8">
-              <button onClick={scrollToTop} className="text-gray-400 hover:text-blue-600 transition-colors font-semibold text-base">
+            <div className="flex items-center space-x-10">
+              <button onClick={scrollToTop} className="text-gray-500 hover:text-blue-600 transition-colors font-medium text-base">
                 Home
               </button>
 
@@ -50,7 +50,7 @@ const Header = () => {
               onMouseEnter={() => setIsDropdownOpen(true)}
               onMouseLeave={() => setIsDropdownOpen(false)}
             >
-              <button className="flex items-center space-x-1 text-gray-400 hover:text-blue-600 transition-colors font-semibold text-base">
+              <button className="flex items-center space-x-1 text-gray-500 hover:text-blue-600 transition-colors font-medium text-base">
                 <span>Sobre Nós</span>
                 <ChevronDown className="w-4 h-4" />
               </button>
@@ -81,14 +81,14 @@ const Header = () => {
 
             <button
               onClick={() => scrollToSection("services")}
-              className="text-gray-400 hover:text-blue-600 transition-colors font-semibold text-base"
+              className="text-gray-500 hover:text-blue-600 transition-colors font-medium text-base"
             >
               Serviços
             </button>
 
             <button
               onClick={() => scrollToSection("sensors")}
-              className="text-gray-400 hover:text-blue-600 transition-colors font-semibold text-base"
+              className="text-gray-500 hover:text-blue-600 transition-colors font-medium text-base"
             >
               Sensores
               </button>
