@@ -60,19 +60,19 @@ const Header = () => {
                     to="/about" 
                     className="block px-4 py-2 hover:bg-muted transition-colors"
                   >
-                    Nossa Visão
+                    Sobre
+                  </Link>
+                  <Link 
+                    to="/blog" 
+                    className="block px-4 py-2 hover:bg-muted transition-colors"
+                  >
+                    Blog
                   </Link>
                   <button
-                    onClick={() => scrollToSection("services")}
+                    onClick={() => scrollToSection("contact")}
                     className="block w-full text-left px-4 py-2 hover:bg-muted transition-colors"
                   >
-                    Serviços
-                  </button>
-                  <button
-                    onClick={() => scrollToSection("sensors")}
-                    className="block w-full text-left px-4 py-2 hover:bg-muted transition-colors"
-                  >
-                    Sensores
+                    Contato
                   </button>
                 </div>
               )}
