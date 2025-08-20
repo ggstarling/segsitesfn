@@ -10,7 +10,7 @@ const Footer = () => {
             <img
               src="/lovable-uploads/3b8dcbac-971c-405e-a211-f2d6a8d87ff5.png"
               alt="Safena Logo"
-              className="h-8 w-auto"
+              className="h-6 w-auto"
             />
           </div>
 
