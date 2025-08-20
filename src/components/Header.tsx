@@ -13,11 +13,25 @@ const Header = () => {
       navigate("/");
       setTimeout(() => {
         const element = document.getElementById(sectionId);
-        element?.scrollIntoView({ behavior: "smooth" });
+        if (element) {
+          const headerHeight = 100; // Account for fixed header height
+          const elementPosition = element.offsetTop - headerHeight;
+          window.scrollTo({
+            top: elementPosition,
+            behavior: "smooth"
+          });
+        }
       }, 100);
     } else {
       const element = document.getElementById(sectionId);
-      element?.scrollIntoView({ behavior: "smooth" });
+      if (element) {
+        const headerHeight = 100; // Account for fixed header height
+        const elementPosition = element.offsetTop - headerHeight;
+        window.scrollTo({
+          top: elementPosition,
+          behavior: "smooth"
+        });
+      }
     }
   };
 
