@@ -72,7 +72,7 @@ const Header = () => {
               />
             </button>
 
-            <div className="flex items-center space-x-12 ml-8">
+            <div className="flex items-center space-x-12 ml-16">
               <button onClick={scrollToTop} className={`transition-colors font-medium text-base ${location.pathname === "/" ? "text-[#3481bd]" : "text-gray-500 hover:text-blue-600"}`}>
                 Início
               </button>
