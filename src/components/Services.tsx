@@ -42,9 +42,9 @@ const Services = () => {
               >
                 <CardHeader>
                   <div className="flex justify-center mb-4">
-                    <IconComponent className="w-16 h-16 text-primary" />
+                    <IconComponent className="w-12 h-12 text-primary" />
                   </div>
-                  <CardTitle className="text-center">{service.title}</CardTitle>
+                  <CardTitle className="text-center text-lg">{service.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-center text-muted-foreground">
