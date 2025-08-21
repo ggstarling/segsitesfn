@@ -17,7 +17,7 @@ const Hero = ({ onOpenModal }: HeroProps) => {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4">
-        <div className="max-w-3xl md:ml-0">
+        <div className="max-w-3xl md:mr-auto md:ml-8">
           <h1 className="text-5xl font-bold text-white mb-4 leading-tight">
             Inteligência para a gestão de infraestruturas
           </h1>
