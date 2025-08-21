@@ -11,7 +11,7 @@ const About = () => {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1615422293020-495d2a072f0f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"
+            backgroundImage: "url('https://images.unsplash.com/photo-1601647109079-070fdbc329bb?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D%3D%3D')"
           }}
         >
           <div className="absolute inset-0 bg-black/50"></div>
@@ -21,7 +21,7 @@ const About = () => {
             <h1 className="text-5xl text-white mb-8">Nossa Visão</h1>
             <div className="w-16 h-1 bg-blue-500 mb-8"></div>
             <p className="text-xl text-white leading-relaxed">
-              Criar a maior melhoria individual na segurança rodoviária desde o cinto de segurança, usando dados
+              Construir um futuro em que dados estejam integrados à gestão de estruturas viárias e à proteção de pessoas e ecossistemas.
             </p>
           </div>
         </div>
@@ -36,17 +36,7 @@ const About = () => {
               <div className="w-16 h-1 bg-blue-500 mb-8"></div>
               <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
                 <p>
-                  Fomos fundados em 2016 com a missão de transformar as operações rodoviárias. 
-                  Estamos desenvolvendo IA que trabalha em conjunto com humanos para tornar a 
-                  maior infraestrutura do mundo mais segura e eficiente.
-                </p>
-                <p>
-                  Hoje trabalhamos com os maiores operadores de infraestrutura do mundo em mais 
-                  de 10 países diferentes. Somos apoiados por investidores líderes em infraestrutura 
-                  nos EUA e Europa. Temos escritórios no Reino Unido, Israel, Espanha e EUA.
-                </p>
-                <p>
-                  Amamos dados e o que boas práticas de dados podem fazer.
+                  A Safena nasceu em Florianópolis, SC. Com anos de trabalho e pesquisa no Laboratório de Otimização e Confiabilidade Estrutural (CORE) da Universidade Federal de Santa Catarina (UFSC), nossa equipe multidisciplinar é formada por profissionais de diferentes áreas da engenharia e tecnologia, com conhecimentos integrados em estruturas, sensores, ciência de dados e inovação.
                 </p>
               </div>
             </div>
