@@ -19,11 +19,11 @@ const Hero = ({ onOpenModal }: HeroProps) => {
       <div className="relative z-10 max-w-7xl mx-auto px-4">
         <div className="max-w-3xl text-left md:ml-12">
           <h1 className="text-5xl font-bold text-white mb-4 leading-tight">
-            Inteligência para a gestão de infraestruturas
+            Inteligência para a gestão de ativos viários no Brasil
           </h1>
 
           <p className="text-xl text-white/90 mb-8 leading-relaxed">
-            Somos uma plataforma de fusão de dados com inteligência artificial para a gestão de ativos de infraestrutura.
+            Somos uma plataforma de fusão de dados com inteligência artificial para a gestão de ativos de infraestrutura viária
           </p>
 
           <Button
