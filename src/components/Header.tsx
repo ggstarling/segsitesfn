@@ -64,7 +64,7 @@ const Header = () => {
           {/* Left side menu */}
           <div className="flex items-center ml-8">
             {/* Logo */}
-            <button onClick={scrollToTop} className="flex items-center mr-28">
+            <button onClick={scrollToTop} className="flex items-center mr-32">
               <img
                 src="/lovable-uploads/81b574cd-6dab-4603-aa73-5b5fc5e0766e.png"
                 alt="Safena Logo"
@@ -72,7 +72,7 @@ const Header = () => {
               />
             </button>
 
-            <div className="flex items-center space-x-10">
+            <div className="flex items-center space-x-12 ml-8">
               <button onClick={scrollToTop} className={`transition-colors font-medium text-base ${location.pathname === "/" ? "text-[#3481bd]" : "text-gray-500 hover:text-blue-600"}`}>
                 Início
               </button>
