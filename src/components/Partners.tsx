@@ -7,9 +7,9 @@ const Partners = () => {
   ];
 
   return (
-    <section className="pt-4 pb-8 bg-muted/30">
+    <section className="py-2 bg-muted/30">
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-base font-medium text-center mb-16 text-gray-500">Parceiros que confiam em nosso trabalho</h2>
+        <h2 className="text-base font-medium text-center mb-4 text-gray-500">Parceiros que confiam em nosso trabalho</h2>
 
         <div className="overflow-hidden">
           <div className="flex animate-scroll-infinite space-x-24 items-center">
