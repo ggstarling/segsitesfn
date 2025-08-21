@@ -1,15 +1,15 @@
 const Partners = () => {
   const partners = [
-    { name: "Minerva", logo: "/lovable-uploads/20cbae7f-f7b7-4900-842d-0d8f5edfcf51.png" },
-    { name: "UFSC", logo: "/lovable-uploads/eb140fb0-3369-4134-8b44-792334355803.png" },
-    { name: "CORE", logo: "/lovable-uploads/4378e337-2ed5-4d5f-bbb2-9e943c44ba34.png" },
-    { name: "New Partner", logo: "/lovable-uploads/c11fb548-4954-4a0f-a0bc-c3eb4e54166d.png" },
+    { name: "Minerva", logo: "/lovable-uploads/b8a93f3f-2525-4563-96e1-766cdc8561ea.png" },
+    { name: "UFSC", logo: "/lovable-uploads/f10d599c-dcf1-4a4e-9803-727d736b4127.png" },
+    { name: "Kartado", logo: "/lovable-uploads/b00b9117-68a3-4507-9d1d-163b8339fc01.png" },
+    { name: "CORE", logo: "/lovable-uploads/21b38f69-e678-4ff8-8af6-2b991e37ecbd.png" },
   ];
 
   return (
     <section className="pt-4 pb-8 bg-muted/30">
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-base font-medium text-center mb-10 text-gray-500">Parceiros que confiam em nosso trabalho</h2>
+        <h2 className="text-base font-medium text-center mb-16 text-gray-500">Parceiros que confiam em nosso trabalho</h2>
 
         <div className="overflow-hidden">
           <div className="flex animate-scroll-infinite space-x-24 items-center">
