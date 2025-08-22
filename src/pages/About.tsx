@@ -53,9 +53,9 @@ const About = () => {
       </section>
 
       {/* Nossos Clientes */}
-      <section className="py-20 px-4 bg-gray-900">
+      <section className="py-20 px-4 bg-gradient-to-b from-gray-300 via-gray-200 to-gray-100">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl text-white mb-4">Nossos Parceiros</h2>
+          <h2 className="text-4xl text-gray-900 mb-4">Nossos Parceiros</h2>
           <div className="w-16 h-0.5 bg-blue-500 mx-auto mb-16"></div>
           
           <div className="overflow-hidden">

@@ -7,7 +7,7 @@ const Partners = () => {
   ];
 
   return (
-    <section className="pt-6 pb-2 bg-gradient-to-b from-gray-900 via-gray-700 to-gray-100">
+    <section className="pt-6 pb-2 bg-muted/30">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-base font-medium text-center -mb-4 relative z-10 text-gray-500">Parceiros que confiam em nosso trabalho</h2>
 
