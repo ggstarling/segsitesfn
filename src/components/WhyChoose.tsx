@@ -6,19 +6,19 @@ const WhyChoose = () => {
 
   const items = [
     {
-      title: "Tecnologia Avançada em Monitoramento",
+      title: "Obtenha dashboards automatizados",
       description: "Utilizamos sensores de última geração e algoritmos inteligentes para detectar problemas estruturais antes que se tornem críticos, garantindo máxima segurança e eficiência."
     },
     {
-      title: "Análise Precisa e Confiável",
+      title: "Diagnóstico estrutural baseado em dados",
       description: "Nossa plataforma oferece análises detalhadas e relatórios precisos, permitindo decisões informadas baseadas em dados reais de performance estrutural."
     },
     {
-      title: "Solução Intuitiva e Prática",
+      title: "Análises preditivas, e não reativas",
       description: "Interface desenvolvida para ser facilmente utilizada por engenheiros e técnicos, com visualizações claras e dashboards intuitivos para monitoramento em tempo real."
     },
     {
-      title: "Suporte Técnico Especializado",
+      title: "Abordagem sem interrupções de tráfego",
       description: "Nossa equipe de engenheiros especializados oferece suporte completo em todas as etapas do projeto, desde a instalação até a interpretação dos dados."
     }
   ];
