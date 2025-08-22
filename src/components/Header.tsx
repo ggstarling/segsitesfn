@@ -73,7 +73,7 @@ const Header = () => {
             </button>
 
             <div className="flex items-center space-x-12 ml-16">
-              <button onClick={scrollToTop} className={`transition-colors font-medium text-base ${location.pathname === "/" ? "text-[#3481bd]" : "text-gray-500 hover:text-blue-600"}`}>
+              <button onClick={scrollToTop} className={`transition-colors font-normal text-base ${location.pathname === "/" ? "text-[#3481bd]" : "text-gray-500 hover:text-blue-600"}`}>
                 Início
               </button>
 
@@ -83,7 +83,7 @@ const Header = () => {
               onMouseEnter={() => setIsDropdownOpen(true)}
               onMouseLeave={() => setIsDropdownOpen(false)}
             >
-              <button className={`flex items-center space-x-1 transition-colors font-medium text-base ${(location.pathname === "/about" || location.pathname === "/blog") ? "text-[#3481bd]" : "text-gray-500 hover:text-blue-600"}`}>
+              <button className={`flex items-center space-x-1 transition-colors font-normal text-base ${(location.pathname === "/about" || location.pathname === "/blog") ? "text-[#3481bd]" : "text-gray-500 hover:text-blue-600"}`}>
                 <span>Sobre Nós</span>
                 <ChevronDown className="w-4 h-4" />
               </button>
@@ -114,14 +114,14 @@ const Header = () => {
 
             <button
               onClick={() => scrollToSection("services")}
-              className={`transition-colors font-medium text-base ${isServicesActive ? "text-[#3481bd]" : "text-gray-500 hover:text-blue-600"}`}
+              className={`transition-colors font-normal text-base ${isServicesActive ? "text-[#3481bd]" : "text-gray-500 hover:text-blue-600"}`}
             >
               Serviços
             </button>
 
             <button
               onClick={() => scrollToSection("sensors")}
-              className={`transition-colors font-medium text-base ${isSensorsActive ? "text-[#3481bd]" : "text-gray-500 hover:text-blue-600"}`}
+              className={`transition-colors font-normal text-base ${isSensorsActive ? "text-[#3481bd]" : "text-gray-500 hover:text-blue-600"}`}
             >
               Sensores
             </button>
