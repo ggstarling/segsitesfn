@@ -9,12 +9,13 @@ const About = () => {
       {/* Nossa Visão */}
       <section className="relative h-screen flex items-center justify-center">
         <div
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-center filter blur-sm"
           style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1651356945969-46c91f5d6317?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"
+            backgroundImage: "url('https://images.unsplash.com/photo-1651356945969-46c91f5d6317?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
+            backgroundPosition: "center 30%"
           }}
         >
-          <div className="absolute inset-0 bg-black/50"></div>
+          <div className="absolute inset-0 bg-black/60"></div>
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4">
           <div className="max-w-2xl ml-0">
