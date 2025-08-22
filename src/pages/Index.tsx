@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Partners from "@/components/Partners";
+import WhyChoose from "@/components/WhyChoose";
 import Services from "@/components/Services";
 import Sensors from "@/components/Sensors";
 import Posts from "@/components/Posts";
@@ -17,6 +18,7 @@ const Index = () => {
       <Header />
       <Hero onOpenModal={() => setIsModalOpen(true)} />
       <Partners />
+      <WhyChoose />
       <Services />
       <Sensors />
       <Posts />
