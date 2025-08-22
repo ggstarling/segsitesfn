@@ -57,56 +57,31 @@ const About = () => {
           <h2 className="text-4xl text-white mb-4">Nossos Clientes</h2>
           <div className="w-16 h-0.5 bg-blue-500 mx-auto mb-16"></div>
           
-          <div className="relative">
-            <div className="flex items-center justify-center space-x-12 lg:space-x-20">
-              <div className="flex-shrink-0">
-                <img
-                  src="/lovable-uploads/b8a93f3f-2525-4563-96e1-766cdc8561ea.png"
-                  alt="Minerva"
-                  className="h-20 w-auto max-w-[200px] object-contain opacity-80 hover:opacity-100 transition-all duration-300"
-                />
-              </div>
-              <div className="flex-shrink-0">
-                <img
-                  src="/lovable-uploads/f10d599c-dcf1-4a4e-9803-727d736b4127.png"
-                  alt="UFSC"
-                  className="h-20 w-auto max-w-[200px] object-contain opacity-80 hover:opacity-100 transition-all duration-300"
-                />
-              </div>
-              <div className="flex-shrink-0">
-                <img
-                  src="/lovable-uploads/b00b9117-68a3-4507-9d1d-163b8339fc01.png"
-                  alt="Kartado"
-                  className="h-20 w-auto max-w-[200px] object-contain opacity-80 hover:opacity-100 transition-all duration-300"
-                />
-              </div>
-              <div className="flex-shrink-0">
-                <img
-                  src="/lovable-uploads/21b38f69-e678-4ff8-8af6-2b991e37ecbd.png"
-                  alt="CORE"
-                  className="h-20 w-auto max-w-[200px] object-contain opacity-80 hover:opacity-100 transition-all duration-300"
-                />
-              </div>
+          <div className="overflow-hidden">
+            <div className="flex animate-scroll-infinite space-x-24 items-center">
+              {[
+                { name: "Minerva", logo: "/lovable-uploads/b8a93f3f-2525-4563-96e1-766cdc8561ea.png" },
+                { name: "UFSC", logo: "/lovable-uploads/f10d599c-dcf1-4a4e-9803-727d736b4127.png" },
+                { name: "Kartado", logo: "/lovable-uploads/b00b9117-68a3-4507-9d1d-163b8339fc01.png" },
+                { name: "CORE", logo: "/lovable-uploads/21b38f69-e678-4ff8-8af6-2b991e37ecbd.png" },
+                { name: "Minerva", logo: "/lovable-uploads/b8a93f3f-2525-4563-96e1-766cdc8561ea.png" },
+                { name: "UFSC", logo: "/lovable-uploads/f10d599c-dcf1-4a4e-9803-727d736b4127.png" },
+                { name: "Kartado", logo: "/lovable-uploads/b00b9117-68a3-4507-9d1d-163b8339fc01.png" },
+                { name: "CORE", logo: "/lovable-uploads/21b38f69-e678-4ff8-8af6-2b991e37ecbd.png" },
+                { name: "Minerva", logo: "/lovable-uploads/b8a93f3f-2525-4563-96e1-766cdc8561ea.png" },
+                { name: "UFSC", logo: "/lovable-uploads/f10d599c-dcf1-4a4e-9803-727d736b4127.png" },
+                { name: "Kartado", logo: "/lovable-uploads/b00b9117-68a3-4507-9d1d-163b8339fc01.png" },
+                { name: "CORE", logo: "/lovable-uploads/21b38f69-e678-4ff8-8af6-2b991e37ecbd.png" }
+              ].map((client, index) => (
+                <div key={index} className="flex-shrink-0 flex items-center justify-center">
+                  <img
+                    src={client.logo}
+                    alt={client.name}
+                    className="h-48 w-auto max-w-[400px] object-contain opacity-80 hover:opacity-100 transition-all duration-300 filter grayscale hover:grayscale-0 hover:scale-105"
+                  />
+                </div>
+              ))}
             </div>
-            
-            {/* Navigation arrows */}
-            <button className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white hover:text-blue-400 transition-colors">
-              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
-            <button className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white hover:text-blue-400 transition-colors">
-              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-          </div>
-          
-          {/* Dots indicator */}
-          <div className="flex justify-center space-x-2 mt-8">
-            <div className="w-3 h-3 bg-white rounded-full"></div>
-            <div className="w-3 h-3 bg-gray-600 rounded-full"></div>
-            <div className="w-3 h-3 bg-gray-600 rounded-full"></div>
           </div>
         </div>
       </section>
