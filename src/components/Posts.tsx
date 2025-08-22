@@ -38,7 +38,7 @@ const Posts = () => {
                   className="w-full h-48 object-cover"
                 />
                 <div className="p-4">
-                  <h3 className="font-semibold text-sm leading-tight line-clamp-3">
+                  <h3 className="text-sm leading-tight line-clamp-3">
                     {post.title}
                   </h3>
                 </div>
