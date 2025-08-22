@@ -25,11 +25,10 @@ const WhyChoose = () => {
 
   return (
     <section className="py-16 bg-background">
-      <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-2xl text-center mb-12">Por que escolher a Safena?</h2>
-        
+      <div className="max-w-7xl mx-auto px-4">        
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
+            <h2 className="text-3xl font-bold text-foreground mb-8">Por que escolher a Safena?</h2>
             {items.map((item, index) => (
               <div key={index} className="space-y-3">
                 <div 
