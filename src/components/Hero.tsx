@@ -17,7 +17,7 @@ const Hero = ({ onOpenModal }: HeroProps) => {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4">
-        <div className="max-w-3xl text-left md:ml-12">
+        <div className="max-w-3xl text-left">
           <h1 className="text-5xl font-bold text-white mb-4 leading-tight">
             Inteligência para a gestão de ativos viários no Brasil
           </h1>

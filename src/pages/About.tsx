@@ -17,7 +17,7 @@ const About = () => {
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4">
-          <div className="max-w-2xl">
+          <div className="max-w-2xl ml-0">
             <h1 className="text-6xl text-white mb-8">Nossa Visão</h1>
             <div className="w-16 h-1 bg-blue-500 mb-8"></div>
             <p className="text-xl text-white leading-relaxed max-w-xl">
