@@ -68,18 +68,94 @@ const WhyChoose = () => {
           </div>
           
           <div className="hidden lg:flex justify-center">
-            <div className="w-96 h-96 bg-gradient-to-br from-primary/10 to-primary/20 rounded-2xl flex items-center justify-center">
-              <div className="text-center space-y-4">
-                <div className="w-24 h-24 bg-primary rounded-full flex items-center justify-center mx-auto">
-                  <Check className="w-12 h-12 text-white" />
+            <div className="w-96 h-96 bg-gradient-to-br from-primary/10 to-primary/20 rounded-2xl flex items-center justify-center relative overflow-hidden">
+              {selectedItem === 0 && (
+                <div className="text-center space-y-4 animate-fade-in">
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div className="bg-primary/20 rounded-lg p-3 animate-pulse">
+                      <div className="h-3 bg-primary/40 rounded mb-2"></div>
+                      <div className="h-8 bg-primary rounded"></div>
+                    </div>
+                    <div className="bg-primary/20 rounded-lg p-3 animate-pulse" style={{animationDelay: '0.5s'}}>
+                      <div className="h-3 bg-primary/40 rounded mb-2"></div>
+                      <div className="h-8 bg-primary rounded"></div>
+                    </div>
+                  </div>
+                  <h4 className="text-xl font-semibold text-primary">
+                    Dashboards Automatizados
+                  </h4>
                 </div>
-                <h4 className="text-xl font-semibold text-primary">
-                  Monitoramento Inteligente
-                </h4>
-                <p className="text-muted-foreground max-w-xs">
-                  Soluções avançadas para estruturas mais seguras
-                </p>
-              </div>
+              )}
+              
+              {selectedItem === 1 && (
+                <div className="text-center space-y-4 animate-fade-in">
+                  <div className="relative">
+                    <div className="w-20 h-20 border-4 border-primary/30 rounded-full animate-spin mx-auto mb-4"></div>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-12 h-12 bg-primary rounded-full animate-ping"></div>
+                    </div>
+                  </div>
+                  <div className="flex justify-center space-x-2 mb-4">
+                    <div className="w-2 h-8 bg-primary/60 rounded animate-pulse"></div>
+                    <div className="w-2 h-12 bg-primary/80 rounded animate-pulse" style={{animationDelay: '0.2s'}}></div>
+                    <div className="w-2 h-6 bg-primary/60 rounded animate-pulse" style={{animationDelay: '0.4s'}}></div>
+                    <div className="w-2 h-10 bg-primary rounded animate-pulse" style={{animationDelay: '0.6s'}}></div>
+                  </div>
+                  <h4 className="text-xl font-semibold text-primary">
+                    Diagnóstico Baseado em Dados
+                  </h4>
+                </div>
+              )}
+              
+              {selectedItem === 2 && (
+                <div className="text-center space-y-4 animate-fade-in">
+                  <div className="relative w-24 h-24 mx-auto mb-4">
+                    <svg className="w-full h-full" viewBox="0 0 100 100">
+                      <path 
+                        d="M10,80 Q30,20 50,40 T90,10" 
+                        stroke="hsl(var(--primary))" 
+                        strokeWidth="3" 
+                        fill="none"
+                        className="animate-pulse"
+                        strokeDasharray="5,5"
+                      />
+                      <path 
+                        d="M10,80 Q30,30 50,50 T90,20" 
+                        stroke="hsl(var(--primary)/0.6)" 
+                        strokeWidth="2" 
+                        fill="none"
+                        strokeDasharray="3,3"
+                        style={{animationDelay: '0.5s'}}
+                        className="animate-pulse"
+                      />
+                    </svg>
+                    <div className="absolute top-2 right-2 w-3 h-3 bg-primary rounded-full animate-ping"></div>
+                  </div>
+                  <h4 className="text-xl font-semibold text-primary">
+                    Análises Preditivas
+                  </h4>
+                </div>
+              )}
+              
+              {selectedItem === 3 && (
+                <div className="text-center space-y-4 animate-fade-in">
+                  <div className="relative mb-6">
+                    <div className="flex justify-center space-x-1 mb-4">
+                      <div className="w-2 h-2 bg-primary rounded-full animate-bounce"></div>
+                      <div className="w-2 h-2 bg-primary rounded-full animate-bounce" style={{animationDelay: '0.2s'}}></div>
+                      <div className="w-2 h-2 bg-primary rounded-full animate-bounce" style={{animationDelay: '0.4s'}}></div>
+                      <div className="w-2 h-2 bg-primary rounded-full animate-bounce" style={{animationDelay: '0.6s'}}></div>
+                      <div className="w-2 h-2 bg-primary rounded-full animate-bounce" style={{animationDelay: '0.8s'}}></div>
+                    </div>
+                    <div className="w-16 h-8 border-2 border-primary/40 rounded-lg mx-auto relative">
+                      <div className="absolute inset-1 bg-primary/20 rounded animate-pulse"></div>
+                    </div>
+                  </div>
+                  <h4 className="text-xl font-semibold text-primary">
+                    Sem Interrupções
+                  </h4>
+                </div>
+              )}
             </div>
           </div>
         </div>
