@@ -9,7 +9,7 @@ const ContactForm = () => {
   return (
     <section id="contact" className="py-16 bg-gradient-to-b from-gray-300 via-gray-200 to-gray-100">
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-16 text-gray-900">Contato</h2>
+        <h2 className="text-2xl text-center mb-8">Contato</h2>
         
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Contact Information */}
