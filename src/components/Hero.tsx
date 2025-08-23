@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
-import heroBackground from "@/assets/hero-background-blue.jpg";
-import BridgeAnimation from "./BridgeAnimation";
+import heroBackground from "@/assets/hero-background-light-blue.jpg";
 
 interface HeroProps {
   onOpenModal: () => void;
@@ -37,8 +36,6 @@ const Hero = ({ onOpenModal }: HeroProps) => {
           </Button>
         </div>
       </div>
-      
-      <BridgeAnimation />
     </section>
   );
 };
