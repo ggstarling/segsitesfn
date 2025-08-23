@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import heroBackground from "@/assets/hero-background-sand.jpg";
+import heroBackground from "@/assets/hero-background.jpg";
 
 interface HeroProps {
   onOpenModal: () => void;
