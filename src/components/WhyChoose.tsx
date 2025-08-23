@@ -54,8 +54,8 @@ const WhyChoose = () => {
   return (
     <section ref={sectionRef} className="py-16 bg-background">
       <div className="max-w-7xl mx-auto px-4">        
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
+          <div className="space-y-6 min-h-[600px]">
             <h2 className="text-3xl font-normal text-foreground mb-8">Por que escolher a Safena?</h2>
             {items.map((item, index) => (
               <div key={index} className="space-y-3">
@@ -79,12 +79,12 @@ const WhyChoose = () => {
                   </h3>
                 </div>
                 
-                <div className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                <div className={`overflow-hidden transition-all duration-700 ease-out ${
                   selectedItem === index 
-                    ? 'max-h-96 opacity-100' 
-                    : 'max-h-0 opacity-0'
+                    ? 'max-h-32 opacity-100 transform translate-y-0' 
+                    : 'max-h-0 opacity-0 transform -translate-y-2'
                 }`}>
-                  <div className="pl-9 pr-4">
+                  <div className="pl-9 pr-4 pt-2 pb-4">
                     <p className="text-muted-foreground leading-relaxed">
                       {item.description}
                     </p>
