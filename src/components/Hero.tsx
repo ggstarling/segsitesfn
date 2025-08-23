@@ -15,7 +15,7 @@ const Hero = ({ onOpenModal }: HeroProps) => {
           backgroundImage: `url('${heroBackground}')`
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-blue-400/20 via-blue-600/40 to-blue-800/60"></div>
+        <div className="absolute inset-0 bg-black/40"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4">
