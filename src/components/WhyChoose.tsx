@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Check } from "lucide-react";
 
 const WhyChoose = () => {
-  const [selectedItem, setSelectedItem] = useState(0);
+  const [selectedItem, setSelectedItem] = useState<number | null>(null);
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
 
   const items = [
     {
@@ -23,8 +25,34 @@ const WhyChoose = () => {
     }
   ];
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimated) {
+            setTimeout(() => {
+              setSelectedItem(0);
+              setHasAnimated(true);
+            }, 750);
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, [hasAnimated]);
+
   return (
-    <section className="py-16 bg-background">
+    <section ref={sectionRef} className="py-16 bg-background">
       <div className="max-w-7xl mx-auto px-4">        
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
