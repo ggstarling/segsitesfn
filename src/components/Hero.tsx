@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import heroTexture from "@/assets/hero-texture-blue.jpg";
+import heroTexture from "@/assets/hero-background-3481bd.jpg";
 import HorizontalWaves from "./HorizontalWaves";
 
 interface HeroProps {
@@ -15,7 +15,7 @@ const Hero = ({ onOpenModal }: HeroProps) => {
           backgroundImage: `url('${heroTexture}')`
         }}
       >
-        <div className="absolute inset-0 bg-[#3481bd]/20"></div>
+        <div className="absolute inset-0 bg-[#3481bd]/10"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4">
