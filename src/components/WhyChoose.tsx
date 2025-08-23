@@ -52,7 +52,7 @@ const WhyChoose = () => {
   }, [hasAnimated]);
 
   return (
-    <section ref={sectionRef} className="pt-16 pb-8 bg-background">
+    <section ref={sectionRef} className="pt-16 pb-16 bg-background">
       <div className="max-w-7xl mx-auto px-4">        
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           <div className="space-y-6 min-h-[600px]">
