@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import heroBackground from "@/assets/hero-background-light-blue.jpg";
+import HorizontalWaves from "./HorizontalWaves";
 
 interface HeroProps {
   onOpenModal: () => void;
@@ -36,6 +37,8 @@ const Hero = ({ onOpenModal }: HeroProps) => {
           </Button>
         </div>
       </div>
+      
+      <HorizontalWaves />
     </section>
   );
 };

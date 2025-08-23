@@ -75,6 +75,15 @@ All colors MUST be HSL.
     }
   }
   
+  @keyframes scroll-horizontal {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
   .animate-scroll-infinite {
     animation: scroll-infinite 20s linear infinite;
   }
@@ -89,6 +98,18 @@ All colors MUST be HSL.
   
   .animate-wave-slow {
     animation: wave-flow 8s ease-in-out infinite;
+  }
+  
+  .animate-scroll-fast {
+    animation: scroll-horizontal 8s linear infinite;
+  }
+  
+  .animate-scroll-medium {
+    animation: scroll-horizontal 12s linear infinite;
+  }
+  
+  .animate-scroll-slow {
+    animation: scroll-horizontal 18s linear infinite;
   }
 
   .dark {
