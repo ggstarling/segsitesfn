@@ -58,7 +58,7 @@ const Header = () => {
   const isSensorsActive = location.pathname === "/" && location.hash === "#sensors";
 
   return (
-    <header className="fixed top-0 w-full bg-white border-b border-gray-200 z-50">
+    <header className="fixed top-0 w-full bg-gray-900 border-b border-gray-700 z-50">
       <div className="w-full px-6 py-4">
         <nav className="flex items-center justify-between">
           {/* Logo */}
@@ -72,7 +72,7 @@ const Header = () => {
 
           {/* Center navigation menu */}
           <div className="flex items-center space-x-12 absolute left-1/2 transform -translate-x-1/2">
-              <button onClick={scrollToTop} className={`transition-colors font-normal text-base ${location.pathname === "/" ? "text-[#3481bd]" : "text-gray-500 hover:text-blue-600"}`}>
+              <button onClick={scrollToTop} className={`transition-colors font-normal text-base ${location.pathname === "/" ? "text-[#3481bd]" : "text-gray-300 hover:text-white"}`}>
                 Início
               </button>
 
@@ -82,7 +82,7 @@ const Header = () => {
               onMouseEnter={() => setIsDropdownOpen(true)}
               onMouseLeave={() => setIsDropdownOpen(false)}
             >
-              <button className={`flex items-center space-x-1 transition-colors font-normal text-base ${(location.pathname === "/about" || location.pathname === "/blog") ? "text-[#3481bd]" : "text-gray-500 hover:text-blue-600"}`}>
+              <button className={`flex items-center space-x-1 transition-colors font-normal text-base ${(location.pathname === "/about" || location.pathname === "/blog") ? "text-[#3481bd]" : "text-gray-300 hover:text-white"}`}>
                 <span>Sobre Nós</span>
                 <ChevronDown className="w-4 h-4" />
               </button>
@@ -113,14 +113,14 @@ const Header = () => {
 
             <button
               onClick={() => scrollToSection("services")}
-              className={`transition-colors font-normal text-base ${isServicesActive ? "text-[#3481bd]" : "text-gray-500 hover:text-blue-600"}`}
+              className={`transition-colors font-normal text-base ${isServicesActive ? "text-[#3481bd]" : "text-gray-300 hover:text-white"}`}
             >
               Serviços
             </button>
 
             <button
               onClick={() => scrollToSection("sensors")}
-              className={`transition-colors font-normal text-base ${isSensorsActive ? "text-[#3481bd]" : "text-gray-500 hover:text-blue-600"}`}
+              className={`transition-colors font-normal text-base ${isSensorsActive ? "text-[#3481bd]" : "text-gray-300 hover:text-white"}`}
             >
               Sensores
             </button>
@@ -128,7 +128,7 @@ const Header = () => {
 
           {/* Right side menu */}
           <div className="hidden md:flex items-center space-x-6 mr-4">
-            <button className="flex items-center space-x-1 text-gray-500 hover:text-blue-600 transition-colors">
+            <button className="flex items-center space-x-1 text-gray-300 hover:text-white transition-colors">
               <Globe className="h-5 w-5" />
               <ChevronDown className="w-3 h-3" />
             </button>
