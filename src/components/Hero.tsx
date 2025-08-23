@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import heroBackground from "@/assets/hero-background-light-blue.jpg";
+import sandTexture from "@/assets/sand-texture-blue.jpg";
 import HorizontalWaves from "./HorizontalWaves";
 
 interface HeroProps {
@@ -8,7 +8,15 @@ interface HeroProps {
 
 const Hero = ({ onOpenModal }: HeroProps) => {
   return (
-    <section className="relative h-screen flex items-center bg-gradient-to-b from-[#7db8e8] via-[#3481bd] to-[#1e4a66]">
+    <section className="relative h-screen flex items-center">
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{
+          backgroundImage: `url('${sandTexture}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-[#3481bd]/20"></div>
+      </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4">
         <div className="max-w-3xl text-center mx-auto">
