@@ -1,81 +1,67 @@
-import { cn } from "@/lib/utils";
-
 const BridgeAnimation = () => {
   return (
-    <div className="absolute bottom-0 left-0 right-0 h-32 overflow-hidden">
+    <div className="absolute bottom-0 left-0 right-0 h-24 overflow-hidden">
       {/* Bridge SVG */}
       <svg
         className="absolute bottom-0 w-full h-full"
-        viewBox="0 0 800 128"
+        viewBox="0 0 1200 96"
         preserveAspectRatio="xMidYEnd meet"
         xmlns="http://www.w3.org/2000/svg"
       >
-        {/* Bridge structure */}
-        <g className="opacity-80">
-          {/* Bridge deck */}
-          <rect x="0" y="90" width="800" height="4" fill="rgba(255,255,255,0.7)" />
+        {/* Minimalist Bridge structure */}
+        <g className="opacity-60">
+          {/* Bridge deck - main horizontal line */}
+          <rect x="0" y="72" width="1200" height="2" fill="rgba(255,255,255,0.8)" />
           
-          {/* Left tower */}
-          <rect x="150" y="40" width="8" height="50" fill="rgba(255,255,255,0.6)" />
-          <rect x="145" y="85" width="18" height="8" fill="rgba(255,255,255,0.6)" />
+          {/* Left support */}
+          <rect x="100" y="50" width="2" height="22" fill="rgba(255,255,255,0.6)" />
           
-          {/* Right tower */}
-          <rect x="642" y="40" width="8" height="50" fill="rgba(255,255,255,0.6)" />
-          <rect x="637" y="85" width="18" height="8" fill="rgba(255,255,255,0.6)" />
+          {/* Right support */}
+          <rect x="1100" y="50" width="2" height="22" fill="rgba(255,255,255,0.6)" />
           
-          {/* Bridge arch */}
+          {/* Main span arch - very subtle */}
           <path
-            d="M 150 90 Q 400 20 650 90"
-            stroke="rgba(255,255,255,0.7)"
-            strokeWidth="3"
+            d="M 100 72 Q 600 45 1100 72"
+            stroke="rgba(255,255,255,0.5)"
+            strokeWidth="1"
             fill="none"
           />
-          
-          {/* Support cables */}
-          <g stroke="rgba(255,255,255,0.4)" strokeWidth="1">
-            <line x1="200" y1="90" x2="220" y2="60" />
-            <line x1="250" y1="90" x2="270" y2="45" />
-            <line x1="300" y1="90" x2="320" y2="35" />
-            <line x1="350" y1="90" x2="370" y2="30" />
-            <line x1="400" y1="90" x2="400" y2="25" />
-            <line x1="450" y1="90" x2="430" y2="30" />
-            <line x1="500" y1="90" x2="480" y2="35" />
-            <line x1="550" y1="90" x2="530" y2="45" />
-            <line x1="600" y1="90" x2="580" y2="60" />
-          </g>
         </g>
         
-        {/* Animated signal waves */}
+        {/* Animated signal waves on the bridge deck */}
         <g className="signal-waves">
-          {/* Fast wave */}
-          <path
-            className="animate-signal-fast opacity-80"
-            d="M 0 94 Q 200 85 400 94 Q 600 103 800 94"
-            stroke="#60a5fa"
-            strokeWidth="2"
-            fill="none"
-            strokeDasharray="10,5"
-          />
+          {/* Fast wave - Orange */}
+          <g className="animate-wave-fast">
+            <path
+              d="M 0 72 Q 50 62 100 72 Q 150 82 200 72 Q 250 62 300 72 Q 350 82 400 72 Q 450 62 500 72 Q 550 82 600 72 Q 650 62 700 72 Q 750 82 800 72 Q 850 62 900 72 Q 950 82 1000 72 Q 1050 62 1100 72 Q 1150 82 1200 72"
+              stroke="#f59e0b"
+              strokeWidth="2"
+              fill="none"
+              opacity="0.8"
+            />
+          </g>
           
-          {/* Medium wave */}
-          <path
-            className="animate-signal-medium opacity-70"
-            d="M 0 96 Q 200 87 400 96 Q 600 105 800 96"
-            stroke="#34d399"
-            strokeWidth="2"
-            fill="none"
-            strokeDasharray="8,3"
-          />
+          {/* Medium wave - Green */}
+          <g className="animate-wave-medium">
+            <path
+              d="M 0 72 Q 75 65 150 72 Q 225 79 300 72 Q 375 65 450 72 Q 525 79 600 72 Q 675 65 750 72 Q 825 79 900 72 Q 975 65 1050 72 Q 1125 79 1200 72"
+              stroke="#10b981"
+              strokeWidth="2"
+              fill="none"
+              opacity="0.7"
+            />
+          </g>
           
-          {/* Slow wave */}
-          <path
-            className="animate-signal-slow opacity-60"
-            d="M 0 98 Q 200 89 400 98 Q 600 107 800 98"
-            stroke="#fbbf24"
-            strokeWidth="2"
-            fill="none"
-            strokeDasharray="12,4"
-          />
+          {/* Slow wave - Cyan */}
+          <g className="animate-wave-slow">
+            <path
+              d="M 0 72 Q 100 68 200 72 Q 300 76 400 72 Q 500 68 600 72 Q 700 76 800 72 Q 900 68 1000 72 Q 1100 76 1200 72"
+              stroke="#06b6d4"
+              strokeWidth="2"
+              fill="none"
+              opacity="0.6"
+            />
+          </g>
         </g>
       </svg>
     </div>

@@ -66,12 +66,12 @@ All colors MUST be HSL.
     }
   }
   
-  @keyframes signal-flow {
+  @keyframes wave-flow {
     0% {
-      stroke-dashoffset: 0;
+      transform: translateX(-200px);
     }
     100% {
-      stroke-dashoffset: 30;
+      transform: translateX(200px);
     }
   }
   
@@ -79,16 +79,16 @@ All colors MUST be HSL.
     animation: scroll-infinite 20s linear infinite;
   }
   
-  .animate-signal-fast {
-    animation: signal-flow 2s linear infinite;
+  .animate-wave-fast {
+    animation: wave-flow 3s ease-in-out infinite;
   }
   
-  .animate-signal-medium {
-    animation: signal-flow 4s linear infinite;
+  .animate-wave-medium {
+    animation: wave-flow 5s ease-in-out infinite;
   }
   
-  .animate-signal-slow {
-    animation: signal-flow 6s linear infinite;
+  .animate-wave-slow {
+    animation: wave-flow 8s ease-in-out infinite;
   }
 
   .dark {
