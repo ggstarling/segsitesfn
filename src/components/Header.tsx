@@ -61,18 +61,17 @@ const Header = () => {
     <header className="fixed top-0 w-full bg-white border-b border-gray-200 z-50">
       <div className="w-full px-6 py-4">
         <nav className="flex items-center justify-between">
-          {/* Left side menu */}
-          <div className="flex items-center ml-8">
-            {/* Logo */}
-            <button onClick={scrollToTop} className="flex items-center mr-32">
-              <img
-                src="/lovable-uploads/81b574cd-6dab-4603-aa73-5b5fc5e0766e.png"
-                alt="Safena Logo"
-                className="h-6 w-auto"
-              />
-            </button>
+          {/* Logo */}
+          <button onClick={scrollToTop} className="flex items-center">
+            <img
+              src="/lovable-uploads/81b574cd-6dab-4603-aa73-5b5fc5e0766e.png"
+              alt="Safena Logo"
+              className="h-6 w-auto"
+            />
+          </button>
 
-            <div className="flex items-center space-x-12 ml-16">
+          {/* Center navigation menu */}
+          <div className="flex items-center space-x-12 absolute left-1/2 transform -translate-x-1/2">
               <button onClick={scrollToTop} className={`transition-colors font-normal text-base ${location.pathname === "/" ? "text-[#3481bd]" : "text-gray-500 hover:text-blue-600"}`}>
                 Início
               </button>
@@ -126,7 +125,6 @@ const Header = () => {
               Sensores
             </button>
             </div>
-          </div>
 
           {/* Right side menu */}
           <div className="hidden md:flex items-center space-x-6 mr-4">

@@ -28,7 +28,7 @@ const WhyChoose = () => {
       <div className="max-w-7xl mx-auto px-4">        
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <h2 className="text-3xl font-bold text-foreground mb-8">Por que escolher a Safena?</h2>
+            <h2 className="text-3xl font-normal text-foreground mb-8">Por que escolher a Safena?</h2>
             {items.map((item, index) => (
               <div key={index} className="space-y-3">
                 <div 
@@ -67,7 +67,8 @@ const WhyChoose = () => {
           </div>
           
           <div className="hidden lg:flex justify-center">
-            <div className="w-96 h-96 bg-gradient-to-br from-primary/10 to-primary/20 rounded-2xl flex items-center justify-center relative overflow-hidden">
+            <div className="w-96 h-96 bg-gradient-to-br from-primary/10 to-primary/20 rounded-2xl relative overflow-hidden">
+              <div className="absolute inset-0 flex items-center justify-center">
               {selectedItem === 0 && (
                 <div className="text-center space-y-4 animate-fade-in">
                   <div className="grid grid-cols-2 gap-4 mb-6">
@@ -155,6 +156,7 @@ const WhyChoose = () => {
                   </h4>
                 </div>
               )}
+              </div>
             </div>
           </div>
         </div>
