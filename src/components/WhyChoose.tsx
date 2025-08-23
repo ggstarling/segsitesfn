@@ -52,10 +52,10 @@ const WhyChoose = () => {
   }, [hasAnimated]);
 
   return (
-    <section ref={sectionRef} className="pt-16 pb-4 bg-background">
+    <section ref={sectionRef} className="pt-16 pb-24 bg-background">
       <div className="max-w-7xl mx-auto px-4">        
         <div className="grid lg:grid-cols-2 gap-12 items-start">
-          <div className="space-y-6 min-h-[600px]">
+          <div className="space-y-6 min-h-[800px]">
             <h2 className="text-3xl font-normal text-foreground mb-12">Por que escolher a Safena?</h2>
             {items.map((item, index) => (
               <div key={index} className="space-y-3">
