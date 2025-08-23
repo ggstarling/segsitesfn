@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import heroTexture from "@/assets/hero-background-textured-blue.jpg";
+import heroTexture from "@/assets/hero-background-minimal-blue.jpg";
 import HorizontalWaves from "./HorizontalWaves";
 
 interface HeroProps {
