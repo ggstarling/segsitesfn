@@ -66,8 +66,29 @@ All colors MUST be HSL.
     }
   }
   
+  @keyframes signal-flow {
+    0% {
+      stroke-dashoffset: 0;
+    }
+    100% {
+      stroke-dashoffset: 30;
+    }
+  }
+  
   .animate-scroll-infinite {
     animation: scroll-infinite 20s linear infinite;
+  }
+  
+  .animate-signal-fast {
+    animation: signal-flow 2s linear infinite;
+  }
+  
+  .animate-signal-medium {
+    animation: signal-flow 4s linear infinite;
+  }
+  
+  .animate-signal-slow {
+    animation: signal-flow 6s linear infinite;
   }
 
   .dark {
