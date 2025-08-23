@@ -8,15 +8,7 @@ interface HeroProps {
 
 const Hero = ({ onOpenModal }: HeroProps) => {
   return (
-    <section className="relative h-screen flex items-center">
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: `url('${heroBackground}')`
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-[#5ba3db]/80 via-[#3481bd]/85 to-[#1e5f92]/90"></div>
-      </div>
+    <section className="relative h-screen flex items-center bg-gradient-to-b from-[#7db8e8] via-[#3481bd] to-[#1e4a66]">
 
       <div className="relative z-10 max-w-7xl mx-auto px-4">
         <div className="max-w-3xl text-center mx-auto">
