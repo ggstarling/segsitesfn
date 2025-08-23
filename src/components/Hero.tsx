@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import heroBackground from "@/assets/hero-background.jpg";
 
 interface HeroProps {
   onOpenModal: () => void;
@@ -10,7 +11,7 @@ const Hero = ({ onOpenModal }: HeroProps) => {
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1712023076708-a56b83c332a9?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"
+          backgroundImage: `url('${heroBackground}')`
         }}
       >
         <div className="absolute inset-0 bg-black/40"></div>
@@ -29,7 +30,7 @@ const Hero = ({ onOpenModal }: HeroProps) => {
           <Button
             onClick={onOpenModal}
             size="lg"
-            className="text-lg px-8 py-4"
+            className="text-lg px-8 py-4 font-normal"
           >
             Agende uma conversa
           </Button>
