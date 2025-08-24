@@ -8,16 +8,18 @@ interface HeroProps {
 
 const Hero = ({ onOpenModal }: HeroProps) => {
   return (
-    <section className="relative h-screen flex items-center bg-white">
-      <div className="absolute inset-0 bg-white">
+    <section className="relative h-screen flex items-center bg-gray-50">
+      <div className="absolute inset-0 bg-gray-50">
         <div 
-          className="absolute inset-0 opacity-30"
+          className="absolute inset-0 opacity-40"
           style={{
             backgroundImage: `
-              radial-gradient(circle at 1px 1px, rgba(0,0,0,0.05) 1px, transparent 0),
-              linear-gradient(90deg, rgba(0,0,0,0.02) 50%, transparent 50%)
+              radial-gradient(circle at 2px 2px, rgba(0,0,0,0.08) 1px, transparent 0),
+              radial-gradient(circle at 6px 6px, rgba(0,0,0,0.04) 0.5px, transparent 0),
+              linear-gradient(45deg, rgba(0,0,0,0.02) 25%, transparent 25%, transparent 75%, rgba(0,0,0,0.02) 75%),
+              linear-gradient(-45deg, rgba(0,0,0,0.01) 25%, transparent 25%, transparent 75%, rgba(0,0,0,0.01) 75%)
             `,
-            backgroundSize: '20px 20px, 40px 40px'
+            backgroundSize: '12px 12px, 18px 18px, 8px 8px, 6px 6px'
           }}
         ></div>
       </div>
