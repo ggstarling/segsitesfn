@@ -30,14 +30,14 @@ const Hero = ({ onOpenModal }: HeroProps) => {
             Inteligência para a gestão de ativos viários no Brasil
           </h1>
 
-          <p className="text-xl text-gray-700 mb-8 leading-relaxed">
+          <p className="text-lg text-gray-700 mb-8 leading-relaxed">
             Somos uma plataforma de fusão de dados com inteligência artificial para a gestão de ativos de infraestrutura viária.
           </p>
 
           <Button
             onClick={onOpenModal}
             size="lg"
-            className="text-lg px-8 py-4 font-normal"
+            className="text-base px-8 py-4 font-normal"
           >
             Agende uma conversa
           </Button>
