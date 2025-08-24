@@ -10,17 +10,17 @@ const Services = () => {
     {
       id: "data-collection",
       title: "Monitoramento Estrutural",
-      description: "Coletamos dados precisos de estruturas para monitoramento avançado."
+      description: "Oferecemos soluções personalizadas de monitoramento contínuo que acompanham o comportamento da estrutura ao longo do tempo."
     },
     {
       id: "diagnostics",
       title: "B-WIM",
-      description: "Analisamos dados para identificar riscos e necessidades de manutenção."
+      description: "Implementamos sistemas de B-WIM para monitoramento inteligente do tráfego sobre pontes e viadutos."
     },
     {
       id: "dashboards",
       title: "Modelos de Desempenho",
-      description: "Visualização intuitiva e interativa de informações estruturais em tempo real."
+      description: "Desenvolvemos modelos de desempenho que acompanham a evolução das condições dos ativos ao longo do tempo e estimam seu ciclo de vida."
     }
   ];
 
