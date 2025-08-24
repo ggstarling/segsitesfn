@@ -10,7 +10,7 @@ const Services = () => {
     {
       id: "data-collection",
       title: "Monitoramento Estrutural",
-      description: "Oferecemos soluções personalizadas de monitoramento contínuo que acompanham o comportamento da estrutura ao longo do tempo."
+      description: "Oferecemos soluções personalizadas de monitoramento estrutural contínuo."
     },
     {
       id: "diagnostics",
@@ -20,7 +20,7 @@ const Services = () => {
     {
       id: "dashboards",
       title: "Modelos de Desempenho",
-      description: "Desenvolvemos modelos de desempenho que acompanham a evolução das condições dos ativos ao longo do tempo e estimam seu ciclo de vida."
+      description: "Desenvolvemos modelos de desempenho que acompanham a evolução das condições dos ativos e estimam seu ciclo de vida."
     }
   ];
 
