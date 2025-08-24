@@ -10,19 +10,19 @@ const Services = () => {
       id: "data-collection",
       title: "Monitoramento Estrutural",
       description: "Oferecemos soluções personalizadas de monitoramento estrutural contínuo.",
-      detailedContent: "Nossos sistemas de monitoramento estrutural contínuo utilizam sensores avançados para acompanhar o comportamento da estrutura em tempo real. Coletamos dados sobre deformações, vibrações, temperatura e outros parâmetros críticos, fornecendo insights valiosos sobre a integridade e performance da infraestrutura. Nossa abordagem personalizada garante que cada solução seja adaptada às necessidades específicas do projeto, permitindo detecção precoce de anomalias e otimização da manutenção preventiva."
+      detailedContent: "Oferecemos soluções personalizadas de monitoramento estrutural contínuo que acompanham o comportamento da estrutura ao longo do tempo. Por meio de tecnologias avançadas de sensoriamento e aprendizado de máquina, nossa plataforma oferece relatórios automáticos, emite alertas inteligentes e prevê comportamentos atípicos da estrutura, gerando diagnósticos precisos e embasados em dados reais."
     },
     {
       id: "diagnostics",
       title: "B-WIM",
       description: "Implementamos sistemas de B-WIM para monitoramento inteligente do tráfego sobre pontes e viadutos.",
-      detailedContent: "Nosso sistema B-WIM (Bridge Weigh-in-Motion) representa a tecnologia mais avançada para monitoramento do tráfego em pontes e viadutos. Através de sensores estrategicamente posicionados, capturamos dados precisos sobre peso, velocidade e características dos veículos que transitam pela estrutura. Esta tecnologia permite análise em tempo real do impacto do tráfego na infraestrutura, identificação de sobrecarga e otimização da gestão de tráfego, contribuindo significativamente para a preservação e segurança das pontes."
+      detailedContent: "Implementamos sistemas de B-WIM (Bridge Weigh-In-Motion) para monitoramento inteligente do tráfego sobre pontes e viadutos. Essa tecnologia permite identificar e pesar veículos em movimento, sem a necessidade de intervenção no tráfego. Através de sensores e algoritmos avançados, fornecemos informações detalhadas sobre cargas aplicadas, fluxo de veículos e padrões de uso da estrutura, apoiando decisões estratégicas de manutenção, operação e segurança."
     },
     {
       id: "dashboards",
       title: "Modelos de Desempenho",
       description: "Desenvolvemos modelos de desempenho que acompanham a evolução das condições dos ativos e estimam seu ciclo de vida.",
-      detailedContent: "Desenvolvemos modelos sofisticados de desempenho que integram dados históricos e em tempo real para prever a evolução das condições dos ativos de infraestrutura. Nossos algoritmos avançados analisam padrões de degradação, fatores ambientais e cargas operacionais para estimar com precisão o ciclo de vida útil das estruturas. Estes modelos fornecem informações cruciais para planejamento de manutenção, alocação de recursos e tomada de decisões estratégicas, maximizando o retorno sobre investimento em infraestrutura."
+      detailedContent: "Desenvolvemos modelos de desempenho que acompanham a evolução das condições dos ativos e estimam seu ciclo de vida. Com base em dados históricos, inspeções e análises preditivas, nossa metodologia apoia a gestão eficiente de ativos de infraestrutura, oferecendo previsões sobre degradação, custos futuros e momentos ideais de intervenção."
     }
   ];
 
