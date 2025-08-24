@@ -53,7 +53,7 @@ const About = () => {
       </section>
 
       {/* Nossos Clientes */}
-      <section className="py-20 px-4 bg-gradient-to-b from-gray-300 via-gray-200 to-gray-100">
+      <section className="py-20 bg-gradient-to-b from-gray-300 via-gray-200 to-gray-100">
         <div className="w-full text-center">
           <h2 className="text-4xl text-gray-900 mb-4">Nossos Parceiros</h2>
           <div className="w-16 h-0.5 bg-blue-500 mx-auto mb-16"></div>
@@ -65,17 +65,17 @@ const About = () => {
                 { name: "UFSC", logo: "/lovable-uploads/f10d599c-dcf1-4a4e-9803-727d736b4127.png" },
                 { name: "Kartado", logo: "/lovable-uploads/b00b9117-68a3-4507-9d1d-163b8339fc01.png" },
                 { name: "CORE", logo: "/lovable-uploads/21b38f69-e678-4ff8-8af6-2b991e37ecbd.png" },
-                { name: "Fundo Catarina", logo: "/lovable-uploads/1eabf468-764a-4795-817b-7a33d35943f9.png" },
+                { name: "Fundo Catarina", logo: "/lovable-uploads/532a84b5-b3e0-4188-b585-cb1b277e4e64.png" },
                 { name: "Minerva", logo: "/lovable-uploads/b8a93f3f-2525-4563-96e1-766cdc8561ea.png" },
                 { name: "UFSC", logo: "/lovable-uploads/f10d599c-dcf1-4a4e-9803-727d736b4127.png" },
                 { name: "Kartado", logo: "/lovable-uploads/b00b9117-68a3-4507-9d1d-163b8339fc01.png" },
                 { name: "CORE", logo: "/lovable-uploads/21b38f69-e678-4ff8-8af6-2b991e37ecbd.png" },
-                { name: "Fundo Catarina", logo: "/lovable-uploads/1eabf468-764a-4795-817b-7a33d35943f9.png" },
+                { name: "Fundo Catarina", logo: "/lovable-uploads/532a84b5-b3e0-4188-b585-cb1b277e4e64.png" },
                 { name: "Minerva", logo: "/lovable-uploads/b8a93f3f-2525-4563-96e1-766cdc8561ea.png" },
                 { name: "UFSC", logo: "/lovable-uploads/f10d599c-dcf1-4a4e-9803-727d736b4127.png" },
                 { name: "Kartado", logo: "/lovable-uploads/b00b9117-68a3-4507-9d1d-163b8339fc01.png" },
                 { name: "CORE", logo: "/lovable-uploads/21b38f69-e678-4ff8-8af6-2b991e37ecbd.png" },
-                { name: "Fundo Catarina", logo: "/lovable-uploads/1eabf468-764a-4795-817b-7a33d35943f9.png" }
+                { name: "Fundo Catarina", logo: "/lovable-uploads/532a84b5-b3e0-4188-b585-cb1b277e4e64.png" }
               ].map((client, index) => (
                 <div key={index} className="flex-shrink-0 flex items-center justify-center">
                   <img

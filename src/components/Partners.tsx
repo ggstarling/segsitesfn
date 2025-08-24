@@ -4,12 +4,12 @@ const Partners = () => {
     { name: "UFSC", logo: "/lovable-uploads/f10d599c-dcf1-4a4e-9803-727d736b4127.png" },
     { name: "Kartado", logo: "/lovable-uploads/b00b9117-68a3-4507-9d1d-163b8339fc01.png" },
     { name: "CORE", logo: "/lovable-uploads/21b38f69-e678-4ff8-8af6-2b991e37ecbd.png" },
-    { name: "Fundo Catarina", logo: "/lovable-uploads/1eabf468-764a-4795-817b-7a33d35943f9.png" },
+    { name: "Fundo Catarina", logo: "/lovable-uploads/532a84b5-b3e0-4188-b585-cb1b277e4e64.png" },
   ];
 
   return (
     <section className="pt-6 pb-2 bg-gradient-to-b from-gray-300 via-gray-200 to-gray-100">
-      <div className="w-full px-4">
+      <div className="w-full">
         <h2 className="text-base font-normal text-center -mb-4 relative z-10 text-gray-500">Parceiros que confiam em nosso trabalho</h2>
 
         <div className="overflow-hidden">
