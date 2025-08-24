@@ -18,7 +18,7 @@ const HorizontalWaves = () => {
         </svg>
       </div>
 
-      {/* Middle Wave - Medium Blue - Largest amplitude, tightest wavelength */}
+      {/* Middle Wave - Neutral Gray - Largest amplitude, tightest wavelength */}
       <div className="absolute bottom-0 w-[200%] h-full animate-scroll-medium">
         <svg
           viewBox="0 0 1200 128"
@@ -30,7 +30,7 @@ const HorizontalWaves = () => {
             stroke="#6b7280"
             strokeWidth="2"
             fill="none"
-            opacity="0.7"
+            opacity="0.8"
           />
         </svg>
       </div>
