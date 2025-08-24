@@ -1,32 +1,32 @@
 const HorizontalWaves = () => {
   return (
-    <div className="absolute bottom-0 left-0 right-0 h-32 overflow-hidden">
-      {/* Top Wave - Gray, Very Small Amplitude (Gentle) */}
-      <div className="absolute bottom-20 w-[300%] h-6 animate-scroll-fast">
+    <div className="absolute bottom-0 left-0 right-0 h-40 overflow-hidden">
+      {/* Top Wave - Light Blue, Subtle */}
+      <div className="absolute bottom-24 w-[400%] h-8 animate-scroll-fast">
         <svg
-          viewBox="0 0 1800 24"
+          viewBox="0 0 2400 32"
           className="w-full h-full"
           preserveAspectRatio="none"
         >
           <path
-            d="M0,12 Q45,11 90,12 Q135,13 180,12 Q225,11 270,12 Q315,13 360,12 Q405,11 450,12 Q495,13 540,12 Q585,11 630,12 Q675,13 720,12 Q765,11 810,12 Q855,13 900,12 Q945,11 990,12 Q1035,13 1080,12 Q1125,11 1170,12 Q1215,13 1260,12 Q1305,11 1350,12 Q1395,13 1440,12 Q1485,11 1530,12 Q1575,13 1620,12 Q1665,11 1710,12 Q1755,13 1800,12"
-            stroke="#6b7280"
-            strokeWidth="2"
+            d="M0,16 C80,8 160,24 240,16 C320,8 400,24 480,16 C560,8 640,24 720,16 C800,8 880,24 960,16 C1040,8 1120,24 1200,16 C1280,8 1360,24 1440,16 C1520,8 1600,24 1680,16 C1760,8 1840,24 1920,16 C2000,8 2080,24 2160,16 C2240,8 2320,24 2400,16"
+            stroke="#87ceeb"
+            strokeWidth="1.5"
             fill="none"
-            opacity="0.8"
+            opacity="0.6"
           />
         </svg>
       </div>
 
-      {/* Middle Wave - White, Medium Amplitude (Pronounced) */}
-      <div className="absolute bottom-10 w-[300%] h-8 animate-scroll-medium">
+      {/* Middle Wave - White, More Pronounced */}
+      <div className="absolute bottom-12 w-[400%] h-12 animate-scroll-medium">
         <svg
-          viewBox="0 0 1800 32"
+          viewBox="0 0 2400 48"
           className="w-full h-full"
           preserveAspectRatio="none"
         >
           <path
-            d="M0,16 Q90,8 180,16 Q270,24 360,16 Q450,8 540,16 Q630,24 720,16 Q810,8 900,16 Q990,24 1080,16 Q1170,8 1260,16 Q1350,24 1440,16 Q1530,8 1620,16 Q1710,24 1800,16"
+            d="M0,24 C120,12 240,36 360,24 C480,12 600,36 720,24 C840,12 960,36 1080,24 C1200,12 1320,36 1440,24 C1560,12 1680,36 1800,24 C1920,12 2040,36 2160,24 C2280,12 2400,36 2400,24"
             stroke="#ffffff"
             strokeWidth="2"
             fill="none"
@@ -35,19 +35,19 @@ const HorizontalWaves = () => {
         </svg>
       </div>
 
-      {/* Bottom Wave - Blue, Large Amplitude (Dramatic) */}
-      <div className="absolute bottom-0 w-[300%] h-12 animate-scroll-slow">
+      {/* Bottom Wave - Primary Blue, Most Dramatic */}
+      <div className="absolute bottom-0 w-[400%] h-16 animate-scroll-slow">
         <svg
-          viewBox="0 0 1800 48"
+          viewBox="0 0 2400 64"
           className="w-full h-full"
           preserveAspectRatio="none"
         >
           <path
-            d="M0,24 Q225,6 450,24 Q675,42 900,24 Q1125,6 1350,24 Q1575,42 1800,24"
+            d="M0,32 C150,16 300,48 450,32 C600,16 750,48 900,32 C1050,16 1200,48 1350,32 C1500,16 1650,48 1800,32 C1950,16 2100,48 2250,32 C2400,16 2400,48 2400,32"
             stroke="#3481bd"
-            strokeWidth="2"
+            strokeWidth="2.5"
             fill="none"
-            opacity="0.8"
+            opacity="0.9"
           />
         </svg>
       </div>
