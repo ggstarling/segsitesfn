@@ -22,7 +22,7 @@ const Services = () => {
       id: "dashboards",
       title: "Modelos de Desempenho",
       description: "Desenvolvemos modelos de desempenho que acompanham a evolução das condições dos ativos e estimam seu ciclo de vida.",
-      detailedContent: "Desenvolvemos modelos de desempenho que acompanham a evolução das condições dos ativos e estimam seu ciclo de vida. Com base em dados históricos, inspeções e análises preditivas, nossa metodologia apoia a gestão eficiente de ativos de infraestrutura, oferecendo previsões sobre degradação, custos futuros e momentos ideais de intervenção."
+      detailedContent: "Desenvolvemos modelos de desempenho que acompanham a evolução das condições dos ativos e estimam seu ciclo de vida. Com base em dados históricos, inspeções e análises preditivas, nossa metodologia apoia a gestão eficiente de ativos de infraestrutura, oferecendo previsões sobre degradação, custos futuros e momento ideal para intervenção."
     }
   ];
 
@@ -62,13 +62,6 @@ const Services = () => {
                     {service.title}
                   </CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <p className={`text-center transition-colors ${
-                    isSelected ? "text-muted-foreground" : "text-muted-foreground/70"
-                  }`}>
-                    {service.description}
-                  </p>
-                </CardContent>
               </Card>
             );
           })}
