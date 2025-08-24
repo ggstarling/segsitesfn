@@ -8,7 +8,7 @@ interface HeroProps {
 
 const Hero = ({ onOpenModal }: HeroProps) => {
   return (
-    <section className="relative h-screen flex items-start pt-32 bg-gray-50">
+    <section className="relative h-screen flex items-center bg-gray-50">
       <div className="absolute inset-0 bg-gray-50">
         <div 
           className="absolute inset-0 opacity-40"
