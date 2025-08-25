@@ -5,7 +5,6 @@ import Hero from "@/components/Hero";
 import Partners from "@/components/Partners";
 import WhyChoose from "@/components/WhyChoose";
 import Services from "@/components/Services";
-import Sensors from "@/components/Sensors";
 import Posts from "@/components/Posts";
 import ContactForm from "@/components/ContactForm";
 import ContactModal from "@/components/ContactModal";
@@ -20,7 +19,6 @@ const Index = () => {
       <Partners />
       <WhyChoose />
       <Services />
-      <Sensors />
       <Posts />
       <ContactForm />
       <Footer />
