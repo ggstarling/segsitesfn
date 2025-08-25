@@ -15,8 +15,8 @@ const Posts = () => {
     setCurrentIndex((prev) => (prev - 1 + posts.length) % posts.length);
   };
 
-  const visiblePosts = posts.slice(currentIndex, currentIndex + 3).concat(
-    posts.slice(0, Math.max(0, currentIndex + 3 - posts.length))
+  const visiblePosts = posts.slice(currentIndex, currentIndex + 4).concat(
+    posts.slice(0, Math.max(0, currentIndex + 4 - posts.length))
   );
 
   return (
@@ -25,7 +25,7 @@ const Posts = () => {
         <h2 className="text-2xl text-center mb-12">Últimas Postagens</h2>
 
         <div className="relative">
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-4 gap-6">
             {visiblePosts.map((post, index) => (
               <Link 
                 key={`${post.id}-${index}`} 
