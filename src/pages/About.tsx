@@ -10,7 +10,7 @@ const About = () => {
       {/* Nossa Visão */}
       <section className="relative h-screen flex items-center justify-center">
         <div
-          className="absolute inset-0 bg-cover bg-center filter blur-sm"
+          className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage: "url('https://images.unsplash.com/photo-1651356945969-46c91f5d6317?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
             backgroundPosition: "center 30%"
@@ -38,7 +38,7 @@ const About = () => {
               <div className="w-16 h-0.5 bg-blue-500 mb-8"></div>
               <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
                 <p>
-                  A Safena surgiu a partir do trabalho desenvolvido no Laboratório de Otimização e Confiabilidade Estrutural (CORE) da Universidade Federal de Santa Catarina (UFSC). Unindo experiência acadêmica e visão inovadora, transformamos anos de pesquisa aplicada em soluções eficientes para a indústria.
+                  A <span style={{ color: '#3481bd', fontWeight: '600' }}>Safena</span> surgiu a partir do trabalho desenvolvido no Laboratório de Otimização e Confiabilidade Estrutural (CORE) da Universidade Federal de Santa Catarina (UFSC). Unindo experiência acadêmica e visão inovadora, transformamos anos de pesquisa aplicada em soluções eficientes para a indústria.
                 </p>
                 <p>
                   Nossa equipe multidisciplinar é composta por especialistas de diversas áreas da engenharia e tecnologia. Reunimos conhecimentos avançados em estruturas, sensoriamento inteligente e ciência de dados, com o objetivo de desenvolver soluções orientadas por dados para os desafios da engenharia moderna.
