@@ -33,7 +33,17 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
           <div className="grid md:grid-cols-2 gap-4">
             <div className="space-y-3">
               <Label htmlFor="modal-phone">Telefone</Label>
-              <Input id="modal-phone" type="tel" minLength={11} maxLength={15} />
+              <Input 
+                id="modal-phone" 
+                type="tel" 
+                minLength={11} 
+                maxLength={15} 
+                pattern="[0-9]*"
+                onInput={(e) => {
+                  const target = e.target as HTMLInputElement;
+                  target.value = target.value.replace(/[^0-9]/g, '');
+                }}
+              />
             </div>
             <div className="space-y-3">
               <Label htmlFor="modal-profession">Profissão</Label>
@@ -52,6 +62,8 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                 <SelectItem value="infrastructure">Infraestrutura</SelectItem>
                 <SelectItem value="transport">Transporte</SelectItem>
                 <SelectItem value="energy">Energia</SelectItem>
+                <SelectItem value="data-science">Ciência de Dados</SelectItem>
+                <SelectItem value="environment">Meio Ambiente</SelectItem>
                 <SelectItem value="other">Outro</SelectItem>
               </SelectContent>
             </Select>

@@ -88,6 +88,11 @@ const ContactForm = () => {
                     type="tel" 
                     minLength={11}
                     maxLength={15}
+                    pattern="[0-9]*"
+                    onInput={(e) => {
+                      const target = e.target as HTMLInputElement;
+                      target.value = target.value.replace(/[^0-9]/g, '');
+                    }}
                     className="border-0 border-b-2 border-gray-200 rounded-none px-0 py-3 focus:border-blue-600 focus:ring-2 focus:ring-blue-600/20 focus:rounded-md transition-all duration-200 bg-transparent"
                   />
                 </div>
@@ -113,6 +118,8 @@ const ContactForm = () => {
                     <SelectItem value="infrastructure">Infraestrutura</SelectItem>
                     <SelectItem value="transport">Transporte</SelectItem>
                     <SelectItem value="energy">Energia</SelectItem>
+                    <SelectItem value="data-science">Ciência de Dados</SelectItem>
+                    <SelectItem value="environment">Meio Ambiente</SelectItem>
                     <SelectItem value="other">Outro</SelectItem>
                   </SelectContent>
                 </Select>
