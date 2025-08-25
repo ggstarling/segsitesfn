@@ -35,9 +35,9 @@ const Posts = () => {
                 <img
                   src={post.image}
                   alt={post.title}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-32 object-cover"
                 />
-                <div className="p-4">
+                <div className="p-3">
                   <h3 className="text-sm leading-tight line-clamp-3">
                     {post.title}
                   </h3>
