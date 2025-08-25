@@ -13,16 +13,16 @@ const About = () => {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage: "url('/lovable-uploads/cc0382b7-39d8-4fc3-8fe8-8f1eb4ea851a.png')",
-            backgroundPosition: "center 30%"
+            backgroundPosition: "center 10%"
           }}
         >
           <div className="absolute inset-0 bg-black/60"></div>
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4">
-          <div className="max-w-2xl ml-0">
+          <div className="text-center">
             <h1 className="text-5xl text-white mb-8">Nossa Visão</h1>
-            <div className="w-16 h-0.5 bg-blue-500 mb-8"></div>
-            <p className="text-xl text-white leading-relaxed max-w-xl">
+            <div className="w-16 h-0.5 bg-blue-500 mb-8 mx-auto"></div>
+            <p className="text-xl text-white leading-relaxed max-w-xl mx-auto">
               Construir um futuro em que dados estejam integrados à gestão de estruturas viárias e à proteção de pessoas e ecossistemas.
             </p>
           </div>
