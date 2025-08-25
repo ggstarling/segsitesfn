@@ -59,19 +59,21 @@ const ContactForm = () => {
             <form className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <Label htmlFor="name" className="text-gray-700 font-medium">Nome</Label>
+                   <Label htmlFor="name" className="text-gray-700 font-medium">Nome</Label>
                    <Input 
                     id="name" 
                     type="text" 
+                    maxLength={74}
                     required 
                     className="border-0 border-b-2 border-gray-200 rounded-none px-0 py-3 focus:border-blue-600 focus:ring-2 focus:ring-blue-600/20 focus:rounded-md transition-all duration-200 bg-transparent"
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="email" className="text-gray-700 font-medium">E-mail</Label>
+                   <Label htmlFor="email" className="text-gray-700 font-medium">E-mail</Label>
                    <Input 
                     id="email" 
                     type="email" 
+                    maxLength={50}
                     required 
                     className="border-0 border-b-2 border-gray-200 rounded-none px-0 py-3 focus:border-blue-600 focus:ring-2 focus:ring-blue-600/20 focus:rounded-md transition-all duration-200 bg-transparent"
                   />
@@ -80,18 +82,21 @@ const ContactForm = () => {
               
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <Label htmlFor="phone" className="text-gray-700 font-medium">Telefone</Label>
+                   <Label htmlFor="phone" className="text-gray-700 font-medium">Telefone</Label>
                    <Input 
                     id="phone" 
                     type="tel" 
+                    minLength={11}
+                    maxLength={15}
                     className="border-0 border-b-2 border-gray-200 rounded-none px-0 py-3 focus:border-blue-600 focus:ring-2 focus:ring-blue-600/20 focus:rounded-md transition-all duration-200 bg-transparent"
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="profession" className="text-gray-700 font-medium">Profissão</Label>
+                   <Label htmlFor="profession" className="text-gray-700 font-medium">Profissão</Label>
                    <Input 
                     id="profession" 
                     type="text" 
+                    maxLength={70}
                     className="border-0 border-b-2 border-gray-200 rounded-none px-0 py-3 focus:border-blue-600 focus:ring-2 focus:ring-blue-600/20 focus:rounded-md transition-all duration-200 bg-transparent"
                   />
                 </div>

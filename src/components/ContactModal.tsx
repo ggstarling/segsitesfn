@@ -22,22 +22,22 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
           <div className="grid md:grid-cols-2 gap-4">
             <div className="space-y-3">
               <Label htmlFor="modal-name">Nome</Label>
-              <Input id="modal-name" type="text" required />
+              <Input id="modal-name" type="text" maxLength={74} required />
             </div>
             <div className="space-y-3">
               <Label htmlFor="modal-email">E-mail</Label>
-              <Input id="modal-email" type="email" required />
+              <Input id="modal-email" type="email" maxLength={50} required />
             </div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-4">
             <div className="space-y-3">
               <Label htmlFor="modal-phone">Telefone</Label>
-              <Input id="modal-phone" type="tel" />
+              <Input id="modal-phone" type="tel" minLength={11} maxLength={15} />
             </div>
             <div className="space-y-3">
               <Label htmlFor="modal-profession">Profissão</Label>
-              <Input id="modal-profession" type="text" />
+              <Input id="modal-profession" type="text" maxLength={70} />
             </div>
           </div>
 
