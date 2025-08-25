@@ -8,7 +8,7 @@ const Partners = () => {
   ];
 
   return (
-    <section className="pt-6 pb-2 bg-gradient-to-b from-gray-100 via-gray-200 to-gray-300">
+    <section className="pt-2 pb-0 bg-gradient-to-b from-gray-100 via-gray-200 to-gray-300">
       <div className="w-full">
         <h2 className="text-base font-normal text-center -mb-4 relative z-10 text-gray-500">Parceiros que confiam em nosso trabalho</h2>
 
