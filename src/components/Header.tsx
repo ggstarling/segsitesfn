@@ -55,6 +55,7 @@ const Header = () => {
   };
 
   const isServicesActive = location.pathname === "/" && location.hash === "#services";
+  const isContactActive = location.pathname === "/" && location.hash === "#contact";
 
   return (
     <header className="fixed top-0 w-full bg-white border-b border-gray-200 z-50">
@@ -117,6 +118,12 @@ const Header = () => {
               Serviços
             </button>
 
+            <button
+              onClick={() => scrollToSection("contact")}
+              className={`transition-colors font-normal text-base ${isContactActive ? "text-[#3481bd]" : "text-gray-500 hover:text-blue-600"}`}
+            >
+              Contato
+            </button>
             </div>
 
           {/* Right side menu */}

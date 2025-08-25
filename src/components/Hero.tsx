@@ -9,32 +9,18 @@ interface HeroProps {
 const Hero = ({ onOpenModal }: HeroProps) => {
   return (
     <section className="relative h-screen flex items-center bg-gray-100">
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200">
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-gray-100 to-gray-150">
         <div 
-          className="absolute inset-0 opacity-60"
+          className="absolute inset-0 opacity-40"
           style={{
             backgroundImage: `
-              linear-gradient(45deg, 
-                rgba(255,255,255,0.8) 0%, 
-                rgba(240,240,240,0.4) 25%, 
-                rgba(255,255,255,0.8) 50%, 
-                rgba(240,240,240,0.4) 75%, 
-                rgba(255,255,255,0.8) 100%
-              ),
-              repeating-linear-gradient(90deg, 
-                rgba(255,255,255,0.1) 0px, 
-                rgba(255,255,255,0.1) 1px, 
-                transparent 1px, 
-                transparent 20px
-              ),
-              repeating-linear-gradient(0deg, 
-                rgba(255,255,255,0.05) 0px, 
-                rgba(255,255,255,0.05) 1px, 
-                transparent 1px, 
-                transparent 20px
-              )
+              radial-gradient(ellipse at center, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.1) 70%, transparent 100%),
+              linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(240,240,240,0.1) 50%, rgba(255,255,255,0.2) 100%),
+              radial-gradient(circle at 25% 25%, rgba(255,255,255,0.15) 0%, transparent 50%),
+              radial-gradient(circle at 75% 75%, rgba(240,240,240,0.1) 0%, transparent 50%)
             `,
-            backgroundSize: '40px 40px, 20px 20px, 20px 20px'
+            backgroundSize: '200px 200px, 100% 100%, 150px 150px, 180px 180px',
+            filter: 'blur(0.5px) contrast(1.1)'
           }}
         ></div>
       </div>
