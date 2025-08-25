@@ -84,6 +84,17 @@ All colors MUST be HSL.
     }
   }
   
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(-8px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
   .animate-scroll-infinite {
     animation: scroll-infinite 20s linear infinite;
   }
@@ -110,6 +121,10 @@ All colors MUST be HSL.
   
   .animate-scroll-slow {
     animation: scroll-horizontal 18s linear infinite;
+  }
+  
+  .animate-fade-in {
+    animation: fade-in 0.2s ease-out;
   }
 
   .dark {

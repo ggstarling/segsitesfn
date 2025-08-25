@@ -129,16 +129,19 @@ const Header = () => {
               </button>
 
               {isDropdownOpen && (
-                <div className="absolute top-full left-0 bg-white border border-gray-200 rounded-md shadow-lg py-2 z-50 min-w-[200px]">
+                <div className="absolute top-full left-0 bg-white border border-gray-100 rounded-lg py-3 z-50 min-w-[200px] animate-fade-in" 
+                     style={{ 
+                       boxShadow: '0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)' 
+                     }}>
                   <button 
                     onClick={() => navigateToPage("/about")}
-                    className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors"
+                    className="block w-full text-left px-6 py-3 text-base text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-all duration-200"
                   >
                     Sobre
                   </button>
                   <button 
                     onClick={() => navigateToPage("/blog")}
-                    className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors"
+                    className="block w-full text-left px-6 py-3 text-base text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-all duration-200"
                   >
                     Blog
                   </button>
