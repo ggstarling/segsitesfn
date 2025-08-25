@@ -14,11 +14,11 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-2xl">
-        <DialogHeader>
-          <DialogTitle>Agende uma conversa</DialogTitle>
+        <DialogHeader className="pb-6">
+          <DialogTitle className="text-2xl">Agende uma conversa</DialogTitle>
         </DialogHeader>
 
-        <form className="space-y-4">
+        <form className="space-y-6">
           <div className="grid md:grid-cols-2 gap-4">
             <div>
               <Label htmlFor="modal-name">Nome</Label>
