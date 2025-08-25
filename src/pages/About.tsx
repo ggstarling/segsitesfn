@@ -12,7 +12,7 @@ const About = () => {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1651356945969-46c91f5d6317?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
+            backgroundImage: "url('/lovable-uploads/cc0382b7-39d8-4fc3-8fe8-8f1eb4ea851a.png')",
             backgroundPosition: "center 30%"
           }}
         >
