@@ -14,6 +14,8 @@ const HorizontalWaves = () => {
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
+            vectorEffect="non-scaling-stroke"
+            shapeRendering="geometricPrecision"
             fill="none"
             opacity="0.8"
           />
