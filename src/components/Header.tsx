@@ -1,11 +1,12 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, Globe } from "lucide-react";
 
 const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -54,8 +55,45 @@ const Header = () => {
     }
   };
 
-  const isServicesActive = location.pathname === "/" && location.hash === "#services";
-  const isContactActive = location.pathname === "/" && location.hash === "#contact";
+  useEffect(() => {
+    const handleScroll = () => {
+      if (location.pathname !== "/") return;
+      
+      const sections = ["services", "contact"];
+      const scrollPosition = window.scrollY + 150; // Offset for header height
+      
+      // Check if we're at the top
+      if (window.scrollY < 100) {
+        setActiveSection("home");
+        return;
+      }
+      
+      // Check each section
+      for (const sectionId of sections) {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const elementTop = element.offsetTop;
+          const elementBottom = elementTop + element.offsetHeight;
+          
+          if (scrollPosition >= elementTop && scrollPosition < elementBottom) {
+            setActiveSection(sectionId);
+            return;
+          }
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Check initial position
+    
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [location.pathname]);
+
+  const isHomeActive = location.pathname === "/" && activeSection === "home";
+  const isServicesActive = location.pathname === "/" && activeSection === "services";
+  const isContactActive = location.pathname === "/" && activeSection === "contact";
 
   return (
     <header className="fixed top-0 w-full bg-white border-b border-gray-200 z-50">
@@ -72,7 +110,10 @@ const Header = () => {
 
           {/* Center navigation menu */}
           <div className="flex items-center space-x-12 absolute left-1/2 transform -translate-x-1/2">
-              <button onClick={scrollToTop} className={`transition-colors font-normal text-base ${location.pathname === "/" ? "text-[#3481bd]" : "text-gray-500 hover:text-blue-600"}`}>
+              <button 
+                onClick={() => scrollToTop()}
+                className={`transition-colors font-normal text-base ${isHomeActive ? "text-[#3481bd]" : "text-gray-500 hover:text-blue-600"}`}
+              >
                 Início
               </button>
 
@@ -100,12 +141,6 @@ const Header = () => {
                     className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors"
                   >
                     Blog
-                  </button>
-                  <button
-                    onClick={() => scrollToSection("contact")}
-                    className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors"
-                  >
-                    Contato
                   </button>
                 </div>
               )}
