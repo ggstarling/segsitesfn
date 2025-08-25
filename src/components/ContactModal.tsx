@@ -20,28 +20,28 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
 
         <form className="space-y-6">
           <div className="grid md:grid-cols-2 gap-4">
-            <div>
+            <div className="space-y-3">
               <Label htmlFor="modal-name">Nome</Label>
               <Input id="modal-name" type="text" required />
             </div>
-            <div>
+            <div className="space-y-3">
               <Label htmlFor="modal-email">E-mail</Label>
               <Input id="modal-email" type="email" required />
             </div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-4">
-            <div>
+            <div className="space-y-3">
               <Label htmlFor="modal-phone">Telefone</Label>
               <Input id="modal-phone" type="tel" />
             </div>
-            <div>
+            <div className="space-y-3">
               <Label htmlFor="modal-profession">Profissão</Label>
               <Input id="modal-profession" type="text" />
             </div>
           </div>
 
-          <div>
+          <div className="space-y-3">
             <Label htmlFor="modal-industry">Setor da Indústria</Label>
             <Select>
               <SelectTrigger>
@@ -57,7 +57,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
             </Select>
           </div>
 
-          <div>
+          <div className="space-y-3">
             <Label htmlFor="modal-message">Mensagem</Label>
             <Textarea id="modal-message" rows={3} />
           </div>
