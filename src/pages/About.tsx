@@ -38,13 +38,13 @@ const About = () => {
               <div className="w-16 h-0.5 bg-blue-500 mb-8"></div>
               <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
                 <p>
-                  A Safena surgiu a partir do trabalho desenvolvido no Laboratório de Otimização e Confiabilidade Estrutural (CORE) da Universidade Federal de Santa Catarina (UFSC). Unindo excelência acadêmica e visão inovadora, transformamos anos de pesquisa aplicada em soluções práticas e eficientes para a indústria.
+                  A Safena surgiu a partir do trabalho desenvolvido no Laboratório de Otimização e Confiabilidade Estrutural (CORE) da Universidade Federal de Santa Catarina (UFSC). Unindo experiência acadêmica e visão inovadora, transformamos anos de pesquisa aplicada em soluções eficientes para a indústria.
                 </p>
                 <p>
-                  Nossa equipe multidisciplinar é composta por especialistas em diversas áreas da engenharia e tecnologia. Reunimos conhecimentos avançados em estruturas, sensoriamento inteligente, ciência de dados e inovação, com o objetivo de desenvolver soluções orientadas por dados para os desafios da engenharia moderna.
+                  Nossa equipe multidisciplinar é composta por especialistas de diversas áreas da engenharia e tecnologia. Reunimos conhecimentos avançados em estruturas, sensoriamento inteligente e ciência de dados, com o objetivo de desenvolver soluções orientadas por dados para os desafios da engenharia moderna.
                 </p>
                 <p>
-                  Somos é o elo entre a pesquisa científica de ponta e as demandas reais do mercado.
+                  Somos o elo entre a pesquisa científica de ponta e as demandas reais do mercado.
                 </p>
               </div>
             </div>
