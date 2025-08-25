@@ -112,7 +112,7 @@ const Header = () => {
           <div className="flex items-center space-x-12 absolute left-1/2 transform -translate-x-1/2">
               <button 
                 onClick={() => scrollToTop()}
-                className={`transition-colors font-normal text-base ${isHomeActive ? "text-[#3481bd]" : "text-gray-600 hover:text-[#3481bd]"}`}
+                className={`transition-colors font-normal text-base ${isHomeActive ? "text-[#3481bd]" : "text-gray-500 hover:text-[#3481bd]"}`}
               >
                 Início
               </button>
@@ -123,18 +123,16 @@ const Header = () => {
               onMouseEnter={() => setIsDropdownOpen(true)}
               onMouseLeave={() => setIsDropdownOpen(false)}
             >
-              <button className={`flex items-center space-x-1 transition-colors font-normal text-base ${(location.pathname === "/about" || location.pathname === "/blog") ? "text-[#3481bd]" : "text-gray-600 hover:text-[#3481bd]"}`}>
+              <button className={`flex items-center space-x-1 transition-colors font-normal text-base ${(location.pathname === "/about" || location.pathname === "/blog") ? "text-[#3481bd]" : "text-gray-500 hover:text-[#3481bd]"}`}>
                 <span>Sobre Nós</span>
                 <ChevronDown className="w-4 h-4" />
               </button>
 
               {isDropdownOpen && (
-                <div className="absolute top-6 left-0 bg-white border border-gray-100 rounded-lg py-3 z-50 min-w-[160px] animate-fade-in" 
+                <div className="absolute top-full left-0 bg-white border border-gray-100 rounded-lg py-3 z-50 min-w-[200px] animate-fade-in" 
                      style={{ 
                        boxShadow: '0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)' 
-                     }}
-                     onMouseEnter={() => setIsDropdownOpen(true)}
-                     onMouseLeave={() => setIsDropdownOpen(false)}>
+                     }}>
                   <button 
                     onClick={() => navigateToPage("/about")}
                     className="block w-full text-left px-6 py-3 text-base text-gray-700 hover:bg-gray-50 hover:text-[#3481bd] transition-all duration-200"
@@ -153,14 +151,14 @@ const Header = () => {
 
             <button
               onClick={() => scrollToSection("services")}
-              className={`transition-colors font-normal text-base ${isServicesActive ? "text-[#3481bd]" : "text-gray-600 hover:text-[#3481bd]"}`}
+              className={`transition-colors font-normal text-base ${isServicesActive ? "text-[#3481bd]" : "text-gray-500 hover:text-[#3481bd]"}`}
             >
               Serviços
             </button>
 
             <button
               onClick={() => scrollToSection("contact")}
-              className={`transition-colors font-normal text-base ${isContactActive ? "text-[#3481bd]" : "text-gray-600 hover:text-[#3481bd]"}`}
+              className={`transition-colors font-normal text-base ${isContactActive ? "text-[#3481bd]" : "text-gray-500 hover:text-[#3481bd]"}`}
             >
               Contato
             </button>
