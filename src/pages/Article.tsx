@@ -20,7 +20,7 @@ const Article = () => {
         <div className="max-w-4xl mx-auto">
           <article>
             <header className="mb-8 text-center">
-              <h1 className="text-3xl font-normal mb-6 leading-tight">
+              <h1 className="text-2xl font-normal mb-6 leading-tight">
                 {post.title}
               </h1>
               <img
@@ -31,7 +31,7 @@ const Article = () => {
             </header>
             
             <div className="prose prose-lg mx-auto">
-              <p className="text-muted-foreground text-center py-8">
+              <p className="text-muted-foreground text-left py-8">
                 {post.content}
               </p>
             </div>
