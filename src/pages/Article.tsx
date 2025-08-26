@@ -16,7 +16,7 @@ const Article = () => {
     <div className="min-h-screen bg-background">
       <Header />
 
-      <main className="py-16 px-4">
+      <main className="pt-24 pb-16 px-4">
         <div className="max-w-4xl mx-auto">
           <article>
             <header className="mb-8 text-center">
