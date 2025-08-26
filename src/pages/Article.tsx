@@ -16,11 +16,11 @@ const Article = () => {
     <div className="min-h-screen bg-background">
       <Header />
 
-      <main className="py-24 px-4">
+      <main className="py-16 px-4">
         <div className="max-w-4xl mx-auto">
           <article>
             <header className="mb-8 text-center">
-              <h1 className="text-2xl font-normal mb-6 leading-tight">
+              <h1 className="text-2xl font-semibold mb-6 leading-tight">
                 {post.title}
               </h1>
               <img
