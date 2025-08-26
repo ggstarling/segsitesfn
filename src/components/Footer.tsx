@@ -15,9 +15,10 @@ const Footer = () => {
           </div>
 
           {/* Company Info */}
-          <p className="text-white mb-6">
-            Safena Engenharia | CNPJ: 60.871.697/0001-06 | contato.safena@gmail.com | (48) 988397540
-          </p>
+          <div className="text-white mb-6 text-center">
+            <p className="mb-1">Safena Engenharia</p>
+            <p>CNPJ: 60.871.697/0001-06 | contato.safena@gmail.com | (48) 98839-7540</p>
+          </div>
 
           {/* Social Icons and Address */}
           <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
@@ -31,8 +32,7 @@ const Footer = () => {
             </div>
 
             <div className="text-sm text-white">
-              <p>Rua Exemplo, 123 - Bairro</p>
-              <p>Cidade - Estado, CEP: 00000-000</p>
+              <p>Rod. José Carlos Daux, 600 - Lote 2 - João Paulo, Florianópolis - SC, 88030-000</p>
             </div>
           </div>
         </div>
