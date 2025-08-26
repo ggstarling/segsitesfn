@@ -19,7 +19,7 @@ const ContactForm = () => {
           
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Contact Form */}
-            <div className="bg-white p-8 rounded-lg shadow-sm">
+            <div className="p-8">
               <form className="space-y-6">
                 <div className="space-y-4">
                   <Input 
@@ -28,7 +28,7 @@ const ContactForm = () => {
                     placeholder="Nome"
                     maxLength={74}
                     required 
-                    className="h-12 px-4 bg-gray-50 border border-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                    className="h-12 px-4 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                   />
                   
                   <Input 
@@ -37,11 +37,11 @@ const ContactForm = () => {
                     placeholder="E-mail"
                     maxLength={50}
                     required 
-                    className="h-12 px-4 bg-gray-50 border border-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                    className="h-12 px-4 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                   />
                   
                   <Select>
-                    <SelectTrigger className="h-12 px-4 bg-gray-50 border border-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200">
+                    <SelectTrigger className="h-12 px-4 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200">
                       <SelectValue placeholder="Setor da Indústria" />
                     </SelectTrigger>
                     <SelectContent>
@@ -59,13 +59,13 @@ const ContactForm = () => {
                     id="message" 
                     placeholder="Mensagem"
                     rows={4} 
-                    className="p-4 bg-gray-50 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-none"
+                    className="p-4 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-none"
                   />
                 </div>
                 
                 <Button 
                   type="submit" 
-                  className="w-full h-12 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-full transition-colors duration-200"
+                  className="w-full h-12 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200"
                 >
                   Enviar Mensagem
                 </Button>
