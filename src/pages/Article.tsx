@@ -31,9 +31,11 @@ const Article = () => {
             </header>
             
             <div className="prose prose-lg mx-auto">
-              <p className="text-muted-foreground text-left py-8">
-                {post.content}
-              </p>
+              {post.content?.split('\n\n').map((paragraph, index) => (
+                <p key={index} className="text-muted-foreground text-left py-4">
+                  {paragraph}
+                </p>
+              ))}
             </div>
           </article>
         </div>
