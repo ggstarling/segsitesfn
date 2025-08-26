@@ -80,33 +80,6 @@ const ContactForm = () => {
                 </div>
               </div>
               
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                   <Label htmlFor="phone" className="text-gray-700 font-medium">Telefone</Label>
-                   <Input 
-                    id="phone" 
-                    type="tel" 
-                    minLength={11}
-                    maxLength={15}
-                    pattern="[0-9]*"
-                    onInput={(e) => {
-                      const target = e.target as HTMLInputElement;
-                      target.value = target.value.replace(/[^0-9]/g, '');
-                    }}
-                    className="border-0 border-b-2 border-gray-200 rounded-none px-0 py-3 focus:border-blue-600 focus:ring-2 focus:ring-blue-600/20 focus:rounded-md transition-all duration-200 bg-transparent"
-                  />
-                </div>
-                <div className="space-y-2">
-                   <Label htmlFor="profession" className="text-gray-700 font-medium">Profissão</Label>
-                   <Input 
-                    id="profession" 
-                    type="text" 
-                    maxLength={70}
-                    className="border-0 border-b-2 border-gray-200 rounded-none px-0 py-3 focus:border-blue-600 focus:ring-2 focus:ring-blue-600/20 focus:rounded-md transition-all duration-200 bg-transparent"
-                  />
-                </div>
-              </div>
-              
               <div className="space-y-2">
                 <Label htmlFor="industry" className="text-gray-700 font-medium">Setor da Indústria</Label>
                 <Select>

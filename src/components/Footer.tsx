@@ -16,7 +16,7 @@ const Footer = () => {
 
           {/* Company Info */}
           <p className="text-white mb-6">
-            Safena Engenharia | CNPJ: XX.XXX.XXX/0001-XX | email@safena.com.br
+            Safena Engenharia | CNPJ: 60.871.697/0001-06 | contato.safena@gmail.com | (48) 988397540
           </p>
 
           {/* Social Icons and Address */}
