@@ -21,34 +21,28 @@ const ContactForm = () => {
             {/* Contact Form */}
             <div className="bg-white p-8 rounded-lg shadow-sm">
               <form className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                     <Label htmlFor="name" className="text-gray-700 font-medium">Nome</Label>
-                     <Input 
-                      id="name" 
-                      type="text" 
-                      maxLength={74}
-                      required 
-                      className="border-0 border-b-2 border-gray-200 rounded-none px-0 py-3 focus:border-blue-600 focus:ring-2 focus:ring-blue-600/20 focus:rounded-md transition-all duration-200 bg-transparent"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                     <Label htmlFor="email" className="text-gray-700 font-medium">E-mail</Label>
-                     <Input 
-                      id="email" 
-                      type="email" 
-                      maxLength={50}
-                      required 
-                      className="border-0 border-b-2 border-gray-200 rounded-none px-0 py-3 focus:border-blue-600 focus:ring-2 focus:ring-blue-600/20 focus:rounded-md transition-all duration-200 bg-transparent"
-                    />
-                  </div>
-                </div>
-                
-                <div className="space-y-2">
-                  <Label htmlFor="industry" className="text-gray-700 font-medium">Setor da Indústria</Label>
+                <div className="space-y-4">
+                  <Input 
+                    id="name" 
+                    type="text" 
+                    placeholder="Nome"
+                    maxLength={74}
+                    required 
+                    className="h-12 px-4 bg-gray-50 border border-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                  />
+                  
+                  <Input 
+                    id="email" 
+                    type="email" 
+                    placeholder="E-mail"
+                    maxLength={50}
+                    required 
+                    className="h-12 px-4 bg-gray-50 border border-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                  />
+                  
                   <Select>
-                    <SelectTrigger className="border-0 border-b-2 border-gray-200 rounded-none px-0 py-3 focus:border-blue-600 focus:ring-2 focus:ring-blue-600/20 focus:rounded-md transition-all duration-200 bg-transparent">
-                      <SelectValue placeholder="Selecione..." />
+                    <SelectTrigger className="h-12 px-4 bg-gray-50 border border-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200">
+                      <SelectValue placeholder="Setor da Indústria" />
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="construction">Construção Civil</SelectItem>
@@ -60,20 +54,18 @@ const ContactForm = () => {
                       <SelectItem value="other">Outro</SelectItem>
                     </SelectContent>
                   </Select>
-                </div>
-                
-                <div className="space-y-2">
-                  <Label htmlFor="message" className="text-gray-700 font-medium">Mensagem</Label>
-                   <Textarea 
+                  
+                  <Textarea 
                     id="message" 
+                    placeholder="Mensagem"
                     rows={4} 
-                    className="border-0 border-b-2 border-gray-200 rounded-none px-0 py-3 focus:border-blue-600 focus:ring-2 focus:ring-blue-600/20 focus:rounded-md transition-all duration-200 bg-transparent resize-none"
+                    className="p-4 bg-gray-50 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-none"
                   />
                 </div>
                 
                 <Button 
                   type="submit" 
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-none transition-colors duration-200 shadow-none border-0"
+                  className="w-full h-12 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-full transition-colors duration-200"
                 >
                   Enviar Mensagem
                 </Button>
