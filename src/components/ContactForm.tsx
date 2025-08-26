@@ -10,10 +10,10 @@ const ContactForm = () => {
     <section id="contact" className="py-16 bg-gradient-to-b from-gray-300 via-gray-200 to-gray-100">
       <div className="max-w-7xl mx-auto px-4">
         <div className="space-y-8">
-          <div>
-            <h3 className="text-3xl font-normal text-foreground mb-6">Entre em contato</h3>
+          <div className="px-8">
+            <h3 className="text-3xl font-normal text-foreground mb-6">Fale Conosco</h3>
             <p className="text-gray-600 leading-relaxed mb-8">
-              Informe seu nome e e-mail e nossa equipe preparará um contato personalizado para você.
+              Para um contato personalizado, informe-nos seus dados:
             </p>
           </div>
           
