@@ -322,19 +322,7 @@ All colors MUST be HSL.
     border-right: 8px solid transparent;
     border-bottom: 24px solid #3481bd;
     position: relative;
-    overflow: hidden;
-  }
-
-  .up-arrow-refined::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -8px;
-    width: 16px;
-    height: 24px;
-    background: linear-gradient(to bottom, #60a5fa, #3481bd, #1e40af);
-    clip-path: polygon(50% 100%, 0% 0%, 100% 0%);
-    animation: gradientFlowUp 2.5s ease-in-out infinite;
+    animation: arrowFlowUp 3s ease-in-out infinite;
   }
 
   .down-arrow-refined {
@@ -344,48 +332,36 @@ All colors MUST be HSL.
     border-right: 8px solid transparent;
     border-top: 24px solid #3481bd;
     position: relative;
-    overflow: hidden;
+    animation: arrowFlowDown 3s ease-in-out infinite;
   }
 
-  .down-arrow-refined::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: -8px;
-    width: 16px;
-    height: 24px;
-    background: linear-gradient(to top, #60a5fa, #3481bd, #1e40af);
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    animation: gradientFlowDown 2.5s ease-in-out infinite;
-  }
-
-  @keyframes gradientFlowUp {
-    0% {
-      background: linear-gradient(to bottom, #1e40af 0%, #1e40af 30%, #3481bd 70%, #60a5fa 100%);
-      transform: translateY(8px);
+  @keyframes arrowFlowUp {
+    0% { 
+      border-bottom-color: #5fa8d3;
+      filter: brightness(0.9);
     }
-    50% {
-      background: linear-gradient(to bottom, #3481bd 0%, #60a5fa 30%, #1e40af 70%, #3481bd 100%);
-      transform: translateY(0px);
+    50% { 
+      border-bottom-color: #3481bd;
+      filter: brightness(1.1);
     }
-    100% {
-      background: linear-gradient(to bottom, #60a5fa 0%, #3481bd 30%, #1e40af 70%, #3481bd 100%);
-      transform: translateY(-4px);
+    100% { 
+      border-bottom-color: #2a6fa0;
+      filter: brightness(0.8);
     }
   }
 
-  @keyframes gradientFlowDown {
-    0% {
-      background: linear-gradient(to top, #1e40af 0%, #1e40af 30%, #3481bd 70%, #60a5fa 100%);
-      transform: translateY(-8px);
+  @keyframes arrowFlowDown {
+    0% { 
+      border-top-color: #5fa8d3;
+      filter: brightness(0.9);
     }
-    50% {
-      background: linear-gradient(to top, #3481bd 0%, #60a5fa 30%, #1e40af 70%, #3481bd 100%);
-      transform: translateY(0px);
+    50% { 
+      border-top-color: #3481bd;
+      filter: brightness(1.1);
     }
-    100% {
-      background: linear-gradient(to top, #60a5fa 0%, #3481bd 30%, #1e40af 70%, #3481bd 100%);
-      transform: translateY(4px);
+    100% { 
+      border-top-color: #2a6fa0;
+      filter: brightness(0.8);
     }
   }
 
