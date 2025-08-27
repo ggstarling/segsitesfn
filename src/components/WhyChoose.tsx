@@ -94,7 +94,7 @@ const WhyChoose = () => {
             ))}
           </div>
           
-          <div className="hidden lg:flex justify-center">
+          <div className="hidden lg:flex justify-center items-center">
             <div className="w-96 h-96 bg-gradient-to-br from-primary/10 to-primary/20 rounded-2xl relative overflow-hidden">
               <div className="absolute inset-0 flex items-center justify-center">
               {selectedItem === 0 && (
