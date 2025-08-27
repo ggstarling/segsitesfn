@@ -74,11 +74,11 @@ const ContactForm = () => {
             </div>
             
             {/* Brazil silhouette */}
-            <div className="hidden lg:flex items-center justify-end pr-4 pl-12">
+            <div className="hidden lg:flex items-start justify-end pr-4 pl-12 pt-8">
               <img 
                 src="/lovable-uploads/6e51012e-1cb4-4b89-88b6-2b16120e8f98.png"
                 alt="Brazil silhouette"
-                className="w-[392px] h-[392px] opacity-90"
+                className="w-[480px] h-[480px] opacity-90"
                 style={{ 
                   filter: 'brightness(0) saturate(100%) invert(21%) sepia(100%) saturate(2000%) hue-rotate(200deg) brightness(97%) contrast(85%) drop-shadow(0 0 0 4px #3481bd)'
                 }}
