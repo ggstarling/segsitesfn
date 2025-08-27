@@ -185,20 +185,67 @@ const WhyChoose = () => {
               
               {selectedItem === 1 && (
                 <div className="text-center space-y-4 animate-fade-in">
-                  <div className="relative">
-                    <div className="w-20 h-20 border-4 border-primary/30 rounded-full animate-spin mx-auto mb-4"></div>
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-12 h-12 bg-primary rounded-full animate-ping"></div>
-                    </div>
-                  </div>
-                  <div className="flex justify-center space-x-2 mb-4">
-                    <div className="w-2 h-8 bg-primary/60 rounded animate-pulse"></div>
-                    <div className="w-2 h-12 bg-primary/80 rounded animate-pulse" style={{animationDelay: '0.2s'}}></div>
-                    <div className="w-2 h-6 bg-primary/60 rounded animate-pulse" style={{animationDelay: '0.4s'}}></div>
-                    <div className="w-2 h-10 bg-primary rounded animate-pulse" style={{animationDelay: '0.6s'}}></div>
+                  <div className="relative w-72 h-32 mx-auto mb-6 overflow-hidden">
+                    {/* Bridge Structure */}
+                    <svg className="w-full h-full" viewBox="0 0 288 128">
+                      {/* Bridge Deck */}
+                      <rect x="20" y="90" width="248" height="8" fill="hsl(var(--primary)/0.3)" rx="2"/>
+                      
+                      {/* Bridge Supports */}
+                      <rect x="60" y="50" width="4" height="40" fill="hsl(var(--primary)/0.4)"/>
+                      <rect x="120" y="40" width="4" height="50" fill="hsl(var(--primary)/0.4)"/>
+                      <rect x="180" y="45" width="4" height="45" fill="hsl(var(--primary)/0.4)"/>
+                      <rect x="220" y="55" width="4" height="35" fill="hsl(var(--primary)/0.4)"/>
+                      
+                      {/* Cable Structure */}
+                      <path d="M62,50 L122,40 L182,45 L222,55" stroke="hsl(var(--primary)/0.3)" strokeWidth="2" fill="none"/>
+                      <path d="M62,60 L122,50 L182,55 L222,65" stroke="hsl(var(--primary)/0.3)" strokeWidth="1.5" fill="none"/>
+                      
+                      {/* Foundation Elements */}
+                      <rect x="58" y="95" width="8" height="20" fill="hsl(var(--primary)/0.2)" rx="1"/>
+                      <rect x="118" y="95" width="8" height="25" fill="hsl(var(--primary)/0.2)" rx="1"/>
+                      <rect x="178" y="95" width="8" height="22" fill="hsl(var(--primary)/0.2)" rx="1"/>
+                      <rect x="218" y="95" width="8" height="18" fill="hsl(var(--primary)/0.2)" rx="1"/>
+                      
+                      {/* Scanning Beam */}
+                      <defs>
+                        <linearGradient id="scanBeam" x1="0%" y1="0%" x2="100%" y2="0%">
+                          <stop offset="0%" stopColor="hsl(var(--primary)/0)" />
+                          <stop offset="45%" stopColor="hsl(var(--primary)/0.8)" />
+                          <stop offset="55%" stopColor="hsl(var(--primary)/1)" />
+                          <stop offset="100%" stopColor="hsl(var(--primary)/0)" />
+                        </linearGradient>
+                        <animateTransform
+                          attributeName="gradientTransform"
+                          type="translate"
+                          values="-100 0; 400 0; -100 0"
+                          dur="3s"
+                          repeatCount="indefinite"
+                        />
+                      </defs>
+                      <rect x="0" y="0" width="288" height="128" fill="url(#scanBeam)" opacity="0.6"/>
+                      
+                      {/* Revealed Structural Data */}
+                      <g className="opacity-0 animate-pulse" style={{animationDelay: '1s'}}>
+                        {/* Internal stress lines */}
+                        <path d="M70,85 L110,75" stroke="hsl(var(--primary)/0.6)" strokeWidth="1" strokeDasharray="2,2"/>
+                        <path d="M130,75 L170,80" stroke="hsl(var(--primary)/0.6)" strokeWidth="1" strokeDasharray="2,2"/>
+                        <path d="M190,80 L210,85" stroke="hsl(var(--primary)/0.6)" strokeWidth="1" strokeDasharray="2,2"/>
+                        
+                        {/* Measurement points */}
+                        <circle cx="80" cy="80" r="2" fill="hsl(var(--primary))" className="animate-pulse" style={{animationDelay: '1.5s'}}/>
+                        <circle cx="140" cy="70" r="2" fill="hsl(var(--primary))" className="animate-pulse" style={{animationDelay: '1.8s'}}/>
+                        <circle cx="200" cy="75" r="2" fill="hsl(var(--primary))" className="animate-pulse" style={{animationDelay: '2.1s'}}/>
+                        
+                        {/* Structural integrity indicators */}
+                        <rect x="75" y="78" width="10" height="2" fill="hsl(var(--primary)/0.7)" rx="1" className="animate-pulse" style={{animationDelay: '2.4s'}}/>
+                        <rect x="135" y="68" width="10" height="2" fill="hsl(var(--primary)/0.7)" rx="1" className="animate-pulse" style={{animationDelay: '2.7s'}}/>
+                        <rect x="195" y="73" width="10" height="2" fill="hsl(var(--primary)/0.7)" rx="1" className="animate-pulse" style={{animationDelay: '3s'}}/>
+                      </g>
+                    </svg>
                   </div>
                   <h4 className="text-xl font-semibold text-primary">
-                    Diagnóstico Baseado em Dados
+                    Diagnóstico Estrutural
                   </h4>
                 </div>
               )}
