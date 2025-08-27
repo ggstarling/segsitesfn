@@ -448,112 +448,74 @@ const WhyChoose = () => {
               
               {selectedItem === 2 && (
                 <div className="text-center space-y-4 animate-fade-in">
-                  {/* Predictive Analysis Graph */}
+                  {/* Simple Predictive Curve */}
                   <div className="relative mx-auto w-80 h-52 mb-4 flex items-center justify-center">
-                    {/* Graph Container */}
                     <div className="w-72 h-40 relative">
-                      {/* Graph Background */}
-                      <div className="w-full h-full rounded-lg relative shadow-lg" style={{backgroundColor: '#f8fafc', border: '2px solid #3481bd'}}>
+                      
+                      {/* Clean SVG Chart */}
+                      <svg className="w-full h-full" viewBox="0 0 300 160" fill="none">
                         
-                        {/* Graph Header */}
-                        <div className="absolute top-0 left-0 right-0 h-6 rounded-t-lg flex items-center px-3" style={{backgroundColor: '#3481bd'}}>
-                          <div className="w-12 h-1.5 rounded bg-white/30"></div>
-                          <div className="ml-auto flex space-x-1">
-                            <div className="w-1 h-1 rounded-full bg-white/50"></div>
-                            <div className="w-1 h-1 rounded-full bg-white/50"></div>
-                          </div>
-                        </div>
-
-                        {/* Graph Content Area */}
-                        <div className="absolute top-6 left-0 right-0 bottom-0 p-4">
-                          {/* Grid Background */}
-                          <div className="w-full h-full relative">
-                            <svg className="w-full h-full" viewBox="0 0 280 120" fill="none">
-                              {/* Grid Lines */}
-                              <defs>
-                                <pattern id="predGrid" width="20" height="15" patternUnits="userSpaceOnUse">
-                                  <path d="M 20 0 L 0 0 0 15" fill="none" stroke="#3481bd" strokeWidth="0.3" opacity="0.2"/>
-                                </pattern>
-                              </defs>
-                              <rect width="280" height="120" fill="url(#predGrid)"/>
-                              
-                              {/* Historical Data Line (Solid) */}
-                              <path 
-                                d="M20,90 L50,75 L80,65 L110,50 L140,45"
-                                stroke="#3481bd"
-                                strokeWidth="3"
-                                fill="none"
-                                style={{
-                                  animation: 'lineWave1 3s ease-in-out infinite'
-                                }}
-                              />
-                              
-                              {/* Data Points on Historical Line */}
-                              <circle cx="20" cy="90" r="2" fill="#3481bd" style={{animation: 'pointPulse1 2s ease-in-out infinite'}}/>
-                              <circle cx="50" cy="75" r="2" fill="#3481bd" style={{animation: 'pointPulse2 2.5s ease-in-out infinite'}}/>
-                              <circle cx="80" cy="65" r="2" fill="#3481bd" style={{animation: 'pointPulse3 2.2s ease-in-out infinite'}}/>
-                              <circle cx="110" cy="50" r="2" fill="#3481bd" style={{animation: 'pointPulse1 2.8s ease-in-out infinite'}}/>
-                              <circle cx="140" cy="45" r="2" fill="#3481bd" style={{animation: 'pointPulse2 2.3s ease-in-out infinite'}}/>
-                              
-                              {/* Future Prediction Line (Dashed) */}
-                              <path 
-                                d="M140,45 L170,35 L200,30 L230,25 L260,20"
-                                stroke="#3481bd"
-                                strokeWidth="2.5"
-                                fill="none"
-                                strokeDasharray="4,4"
-                                opacity="0.8"
-                                style={{
-                                  animation: 'lineWave2 4s ease-in-out infinite',
-                                  strokeDashoffset: '0'
-                                }}
-                              />
-                              
-                              {/* Moving Alert Icon on Prediction Line */}
-                              <g style={{animation: 'moveAlongPrediction 4s ease-in-out infinite'}}>
-                                <circle cx="200" cy="30" r="3" fill="#3481bd" opacity="0.3"/>
-                                <circle cx="200" cy="30" r="1.5" fill="#3481bd"/>
-                                <polygon points="200,25 202,27 198,27" fill="#3481bd" opacity="0.8"/>
-                              </g>
-                              
-                              {/* Confidence Band (shaded area) */}
-                              <path 
-                                d="M140,45 L170,32 L200,27 L230,22 L260,17 L260,23 L230,28 L200,33 L170,38 L140,48 Z"
-                                fill="#3481bd"
-                                opacity="0.1"
-                                style={{animation: 'matrixPulse1 3s ease-in-out infinite alternate'}}
-                              />
-                              
-                              {/* Axis Lines */}
-                              <line x1="20" y1="100" x2="260" y2="100" stroke="#3481bd" strokeWidth="1" opacity="0.3"/>
-                              <line x1="20" y1="20" x2="20" y2="100" stroke="#3481bd" strokeWidth="1" opacity="0.3"/>
-                              
-                              {/* Time Divider (Present/Future) */}
-                              <line x1="140" y1="20" x2="140" y2="100" stroke="#3481bd" strokeWidth="1" strokeDasharray="2,2" opacity="0.4"/>
-                              
-                              {/* Labels */}
-                              <text x="80" y="115" fill="#3481bd" fontSize="8" opacity="0.6" textAnchor="middle">Histórico</text>
-                              <text x="200" y="115" fill="#3481bd" fontSize="8" opacity="0.6" textAnchor="middle">Predição</text>
-                            </svg>
-                          </div>
-                        </div>
-
-                        {/* Alert Icon Badge */}
-                        <div className="absolute -top-1 -right-1 w-8 h-8 rounded-full flex items-center justify-center shadow-lg" style={{backgroundColor: '#3481bd'}}>
-                          <div 
-                            className="w-6 h-6 rounded-full flex items-center justify-center bg-white"
-                            style={{animation: 'pointPulse2 2s ease-in-out infinite'}}
-                          >
-                            <div className="w-2 h-2 rounded-full" style={{backgroundColor: '#3481bd'}}></div>
-                          </div>
-                        </div>
-
-                        {/* Graph Shadow */}
-                        <div 
-                          className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-64 h-2 rounded-full opacity-20"
-                          style={{backgroundColor: '#3481bd'}}
-                        ></div>
-                      </div>
+                        {/* Historical Data Line (Solid) */}
+                        <path 
+                          d="M40,120 Q80,100 120,80 Q160,60 200,50"
+                          stroke="#3481bd"
+                          strokeWidth="4"
+                          fill="none"
+                          style={{
+                            animation: 'lineWave1 3s ease-in-out infinite'
+                          }}
+                        />
+                        
+                        {/* Prediction Curve (Dashed) */}
+                        <path 
+                          d="M200,50 Q230,35 260,25"
+                          stroke="#3481bd"
+                          strokeWidth="3"
+                          fill="none"
+                          strokeDasharray="8,6"
+                          opacity="0.8"
+                          style={{
+                            animation: 'lineWave2 4s ease-in-out infinite',
+                            strokeDashoffset: '0'
+                          }}
+                        />
+                        
+                        {/* Data Points on Historical Line */}
+                        <circle cx="80" cy="100" r="3" fill="#3481bd" style={{animation: 'pointPulse1 2s ease-in-out infinite'}}/>
+                        <circle cx="120" cy="80" r="3" fill="#3481bd" style={{animation: 'pointPulse2 2.5s ease-in-out infinite'}}/>
+                        <circle cx="160" cy="60" r="3" fill="#3481bd" style={{animation: 'pointPulse3 2.2s ease-in-out infinite'}}/>
+                        <circle cx="200" cy="50" r="3" fill="#3481bd" style={{animation: 'pointPulse1 2.8s ease-in-out infinite'}}/>
+                        
+                        {/* Moving Prediction Indicator */}
+                        <g style={{animation: 'moveAlongPrediction 4s ease-in-out infinite'}}>
+                          <circle cx="230" cy="35" r="4" fill="#3481bd" opacity="0.4"/>
+                          <circle cx="230" cy="35" r="2" fill="#3481bd"/>
+                          <polygon points="230,30 233,32 227,32" fill="#3481bd" opacity="0.9"/>
+                        </g>
+                        
+                        {/* Subtle Confidence Area */}
+                        <path 
+                          d="M200,50 Q230,32 260,22 Q230,38 200,55 Z"
+                          fill="#3481bd"
+                          opacity="0.15"
+                          style={{animation: 'matrixPulse1 3s ease-in-out infinite alternate'}}
+                        />
+                        
+                        {/* Timeline Divider */}
+                        <line x1="200" y1="30" x2="200" y2="130" stroke="#3481bd" strokeWidth="1" strokeDasharray="3,3" opacity="0.3"/>
+                        
+                        {/* Arrow pointing to future */}
+                        <path 
+                          d="M250,35 L265,35 M260,30 L265,35 L260,40"
+                          stroke="#3481bd"
+                          strokeWidth="2"
+                          fill="none"
+                          opacity="0.7"
+                          style={{animation: 'pointPulse2 2.5s ease-in-out infinite'}}
+                        />
+                        
+                      </svg>
+                      
                     </div>
                   </div>
                 </div>
