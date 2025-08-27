@@ -9,19 +9,19 @@ const WhyChoose = () => {
   const items = [
     {
       title: "Dashboards automáticos e intuitivos",
-      description: "Utilizamos sensores de última geração e algoritmos inteligentes para detectar problemas estruturais antes que se tornem críticos, garantindo máxima segurança e eficiência."
+      description: "Visualize informações claras e atualizadas em tempo real, apoiando decisões rápidas e assertivas."
     },
     {
       title: "Diagnósticos estruturais confiáveis",
-      description: "Nossa plataforma oferece análises detalhadas e relatórios precisos, permitindo decisões informadas baseadas em dados reais de performance estrutural."
+      description: "Conte com relatórios baseados em dados reais, com análises precisas e tecnicamente embasadas."
     },
     {
       title: "Análise preditiva, não reativa",
-      description: "Interface desenvolvida para ser facilmente utilizada por engenheiros e técnicos, com visualizações claras e dashboards intuitivos para monitoramento em tempo real."
+      description: "Antecipe falhas antes que elas ocorram e reduza custos com uma gestão orientada por previsões."
     },
     {
       title: "Monitoramento sem interrupções do tráfego",
-      description: "Nossa equipe de engenheiros especializados oferece suporte completo em todas as etapas do projeto, desde a instalação até a interpretação dos dados."
+      description: "Garanta o monitoramento sem interrupções do tráfego com tecnologia não invasiva, mantendo o fluxo contínuo sem paradas ou bloqueios."
     }
   ];
 
