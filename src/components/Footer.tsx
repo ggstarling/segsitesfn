@@ -16,7 +16,7 @@ const Footer = () => {
 
           {/* Company Info */}
           <div className="text-white mb-6 text-center">
-            <p className="mb-1">Safena Engenharia</p>
+            <p className="mb-4">Safena Engenharia</p>
             <p className="text-sm">CNPJ: 60.871.697/0001-06 | contato.safena@gmail.com | (48) 98839-7540</p>
           </div>
 

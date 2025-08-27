@@ -31,7 +31,7 @@ const Services = () => {
   return (
     <section id="services" className="py-16 bg-gradient-to-b from-gray-300 via-gray-200 to-gray-100">
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-2xl text-center mb-12">Serviços</h2>
+        <h2 className="text-2xl text-center mb-12">Nossos Serviços</h2>
 
         {/* Service Cards */}
         <div className="grid md:grid-cols-3 gap-8 mb-12">
