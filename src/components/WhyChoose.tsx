@@ -292,10 +292,10 @@ const WhyChoose = () => {
                     {/* Document Container */}
                     <div className="w-64 h-44 relative">
                       {/* Main Document Body */}
-                      <div className="w-full h-full rounded-lg relative shadow-lg" style={{backgroundColor: '#f8fafc', border: '2px solid #3481bd'}}>
+                      <div className="w-full h-full rounded-lg relative shadow-lg" style={{backgroundColor: '#f8fafc', border: '2px solid #64748b'}}>
                         
                         {/* Document Header */}
-                        <div className="absolute top-0 left-0 right-0 h-8 rounded-t-lg" style={{backgroundColor: '#3481bd'}}>
+                        <div className="absolute top-0 left-0 right-0 h-8 rounded-t-lg" style={{backgroundColor: '#64748b'}}>
                           {/* Header Icons */}
                           <div className="flex items-center justify-between h-full px-3">
                             <div className="flex space-x-1">
@@ -309,12 +309,12 @@ const WhyChoose = () => {
 
                         {/* Document Content Area */}
                         <div className="absolute top-8 left-0 right-0 bottom-0 p-4">
-                          {/* Content Lines with Animation */}
-                          <div className="space-y-2">
+                          {/* Content Lines with Animation - moved down by 4% */}
+                          <div className="space-y-2" style={{marginTop: '8%'}}>
                             <div 
                               className="h-1.5 rounded transition-all duration-1000"
                               style={{
-                                backgroundColor: '#3481bd',
+                                backgroundColor: '#94a3b8',
                                 width: '80%',
                                 animation: 'barPulse1 2s ease-in-out infinite alternate'
                               }}
@@ -322,7 +322,7 @@ const WhyChoose = () => {
                             <div 
                               className="h-1.5 rounded transition-all duration-1200"
                               style={{
-                                backgroundColor: '#3481bd',
+                                backgroundColor: '#475569',
                                 width: '95%',
                                 animation: 'barPulse2 2.5s ease-in-out infinite alternate'
                               }}
@@ -330,7 +330,7 @@ const WhyChoose = () => {
                             <div 
                               className="h-1.5 rounded transition-all duration-900"
                               style={{
-                                backgroundColor: '#3481bd',
+                                backgroundColor: '#64748b',
                                 width: '70%',
                                 animation: 'barPulse3 1.8s ease-in-out infinite alternate'
                               }}
@@ -338,58 +338,14 @@ const WhyChoose = () => {
                             <div 
                               className="h-1.5 rounded transition-all duration-1100"
                               style={{
-                                backgroundColor: '#3481bd',
+                                backgroundColor: '#94a3b8',
                                 width: '85%',
                                 animation: 'barPulse4 2.2s ease-in-out infinite alternate'
                               }}
                             ></div>
                           </div>
 
-                          {/* Mini Chart Section */}
-                          <div className="mt-4 p-2 rounded" style={{backgroundColor: 'rgba(52, 129, 189, 0.1)'}}>
-                            <div className="flex items-end justify-center space-x-1 h-8">
-                              <div 
-                                className="w-1.5 rounded-t transition-all duration-1000"
-                                style={{
-                                  backgroundColor: '#3481bd',
-                                  height: '60%',
-                                  animation: 'barPulse1 2s ease-in-out infinite alternate'
-                                }}
-                              ></div>
-                              <div 
-                                className="w-1.5 rounded-t transition-all duration-1200"
-                                style={{
-                                  backgroundColor: '#3481bd',
-                                  height: '40%',
-                                  animation: 'barPulse2 2.5s ease-in-out infinite alternate'
-                                }}
-                              ></div>
-                              <div 
-                                className="w-1.5 rounded-t transition-all duration-900"
-                                style={{
-                                  backgroundColor: '#3481bd',
-                                  height: '80%',
-                                  animation: 'barPulse3 1.8s ease-in-out infinite alternate'
-                                }}
-                              ></div>
-                              <div 
-                                className="w-1.5 rounded-t transition-all duration-1100"
-                                style={{
-                                  backgroundColor: '#3481bd',
-                                  height: '50%',
-                                  animation: 'barPulse4 2.2s ease-in-out infinite alternate'
-                                }}
-                              ></div>
-                              <div 
-                                className="w-1.5 rounded-t transition-all duration-1000"
-                                style={{
-                                  backgroundColor: '#3481bd',
-                                  height: '70%',
-                                  animation: 'barPulse5 1.9s ease-in-out infinite alternate'
-                                }}
-                              ></div>
-                            </div>
-                          </div>
+                          {/* Graph removed - empty space */}
 
                           {/* Text Lines Below Chart */}
                           <div className="mt-3 space-y-1.5">
