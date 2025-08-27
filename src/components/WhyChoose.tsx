@@ -448,19 +448,25 @@ const WhyChoose = () => {
               
               {selectedItem === 2 && (
                 <div className="text-center space-y-4 animate-fade-in">
-                  {/* Static Predictive Analysis Image */}
+                  {/* Animated Predictive Eye with Bar Chart */}
                   <div className="relative mx-auto w-80 h-52 mb-4 flex items-center justify-center">
-                    <div className="animated-logo w-full h-full flex items-center justify-center p-6">
-                      <div className="predictive-phrase-container">
-                        <img 
-                          src="/lovable-uploads/fe75523c-a60a-47e2-90a6-45fa644ae348.png" 
-                          alt="Predictive Analysis - Person with telescope and charts"
-                          style={{ 
-                            width: '200%', 
-                            height: '200%', 
-                            objectFit: 'contain' 
-                          }}
-                        />
+                    <div className="predictive-eye">
+                      {/* Eye Outline */}
+                      <div className="eye-shape">
+                        {/* Eye Border */}
+                        <div className="eye-border"></div>
+                        
+                        {/* Pupil Area */}
+                        <div className="pupil-area">
+                          {/* Animated Bar Chart Inside Pupil */}
+                          <div className="chart-container">
+                            <div className="chart-bar" style={{animationDelay: '0s'}}></div>
+                            <div className="chart-bar" style={{animationDelay: '0.2s'}}></div>
+                            <div className="chart-bar" style={{animationDelay: '0.4s'}}></div>
+                            <div className="chart-bar" style={{animationDelay: '0.6s'}}></div>
+                            <div className="chart-bar" style={{animationDelay: '0.8s'}}></div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
