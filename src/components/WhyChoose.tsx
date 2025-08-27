@@ -448,99 +448,94 @@ const WhyChoose = () => {
               
               {selectedItem === 2 && (
                 <div className="text-center space-y-4 animate-fade-in">
-                  {/* Predictive Analysis - Person with Telescope and Chart */}
+                  {/* Static Predictive Analysis - Person with Telescope and Chart */}
                   <div className="relative mx-auto w-80 h-52 mb-4 flex items-center justify-center">
                     <div className="w-72 h-40 relative">
                       
-                      {/* Main SVG Container */}
+                      {/* Static SVG Container */}
                       <svg className="w-full h-full" viewBox="0 0 300 160" fill="none">
                         
                         {/* Person Figure */}
-                        <g transform="translate(40, 40)">
+                        <g transform="translate(30, 30)">
                           {/* Head */}
                           <circle 
-                            cx="15" 
-                            cy="15" 
-                            r="12" 
+                            cx="20" 
+                            cy="20" 
+                            r="15" 
                             stroke="#3481bd" 
-                            strokeWidth="3" 
+                            strokeWidth="4" 
                             fill="none"
-                            style={{animation: 'pointPulse1 3s ease-in-out infinite'}}
                           />
                           
                           {/* Body */}
                           <path 
-                            d="M15,27 L15,65 M5,45 Q15,40 25,45 M15,65 L5,85 M15,65 L25,85"
+                            d="M20,35 L20,80 M8,55 Q20,50 32,55 M20,80 L8,105 M20,80 L32,105"
                             stroke="#3481bd"
-                            strokeWidth="3"
+                            strokeWidth="4"
                             strokeLinecap="round"
                             strokeLinejoin="round"
-                            style={{animation: 'lineWave1 4s ease-in-out infinite'}}
                           />
                           
                           {/* Telescope */}
-                          <g transform="translate(25, 35)">
+                          <g transform="translate(32, 45)">
                             {/* Telescope body */}
                             <rect 
                               x="0" 
-                              y="8" 
-                              width="25" 
-                              height="4" 
-                              rx="2" 
+                              y="10" 
+                              width="30" 
+                              height="6" 
+                              rx="3" 
                               fill="#3481bd"
-                              style={{animation: 'matrixPulse1 2.5s ease-in-out infinite alternate'}}
                             />
                             {/* Telescope lens */}
                             <circle 
-                              cx="27" 
-                              cy="10" 
-                              r="3" 
+                              cx="33" 
+                              cy="13" 
+                              r="4" 
                               stroke="#3481bd" 
-                              strokeWidth="2" 
+                              strokeWidth="3" 
                               fill="none"
-                              style={{animation: 'pointPulse2 2s ease-in-out infinite'}}
                             />
                             {/* Telescope eyepiece */}
                             <rect 
-                              x="-3" 
-                              y="9" 
-                              width="3" 
-                              height="2" 
+                              x="-4" 
+                              y="11" 
+                              width="4" 
+                              height="4" 
                               fill="#3481bd"
                             />
                           </g>
                         </g>
                         
                         {/* Bar Chart */}
-                        <g transform="translate(140, 70)">
+                        <g transform="translate(120, 60)">
                           {/* Chart bars */}
                           <rect 
-                            x="0" y="50" width="12" height="20" 
-                            fill="#3481bd" 
-                            style={{animation: 'barPulse1 2s ease-in-out infinite alternate'}}
+                            x="0" y="60" width="15" height="25" 
+                            rx="2"
+                            fill="#3481bd"
                           />
                           <rect 
-                            x="20" y="40" width="12" height="30" 
-                            fill="#3481bd" 
-                            style={{animation: 'barPulse2 2.3s ease-in-out infinite alternate'}}
+                            x="25" y="45" width="15" height="40" 
+                            rx="2"
+                            fill="#3481bd"
                           />
                           <rect 
-                            x="40" y="25" width="12" height="45" 
-                            fill="#3481bd" 
-                            style={{animation: 'barPulse3 1.8s ease-in-out infinite alternate'}}
+                            x="50" y="25" width="15" height="60" 
+                            rx="2"
+                            fill="#3481bd"
                           />
                           <rect 
-                            x="60" y="15" width="12" height="55" 
-                            fill="#3481bd" 
-                            style={{animation: 'barPulse4 2.1s ease-in-out infinite alternate'}}
+                            x="75" y="10" width="15" height="75" 
+                            rx="2"
+                            fill="#3481bd"
                           />
                           
                           {/* Chart base line */}
                           <line 
-                            x1="-5" y1="70" x2="80" y2="70" 
-                            stroke="#3481bd" 
+                            x1="-5" y1="85" x2="100" y2="85" 
+                            stroke="#6b7280" 
                             strokeWidth="2"
-                            opacity="0.5"
                           />
                         </g>
                         
@@ -550,50 +545,31 @@ const WhyChoose = () => {
                           <circle 
                             cx="0" 
                             cy="0" 
-                            r="25" 
+                            r="30" 
                             stroke="#3481bd" 
-                            strokeWidth="3" 
+                            strokeWidth="4" 
                             fill="none"
-                            style={{animation: 'circularProgress 3s ease-in-out infinite'}}
                           />
                           
                           {/* Dollar sign */}
-                          <g style={{animation: 'pointPulse1 2.5s ease-in-out infinite'}}>
+                          <g>
                             {/* Vertical line */}
-                            <line x1="0" y1="-15" x2="0" y2="15" stroke="#3481bd" strokeWidth="3"/>
+                            <line x1="0" y1="-18" x2="0" y2="18" stroke="#3481bd" strokeWidth="4"/>
                             {/* Top curve */}
                             <path 
-                              d="M-8,-8 Q0,-15 8,-8 Q0,-4 -8,-8" 
+                              d="M-10,-10 Q0,-18 10,-10 Q0,-5 -10,-10" 
                               stroke="#3481bd" 
-                              strokeWidth="2" 
+                              strokeWidth="3" 
                               fill="none"
                             />
                             {/* Bottom curve */}
                             <path 
-                              d="M8,8 Q0,15 -8,8 Q0,4 8,8" 
+                              d="M10,10 Q0,18 -10,10 Q0,5 10,10" 
                               stroke="#3481bd" 
-                              strokeWidth="2" 
+                              strokeWidth="3" 
                               fill="none"
                             />
                           </g>
-                        </g>
-                        
-                        {/* Connecting Elements - Vision Lines */}
-                        <g opacity="0.3">
-                          <path 
-                            d="M95,75 Q120,70 140,75"
-                            stroke="#3481bd"
-                            strokeWidth="1"
-                            strokeDasharray="3,3"
-                            style={{animation: 'lineWave2 4s ease-in-out infinite'}}
-                          />
-                          <path 
-                            d="M220,110 Q230,105 240,110"
-                            stroke="#3481bd"
-                            strokeWidth="1"
-                            strokeDasharray="3,3"
-                            style={{animation: 'lineWave1 3.5s ease-in-out infinite'}}
-                          />
                         </g>
                         
                       </svg>
