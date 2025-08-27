@@ -7,7 +7,7 @@ import { Mail, Phone, MapPin } from "lucide-react";
 
 const ContactForm = () => {
   return (
-    <section id="contact" className="pt-16 pb-8 bg-gradient-to-b from-gray-300 via-gray-200 to-gray-100">
+    <section id="contact" className="pt-16 pb-4 bg-gradient-to-b from-gray-300 via-gray-200 to-gray-100">
       <div className="max-w-7xl mx-auto px-4">
         <div className="space-y-8">
           <div className="px-8">
@@ -74,7 +74,7 @@ const ContactForm = () => {
             </div>
             
             {/* Brazil silhouette */}
-            <div className="hidden lg:flex items-end justify-end pr-4 pl-12" style={{ marginBottom: '0px' }}>
+            <div className="hidden lg:flex items-end justify-end pr-4 pl-12" style={{ marginBottom: '48px' }}>
               <img 
                 src="/lovable-uploads/442e7f39-03b8-4a7b-8989-e8cc94dbf801.png"
                 alt="Brazil silhouette"
