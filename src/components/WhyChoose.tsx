@@ -451,12 +451,17 @@ const WhyChoose = () => {
                   {/* Static Predictive Analysis Image */}
                   <div className="relative mx-auto w-80 h-52 mb-4 flex items-center justify-center">
                     <div className="animated-logo w-full h-full flex items-center justify-center p-6">
-                      <img 
-                        src="/lovable-uploads/fe75523c-a60a-47e2-90a6-45fa644ae348.png" 
-                        alt="Predictive Analysis - Person with telescope and charts"
-                        className="w-full h-full object-contain"
-                        style={{ objectFit: 'contain' }}
-                      />
+                      <div className="predictive-phrase-container">
+                        <img 
+                          src="/lovable-uploads/fe75523c-a60a-47e2-90a6-45fa644ae348.png" 
+                          alt="Predictive Analysis - Person with telescope and charts"
+                          style={{ 
+                            width: '200%', 
+                            height: '200%', 
+                            objectFit: 'contain' 
+                          }}
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>

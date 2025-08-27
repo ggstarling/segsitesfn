@@ -92,8 +92,17 @@ All colors MUST be HSL.
     100% {
       opacity: 1;
       transform: translateY(0);
-    }
   }
+}
+
+.predictive-phrase-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
   
   .animate-scroll-infinite {
     animation: scroll-infinite 20s linear infinite;
