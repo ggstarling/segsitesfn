@@ -288,9 +288,9 @@ const WhyChoose = () => {
               {selectedItem === 1 && (
                 <div className="text-center space-y-4 animate-fade-in">
                   {/* Stylized Report Document */}
-                  <div className="relative mx-auto w-80 h-52 mb-4 flex items-center justify-center">
+                  <div className="relative mx-auto w-64 h-40 mb-4 flex items-center justify-center">
                     {/* Document Container */}
-                    <div className="w-64 h-44 relative">
+                    <div className="w-52 h-36 relative">
                       {/* Main Document Body */}
                       <div className="w-full h-full rounded-lg relative shadow-lg" style={{backgroundColor: '#f8fafc', border: '2px solid #64748b'}}>
                         
