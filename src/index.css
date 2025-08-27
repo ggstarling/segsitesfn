@@ -231,6 +231,12 @@ All colors MUST be HSL.
     100% { opacity: 0.8; }
   }
 
+  @keyframes moveAlongPrediction {
+    0% { transform: translateX(-40px); }
+    50% { transform: translateX(20px); }
+    100% { transform: translateX(-40px); }
+  }
+
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
