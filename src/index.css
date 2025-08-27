@@ -246,27 +246,29 @@ All colors MUST be HSL.
     100% { transform: translateX(-40px); }
   }
 
-  /* Traffic Road Animation Styles */
-  .traffic-road-container {
-    width: 200px;
-    height: 120px;
+  /* Refined Traffic Road Animation Styles */
+  .traffic-road-refined {
+    width: 180px;
+    height: 280px;
     position: relative;
-    perspective: 800px;
-  }
-
-  .road-surface {
-    width: 100%;
-    height: 80px;
-    background: linear-gradient(to bottom, #2a2a2a 0%, #1a1a1a 100%);
-    border-radius: 8px;
-    position: relative;
-    box-shadow: 0 4px 8px rgba(52, 129, 189, 0.2);
-    transform: rotateX(10deg);
     display: flex;
     align-items: center;
+    justify-content: center;
   }
 
-  .road-lane {
+  .road-straight {
+    width: 100px;
+    height: 240px;
+    background: #5a5a5a;
+    border-radius: 4px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    border: 2px solid #666666;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .lane-straight {
     flex: 1;
     height: 100%;
     position: relative;
@@ -275,148 +277,92 @@ All colors MUST be HSL.
     justify-content: center;
   }
 
-  .left-lane {
+  .left-lane-straight {
     background: rgba(52, 129, 189, 0.15);
-    border-radius: 8px 0 0 8px;
+    border-radius: 2px 0 0 2px;
   }
 
-  .right-lane {
+  .right-lane-straight {
     background: rgba(52, 129, 189, 0.07);
-    border-radius: 0 8px 8px 0;
+    border-radius: 0 2px 2px 0;
   }
 
-  .center-divider {
-    width: 3px;
+  .center-divider-straight {
+    width: 2px;
     height: 100%;
+    background: #666666;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    padding: 8px 0;
+    padding: 12px 0;
   }
 
-  .divider-line {
+  .divider-dash {
     width: 2px;
-    height: 12px;
+    height: 20px;
     background: #cccccc;
     border-radius: 1px;
-    animation: dividerPulse 2s ease-in-out infinite alternate;
+    margin: 4px 0;
   }
 
-  .lane-marking {
-    position: absolute;
-    top: 8px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60%;
-    height: 1px;
-    background: #cccccc;
-    opacity: 0.6;
-  }
-
-  .traffic-arrow {
+  .solid-arrow {
     position: relative;
-    width: 24px;
-    height: 32px;
+    width: 16px;
+    height: 24px;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
   }
 
-  .arrow-shaft {
-    width: 3px;
-    height: 20px;
-    background: #3481bd;
-    border-radius: 1.5px;
-    position: relative;
-  }
-
-  .arrow-head {
+  .up-arrow-refined {
     width: 0;
     height: 0;
-    border-style: solid;
-    position: absolute;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 24px solid #3481bd;
+    position: relative;
+    animation: arrowFlowUp 3s ease-in-out infinite;
   }
 
-  .up-arrow .arrow-head {
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-bottom: 8px solid #3481bd;
-    top: -4px;
-    animation: arrowPulseUp 2s ease-in-out infinite;
+  .down-arrow-refined {
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 24px solid #3481bd;
+    position: relative;
+    animation: arrowFlowDown 3s ease-in-out infinite;
   }
 
-  .down-arrow {
-    transform: rotate(180deg);
+  @keyframes arrowFlowUp {
+    0% { 
+      border-bottom-color: #5fa8d3;
+      filter: brightness(0.9);
+    }
+    50% { 
+      border-bottom-color: #3481bd;
+      filter: brightness(1.1);
+    }
+    100% { 
+      border-bottom-color: #2a6fa0;
+      filter: brightness(0.8);
+    }
   }
 
-  .down-arrow .arrow-head {
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-bottom: 8px solid #3481bd;
-    top: -4px;
-    animation: arrowPulseDown 2s ease-in-out infinite;
-  }
-
-  .traffic-flow-left {
-    position: absolute;
-    left: 25%;
-    top: 20%;
-    height: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-  }
-
-  .traffic-flow-right {
-    position: absolute;
-    right: 25%;
-    top: 20%;
-    height: 60px;
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: space-around;
-  }
-
-  .flow-dot {
-    width: 4px;
-    height: 4px;
-    background: #3481bd;
-    border-radius: 50%;
-    opacity: 0;
-    animation: flowUp 2s ease-in-out infinite;
-  }
-
-  .traffic-flow-right .flow-dot {
-    animation: flowDown 2s ease-in-out infinite;
-  }
-
-  @keyframes dividerPulse {
-    0% { opacity: 0.6; transform: scaleY(1); }
-    100% { opacity: 1; transform: scaleY(1.2); }
-  }
-
-  @keyframes arrowPulseUp {
-    0%, 100% { opacity: 0.7; transform: translateY(0) scale(1); }
-    50% { opacity: 1; transform: translateY(-2px) scale(1.1); }
-  }
-
-  @keyframes arrowPulseDown {
-    0%, 100% { opacity: 0.7; transform: translateY(0) scale(1); }
-    50% { opacity: 1; transform: translateY(2px) scale(1.1); }
-  }
-
-  @keyframes flowUp {
-    0% { opacity: 0; transform: translateY(20px); }
-    50% { opacity: 1; transform: translateY(-10px); }
-    100% { opacity: 0; transform: translateY(-40px); }
-  }
-
-  @keyframes flowDown {
-    0% { opacity: 0; transform: translateY(-20px); }
-    50% { opacity: 1; transform: translateY(10px); }
-    100% { opacity: 0; transform: translateY(40px); }
+  @keyframes arrowFlowDown {
+    0% { 
+      border-top-color: #5fa8d3;
+      filter: brightness(0.9);
+    }
+    50% { 
+      border-top-color: #3481bd;
+      filter: brightness(1.1);
+    }
+    100% { 
+      border-top-color: #2a6fa0;
+      filter: brightness(0.8);
+    }
   }
 
   .dark {

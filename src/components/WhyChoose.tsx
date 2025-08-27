@@ -469,48 +469,30 @@ const WhyChoose = () => {
               
               {selectedItem === 3 && (
                 <div className="text-center space-y-4 animate-fade-in">
-                  {/* Animated Traffic Road */}
+                  {/* Refined Traffic Road */}
                   <div className="relative mx-auto w-80 h-52 mb-4 flex items-center justify-center">
-                    <div className="traffic-road-container">
-                      {/* Road Base */}
-                      <div className="road-surface">
+                    <div className="traffic-road-refined">
+                      {/* Tall Straight Road */}
+                      <div className="road-straight">
                         {/* Left Lane */}
-                        <div className="road-lane left-lane">
-                          <div className="lane-marking"></div>
-                          <div className="traffic-arrow up-arrow">
-                            <div className="arrow-shaft"></div>
-                            <div className="arrow-head"></div>
-                          </div>
+                        <div className="lane-straight left-lane-straight">
+                          <div className="solid-arrow up-arrow-refined"></div>
                         </div>
                         
                         {/* Center Divider */}
-                        <div className="center-divider">
-                          <div className="divider-line"></div>
-                          <div className="divider-line"></div>
-                          <div className="divider-line"></div>
+                        <div className="center-divider-straight">
+                          <div className="divider-dash"></div>
+                          <div className="divider-dash"></div>
+                          <div className="divider-dash"></div>
+                          <div className="divider-dash"></div>
+                          <div className="divider-dash"></div>
+                          <div className="divider-dash"></div>
                         </div>
                         
                         {/* Right Lane */}
-                        <div className="road-lane right-lane">
-                          <div className="lane-marking"></div>
-                          <div className="traffic-arrow down-arrow">
-                            <div className="arrow-shaft"></div>
-                            <div className="arrow-head"></div>
-                          </div>
+                        <div className="lane-straight right-lane-straight">
+                          <div className="solid-arrow down-arrow-refined"></div>
                         </div>
-                      </div>
-                      
-                      {/* Flowing Traffic Indicators */}
-                      <div className="traffic-flow-left">
-                        <div className="flow-dot" style={{animationDelay: '0s'}}></div>
-                        <div className="flow-dot" style={{animationDelay: '0.5s'}}></div>
-                        <div className="flow-dot" style={{animationDelay: '1s'}}></div>
-                      </div>
-                      
-                      <div className="traffic-flow-right">
-                        <div className="flow-dot" style={{animationDelay: '0.3s'}}></div>
-                        <div className="flow-dot" style={{animationDelay: '0.8s'}}></div>
-                        <div className="flow-dot" style={{animationDelay: '1.3s'}}></div>
                       </div>
                     </div>
                   </div>
