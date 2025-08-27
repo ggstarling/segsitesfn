@@ -78,8 +78,10 @@ const ContactForm = () => {
               <img 
                 src="/lovable-uploads/442e7f39-03b8-4a7b-8989-e8cc94dbf801.png"
                 alt="Brazil silhouette"
-                className="w-80 h-80 opacity-80"
-                style={{ filter: 'brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%)' }}
+                className="w-[560px] h-[560px] opacity-90"
+                style={{ 
+                  filter: 'brightness(0) saturate(100%) invert(21%) sepia(100%) saturate(2000%) hue-rotate(200deg) brightness(97%) contrast(85%) drop-shadow(0 0 0 4px #3481bd)'
+                }}
               />
             </div>
           </div>
