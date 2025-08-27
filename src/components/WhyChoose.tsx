@@ -185,17 +185,51 @@ const WhyChoose = () => {
               
               {selectedItem === 1 && (
                 <div className="text-center space-y-4 animate-fade-in">
-                  <div className="relative">
-                    <div className="w-20 h-20 border-4 border-primary/30 rounded-full animate-spin mx-auto mb-4"></div>
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-12 h-12 bg-primary rounded-full animate-ping"></div>
-                    </div>
-                  </div>
-                  <div className="flex justify-center space-x-2 mb-4">
-                    <div className="w-2 h-8 bg-primary/60 rounded animate-pulse"></div>
-                    <div className="w-2 h-12 bg-primary/80 rounded animate-pulse" style={{animationDelay: '0.2s'}}></div>
-                    <div className="w-2 h-6 bg-primary/60 rounded animate-pulse" style={{animationDelay: '0.4s'}}></div>
-                    <div className="w-2 h-10 bg-primary rounded animate-pulse" style={{animationDelay: '0.6s'}}></div>
+                  <div className="relative w-64 h-32 mx-auto mb-4">
+                    {/* Bridge Silhouette */}
+                    <svg className="w-full h-full" viewBox="0 0 200 80" fill="none">
+                      {/* Bridge deck */}
+                      <rect x="10" y="35" width="180" height="4" fill="hsl(var(--primary))" opacity="0.8"/>
+                      
+                      {/* Bridge supports */}
+                      <rect x="30" y="39" width="3" height="25" fill="hsl(var(--primary))" opacity="0.6"/>
+                      <rect x="60" y="39" width="3" height="20" fill="hsl(var(--primary))" opacity="0.6"/>
+                      <rect x="90" y="39" width="3" height="18" fill="hsl(var(--primary))" opacity="0.6"/>
+                      <rect x="120" y="39" width="3" height="20" fill="hsl(var(--primary))" opacity="0.6"/>
+                      <rect x="150" y="39" width="3" height="25" fill="hsl(var(--primary))" opacity="0.6"/>
+                      
+                      {/* Bridge arch */}
+                      <path d="M20 39 Q100 20 180 39" stroke="hsl(var(--primary))" strokeWidth="2" fill="none" opacity="0.7"/>
+                      
+                      {/* Animated calculation grid overlay */}
+                      <g className="animate-pulse" style={{animationDelay: '0s'}}>
+                        <line x1="40" y1="15" x2="80" y2="25" stroke="hsl(var(--primary))" strokeWidth="1" opacity="0.4" strokeDasharray="2,2"/>
+                        <circle cx="45" cy="18" r="2" fill="hsl(var(--primary))" opacity="0.5"/>
+                      </g>
+                      
+                      <g className="animate-pulse" style={{animationDelay: '0.3s'}}>
+                        <line x1="120" y1="12" x2="160" y2="22" stroke="hsl(var(--primary))" strokeWidth="1" opacity="0.4" strokeDasharray="2,2"/>
+                        <rect x="125" y="15" width="4" height="4" fill="none" stroke="hsl(var(--primary))" strokeWidth="1" opacity="0.5"/>
+                      </g>
+                      
+                      <g className="animate-pulse" style={{animationDelay: '0.6s'}}>
+                        <line x1="70" y1="50" x2="110" y2="55" stroke="hsl(var(--primary))" strokeWidth="1" opacity="0.4" strokeDasharray="3,1"/>
+                        <polygon points="75,52 78,50 81,52 78,54" fill="hsl(var(--primary))" opacity="0.4"/>
+                      </g>
+                      
+                      {/* Mathematical symbols as abstract shapes */}
+                      <g className="animate-pulse" style={{animationDelay: '0.9s'}}>
+                        <circle cx="170" cy="18" r="1.5" fill="hsl(var(--primary))" opacity="0.6"/>
+                        <circle cx="175" cy="18" r="1.5" fill="hsl(var(--primary))" opacity="0.6"/>
+                        <line x1="165" y1="25" x2="180" y2="25" stroke="hsl(var(--primary))" strokeWidth="1" opacity="0.5"/>
+                      </g>
+                      
+                      {/* Geometric calculation indicators */}
+                      <g className="animate-pulse" style={{animationDelay: '1.2s'}}>
+                        <path d="M25 55 L35 50 L45 55 Z" fill="none" stroke="hsl(var(--primary))" strokeWidth="1" opacity="0.4"/>
+                        <line x1="35" y1="50" x2="35" y2="60" stroke="hsl(var(--primary))" strokeWidth="1" opacity="0.3" strokeDasharray="1,1"/>
+                      </g>
+                    </svg>
                   </div>
                   <h4 className="text-xl font-semibold text-primary">
                     Diagnóstico Baseado em Dados
