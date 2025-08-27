@@ -308,8 +308,8 @@ All colors MUST be HSL.
 
   .solid-arrow {
     position: relative;
-    width: 12px;
-    height: 18px;
+    width: 16px;
+    height: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -318,9 +318,9 @@ All colors MUST be HSL.
   .up-arrow-refined {
     width: 0;
     height: 0;
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-bottom: 18px solid #3481bd;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 24px solid #3481bd;
     position: relative;
     overflow: visible;
   }
@@ -329,9 +329,9 @@ All colors MUST be HSL.
     content: '';
     position: absolute;
     bottom: 0;
-    left: -6px;
-    width: 12px;
-    height: 18px;
+    left: -8px;
+    width: 16px;
+    height: 24px;
     background: linear-gradient(0deg, #2a6fa0 0%, #3481bd 40%, #5fa8d3 80%, #87ceeb 100%);
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
     animation: flowUpward 2.5s ease-in-out infinite;
@@ -342,9 +342,9 @@ All colors MUST be HSL.
     content: '';
     position: absolute;
     bottom: 0;
-    left: -6px;
-    width: 12px;
-    height: 18px;
+    left: -8px;
+    width: 16px;
+    height: 24px;
     background: linear-gradient(0deg, #87ceeb 0%, #5fa8d3 30%, #3481bd 70%, #2a6fa0 100%);
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
     animation: flowUpward 2.5s ease-in-out infinite 1.25s;
@@ -354,9 +354,9 @@ All colors MUST be HSL.
   .down-arrow-refined {
     width: 0;
     height: 0;
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-top: 18px solid #3481bd;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 24px solid #3481bd;
     position: relative;
     overflow: visible;
   }
@@ -365,9 +365,9 @@ All colors MUST be HSL.
     content: '';
     position: absolute;
     top: 0;
-    left: -6px;
-    width: 12px;
-    height: 18px;
+    left: -8px;
+    width: 16px;
+    height: 24px;
     background: linear-gradient(180deg, #2a6fa0 0%, #3481bd 40%, #5fa8d3 80%, #87ceeb 100%);
     clip-path: polygon(50% 100%, 0% 0%, 100% 0%);
     animation: flowDownward 2.5s ease-in-out infinite;
@@ -378,9 +378,9 @@ All colors MUST be HSL.
     content: '';
     position: absolute;
     top: 0;
-    left: -6px;
-    width: 12px;
-    height: 18px;
+    left: -8px;
+    width: 16px;
+    height: 24px;
     background: linear-gradient(180deg, #87ceeb 0%, #5fa8d3 30%, #3481bd 70%, #2a6fa0 100%);
     clip-path: polygon(50% 100%, 0% 0%, 100% 0%);
     animation: flowDownward 2.5s ease-in-out infinite 1.25s;
