@@ -409,7 +409,7 @@ const WhyChoose = () => {
               {selectedItem === 2 && (
                 <div className="text-center space-y-4 animate-fade-in">
                   {/* Animated Predictive Eye with Bar Chart */}
-                  <div className="relative mx-auto w-[432px] h-[281px] mb-4 flex items-center justify-center">
+                  <div className="relative mx-auto w-81 h-54 mb-4 flex items-center justify-center">
                     <div className="predictive-eye">
                       {/* Eye Outline */}
                       <div className="eye-shape">
