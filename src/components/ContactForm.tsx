@@ -81,7 +81,7 @@ const ContactForm = () => {
                   alt="Brazil silhouette"
                   className="w-[454px] h-[454px] opacity-90"
                   style={{ 
-                    filter: 'brightness(0) saturate(100%) invert(21%) sepia(100%) saturate(2200%) hue-rotate(210deg) brightness(95%) contrast(90%) drop-shadow(0 0 0 4px #3481bd)'
+                    filter: 'brightness(0) saturate(100%) invert(21%) sepia(100%) saturate(2200%) hue-rotate(210deg) brightness(95%) contrast(90%) drop-shadow(0 0 0 8px #3481bd)'
                   }}
                 />
                 {/* Pulsing dots positioned within Brazil silhouette */}
