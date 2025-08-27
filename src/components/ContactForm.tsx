@@ -12,7 +12,7 @@ const ContactForm = () => {
         <div className="space-y-8">
           <div className="px-8">
             <h3 className="text-3xl font-normal text-foreground mb-8">Fale Conosco</h3>
-            <p className="text-gray-600 leading-relaxed mb-4">
+            <p className="text-gray-600 leading-relaxed mb-4 mt-2">
               Para um contato personalizado, informe-nos seus dados:
             </p>
           </div>
@@ -41,7 +41,7 @@ const ContactForm = () => {
                   />
                   
                   <Select>
-                    <SelectTrigger className="h-12 px-4 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200">
+                    <SelectTrigger className="h-12 px-4 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900">
                       <SelectValue placeholder="Setor da Indústria" />
                     </SelectTrigger>
                     <SelectContent>

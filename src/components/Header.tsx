@@ -100,7 +100,7 @@ const Header = () => {
       <div className="w-full px-6 py-4">
         <nav className="flex items-center justify-between">
           {/* Logo */}
-          <button onClick={scrollToTop} className="flex items-center ml-2">
+          <button onClick={scrollToTop} className="flex items-center ml-6">
             <img
               src="/lovable-uploads/81b574cd-6dab-4603-aa73-5b5fc5e0766e.png"
               alt="Safena Logo"
