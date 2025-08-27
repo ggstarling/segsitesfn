@@ -104,7 +104,7 @@ const Header = () => {
             <img
               src="/lovable-uploads/81b574cd-6dab-4603-aa73-5b5fc5e0766e.png"
               alt="Safena Logo"
-              className="h-6 w-auto"
+              className="h-[1.5625rem] w-auto"
             />
           </button>
 
@@ -173,7 +173,7 @@ const Header = () => {
 
             <button 
               onClick={() => scrollToSection("contact")} 
-              className="text-white hover:text-[#3481bd] transition-colors font-normal text-base bg-primary hover:bg-primary/90 px-4 py-2 rounded-md"
+              className="text-white hover:text-[#3481bd] transition-colors font-normal text-base bg-primary hover:bg-primary/90 px-8 py-4 rounded-md"
             >
               Saiba Mais
             </button>
