@@ -107,75 +107,70 @@ const WhyChoose = () => {
                       <div className="absolute inset-2 rounded-lg bg-black/80 p-2">
                           {/* Modern Dashboard Screen */}
                          <div className="w-full h-full rounded bg-black p-1.5 overflow-hidden">
-                            {/* Dashboard Grid Layout */}
-                            <div className="grid grid-cols-4 grid-rows-3 gap-1 h-full">
+                            {/* Dashboard with 3 Chart Blocks */}
+                            <div className="grid grid-cols-2 grid-rows-2 gap-1 h-full">
                               
-                              {/* Top Row - Main Chart Area */}
-                              <div className="col-span-3 rounded" style={{backgroundColor: '#3481bd', opacity: 0.1}}>
-                                <div className="h-full p-1 flex items-end space-x-0.5">
-                                  {/* Animated Bar Chart */}
-                                  <div className="w-1 rounded-t" style={{backgroundColor: '#3481bd', opacity: 0.8, animation: 'barMove1 3s ease-in-out infinite'}}></div>
-                                  <div className="w-1 rounded-t" style={{backgroundColor: '#3481bd', opacity: 0.7, animation: 'barMove2 3.5s ease-in-out infinite'}}></div>
-                                  <div className="w-1 rounded-t" style={{backgroundColor: '#3481bd', opacity: 0.9, animation: 'barMove3 2.8s ease-in-out infinite'}}></div>
-                                  <div className="w-1 rounded-t" style={{backgroundColor: '#3481bd', opacity: 0.6, animation: 'barMove4 4s ease-in-out infinite'}}></div>
-                                  <div className="w-1 rounded-t" style={{backgroundColor: '#3481bd', opacity: 0.8, animation: 'barMove5 3.2s ease-in-out infinite'}}></div>
-                                  <div className="w-1 rounded-t" style={{backgroundColor: '#3481bd', opacity: 0.7, animation: 'barMove1 4.5s ease-in-out infinite'}}></div>
+                              {/* Top Left - Bar Chart Block */}
+                              <div className="rounded p-1" style={{backgroundColor: 'rgba(55, 65, 81, 0.8)'}}>
+                                <div className="h-full flex items-end justify-center space-x-0.5">
+                                  <div className="w-1 rounded-t" style={{backgroundColor: '#3481bd', height: '60%', animation: 'barGrow1 3s ease-in-out infinite'}}></div>
+                                  <div className="w-1 rounded-t" style={{backgroundColor: '#3481bd', height: '40%', animation: 'barGrow2 3.5s ease-in-out infinite'}}></div>
+                                  <div className="w-1 rounded-t" style={{backgroundColor: '#3481bd', height: '80%', animation: 'barGrow3 2.8s ease-in-out infinite'}}></div>
+                                  <div className="w-1 rounded-t" style={{backgroundColor: '#3481bd', height: '50%', animation: 'barGrow4 4s ease-in-out infinite'}}></div>
+                                  <div className="w-1 rounded-t" style={{backgroundColor: '#3481bd', height: '70%', animation: 'barGrow5 3.2s ease-in-out infinite'}}></div>
                                 </div>
                               </div>
                               
-                              {/* Top Right - Circular Progress */}
-                              <div className="rounded" style={{backgroundColor: '#3481bd', opacity: 0.08}}>
-                                <div className="h-full flex items-center justify-center">
-                                  <div className="relative w-4 h-4">
-                                    <div className="absolute inset-0 rounded-full border border-white/20"></div>
-                                    <div 
-                                      className="absolute inset-0 rounded-full border-l-2 border-t-2 border-transparent animate-spin"
-                                      style={{borderTopColor: '#3481bd', borderLeftColor: '#3481bd', opacity: 0.7}}
-                                    ></div>
-                                  </div>
-                                </div>
-                              </div>
-
-                              {/* Middle Row - Line Chart */}
-                              <div className="col-span-2 rounded" style={{backgroundColor: '#3481bd', opacity: 0.06}}>
-                                <div className="h-full p-1">
-                                  <svg className="w-full h-full" viewBox="0 0 60 20">
+                              {/* Top Right - Line Chart Block */}
+                              <div className="rounded p-1" style={{backgroundColor: 'rgba(30, 41, 59, 0.9)'}}>
+                                <div className="h-full">
+                                  <svg className="w-full h-full" viewBox="0 0 40 20">
                                     <path 
-                                      d="M2,12 Q15,6 25,10 T52,8" 
+                                      d="M2,15 Q12,8 20,12 T38,6" 
                                       stroke="#3481bd" 
-                                      strokeWidth="0.8" 
+                                      strokeWidth="1.5" 
                                       fill="none"
-                                      opacity="0.8"
-                                      style={{animation: 'waveFlow1 4s ease-in-out infinite'}}
+                                      opacity="0.9"
+                                      style={{animation: 'lineFlow1 4s ease-in-out infinite'}}
                                     />
                                     <path 
-                                      d="M2,15 Q15,9 25,13 T52,11" 
+                                      d="M2,12 Q12,5 20,9 T38,4" 
                                       stroke="#3481bd" 
-                                      strokeWidth="0.5" 
+                                      strokeWidth="1" 
                                       fill="none"
-                                      opacity="0.5"
-                                      style={{animation: 'waveFlow2 5s ease-in-out infinite'}}
+                                      opacity="0.6"
+                                      style={{animation: 'lineFlow2 5s ease-in-out infinite'}}
                                     />
                                   </svg>
                                 </div>
                               </div>
 
-                              {/* Middle Right - Small Widgets */}
-                              <div className="col-span-2 grid grid-cols-2 gap-1">
-                                <div className="rounded" style={{backgroundColor: '#3481bd', animation: 'blockFade1 3s ease-in-out infinite'}}></div>
-                                <div className="rounded" style={{backgroundColor: '#3481bd', animation: 'blockFade2 3.5s ease-in-out infinite'}}></div>
-                                <div className="rounded" style={{backgroundColor: '#3481bd', animation: 'blockFade3 4s ease-in-out infinite'}}></div>
-                                <div className="rounded" style={{backgroundColor: '#3481bd', animation: 'blockFade4 2.8s ease-in-out infinite'}}></div>
+                              {/* Bottom Left - Circular Progress Block */}
+                              <div className="rounded p-1 flex items-center justify-center" style={{backgroundColor: 'rgba(51, 65, 85, 0.7)'}}>
+                                <div className="relative w-8 h-8">
+                                  <div className="absolute inset-0 rounded-full border-2 border-gray-600"></div>
+                                  <div 
+                                    className="absolute inset-0 rounded-full border-2 border-transparent"
+                                    style={{
+                                      borderTopColor: '#3481bd', 
+                                      borderRightColor: '#3481bd',
+                                      animation: 'circularFill 3s ease-in-out infinite'
+                                    }}
+                                  ></div>
+                                  <div className="absolute inset-1 rounded-full bg-black/20"></div>
+                                </div>
                               </div>
 
-                              {/* Bottom Row - Status Indicators */}
-                              <div className="col-span-4 grid grid-cols-6 gap-1">
-                                <div className="rounded h-1" style={{backgroundColor: '#3481bd', animation: 'blockFade5 3.8s ease-in-out infinite'}}></div>
-                                <div className="rounded h-1" style={{backgroundColor: '#3481bd', animation: 'blockFade6 4.2s ease-in-out infinite'}}></div>
-                                <div className="rounded h-1" style={{backgroundColor: '#3481bd', animation: 'blockFade1 2.5s ease-in-out infinite'}}></div>
-                                <div className="rounded h-1" style={{backgroundColor: '#3481bd', animation: 'blockFade2 4.8s ease-in-out infinite'}}></div>
-                                <div className="rounded h-1" style={{backgroundColor: '#3481bd', animation: 'blockFade3 3.3s ease-in-out infinite'}}></div>
-                                <div className="rounded h-1" style={{backgroundColor: '#3481bd', animation: 'blockFade4 4.1s ease-in-out infinite'}}></div>
+                              {/* Bottom Right - Data Points Block */}
+                              <div className="rounded p-1" style={{backgroundColor: 'rgba(45, 55, 72, 0.8)'}}>
+                                <div className="grid grid-cols-3 gap-1 h-full">
+                                  <div className="rounded" style={{backgroundColor: '#3481bd', opacity: 0.8, animation: 'dataFade1 2.5s ease-in-out infinite'}}></div>
+                                  <div className="rounded" style={{backgroundColor: '#3481bd', opacity: 0.6, animation: 'dataFade2 3s ease-in-out infinite'}}></div>
+                                  <div className="rounded" style={{backgroundColor: '#3481bd', opacity: 0.9, animation: 'dataFade3 3.5s ease-in-out infinite'}}></div>
+                                  <div className="rounded" style={{backgroundColor: '#3481bd', opacity: 0.7, animation: 'dataFade4 2.8s ease-in-out infinite'}}></div>
+                                  <div className="rounded" style={{backgroundColor: '#3481bd', opacity: 0.8, animation: 'dataFade5 4s ease-in-out infinite'}}></div>
+                                  <div className="rounded" style={{backgroundColor: '#3481bd', opacity: 0.5, animation: 'dataFade6 3.2s ease-in-out infinite'}}></div>
+                                </div>
                               </div>
                             </div>
                           </div>
