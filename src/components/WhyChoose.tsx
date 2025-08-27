@@ -99,16 +99,84 @@ const WhyChoose = () => {
               <div className="absolute inset-0 flex items-center justify-center">
               {selectedItem === 0 && (
                 <div className="text-center space-y-4 animate-fade-in">
-                  <div className="grid grid-cols-2 gap-4 mb-6">
-                    <div className="bg-primary/20 rounded-lg p-3 animate-pulse">
-                      <div className="h-3 bg-primary/40 rounded mb-2"></div>
-                      <div className="h-8 bg-primary rounded"></div>
+                  {/* Computer Screen Frame */}
+                  <div className="relative mx-auto w-64 h-44 bg-gray-800 rounded-lg p-2 mb-4">
+                    {/* Screen */}
+                    <div className="w-full h-full bg-white rounded border-2 border-gray-300 p-3 relative overflow-hidden">
+                      {/* Header Bar */}
+                      <div className="flex justify-between items-center mb-3">
+                        <div className="flex space-x-1">
+                          <div className="w-2 h-2 bg-red-400 rounded-full"></div>
+                          <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
+                          <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                        </div>
+                        <div className="h-1 w-16 bg-gray-200 rounded"></div>
+                      </div>
+                      
+                      {/* Dashboard Content */}
+                      <div className="grid grid-cols-3 gap-2 h-full">
+                        {/* Left Panel - Charts */}
+                        <div className="col-span-2 space-y-2">
+                          {/* Chart 1 */}
+                          <div className="h-12 bg-primary/10 rounded p-1 relative">
+                            <div className="flex items-end justify-between h-full px-1">
+                              <div className="w-1 bg-primary/60 animate-pulse" style={{height: '60%'}}></div>
+                              <div className="w-1 bg-primary/80 animate-pulse" style={{height: '80%', animationDelay: '0.2s'}}></div>
+                              <div className="w-1 bg-primary animate-pulse" style={{height: '100%', animationDelay: '0.4s'}}></div>
+                              <div className="w-1 bg-primary/70 animate-pulse" style={{height: '70%', animationDelay: '0.6s'}}></div>
+                              <div className="w-1 bg-primary/90 animate-pulse" style={{height: '90%', animationDelay: '0.8s'}}></div>
+                            </div>
+                          </div>
+                          
+                          {/* Chart 2 - Line Chart */}
+                          <div className="h-12 bg-primary/5 rounded p-1 relative">
+                            <svg className="w-full h-full" viewBox="0 0 100 40">
+                              <path 
+                                d="M5,30 Q20,15 35,20 T65,10 T95,25" 
+                                stroke="hsl(var(--primary))" 
+                                strokeWidth="1.5" 
+                                fill="none"
+                                className="animate-pulse"
+                                strokeDasharray="2,2"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                        
+                        {/* Right Panel - Widgets */}
+                        <div className="space-y-2">
+                          {/* Widget 1 */}
+                          <div className="h-8 bg-primary/15 rounded p-1">
+                            <div className="w-full h-2 bg-primary/30 rounded mb-1"></div>
+                            <div className="w-3/4 h-1 bg-primary/50 rounded animate-pulse"></div>
+                          </div>
+                          
+                          {/* Widget 2 */}
+                          <div className="h-8 bg-primary/10 rounded p-1">
+                            <div className="flex justify-center items-center h-full">
+                              <div className="w-5 h-5 border-2 border-primary/40 rounded-full relative">
+                                <div className="absolute inset-1 bg-primary/60 rounded-full animate-ping"></div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          {/* Widget 3 */}
+                          <div className="h-6 bg-primary/8 rounded p-1">
+                            <div className="grid grid-cols-3 gap-1 h-full">
+                              <div className="bg-primary/40 rounded animate-pulse"></div>
+                              <div className="bg-primary/60 rounded animate-pulse" style={{animationDelay: '0.3s'}}></div>
+                              <div className="bg-primary/50 rounded animate-pulse" style={{animationDelay: '0.6s'}}></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div className="bg-primary/20 rounded-lg p-3 animate-pulse" style={{animationDelay: '0.5s'}}>
-                      <div className="h-3 bg-primary/40 rounded mb-2"></div>
-                      <div className="h-8 bg-primary rounded"></div>
-                    </div>
+                    
+                    {/* Screen Stand */}
+                    <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-8 h-2 bg-gray-600 rounded-b"></div>
+                    <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-gray-700 rounded"></div>
                   </div>
+                  
                   <h4 className="text-xl font-semibold text-primary">
                     Dashboards Automatizados
                   </h4>
