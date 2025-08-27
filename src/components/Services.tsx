@@ -52,7 +52,7 @@ const Services = () => {
               >
                 <CardHeader>
                   <div className="flex justify-center mb-4">
-                    <div className={`w-12 h-12 flex items-center justify-center transition-colors ${
+                    <div className={`w-16 h-16 flex items-center justify-center transition-colors ${
                       isSelected ? "text-primary" : "text-muted-foreground"
                     }`}>
                       {index === 0 ? (
