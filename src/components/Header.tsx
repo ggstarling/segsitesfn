@@ -2,11 +2,10 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ChevronDown, Globe } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 
 const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const location = useLocation();
   const navigate = useNavigate();
@@ -167,35 +166,6 @@ const Header = () => {
 
           {/* Right side menu */}
           <div className="hidden md:flex items-center space-x-6 mr-4">
-            {/* Language Switcher Dropdown */}
-            <div
-              className="relative"
-              onMouseEnter={() => setIsLanguageDropdownOpen(true)}
-              onMouseLeave={() => setIsLanguageDropdownOpen(false)}
-            >
-              <button className="flex items-center space-x-1 text-gray-500 hover:text-[#3481bd] transition-colors">
-                <Globe className="h-5 w-5" />
-                <ChevronDown className="w-3 h-3" />
-              </button>
-
-              {isLanguageDropdownOpen && (
-                <div className="absolute top-full right-0 bg-white border border-gray-100 rounded-lg py-2 z-50 min-w-[80px] animate-fade-in" 
-                     style={{ 
-                       boxShadow: '0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)' 
-                     }}>
-                  <button className="block w-full text-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#3481bd] transition-all duration-200">
-                    PT
-                  </button>
-                  <button className="block w-full text-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#3481bd] transition-all duration-200">
-                    EN
-                  </button>
-                  <button className="block w-full text-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#3481bd] transition-all duration-200">
-                    ES
-                  </button>
-                </div>
-              )}
-            </div>
-
             <button 
               onClick={() => scrollToSection("contact")} 
               className="text-white hover:text-[#3481bd] transition-colors font-normal text-base bg-primary hover:bg-primary/90 px-4 py-2 rounded-md"
