@@ -56,33 +56,32 @@ const Services = () => {
                       isSelected ? "text-primary" : "text-muted-foreground"
                     }`}>
                       {index === 0 ? (
-                        // Bridge silhouette for Monitoramento Estrutural
-                        <svg viewBox="0 0 48 48" className="w-full h-full" fill="currentColor">
-                          <path d="M6 30h36v2H6z"/>
-                          <path d="M8 30h2V18h-2z"/>
-                          <path d="M22 30h4V14h-4z"/>
-                          <path d="M38 30h2V18h-2z"/>
-                          <path d="M10 18l14-4 14 4v2l-14-4-14 4z"/>
+                        // Bridge outlined silhouette for Monitoramento Estrutural
+                        <svg viewBox="0 0 48 48" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="2">
+                          <path d="M6 30h36"/>
+                          <path d="M9 30V18"/>
+                          <path d="M24 30V14"/>
+                          <path d="M39 30V18"/>
+                          <path d="M9 18L24 14L39 18"/>
                         </svg>
                       ) : index === 1 ? (
-                        // Truck silhouette for B-WIM
-                        <svg viewBox="0 0 48 48" className="w-full h-full" fill="currentColor">
-                          <path d="M8 28h24v4H8z"/>
-                          <path d="M8 20h16v8H8z"/>
-                          <path d="M24 24h8v8h-8z"/>
-                          <path d="M32 26h4v6h-4z"/>
+                        // Truck outlined silhouette for B-WIM
+                        <svg viewBox="0 0 48 48" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="2">
+                          <rect x="8" y="20" width="16" height="8"/>
+                          <rect x="24" y="24" width="8" height="8"/>
+                          <path d="M32 26h4v6h-4V26z"/>
                           <circle cx="14" cy="34" r="3"/>
                           <circle cx="28" cy="34" r="3"/>
-                          <path d="M6 28h2v4H6z"/>
-                          <path d="M36 28h2v4h-2z"/>
+                          <path d="M8 28H6v4h2"/>
+                          <path d="M32 28h4v4h-4"/>
                         </svg>
                       ) : (
-                        // Lightbulb silhouette for Modelos de Desempenho
-                        <svg viewBox="0 0 48 48" className="w-full h-full" fill="currentColor">
+                        // Lightbulb outlined silhouette for Modelos de Desempenho
+                        <svg viewBox="0 0 48 48" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="2">
                           <path d="M24 8c-5.5 0-10 4.5-10 10 0 3 1.3 5.7 3.5 7.5L19 30h10l1.5-4.5c2.2-1.8 3.5-4.5 3.5-7.5 0-5.5-4.5-10-10-10z"/>
-                          <path d="M20 32h8v2h-8z"/>
-                          <path d="M21 36h6v2h-6z"/>
-                          <path d="M22 40h4v2h-4z"/>
+                          <path d="M20 32h8"/>
+                          <path d="M21 36h6"/>
+                          <path d="M22 40h4"/>
                         </svg>
                       )}
                     </div>
