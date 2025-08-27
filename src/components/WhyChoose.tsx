@@ -176,10 +176,6 @@ const WhyChoose = () => {
                     <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-8 h-2 bg-gray-600 rounded-b"></div>
                     <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-gray-700 rounded"></div>
                   </div>
-                  
-                  <h4 className="text-xl font-semibold text-primary">
-                    Dashboards Automatizados
-                  </h4>
                 </div>
               )}
               
@@ -262,9 +258,6 @@ const WhyChoose = () => {
                       <rect x="0" y="0" width="200" height="3" fill="url(#fadeGradient)" opacity="0.6" className="animate-pulse" style={{animationDelay: '1.8s', animationDuration: '2s'}}/>
                     </svg>
                   </div>
-                  <h4 className="text-xl font-semibold text-primary">
-                    Diagnóstico Baseado em Dados
-                  </h4>
                 </div>
               )}
               
@@ -292,9 +285,6 @@ const WhyChoose = () => {
                     </svg>
                     <div className="absolute top-2 right-2 w-3 h-3 bg-primary rounded-full animate-ping"></div>
                   </div>
-                  <h4 className="text-xl font-semibold text-primary">
-                    Análises Preditivas
-                  </h4>
                 </div>
               )}
               
@@ -312,9 +302,6 @@ const WhyChoose = () => {
                       <div className="absolute inset-1 bg-primary/20 rounded animate-pulse"></div>
                     </div>
                   </div>
-                  <h4 className="text-xl font-semibold text-primary">
-                    Sem Interrupções
-                  </h4>
                 </div>
               )}
               </div>
