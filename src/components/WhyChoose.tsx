@@ -442,7 +442,7 @@ const WhyChoose = () => {
                       <div className="road-straight">
                         {/* Left Lane */}
                         <div className="lane-straight left-lane-straight">
-                          <div className="solid-arrow up-arrow-refined"></div>
+                          <div className="solid-arrow up-arrow-refined" style={{transform: 'scale(0.75)'}}></div>
                         </div>
                         
                         {/* Center Divider */}
@@ -457,7 +457,7 @@ const WhyChoose = () => {
                         
                         {/* Right Lane */}
                         <div className="lane-straight right-lane-straight">
-                          <div className="solid-arrow down-arrow-refined"></div>
+                          <div className="solid-arrow down-arrow-refined" style={{transform: 'scale(0.75)'}}></div>
                         </div>
                       </div>
                     </div>

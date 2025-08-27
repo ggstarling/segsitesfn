@@ -52,9 +52,37 @@ const Services = () => {
               >
                 <CardHeader>
                   <div className="flex justify-center mb-4">
-                    <IconComponent className={`w-12 h-12 transition-colors ${
-                      isSelected ? "text-primary" : "text-muted-foreground"
-                    }`} />
+                    {index === 0 ? (
+                      // Bridge Icon for Monitoramento Estrutural
+                      <div className={`w-12 h-12 flex items-center justify-center transition-colors ${
+                        isSelected ? "text-primary" : "text-muted-foreground"
+                      }`}>
+                        <svg viewBox="0 0 48 48" className="w-full h-full" fill="currentColor">
+                          {/* Bridge base */}
+                          <rect x="4" y="32" width="40" height="2" rx="1"/>
+                          {/* Left support */}
+                          <rect x="8" y="16" width="1.5" height="16" rx="0.5"/>
+                          {/* Center support */}
+                          <rect x="23" y="12" width="2" height="20" rx="0.5"/>
+                          {/* Right support */}
+                          <rect x="38" y="16" width="1.5" height="16" rx="0.5"/>
+                          {/* Bridge deck */}
+                          <rect x="6" y="30" width="36" height="1" rx="0.5"/>
+                          {/* Cables - left side */}
+                          <line x1="24" y1="12" x2="10" y2="30" stroke="currentColor" strokeWidth="0.5" opacity="0.8"/>
+                          <line x1="24" y1="12" x2="15" y2="30" stroke="currentColor" strokeWidth="0.5" opacity="0.6"/>
+                          {/* Cables - right side */}
+                          <line x1="24" y1="12" x2="38" y2="30" stroke="currentColor" strokeWidth="0.5" opacity="0.8"/>
+                          <line x1="24" y1="12" x2="33" y2="30" stroke="currentColor" strokeWidth="0.5" opacity="0.6"/>
+                          {/* Foundation */}
+                          <rect x="22" y="34" width="4" height="2" rx="1" opacity="0.7"/>
+                        </svg>
+                      </div>
+                    ) : (
+                      <IconComponent className={`w-12 h-12 transition-colors ${
+                        isSelected ? "text-primary" : "text-muted-foreground"
+                      }`} />
+                    )}
                   </div>
                   <CardTitle className={`text-center text-lg transition-colors ${
                     isSelected ? "text-foreground" : "text-muted-foreground"
