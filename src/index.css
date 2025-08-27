@@ -320,9 +320,21 @@ All colors MUST be HSL.
     height: 0;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-bottom: 24px solid #3481bd;
+    border-bottom: 24px solid #5fa8d3;
     position: relative;
-    animation: arrowFlowUp 3s ease-in-out infinite;
+    overflow: hidden;
+  }
+
+  .up-arrow-refined::before {
+    content: '';
+    position: absolute;
+    bottom: -24px;
+    left: -8px;
+    width: 16px;
+    height: 24px;
+    background: linear-gradient(to top, #2a6fa0 0%, #3481bd 50%, #5fa8d3 100%);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    animation: gradientFlowUp 2s ease-in-out infinite;
   }
 
   .down-arrow-refined {
@@ -330,38 +342,50 @@ All colors MUST be HSL.
     height: 0;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-top: 24px solid #3481bd;
+    border-top: 24px solid #5fa8d3;
     position: relative;
-    animation: arrowFlowDown 3s ease-in-out infinite;
+    overflow: hidden;
   }
 
-  @keyframes arrowFlowUp {
-    0% { 
-      border-bottom-color: #5fa8d3;
-      filter: brightness(0.9);
+  .down-arrow-refined::before {
+    content: '';
+    position: absolute;
+    top: -24px;
+    left: -8px;
+    width: 16px;
+    height: 24px;
+    background: linear-gradient(to bottom, #2a6fa0 0%, #3481bd 50%, #5fa8d3 100%);
+    clip-path: polygon(50% 100%, 0% 0%, 100% 0%);
+    animation: gradientFlowDown 2s ease-in-out infinite;
+  }
+
+  @keyframes gradientFlowUp {
+    0% {
+      transform: translateY(24px);
+      opacity: 0.3;
     }
-    50% { 
-      border-bottom-color: #3481bd;
-      filter: brightness(1.1);
+    50% {
+      transform: translateY(0px);
+      opacity: 1;
     }
-    100% { 
-      border-bottom-color: #2a6fa0;
-      filter: brightness(0.8);
+    100% {
+      transform: translateY(-12px);
+      opacity: 0.6;
     }
   }
 
-  @keyframes arrowFlowDown {
-    0% { 
-      border-top-color: #5fa8d3;
-      filter: brightness(0.9);
+  @keyframes gradientFlowDown {
+    0% {
+      transform: translateY(-24px);
+      opacity: 0.3;
     }
-    50% { 
-      border-top-color: #3481bd;
-      filter: brightness(1.1);
+    50% {
+      transform: translateY(0px);
+      opacity: 1;
     }
-    100% { 
-      border-top-color: #2a6fa0;
-      filter: brightness(0.8);
+    100% {
+      transform: translateY(12px);
+      opacity: 0.6;
     }
   }
 
