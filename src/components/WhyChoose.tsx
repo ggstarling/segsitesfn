@@ -56,7 +56,7 @@ const WhyChoose = () => {
       <div className="max-w-7xl mx-auto px-4">        
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           <div className="space-y-6 min-h-[500px] px-8 mt-6">
-            <h2 className="text-3xl font-normal text-foreground mb-12">Por que escolher a Safena?</h2>
+            <h2 className="text-3xl font-normal text-foreground mb-12 relative -top-6">Por que escolher a Safena?</h2>
             {items.map((item, index) => (
               <div key={index} className="space-y-3">
                 <div 
