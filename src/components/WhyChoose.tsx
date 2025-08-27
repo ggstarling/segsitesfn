@@ -469,16 +469,49 @@ const WhyChoose = () => {
               
               {selectedItem === 3 && (
                 <div className="text-center space-y-4 animate-fade-in">
-                  <div className="relative mb-6">
-                    <div className="flex justify-center space-x-1 mb-4">
-                      <div className="w-2 h-2 bg-primary rounded-full animate-bounce"></div>
-                      <div className="w-2 h-2 bg-primary rounded-full animate-bounce" style={{animationDelay: '0.2s'}}></div>
-                      <div className="w-2 h-2 bg-primary rounded-full animate-bounce" style={{animationDelay: '0.4s'}}></div>
-                      <div className="w-2 h-2 bg-primary rounded-full animate-bounce" style={{animationDelay: '0.6s'}}></div>
-                      <div className="w-2 h-2 bg-primary rounded-full animate-bounce" style={{animationDelay: '0.8s'}}></div>
-                    </div>
-                    <div className="w-16 h-8 border-2 border-primary/40 rounded-lg mx-auto relative">
-                      <div className="absolute inset-1 bg-primary/20 rounded animate-pulse"></div>
+                  {/* Animated Traffic Road */}
+                  <div className="relative mx-auto w-80 h-52 mb-4 flex items-center justify-center">
+                    <div className="traffic-road-container">
+                      {/* Road Base */}
+                      <div className="road-surface">
+                        {/* Left Lane */}
+                        <div className="road-lane left-lane">
+                          <div className="lane-marking"></div>
+                          <div className="traffic-arrow up-arrow">
+                            <div className="arrow-shaft"></div>
+                            <div className="arrow-head"></div>
+                          </div>
+                        </div>
+                        
+                        {/* Center Divider */}
+                        <div className="center-divider">
+                          <div className="divider-line"></div>
+                          <div className="divider-line"></div>
+                          <div className="divider-line"></div>
+                        </div>
+                        
+                        {/* Right Lane */}
+                        <div className="road-lane right-lane">
+                          <div className="lane-marking"></div>
+                          <div className="traffic-arrow down-arrow">
+                            <div className="arrow-shaft"></div>
+                            <div className="arrow-head"></div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      {/* Flowing Traffic Indicators */}
+                      <div className="traffic-flow-left">
+                        <div className="flow-dot" style={{animationDelay: '0s'}}></div>
+                        <div className="flow-dot" style={{animationDelay: '0.5s'}}></div>
+                        <div className="flow-dot" style={{animationDelay: '1s'}}></div>
+                      </div>
+                      
+                      <div className="traffic-flow-right">
+                        <div className="flow-dot" style={{animationDelay: '0.3s'}}></div>
+                        <div className="flow-dot" style={{animationDelay: '0.8s'}}></div>
+                        <div className="flow-dot" style={{animationDelay: '1.3s'}}></div>
+                      </div>
                     </div>
                   </div>
                 </div>
