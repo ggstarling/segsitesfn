@@ -74,15 +74,27 @@ const ContactForm = () => {
             </div>
             
             {/* Brazil silhouette */}
-            <div className="hidden lg:flex items-start justify-end pr-4 pl-12 -mt-16">
-              <img 
-                src="/lovable-uploads/6e51012e-1cb4-4b89-88b6-2b16120e8f98.png"
-                alt="Brazil silhouette"
-                className="w-[454px] h-[454px] opacity-90"
-                style={{ 
-                  filter: 'brightness(0) saturate(100%) invert(21%) sepia(100%) saturate(2200%) hue-rotate(210deg) brightness(95%) contrast(90%) drop-shadow(0 0 0 4px #3481bd)'
-                }}
-              />
+            <div className="hidden lg:flex items-start justify-end pr-4 pl-12 -mt-20">
+              <div className="relative">
+                <img 
+                  src="/lovable-uploads/6e51012e-1cb4-4b89-88b6-2b16120e8f98.png"
+                  alt="Brazil silhouette"
+                  className="w-[454px] h-[454px] opacity-90"
+                  style={{ 
+                    filter: 'brightness(0) saturate(100%) invert(21%) sepia(100%) saturate(2200%) hue-rotate(210deg) brightness(95%) contrast(90%) drop-shadow(0 0 0 4px #3481bd)'
+                  }}
+                />
+                {/* Pulsing dots positioned within Brazil silhouette */}
+                <div className="absolute top-[12%] left-[25%] w-3 h-3 bg-blue-400 rounded-full animate-pulse opacity-80"></div>
+                <div className="absolute top-[18%] left-[35%] w-2.5 h-2.5 bg-blue-500 rounded-full animate-pulse opacity-70" style={{ animationDelay: '0.2s' }}></div>
+                <div className="absolute top-[28%] left-[42%] w-3 h-3 bg-blue-600 rounded-full animate-pulse opacity-85" style={{ animationDelay: '0.4s' }}></div>
+                <div className="absolute top-[35%] left-[28%] w-2 h-2 bg-blue-400 rounded-full animate-pulse opacity-75" style={{ animationDelay: '0.6s' }}></div>
+                <div className="absolute top-[45%] left-[38%] w-2.5 h-2.5 bg-blue-500 rounded-full animate-pulse opacity-80" style={{ animationDelay: '0.8s' }}></div>
+                <div className="absolute top-[52%] left-[45%] w-3 h-3 bg-blue-600 rounded-full animate-pulse opacity-70" style={{ animationDelay: '1.0s' }}></div>
+                <div className="absolute top-[58%] left-[32%] w-2 h-2 bg-blue-400 rounded-full animate-pulse opacity-85" style={{ animationDelay: '1.2s' }}></div>
+                <div className="absolute top-[65%] left-[40%] w-2.5 h-2.5 bg-blue-500 rounded-full animate-pulse opacity-75" style={{ animationDelay: '1.4s' }}></div>
+                <div className="absolute top-[72%] left-[35%] w-3 h-3 bg-blue-600 rounded-full animate-pulse opacity-80" style={{ animationDelay: '1.6s' }}></div>
+              </div>
             </div>
           </div>
         </div>
