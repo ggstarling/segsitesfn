@@ -100,7 +100,7 @@ const WhyChoose = () => {
               {selectedItem === 0 && (
                 <div className="text-center space-y-4 animate-fade-in">
                   {/* Modern Notebook */}
-                  <div className="relative mx-auto w-80 h-52 mb-4">
+                  <div className="relative mx-auto w-60 h-40 mb-4">
                     {/* Notebook Body */}
                     <div className="w-full h-full rounded-xl relative shadow-lg" style={{backgroundColor: '#3481bd'}}>
                       {/* Screen Area */}
