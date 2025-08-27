@@ -96,7 +96,7 @@ const WhyChoose = () => {
           
           <div className="hidden lg:flex justify-center items-center">
             <div className="w-96 h-96 bg-gradient-to-br from-primary/10 to-primary/20 rounded-2xl relative overflow-hidden">
-              <div className="absolute inset-0 flex items-center justify-center">
+              <div className="absolute inset-x-0 top-1/2 transform -translate-y-1/2 flex items-center justify-center">
               {selectedItem === 0 && (
                 <div className="text-center space-y-4 animate-fade-in">
                   {/* Modern Notebook */}
