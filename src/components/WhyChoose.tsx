@@ -100,7 +100,7 @@ const WhyChoose = () => {
               {selectedItem === 0 && (
                 <div className="text-center space-y-4 animate-fade-in">
                   {/* Modern Notebook */}
-                  <div className="relative mx-auto w-60 h-39 mb-4">
+                  <div className="relative mx-auto w-80 h-52 mb-4">
                     {/* Notebook Body */}
                     <div className="w-full h-full rounded-xl relative shadow-lg" style={{backgroundColor: '#3481bd'}}>
                       {/* Screen Area */}
@@ -288,7 +288,7 @@ const WhyChoose = () => {
               {selectedItem === 1 && (
                 <div className="text-center space-y-4 animate-fade-in">
                   {/* Stylized Report Document */}
-                  <div className="relative mx-auto w-64 h-42 mb-4 flex items-center justify-center">
+                  <div className="relative mx-auto w-80 h-52 mb-4 flex items-center justify-center">
                     {/* Document Container */}
                     <div className="w-64 h-44 relative">
                       {/* Main Document Body */}
@@ -409,7 +409,7 @@ const WhyChoose = () => {
               {selectedItem === 2 && (
                 <div className="text-center space-y-4 animate-fade-in">
                   {/* Animated Predictive Eye with Bar Chart */}
-                  <div className="relative mx-auto mb-4 flex items-center justify-center" style={{width: '432px', height: '280px'}}>
+                  <div className="relative mx-auto w-80 h-52 mb-4 flex items-center justify-center">
                     <div className="predictive-eye">
                       {/* Eye Outline */}
                       <div className="eye-shape">
