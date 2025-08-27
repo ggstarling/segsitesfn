@@ -52,25 +52,25 @@ const WhyChoose = () => {
   }, [hasAnimated]);
 
   return (
-    <section ref={sectionRef} className="pt-16 pb-4 bg-background">
-      <div className="max-w-7xl mx-auto px-4">        
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
-          <div className="space-y-6 min-h-[500px] px-8 mt-6">
-            <h2 className="text-3xl font-normal text-foreground mb-12 relative -top-6">Por que escolher a Safena?</h2>
+    <section ref={sectionRef} className="pt-12 sm:pt-16 pb-4 bg-background">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">        
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+          <div className="space-y-4 sm:space-y-6 min-h-[400px] sm:min-h-[500px] px-4 sm:px-8 mt-6">
+            <h2 className="text-2xl sm:text-3xl font-normal text-foreground mb-8 sm:mb-12 relative -top-6">Por que escolher a Safena?</h2>
             {items.map((item, index) => (
-              <div key={index} className="space-y-3">
+              <div key={index} className="space-y-2 sm:space-y-3">
                 <div 
                   className="flex items-center space-x-3 cursor-pointer group"
                   onClick={() => setSelectedItem(index)}
                 >
-                  <div className={`flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center transition-colors duration-300 ${
+                  <div className={`flex-shrink-0 w-5 h-5 sm:w-6 sm:h-6 rounded-full flex items-center justify-center transition-colors duration-300 ${
                     selectedItem === index 
                       ? 'bg-primary text-white' 
                       : 'bg-gray-300 text-gray-500'
                   }`}>
-                    <Check className="w-4 h-4" />
+                    <Check className="w-3 h-3 sm:w-4 sm:h-4" />
                   </div>
-                  <h3 className={`text-lg font-medium transition-colors duration-300 ${
+                  <h3 className={`text-base sm:text-lg font-medium transition-colors duration-300 ${
                     selectedItem === index 
                       ? 'text-foreground' 
                       : 'text-muted-foreground'
@@ -84,8 +84,8 @@ const WhyChoose = () => {
                     ? 'max-h-32 opacity-100 transform translate-y-0' 
                     : 'max-h-0 opacity-0 transform -translate-y-2'
                 }`}>
-                  <div className="pl-9 pr-4 pt-2 pb-4">
-                    <p className="text-muted-foreground leading-relaxed">
+                  <div className="pl-8 sm:pl-9 pr-4 pt-2 pb-4">
+                    <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                       {item.description}
                     </p>
                   </div>

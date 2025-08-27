@@ -7,28 +7,28 @@ import { Mail, Phone, MapPin } from "lucide-react";
 
 const ContactForm = () => {
   return (
-    <section id="contact" className="pt-16 pb-8 bg-gradient-to-b from-gray-300 via-gray-200 to-gray-100">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="space-y-8">
-          <div className="px-8">
-            <h3 className="text-3xl font-normal text-foreground mb-8">Fale Conosco</h3>
-            <p className="text-gray-600 leading-relaxed mb-4 mt-6">
+    <section id="contact" className="pt-12 sm:pt-16 pb-6 sm:pb-8 bg-gradient-to-b from-gray-300 via-gray-200 to-gray-100">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="space-y-6 sm:space-y-8">
+          <div className="px-4 sm:px-8">
+            <h3 className="text-2xl sm:text-3xl font-normal text-foreground mb-6 sm:mb-8">Fale Conosco</h3>
+            <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-4 mt-4 sm:mt-6">
               Para um contato personalizado, informe-nos seus dados:
             </p>
           </div>
           
-          <div className="grid lg:grid-cols-2 gap-16">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16">
             {/* Contact Form */}
-            <div className="p-8 pt-4">
-              <form className="space-y-6">
-                <div className="space-y-4">
+            <div className="p-4 sm:p-8 pt-2 sm:pt-4">
+              <form className="space-y-4 sm:space-y-6">
+                <div className="space-y-3 sm:space-y-4">
                   <Input 
                     id="name" 
                     type="text" 
                     placeholder="Nome"
                     maxLength={74}
                     required 
-                    className="h-12 px-4 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                    className="h-11 sm:h-12 px-4 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                   />
                   
                   <Input 
@@ -37,11 +37,11 @@ const ContactForm = () => {
                     placeholder="E-mail"
                     maxLength={50}
                     required 
-                    className="h-12 px-4 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                    className="h-11 sm:h-12 px-4 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                   />
                   
                   <Select>
-                    <SelectTrigger className="h-12 px-4 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900">
+                    <SelectTrigger className="h-11 sm:h-12 px-4 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900">
                       <SelectValue placeholder="Setor da Indústria" />
                     </SelectTrigger>
                     <SelectContent>
@@ -59,21 +59,21 @@ const ContactForm = () => {
                     id="message" 
                     placeholder="Mensagem"
                     rows={4} 
-                    className="p-4 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-none"
+                    className="p-3 sm:p-4 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-none"
                   />
                 </div>
                 
                 <Button 
                   type="submit" 
                   style={{ backgroundColor: '#3481bd' }}
-                  className="w-full h-12 hover:opacity-90 text-white font-medium rounded-lg transition-all duration-200"
+                  className="w-full h-11 sm:h-12 hover:opacity-90 text-white font-medium rounded-lg transition-all duration-200"
                 >
                   Enviar Mensagem
                 </Button>
               </form>
             </div>
             
-            {/* Brazil silhouette */}
+            {/* Brazil silhouette - hidden on mobile */}
             <div className="hidden lg:flex items-start justify-end pr-4 pl-12 -mt-20">
               <div className="relative">
                 <img 

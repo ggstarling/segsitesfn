@@ -25,20 +25,20 @@ const Hero = ({ onOpenModal }: HeroProps) => {
         ></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 -mt-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 -mt-20">
         <div className="max-w-3xl text-center mx-auto">
-          <h1 className="text-5xl font-semibold text-gray-900 mb-4 leading-tight">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-900 mb-4 sm:mb-6 leading-tight">
             <span className="text-[#3481bd] drop-shadow-[0_0_8px_rgba(52,129,189,0.3)]">Inteligência</span> para a gestão de ativos viários no Brasil
           </h1>
 
-          <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-700 mb-6 sm:mb-8 leading-relaxed px-4 sm:px-0">
             Somos uma plataforma de fusão de dados com inteligência artificial para a gestão de ativos de infraestrutura viária.
           </p>
 
           <Button
             onClick={onOpenModal}
             size="lg"
-            className="text-base px-8 py-4 font-normal"
+            className="text-base px-6 sm:px-8 py-3 sm:py-4 font-normal"
           >
             Agende uma conversa
           </Button>
