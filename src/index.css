@@ -103,6 +103,160 @@ All colors MUST be HSL.
   height: 100%;
   overflow: hidden;
 }
+
+.predictive-illustration {
+  position: relative;
+  width: 200px;
+  height: 150px;
+  color: hsl(var(--primary));
+}
+
+/* Character Elements */
+.character {
+  position: absolute;
+  top: 20px;
+  left: 120px;
+  z-index: 2;
+}
+
+.character-head {
+  width: 20px;
+  height: 20px;
+  border: 2px solid hsl(var(--primary));
+  border-radius: 50%;
+  margin-bottom: 2px;
+}
+
+.character-body {
+  width: 2px;
+  height: 35px;
+  background-color: hsl(var(--primary));
+  margin: 0 auto 2px;
+}
+
+.character-arm-left {
+  position: absolute;
+  top: 25px;
+  left: -8px;
+  width: 20px;
+  height: 2px;
+  background-color: hsl(var(--primary));
+  transform: rotate(-30deg);
+  transform-origin: right center;
+}
+
+.character-arm-right {
+  position: absolute;
+  top: 25px;
+  right: -8px;
+  width: 20px;
+  height: 2px;
+  background-color: hsl(var(--primary));
+  transform: rotate(30deg);
+  transform-origin: left center;
+}
+
+.character-leg-left {
+  position: absolute;
+  top: 55px;
+  left: -8px;
+  width: 20px;
+  height: 2px;
+  background-color: hsl(var(--primary));
+  transform: rotate(30deg);
+  transform-origin: right center;
+}
+
+.character-leg-right {
+  position: absolute;
+  top: 55px;
+  right: -8px;
+  width: 20px;
+  height: 2px;
+  background-color: hsl(var(--primary));
+  transform: rotate(-30deg);
+  transform-origin: left center;
+}
+
+.telescope {
+  position: absolute;
+  top: 15px;
+  right: -25px;
+  width: 25px;
+  height: 6px;
+  border: 2px solid hsl(var(--primary));
+  border-radius: 3px;
+  background-color: transparent;
+}
+
+.telescope::after {
+  content: '';
+  position: absolute;
+  right: -8px;
+  top: -2px;
+  width: 8px;
+  height: 10px;
+  border: 2px solid hsl(var(--primary));
+  border-left: none;
+  border-radius: 0 50% 50% 0;
+}
+
+/* Bar Graph Steps */
+.bar-graph {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.bar {
+  width: 20px;
+  border: 2px solid hsl(var(--primary));
+  background-color: transparent;
+}
+
+.bar-1 {
+  height: 20px;
+}
+
+.bar-2 {
+  height: 35px;
+}
+
+.bar-3 {
+  height: 50px;
+}
+
+.bar-4 {
+  height: 65px;
+}
+
+/* Dollar Sign Container */
+.dollar-container {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+
+.dollar-circle {
+  width: 30px;
+  height: 30px;
+  border: 2px solid hsl(var(--primary));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.dollar-sign {
+  font-size: 16px;
+  font-weight: bold;
+  color: hsl(var(--primary));
+  line-height: 1;
+}
   
   .animate-scroll-infinite {
     animation: scroll-infinite 20s linear infinite;
