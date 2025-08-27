@@ -12,7 +12,7 @@ const ContactForm = () => {
         <div className="space-y-6 sm:space-y-8">
           <div className="px-4 sm:px-8">
             <h3 className="text-2xl sm:text-3xl font-normal text-foreground mb-6 sm:mb-8">Fale Conosco</h3>
-            <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-4 mt-4 sm:mt-6">
+            <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-4 mt-4 sm:mt-6">
               Para um contato personalizado, informe-nos seus dados:
             </p>
           </div>
@@ -66,7 +66,7 @@ const ContactForm = () => {
                 <Button 
                   type="submit" 
                   style={{ backgroundColor: '#3481bd' }}
-                  className="w-full h-11 sm:h-12 hover:opacity-90 text-white font-medium rounded-lg transition-all duration-200"
+                  className="w-full h-12 sm:h-14 hover:opacity-90 text-white font-medium rounded-lg transition-all duration-200 text-base sm:text-lg min-h-[48px]"
                 >
                   Enviar Mensagem
                 </Button>

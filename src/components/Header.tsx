@@ -117,7 +117,7 @@ const Header = () => {
             <div className="hidden lg:flex items-center space-x-12 absolute left-1/2 transform -translate-x-1/2">
               <button 
                 onClick={() => scrollToTop()}
-                className={`transition-colors font-normal text-base ${isHomeActive ? "text-[#3481bd]" : "text-gray-500 hover:text-[#3481bd]"}`}
+                className={`transition-colors font-normal text-base min-h-[44px] px-3 ${isHomeActive ? "text-[#3481bd]" : "text-gray-500 hover:text-[#3481bd]"}`}
               >
                 Início
               </button>
@@ -128,7 +128,7 @@ const Header = () => {
                 onMouseEnter={() => setIsDropdownOpen(true)}
                 onMouseLeave={() => setIsDropdownOpen(false)}
               >
-                <button className={`flex items-center space-x-1 transition-colors font-normal text-base ${(location.pathname === "/about" || location.pathname === "/blog") ? "text-[#3481bd]" : "text-gray-500 hover:text-[#3481bd]"}`}>
+                <button className={`flex items-center space-x-1 transition-colors font-normal text-base min-h-[44px] px-3 ${(location.pathname === "/about" || location.pathname === "/blog") ? "text-[#3481bd]" : "text-gray-500 hover:text-[#3481bd]"}`}>
                   <span>Sobre Nós</span>
                   <ChevronDown className="w-4 h-4" />
                 </button>
@@ -140,13 +140,13 @@ const Header = () => {
                        }}>
                     <button 
                       onClick={() => navigateToPage("/about")}
-                      className="block w-full text-left px-6 py-3 text-base text-gray-700 hover:bg-gray-50 hover:text-[#3481bd] transition-all duration-200"
+                      className="block w-full text-left px-6 py-4 text-base text-gray-700 hover:bg-gray-50 hover:text-[#3481bd] transition-all duration-200 min-h-[44px]"
                     >
                       Sobre
                     </button>
                     <button 
                       onClick={() => navigateToPage("/blog")}
-                      className="block w-full text-left px-6 py-3 text-base text-gray-700 hover:bg-gray-50 hover:text-[#3481bd] transition-all duration-200"
+                      className="block w-full text-left px-6 py-4 text-base text-gray-700 hover:bg-gray-50 hover:text-[#3481bd] transition-all duration-200 min-h-[44px]"
                     >
                       Blog
                     </button>
@@ -156,14 +156,14 @@ const Header = () => {
 
               <button
                 onClick={() => scrollToSection("services")}
-                className={`transition-colors font-normal text-base ${isServicesActive ? "text-[#3481bd]" : "text-gray-500 hover:text-[#3481bd]"}`}
+                className={`transition-colors font-normal text-base min-h-[44px] px-3 ${isServicesActive ? "text-[#3481bd]" : "text-gray-500 hover:text-[#3481bd]"}`}
               >
                 Serviços
               </button>
 
               <button
                 onClick={() => scrollToSection("contact")}
-                className={`transition-colors font-normal text-base ${isContactActive ? "text-[#3481bd]" : "text-gray-500 hover:text-[#3481bd]"}`}
+                className={`transition-colors font-normal text-base min-h-[44px] px-3 ${isContactActive ? "text-[#3481bd]" : "text-gray-500 hover:text-[#3481bd]"}`}
               >
                 Contato
               </button>
@@ -173,7 +173,7 @@ const Header = () => {
             <div className="hidden lg:flex items-center space-x-6">
               <button 
                 onClick={() => scrollToSection("contact")} 
-                className="text-white hover:text-[#3481bd] transition-colors font-normal text-base bg-primary hover:bg-primary/90 px-4 py-2 rounded-md"
+                className="text-white hover:text-[#3481bd] transition-colors font-normal text-base bg-primary hover:bg-primary/90 px-4 py-3 rounded-md min-h-[44px]"
               >
                 Saiba Mais
               </button>
@@ -181,7 +181,7 @@ const Header = () => {
 
             {/* Mobile hamburger menu */}
             <button
-              className="lg:hidden p-2"
+              className="lg:hidden p-3 min-h-[44px] min-w-[44px] flex items-center justify-center"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle mobile menu"
             >
@@ -208,7 +208,7 @@ const Header = () => {
           {/* Mobile Navigation Links */}
           <button 
             onClick={() => scrollToTop()}
-            className={`text-left text-lg font-normal ${isHomeActive ? "text-[#3481bd]" : "text-gray-700"}`}
+            className={`text-left text-lg font-normal min-h-[48px] flex items-center ${isHomeActive ? "text-[#3481bd]" : "text-gray-700"}`}
           >
             Início
           </button>
@@ -221,13 +221,13 @@ const Header = () => {
             <div className="pl-4 space-y-3">
               <button 
                 onClick={() => navigateToPage("/about")}
-                className="block text-left text-base text-gray-600 hover:text-[#3481bd] transition-colors"
+                className="block text-left text-base text-gray-600 hover:text-[#3481bd] transition-colors min-h-[44px] flex items-center"
               >
                 Sobre
               </button>
               <button 
                 onClick={() => navigateToPage("/blog")}
-                className="block text-left text-base text-gray-600 hover:text-[#3481bd] transition-colors"
+                className="block text-left text-base text-gray-600 hover:text-[#3481bd] transition-colors min-h-[44px] flex items-center"
               >
                 Blog
               </button>
@@ -236,14 +236,14 @@ const Header = () => {
 
           <button
             onClick={() => scrollToSection("services")}
-            className={`text-left text-lg font-normal ${isServicesActive ? "text-[#3481bd]" : "text-gray-700"}`}
+            className={`text-left text-lg font-normal min-h-[48px] flex items-center ${isServicesActive ? "text-[#3481bd]" : "text-gray-700"}`}
           >
             Serviços
           </button>
 
           <button
             onClick={() => scrollToSection("contact")}
-            className={`text-left text-lg font-normal ${isContactActive ? "text-[#3481bd]" : "text-gray-700"}`}
+            className={`text-left text-lg font-normal min-h-[48px] flex items-center ${isContactActive ? "text-[#3481bd]" : "text-gray-700"}`}
           >
             Contato
           </button>
@@ -251,7 +251,7 @@ const Header = () => {
           {/* Mobile CTA button */}
           <button 
             onClick={() => scrollToSection("contact")} 
-            className="w-full text-white bg-primary hover:bg-primary/90 px-4 py-3 rounded-md text-lg font-normal transition-colors mt-8"
+            className="w-full text-white bg-primary hover:bg-primary/90 px-4 py-4 rounded-md text-lg font-normal transition-colors mt-8 min-h-[48px]"
           >
             Saiba Mais
           </button>

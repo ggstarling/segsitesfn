@@ -30,15 +30,15 @@ const Posts = () => {
               <Link 
                 key={`${post.id}-${index}`} 
                 to={`/article/${post.slug}`}
-                className="bg-card rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow cursor-pointer"
+                className="bg-card rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow cursor-pointer min-h-[48px] block"
               >
                 <img
                   src={post.image}
                   alt={post.title}
                   className="w-full h-32 object-cover"
                 />
-                <div className="p-3">
-                  <h3 className="text-sm leading-tight line-clamp-3">
+                <div className="p-4">
+                  <h3 className="text-base sm:text-lg leading-tight line-clamp-3">
                     {post.title}
                   </h3>
                 </div>
@@ -51,7 +51,7 @@ const Posts = () => {
             variant="outline"
             size="icon"
             onClick={prevSlide}
-            className="hidden sm:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4"
+            className="hidden sm:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 min-h-[44px] min-w-[44px]"
           >
             <ChevronLeft className="w-4 h-4" />
           </Button>
@@ -60,7 +60,7 @@ const Posts = () => {
             variant="outline"
             size="icon"
             onClick={nextSlide}
-            className="hidden sm:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-4"
+            className="hidden sm:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 min-h-[44px] min-w-[44px]"
           >
             <ChevronRight className="w-4 h-4" />
           </Button>

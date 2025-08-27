@@ -60,17 +60,17 @@ const WhyChoose = () => {
             {items.map((item, index) => (
               <div key={index} className="space-y-2 sm:space-y-3">
                 <div 
-                  className="flex items-center space-x-3 cursor-pointer group"
+                  className="flex items-center space-x-3 cursor-pointer group min-h-[48px] py-2"
                   onClick={() => setSelectedItem(index)}
                 >
-                  <div className={`flex-shrink-0 w-5 h-5 sm:w-6 sm:h-6 rounded-full flex items-center justify-center transition-colors duration-300 ${
+                  <div className={`flex-shrink-0 w-6 h-6 sm:w-7 sm:h-7 rounded-full flex items-center justify-center transition-colors duration-300 ${
                     selectedItem === index 
                       ? 'bg-primary text-white' 
                       : 'bg-gray-300 text-gray-500'
                   }`}>
-                    <Check className="w-3 h-3 sm:w-4 sm:h-4" />
+                    <Check className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
-                  <h3 className={`text-base sm:text-lg font-medium transition-colors duration-300 ${
+                  <h3 className={`text-lg sm:text-xl font-medium transition-colors duration-300 ${
                     selectedItem === index 
                       ? 'text-foreground' 
                       : 'text-muted-foreground'
@@ -84,8 +84,8 @@ const WhyChoose = () => {
                     ? 'max-h-32 opacity-100 transform translate-y-0' 
                     : 'max-h-0 opacity-0 transform -translate-y-2'
                 }`}>
-                  <div className="pl-8 sm:pl-9 pr-4 pt-2 pb-4">
-                    <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                  <div className="pl-10 sm:pl-12 pr-4 pt-2 pb-4">
+                    <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
                       {item.description}
                     </p>
                   </div>
