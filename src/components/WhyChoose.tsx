@@ -288,9 +288,9 @@ const WhyChoose = () => {
               {selectedItem === 1 && (
                 <div className="text-center space-y-4 animate-fade-in">
                   {/* Stylized Report Document */}
-                  <div className="relative mx-auto w-80 h-52 mb-4">
+                  <div className="relative mx-auto w-80 h-52 mb-4 flex items-center justify-center">
                     {/* Document Container */}
-                    <div className="w-64 h-44 mx-auto relative">
+                    <div className="w-64 h-44 relative">
                       {/* Main Document Body */}
                       <div className="w-full h-full rounded-lg relative shadow-lg" style={{backgroundColor: '#f8fafc', border: '2px solid #3481bd'}}>
                         
@@ -389,6 +389,37 @@ const WhyChoose = () => {
                                 }}
                               ></div>
                             </div>
+                          </div>
+
+                          {/* Text Lines Below Chart */}
+                          <div className="mt-3 space-y-1.5">
+                            <div 
+                              className="h-1 rounded transition-all duration-1000"
+                              style={{
+                                backgroundColor: '#3481bd',
+                                width: '90%',
+                                opacity: '0.6',
+                                animation: 'matrixPulse1 2.3s ease-in-out infinite alternate'
+                              }}
+                            ></div>
+                            <div 
+                              className="h-1 rounded transition-all duration-1200"
+                              style={{
+                                backgroundColor: '#3481bd',
+                                width: '75%',
+                                opacity: '0.5',
+                                animation: 'matrixPulse2 2.8s ease-in-out infinite alternate'
+                              }}
+                            ></div>
+                            <div 
+                              className="h-1 rounded transition-all duration-900"
+                              style={{
+                                backgroundColor: '#3481bd',
+                                width: '85%',
+                                opacity: '0.4',
+                                animation: 'matrixPulse3 2.1s ease-in-out infinite alternate'
+                              }}
+                            ></div>
                           </div>
                         </div>
 
