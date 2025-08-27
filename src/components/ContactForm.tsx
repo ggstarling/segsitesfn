@@ -19,7 +19,7 @@ const ContactForm = () => {
           
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Contact Form */}
-            <div className="p-8">
+            <div className="p-8 pt-4">
               <form className="space-y-6">
                 <div className="space-y-4">
                   <Input 
@@ -74,7 +74,7 @@ const ContactForm = () => {
             </div>
             
             {/* Brazil silhouette */}
-            <div className="hidden lg:flex items-center justify-end pr-4 pl-12">
+            <div className="hidden lg:flex items-end justify-end pr-4 pl-12" style={{ marginBottom: '48px' }}>
               <img 
                 src="/lovable-uploads/442e7f39-03b8-4a7b-8989-e8cc94dbf801.png"
                 alt="Brazil silhouette"
