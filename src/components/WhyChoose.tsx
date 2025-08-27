@@ -448,42 +448,19 @@ const WhyChoose = () => {
               
               {selectedItem === 2 && (
                 <div className="text-center space-y-4 animate-fade-in">
-                  {/* CSS-based Predictive Analysis Illustration */}
+                  {/* Static Predictive Analysis Image */}
                   <div className="relative mx-auto w-80 h-52 mb-4 flex items-center justify-center">
                     <div className="animated-logo w-full h-full flex items-center justify-center p-6">
                       <div className="predictive-phrase-container">
-                        <div className="predictive-illustration">
-                          {/* Stick Figure Character */}
-                          <div className="character">
-                            {/* Head */}
-                            <div className="character-head"></div>
-                            {/* Body */}
-                            <div className="character-body"></div>
-                            {/* Arms */}
-                            <div className="character-arm-left"></div>
-                            <div className="character-arm-right"></div>
-                            {/* Legs */}
-                            <div className="character-leg-left"></div>
-                            <div className="character-leg-right"></div>
-                            {/* Telescope */}
-                            <div className="telescope"></div>
-                          </div>
-                          
-                          {/* Ascending Bar Graph Steps */}
-                          <div className="bar-graph">
-                            <div className="bar bar-1"></div>
-                            <div className="bar bar-2"></div>
-                            <div className="bar bar-3"></div>
-                            <div className="bar bar-4"></div>
-                          </div>
-                          
-                          {/* Dollar Sign in Circle */}
-                          <div className="dollar-container">
-                            <div className="dollar-circle">
-                              <span className="dollar-sign">$</span>
-                            </div>
-                          </div>
-                        </div>
+                        <img 
+                          src="/lovable-uploads/fe75523c-a60a-47e2-90a6-45fa644ae348.png" 
+                          alt="Predictive Analysis - Person with telescope and charts"
+                          style={{ 
+                            width: '200%', 
+                            height: '200%', 
+                            objectFit: 'contain' 
+                          }}
+                        />
                       </div>
                     </div>
                   </div>
