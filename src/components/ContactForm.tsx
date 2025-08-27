@@ -76,7 +76,7 @@ const ContactForm = () => {
             {/* Brazil silhouette */}
             <div className="hidden lg:flex items-end justify-end pr-4 pl-12" style={{ marginBottom: '48px' }}>
               <img 
-                src="/lovable-uploads/442e7f39-03b8-4a7b-8989-e8cc94dbf801.png"
+                src="/lovable-uploads/6e51012e-1cb4-4b89-88b6-2b16120e8f98.png"
                 alt="Brazil silhouette"
                 className="w-[560px] h-[560px] opacity-90"
                 style={{ 
