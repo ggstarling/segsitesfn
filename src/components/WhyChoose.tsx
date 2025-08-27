@@ -185,70 +185,20 @@ const WhyChoose = () => {
               
               {selectedItem === 1 && (
                 <div className="text-center space-y-4 animate-fade-in">
-                  <div className="relative w-32 h-20 mx-auto mb-6">
-                    {/* Bridge Structure */}
-                    <svg className="w-full h-full" viewBox="0 0 120 80">
-                      {/* Bridge Outline */}
-                      <path 
-                        d="M10,60 L20,35 L35,35 L45,25 L75,25 L85,35 L100,35 L110,60"
-                        stroke="hsl(var(--primary)/0.3)" 
-                        strokeWidth="2" 
-                        fill="none"
-                      />
-                      {/* Bridge Deck */}
-                      <line 
-                        x1="20" y1="35" x2="100" y2="35" 
-                        stroke="hsl(var(--primary)/0.4)" 
-                        strokeWidth="3"
-                      />
-                      {/* Suspension Cables */}
-                      <line x1="45" y1="25" x2="45" y2="35" stroke="hsl(var(--primary)/0.3)" strokeWidth="1"/>
-                      <line x1="75" y1="25" x2="75" y2="35" stroke="hsl(var(--primary)/0.3)" strokeWidth="1"/>
-                      
-                      {/* X-ray Scanning Beam */}
-                      <defs>
-                        <linearGradient id="xrayBeam" x1="0%" y1="0%" x2="100%" y2="0%">
-                          <stop offset="0%" stopColor="hsl(var(--primary)/0)" />
-                          <stop offset="40%" stopColor="hsl(var(--primary)/0.6)" />
-                          <stop offset="60%" stopColor="hsl(var(--primary)/0.8)" />
-                          <stop offset="100%" stopColor="hsl(var(--primary)/0)" />
-                        </linearGradient>
-                        <animateTransform
-                          attributeName="gradientTransform"
-                          type="translate"
-                          values="-120 0; 240 0; -120 0"
-                          dur="3s"
-                          repeatCount="indefinite"
-                        />
-                      </defs>
-                      
-                      {/* Scanning Light Effect */}
-                      <rect 
-                        x="0" y="0" width="120" height="80" 
-                        fill="url(#xrayBeam)"
-                        opacity="0.4"
-                      />
-                      
-                      {/* Revealed Structure Details (appear gradually) */}
-                      <g className="animate-pulse" style={{animationDelay: '1s'}}>
-                        <circle cx="30" cy="35" r="1.5" fill="hsl(var(--primary)/0.6)"/>
-                        <circle cx="50" cy="30" r="1" fill="hsl(var(--primary)/0.5)"/>
-                        <circle cx="70" cy="30" r="1" fill="hsl(var(--primary)/0.5)"/>
-                        <circle cx="90" cy="35" r="1.5" fill="hsl(var(--primary)/0.6)"/>
-                      </g>
-                      
-                      {/* Grid Pattern (X-ray effect) */}
-                      <defs>
-                        <pattern id="xrayGrid" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
-                          <path d="M 8 0 L 0 0 0 8" fill="none" stroke="hsl(var(--primary)/0.1)" strokeWidth="0.5"/>
-                        </pattern>
-                      </defs>
-                      <rect x="20" y="25" width="80" height="35" fill="url(#xrayGrid)" opacity="0.6"/>
-                    </svg>
+                  <div className="relative">
+                    <div className="w-20 h-20 border-4 border-primary/30 rounded-full animate-spin mx-auto mb-4"></div>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-12 h-12 bg-primary rounded-full animate-ping"></div>
+                    </div>
                   </div>
-                  
+                  <div className="flex justify-center space-x-2 mb-4">
+                    <div className="w-2 h-8 bg-primary/60 rounded animate-pulse"></div>
+                    <div className="w-2 h-12 bg-primary/80 rounded animate-pulse" style={{animationDelay: '0.2s'}}></div>
+                    <div className="w-2 h-6 bg-primary/60 rounded animate-pulse" style={{animationDelay: '0.4s'}}></div>
+                    <div className="w-2 h-10 bg-primary rounded animate-pulse" style={{animationDelay: '0.6s'}}></div>
+                  </div>
                   <h4 className="text-xl font-semibold text-primary">
-                    Diagnósticos Estruturais
+                    Diagnóstico Baseado em Dados
                   </h4>
                 </div>
               )}
