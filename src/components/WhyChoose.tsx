@@ -376,6 +376,15 @@ const WhyChoose = () => {
                                 animation: 'matrixPulse3 2.1s ease-in-out infinite alternate'
                               }}
                             ></div>
+                            <div 
+                              className="h-1 rounded transition-all duration-1100"
+                              style={{
+                                backgroundColor: '#3481bd',
+                                width: '65%',
+                                opacity: '0.5',
+                                animation: 'matrixPulse4 2.6s ease-in-out infinite alternate'
+                              }}
+                            ></div>
                           </div>
                         </div>
 
@@ -391,11 +400,6 @@ const WhyChoose = () => {
                           </div>
                         </div>
 
-                        {/* Document Shadow */}
-                        <div 
-                          className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-60 h-2 rounded-full opacity-20"
-                          style={{backgroundColor: '#3481bd'}}
-                        ></div>
                       </div>
                     </div>
                   </div>
