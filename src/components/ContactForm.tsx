@@ -89,6 +89,7 @@ const ContactForm = () => {
                 <div className="absolute top-[18%] left-[64%] w-2 h-2 bg-primary rounded-full animate-ping" style={{ animationDelay: '0.6s', animationDuration: '4.2s' }}></div>
                 <div className="absolute top-[28%] left-[74%] w-2 h-2 bg-primary rounded-full animate-ping" style={{ animationDelay: '1.8s', animationDuration: '4.2s' }}></div>
                 <div className="absolute top-[35%] left-[54%] w-2 h-2 bg-primary rounded-full animate-ping" style={{ animationDelay: '0.2s', animationDuration: '4.2s' }}></div>
+                <div className="absolute top-[35%] left-[94%] w-2 h-2 bg-primary rounded-full animate-ping" style={{ animationDelay: '1.0s', animationDuration: '4.2s' }}></div>
                 <div className="absolute top-[45%] left-[68%] w-2 h-2 bg-primary rounded-full animate-ping" style={{ animationDelay: '1.4s', animationDuration: '4.2s' }}></div>
                 <div className="absolute top-[52%] left-[78%] w-2 h-2 bg-primary rounded-full animate-ping" style={{ animationDelay: '0.8s', animationDuration: '4.2s' }}></div>
                 <div className="absolute top-[58%] left-[60%] w-2 h-2 bg-primary rounded-full animate-ping" style={{ animationDelay: '1.0s', animationDuration: '4.2s' }}></div>
