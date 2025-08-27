@@ -448,133 +448,13 @@ const WhyChoose = () => {
               
               {selectedItem === 2 && (
                 <div className="text-center space-y-4 animate-fade-in">
-                  {/* Static Predictive Analysis - Person with Telescope and Chart */}
+                  {/* Static Predictive Analysis Image */}
                   <div className="relative mx-auto w-80 h-52 mb-4 flex items-center justify-center">
-                    <div className="w-72 h-40 relative">
-                      
-                      {/* Static SVG Container */}
-                      <svg className="w-full h-full" viewBox="0 0 300 160" fill="none">
-                        
-                        {/* Person Figure */}
-                        <g transform="translate(30, 30)">
-                          {/* Head */}
-                          <circle 
-                            cx="20" 
-                            cy="20" 
-                            r="15" 
-                            stroke="#3481bd" 
-                            strokeWidth="4" 
-                            fill="none"
-                          />
-                          
-                          {/* Body */}
-                          <path 
-                            d="M20,35 L20,80 M8,55 Q20,50 32,55 M20,80 L8,105 M20,80 L32,105"
-                            stroke="#3481bd"
-                            strokeWidth="4"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                          
-                          {/* Telescope */}
-                          <g transform="translate(32, 45)">
-                            {/* Telescope body */}
-                            <rect 
-                              x="0" 
-                              y="10" 
-                              width="30" 
-                              height="6" 
-                              rx="3" 
-                              fill="#3481bd"
-                            />
-                            {/* Telescope lens */}
-                            <circle 
-                              cx="33" 
-                              cy="13" 
-                              r="4" 
-                              stroke="#3481bd" 
-                              strokeWidth="3" 
-                              fill="none"
-                            />
-                            {/* Telescope eyepiece */}
-                            <rect 
-                              x="-4" 
-                              y="11" 
-                              width="4" 
-                              height="4" 
-                              fill="#3481bd"
-                            />
-                          </g>
-                        </g>
-                        
-                        {/* Bar Chart */}
-                        <g transform="translate(120, 60)">
-                          {/* Chart bars */}
-                          <rect 
-                            x="0" y="60" width="15" height="25" 
-                            rx="2"
-                            fill="#3481bd"
-                          />
-                          <rect 
-                            x="25" y="45" width="15" height="40" 
-                            rx="2"
-                            fill="#3481bd"
-                          />
-                          <rect 
-                            x="50" y="25" width="15" height="60" 
-                            rx="2"
-                            fill="#3481bd"
-                          />
-                          <rect 
-                            x="75" y="10" width="15" height="75" 
-                            rx="2"
-                            fill="#3481bd"
-                          />
-                          
-                          {/* Chart base line */}
-                          <line 
-                            x1="-5" y1="85" x2="100" y2="85" 
-                            stroke="#6b7280" 
-                            strokeWidth="2"
-                          />
-                        </g>
-                        
-                        {/* Dollar Sign Circle */}
-                        <g transform="translate(240, 100)">
-                          {/* Circle */}
-                          <circle 
-                            cx="0" 
-                            cy="0" 
-                            r="30" 
-                            stroke="#3481bd" 
-                            strokeWidth="4" 
-                            fill="none"
-                          />
-                          
-                          {/* Dollar sign */}
-                          <g>
-                            {/* Vertical line */}
-                            <line x1="0" y1="-18" x2="0" y2="18" stroke="#3481bd" strokeWidth="4"/>
-                            {/* Top curve */}
-                            <path 
-                              d="M-10,-10 Q0,-18 10,-10 Q0,-5 -10,-10" 
-                              stroke="#3481bd" 
-                              strokeWidth="3" 
-                              fill="none"
-                            />
-                            {/* Bottom curve */}
-                            <path 
-                              d="M10,10 Q0,18 -10,10 Q0,5 10,10" 
-                              stroke="#3481bd" 
-                              strokeWidth="3" 
-                              fill="none"
-                            />
-                          </g>
-                        </g>
-                        
-                      </svg>
-                      
-                    </div>
+                    <img 
+                      src="/lovable-uploads/fe75523c-a60a-47e2-90a6-45fa644ae348.png" 
+                      alt="Predictive Analysis - Person with telescope and charts"
+                      className="w-72 h-40 object-contain"
+                    />
                   </div>
                 </div>
               )}
