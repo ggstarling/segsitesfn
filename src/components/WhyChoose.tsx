@@ -287,82 +287,130 @@ const WhyChoose = () => {
               
               {selectedItem === 1 && (
                 <div className="text-center space-y-4 animate-fade-in">
-                  <div className="relative w-64 h-40 mx-auto mb-4">
-                    <svg className="w-full h-full" viewBox="0 0 200 120" fill="none">
-                      {/* Background grid that moves */}
-                      <defs>
-                        <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
-                          <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#3481bd" strokeWidth="0.5" opacity="0.2"/>
-                        </pattern>
-                        <linearGradient id="fadeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                          <stop offset="0%" stopColor="#3481bd" stopOpacity="0"/>
-                          <stop offset="50%" stopColor="#3481bd" stopOpacity="0.8"/>
-                          <stop offset="100%" stopColor="#3481bd" stopOpacity="0"/>
-                        </linearGradient>
-                      </defs>
-                      
-                      {/* Animated grid background */}
-                      <rect width="200" height="120" fill="url(#grid)" className="animate-pulse" style={{animationDuration: '3s'}}/>
-                      
-                      {/* Central geometric structure */}
-                      <g transform="translate(100, 60)">
-                        {/* Main structure - abstract engineering shape */}
-                        <polygon 
-                          points="-30,-20 30,-20 40,0 30,20 -30,20 -40,0" 
-                          fill="none" 
-                          stroke="#3481bd" 
-                          strokeWidth="2" 
-                          opacity="0.7"
-                          className="animate-pulse"
-                          style={{animationDelay: '0s'}}
-                        />
+                  {/* Stylized Report Document */}
+                  <div className="relative mx-auto w-80 h-52 mb-4">
+                    {/* Document Container */}
+                    <div className="w-64 h-44 mx-auto relative">
+                      {/* Main Document Body */}
+                      <div className="w-full h-full rounded-lg relative shadow-lg" style={{backgroundColor: '#f8fafc', border: '2px solid #3481bd'}}>
                         
-                        {/* Dynamic measurement lines */}
-                        <g className="animate-pulse" style={{animationDelay: '0.5s'}}>
-                          <line x1="-35" y1="-25" x2="35" y2="-25" stroke="#3481bd" strokeWidth="1" opacity="0.6"/>
-                          <line x1="-35" y1="-25" x2="-35" y2="-30" stroke="#3481bd" strokeWidth="1" opacity="0.6"/>
-                          <line x1="35" y1="-25" x2="35" y2="-30" stroke="#3481bd" strokeWidth="1" opacity="0.6"/>
-                          {/* Measurement arrows */}
-                          <polygon points="-32,-27 -35,-25 -32,-23" fill="#3481bd" opacity="0.6"/>
-                          <polygon points="32,-27 35,-25 32,-23" fill="#3481bd" opacity="0.6"/>
-                        </g>
-                        
-                        {/* Vertical measurement */}
-                        <g className="animate-pulse" style={{animationDelay: '1s'}}>
-                          <line x1="-45" y1="-20" x2="-45" y2="20" stroke="#3481bd" strokeWidth="1" opacity="0.6"/>
-                          <line x1="-45" y1="-20" x2="-50" y2="-20" stroke="#3481bd" strokeWidth="1" opacity="0.6"/>
-                          <line x1="-45" y1="20" x2="-50" y2="20" stroke="#3481bd" strokeWidth="1" opacity="0.6"/>
-                          {/* Vertical arrows */}
-                          <polygon points="-47,-17 -45,-20 -43,-17" fill="#3481bd" opacity="0.6"/>
-                          <polygon points="-47,17 -45,20 -43,17" fill="#3481bd" opacity="0.6"/>
-                        </g>
-                        
-                        {/* Dynamic calculation points */}
-                        <circle cx="-20" cy="-10" r="2" fill="#3481bd" opacity="0.8" className="animate-ping" style={{animationDelay: '0.2s'}}/>
-                        <circle cx="20" cy="-10" r="2" fill="#3481bd" opacity="0.8" className="animate-ping" style={{animationDelay: '0.7s'}}/>
-                        <circle cx="0" cy="10" r="2" fill="#3481bd" opacity="0.8" className="animate-ping" style={{animationDelay: '1.2s'}}/>
-                        
-                        {/* Abstract equation symbols as geometric shapes */}
-                        <g className="animate-pulse" style={{animationDelay: '1.5s'}}>
-                          <rect x="-10" y="-5" width="20" height="2" fill="#3481bd" opacity="0.4"/>
-                          <rect x="-1" y="-14" width="2" height="8" fill="#3481bd" opacity="0.4"/>
-                        </g>
-                        
-                        {/* Moving analysis line */}
-                        <line x1="-60" y1="0" x2="60" y2="0" stroke="url(#fadeGradient)" strokeWidth="2" className="animate-pulse" style={{animationDelay: '0.8s'}}/>
-                      </g>
-                      
-                      {/* Corner calculation indicators */}
-                      <g className="animate-pulse" style={{animationDelay: '2s'}}>
-                        <circle cx="20" cy="20" r="1.5" fill="#3481bd" opacity="0.5"/>
-                        <circle cx="180" cy="20" r="1.5" fill="#3481bd" opacity="0.5"/>
-                        <circle cx="20" cy="100" r="1.5" fill="#3481bd" opacity="0.5"/>
-                        <circle cx="180" cy="100" r="1.5" fill="#3481bd" opacity="0.5"/>
-                      </g>
-                      
-                      {/* Dynamic scanning effect */}
-                      <rect x="0" y="0" width="200" height="3" fill="url(#fadeGradient)" opacity="0.6" className="animate-pulse" style={{animationDelay: '1.8s', animationDuration: '2s'}}/>
-                    </svg>
+                        {/* Document Header */}
+                        <div className="absolute top-0 left-0 right-0 h-8 rounded-t-lg" style={{backgroundColor: '#3481bd'}}>
+                          {/* Header Icons */}
+                          <div className="flex items-center justify-between h-full px-3">
+                            <div className="flex space-x-1">
+                              <div className="w-1 h-1 rounded-full bg-white/60"></div>
+                              <div className="w-1 h-1 rounded-full bg-white/60"></div>
+                              <div className="w-1 h-1 rounded-full bg-white/60"></div>
+                            </div>
+                            <div className="w-16 h-2 rounded bg-white/20"></div>
+                          </div>
+                        </div>
+
+                        {/* Document Content Area */}
+                        <div className="absolute top-8 left-0 right-0 bottom-0 p-4">
+                          {/* Content Lines with Animation */}
+                          <div className="space-y-2">
+                            <div 
+                              className="h-1.5 rounded transition-all duration-1000"
+                              style={{
+                                backgroundColor: '#3481bd',
+                                width: '80%',
+                                animation: 'barPulse1 2s ease-in-out infinite alternate'
+                              }}
+                            ></div>
+                            <div 
+                              className="h-1.5 rounded transition-all duration-1200"
+                              style={{
+                                backgroundColor: '#3481bd',
+                                width: '95%',
+                                animation: 'barPulse2 2.5s ease-in-out infinite alternate'
+                              }}
+                            ></div>
+                            <div 
+                              className="h-1.5 rounded transition-all duration-900"
+                              style={{
+                                backgroundColor: '#3481bd',
+                                width: '70%',
+                                animation: 'barPulse3 1.8s ease-in-out infinite alternate'
+                              }}
+                            ></div>
+                            <div 
+                              className="h-1.5 rounded transition-all duration-1100"
+                              style={{
+                                backgroundColor: '#3481bd',
+                                width: '85%',
+                                animation: 'barPulse4 2.2s ease-in-out infinite alternate'
+                              }}
+                            ></div>
+                          </div>
+
+                          {/* Mini Chart Section */}
+                          <div className="mt-4 p-2 rounded" style={{backgroundColor: 'rgba(52, 129, 189, 0.1)'}}>
+                            <div className="flex items-end justify-center space-x-1 h-8">
+                              <div 
+                                className="w-1.5 rounded-t transition-all duration-1000"
+                                style={{
+                                  backgroundColor: '#3481bd',
+                                  height: '60%',
+                                  animation: 'barPulse1 2s ease-in-out infinite alternate'
+                                }}
+                              ></div>
+                              <div 
+                                className="w-1.5 rounded-t transition-all duration-1200"
+                                style={{
+                                  backgroundColor: '#3481bd',
+                                  height: '40%',
+                                  animation: 'barPulse2 2.5s ease-in-out infinite alternate'
+                                }}
+                              ></div>
+                              <div 
+                                className="w-1.5 rounded-t transition-all duration-900"
+                                style={{
+                                  backgroundColor: '#3481bd',
+                                  height: '80%',
+                                  animation: 'barPulse3 1.8s ease-in-out infinite alternate'
+                                }}
+                              ></div>
+                              <div 
+                                className="w-1.5 rounded-t transition-all duration-1100"
+                                style={{
+                                  backgroundColor: '#3481bd',
+                                  height: '50%',
+                                  animation: 'barPulse4 2.2s ease-in-out infinite alternate'
+                                }}
+                              ></div>
+                              <div 
+                                className="w-1.5 rounded-t transition-all duration-1000"
+                                style={{
+                                  backgroundColor: '#3481bd',
+                                  height: '70%',
+                                  animation: 'barPulse5 1.9s ease-in-out infinite alternate'
+                                }}
+                              ></div>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Checkmark Badge - Positioned beside document */}
+                        <div className="absolute -top-2 -right-2 w-12 h-12 rounded-full flex items-center justify-center shadow-lg" style={{backgroundColor: '#3481bd'}}>
+                          <div 
+                            className="w-8 h-8 rounded-full flex items-center justify-center bg-white"
+                            style={{
+                              animation: 'pointPulse1 2s ease-in-out infinite'
+                            }}
+                          >
+                            <Check className="w-5 h-5" style={{color: '#3481bd'}} />
+                          </div>
+                        </div>
+
+                        {/* Document Shadow */}
+                        <div 
+                          className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-60 h-2 rounded-full opacity-20"
+                          style={{backgroundColor: '#3481bd'}}
+                        ></div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               )}
