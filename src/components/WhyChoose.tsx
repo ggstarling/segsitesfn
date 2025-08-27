@@ -185,50 +185,81 @@ const WhyChoose = () => {
               
               {selectedItem === 1 && (
                 <div className="text-center space-y-4 animate-fade-in">
-                  <div className="relative w-64 h-32 mx-auto mb-4">
-                    {/* Bridge Silhouette */}
-                    <svg className="w-full h-full" viewBox="0 0 200 80" fill="none">
-                      {/* Bridge deck */}
-                      <rect x="10" y="35" width="180" height="4" fill="hsl(var(--primary))" opacity="0.8"/>
+                  <div className="relative w-64 h-40 mx-auto mb-4">
+                    <svg className="w-full h-full" viewBox="0 0 200 120" fill="none">
+                      {/* Background grid that moves */}
+                      <defs>
+                        <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                          <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#3481bd" strokeWidth="0.5" opacity="0.2"/>
+                        </pattern>
+                        <linearGradient id="fadeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                          <stop offset="0%" stopColor="#3481bd" stopOpacity="0"/>
+                          <stop offset="50%" stopColor="#3481bd" stopOpacity="0.8"/>
+                          <stop offset="100%" stopColor="#3481bd" stopOpacity="0"/>
+                        </linearGradient>
+                      </defs>
                       
-                      {/* Bridge supports */}
-                      <rect x="30" y="39" width="3" height="25" fill="hsl(var(--primary))" opacity="0.6"/>
-                      <rect x="60" y="39" width="3" height="20" fill="hsl(var(--primary))" opacity="0.6"/>
-                      <rect x="90" y="39" width="3" height="18" fill="hsl(var(--primary))" opacity="0.6"/>
-                      <rect x="120" y="39" width="3" height="20" fill="hsl(var(--primary))" opacity="0.6"/>
-                      <rect x="150" y="39" width="3" height="25" fill="hsl(var(--primary))" opacity="0.6"/>
+                      {/* Animated grid background */}
+                      <rect width="200" height="120" fill="url(#grid)" className="animate-pulse" style={{animationDuration: '3s'}}/>
                       
-                      {/* Bridge arch */}
-                      <path d="M20 39 Q100 20 180 39" stroke="hsl(var(--primary))" strokeWidth="2" fill="none" opacity="0.7"/>
-                      
-                      {/* Animated calculation grid overlay */}
-                      <g className="animate-pulse" style={{animationDelay: '0s'}}>
-                        <line x1="40" y1="15" x2="80" y2="25" stroke="hsl(var(--primary))" strokeWidth="1" opacity="0.4" strokeDasharray="2,2"/>
-                        <circle cx="45" cy="18" r="2" fill="hsl(var(--primary))" opacity="0.5"/>
+                      {/* Central geometric structure */}
+                      <g transform="translate(100, 60)">
+                        {/* Main structure - abstract engineering shape */}
+                        <polygon 
+                          points="-30,-20 30,-20 40,0 30,20 -30,20 -40,0" 
+                          fill="none" 
+                          stroke="#3481bd" 
+                          strokeWidth="2" 
+                          opacity="0.7"
+                          className="animate-pulse"
+                          style={{animationDelay: '0s'}}
+                        />
+                        
+                        {/* Dynamic measurement lines */}
+                        <g className="animate-pulse" style={{animationDelay: '0.5s'}}>
+                          <line x1="-35" y1="-25" x2="35" y2="-25" stroke="#3481bd" strokeWidth="1" opacity="0.6"/>
+                          <line x1="-35" y1="-25" x2="-35" y2="-30" stroke="#3481bd" strokeWidth="1" opacity="0.6"/>
+                          <line x1="35" y1="-25" x2="35" y2="-30" stroke="#3481bd" strokeWidth="1" opacity="0.6"/>
+                          {/* Measurement arrows */}
+                          <polygon points="-32,-27 -35,-25 -32,-23" fill="#3481bd" opacity="0.6"/>
+                          <polygon points="32,-27 35,-25 32,-23" fill="#3481bd" opacity="0.6"/>
+                        </g>
+                        
+                        {/* Vertical measurement */}
+                        <g className="animate-pulse" style={{animationDelay: '1s'}}>
+                          <line x1="-45" y1="-20" x2="-45" y2="20" stroke="#3481bd" strokeWidth="1" opacity="0.6"/>
+                          <line x1="-45" y1="-20" x2="-50" y2="-20" stroke="#3481bd" strokeWidth="1" opacity="0.6"/>
+                          <line x1="-45" y1="20" x2="-50" y2="20" stroke="#3481bd" strokeWidth="1" opacity="0.6"/>
+                          {/* Vertical arrows */}
+                          <polygon points="-47,-17 -45,-20 -43,-17" fill="#3481bd" opacity="0.6"/>
+                          <polygon points="-47,17 -45,20 -43,17" fill="#3481bd" opacity="0.6"/>
+                        </g>
+                        
+                        {/* Dynamic calculation points */}
+                        <circle cx="-20" cy="-10" r="2" fill="#3481bd" opacity="0.8" className="animate-ping" style={{animationDelay: '0.2s'}}/>
+                        <circle cx="20" cy="-10" r="2" fill="#3481bd" opacity="0.8" className="animate-ping" style={{animationDelay: '0.7s'}}/>
+                        <circle cx="0" cy="10" r="2" fill="#3481bd" opacity="0.8" className="animate-ping" style={{animationDelay: '1.2s'}}/>
+                        
+                        {/* Abstract equation symbols as geometric shapes */}
+                        <g className="animate-pulse" style={{animationDelay: '1.5s'}}>
+                          <rect x="-10" y="-5" width="20" height="2" fill="#3481bd" opacity="0.4"/>
+                          <rect x="-1" y="-14" width="2" height="8" fill="#3481bd" opacity="0.4"/>
+                        </g>
+                        
+                        {/* Moving analysis line */}
+                        <line x1="-60" y1="0" x2="60" y2="0" stroke="url(#fadeGradient)" strokeWidth="2" className="animate-pulse" style={{animationDelay: '0.8s'}}/>
                       </g>
                       
-                      <g className="animate-pulse" style={{animationDelay: '0.3s'}}>
-                        <line x1="120" y1="12" x2="160" y2="22" stroke="hsl(var(--primary))" strokeWidth="1" opacity="0.4" strokeDasharray="2,2"/>
-                        <rect x="125" y="15" width="4" height="4" fill="none" stroke="hsl(var(--primary))" strokeWidth="1" opacity="0.5"/>
+                      {/* Corner calculation indicators */}
+                      <g className="animate-pulse" style={{animationDelay: '2s'}}>
+                        <circle cx="20" cy="20" r="1.5" fill="#3481bd" opacity="0.5"/>
+                        <circle cx="180" cy="20" r="1.5" fill="#3481bd" opacity="0.5"/>
+                        <circle cx="20" cy="100" r="1.5" fill="#3481bd" opacity="0.5"/>
+                        <circle cx="180" cy="100" r="1.5" fill="#3481bd" opacity="0.5"/>
                       </g>
                       
-                      <g className="animate-pulse" style={{animationDelay: '0.6s'}}>
-                        <line x1="70" y1="50" x2="110" y2="55" stroke="hsl(var(--primary))" strokeWidth="1" opacity="0.4" strokeDasharray="3,1"/>
-                        <polygon points="75,52 78,50 81,52 78,54" fill="hsl(var(--primary))" opacity="0.4"/>
-                      </g>
-                      
-                      {/* Mathematical symbols as abstract shapes */}
-                      <g className="animate-pulse" style={{animationDelay: '0.9s'}}>
-                        <circle cx="170" cy="18" r="1.5" fill="hsl(var(--primary))" opacity="0.6"/>
-                        <circle cx="175" cy="18" r="1.5" fill="hsl(var(--primary))" opacity="0.6"/>
-                        <line x1="165" y1="25" x2="180" y2="25" stroke="hsl(var(--primary))" strokeWidth="1" opacity="0.5"/>
-                      </g>
-                      
-                      {/* Geometric calculation indicators */}
-                      <g className="animate-pulse" style={{animationDelay: '1.2s'}}>
-                        <path d="M25 55 L35 50 L45 55 Z" fill="none" stroke="hsl(var(--primary))" strokeWidth="1" opacity="0.4"/>
-                        <line x1="35" y1="50" x2="35" y2="60" stroke="hsl(var(--primary))" strokeWidth="1" opacity="0.3" strokeDasharray="1,1"/>
-                      </g>
+                      {/* Dynamic scanning effect */}
+                      <rect x="0" y="0" width="200" height="3" fill="url(#fadeGradient)" opacity="0.6" className="animate-pulse" style={{animationDelay: '1.8s', animationDuration: '2s'}}/>
                     </svg>
                   </div>
                   <h4 className="text-xl font-semibold text-primary">
