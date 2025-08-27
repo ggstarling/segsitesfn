@@ -309,76 +309,87 @@ const WhyChoose = () => {
 
                         {/* Document Content Area */}
                         <div className="absolute top-8 left-0 right-0 bottom-0 p-4">
-                           {/* Content Lines with Animation - Lowered Position */}
-                           <div className="space-y-3 mt-3">
-                             <div 
-                               className="h-1 rounded transition-all duration-1000"
-                               style={{
-                                 backgroundColor: '#94a3b8',
-                                 width: '80%',
-                                 animation: 'barPulse1 2s ease-in-out infinite alternate'
-                               }}
-                             ></div>
-                             <div 
-                               className="h-1 rounded transition-all duration-1200"
-                               style={{
-                                 backgroundColor: '#64748b',
-                                 width: '95%',
-                                 animation: 'barPulse2 2.5s ease-in-out infinite alternate'
-                               }}
-                             ></div>
-                             <div 
-                               className="h-1 rounded transition-all duration-900"
-                               style={{
-                                 backgroundColor: '#94a3b8',
-                                 width: '70%',
-                                 animation: 'barPulse3 1.8s ease-in-out infinite alternate'
-                               }}
-                             ></div>
-                             <div 
-                               className="h-1 rounded transition-all duration-1100"
-                               style={{
-                                 backgroundColor: '#64748b',
-                                 width: '85%',
-                                 animation: 'barPulse4 2.2s ease-in-out infinite alternate'
-                               }}
-                             ></div>
-                           </div>
+                          {/* Content Lines with Animation */}
+                          <div className="space-y-2">
+                            <div 
+                              className="h-1.5 rounded transition-all duration-1000"
+                              style={{
+                                backgroundColor: '#3481bd',
+                                width: '80%',
+                                animation: 'barPulse1 2s ease-in-out infinite alternate'
+                              }}
+                            ></div>
+                            <div 
+                              className="h-1.5 rounded transition-all duration-1200"
+                              style={{
+                                backgroundColor: '#3481bd',
+                                width: '95%',
+                                animation: 'barPulse2 2.5s ease-in-out infinite alternate'
+                              }}
+                            ></div>
+                            <div 
+                              className="h-1.5 rounded transition-all duration-900"
+                              style={{
+                                backgroundColor: '#3481bd',
+                                width: '70%',
+                                animation: 'barPulse3 1.8s ease-in-out infinite alternate'
+                              }}
+                            ></div>
+                            <div 
+                              className="h-1.5 rounded transition-all duration-1100"
+                              style={{
+                                backgroundColor: '#3481bd',
+                                width: '85%',
+                                animation: 'barPulse4 2.2s ease-in-out infinite alternate'
+                              }}
+                            ></div>
+                          </div>
 
-                           {/* Curved Line Graph Section */}
-                           <div className="mt-4 p-3 rounded" style={{backgroundColor: 'rgba(148, 163, 184, 0.15)', border: '1px solid rgba(100, 116, 139, 0.2)'}}>
-                             <div className="relative h-12 w-full">
-                               <svg width="100%" height="100%" viewBox="0 0 120 40" className="overflow-visible">
-                                 <defs>
-                                   <linearGradient id="curveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                                     <stop offset="0%" stopColor="#3481bd" stopOpacity="0.6"/>
-                                     <stop offset="50%" stopColor="#64748b" stopOpacity="0.8"/>
-                                     <stop offset="100%" stopColor="#3481bd" stopOpacity="0.6"/>
-                                   </linearGradient>
-                                 </defs>
-                                 <path 
-                                   d="M5 30 Q25 15 45 20 T85 15 Q105 10 115 12" 
-                                   stroke="url(#curveGradient)" 
-                                   strokeWidth="1.5" 
-                                   fill="none" 
-                                   strokeDasharray="3 2"
-                                   className="curved-line-graph"
-                                 />
-                                 <path 
-                                   d="M8 25 Q28 18 48 22 T88 18 Q108 15 118 17" 
-                                   stroke="#94a3b8" 
-                                   strokeWidth="1" 
-                                   fill="none" 
-                                   strokeDasharray="2 3"
-                                   className="curved-line-graph-secondary"
-                                 />
-                                 {/* Animated data points */}
-                                 <circle cx="25" cy="17" r="1.5" fill="#3481bd" className="data-point-1"/>
-                                 <circle cx="65" cy="15" r="1.5" fill="#64748b" className="data-point-2"/>
-                                 <circle cx="105" cy="11" r="1.5" fill="#3481bd" className="data-point-3"/>
-                               </svg>
-                             </div>
-                           </div>
+                          {/* Mini Chart Section */}
+                          <div className="mt-4 p-2 rounded" style={{backgroundColor: 'rgba(52, 129, 189, 0.1)'}}>
+                            <div className="flex items-end justify-center space-x-1 h-8">
+                              <div 
+                                className="w-1.5 rounded-t transition-all duration-1000"
+                                style={{
+                                  backgroundColor: '#3481bd',
+                                  height: '60%',
+                                  animation: 'barPulse1 2s ease-in-out infinite alternate'
+                                }}
+                              ></div>
+                              <div 
+                                className="w-1.5 rounded-t transition-all duration-1200"
+                                style={{
+                                  backgroundColor: '#3481bd',
+                                  height: '40%',
+                                  animation: 'barPulse2 2.5s ease-in-out infinite alternate'
+                                }}
+                              ></div>
+                              <div 
+                                className="w-1.5 rounded-t transition-all duration-900"
+                                style={{
+                                  backgroundColor: '#3481bd',
+                                  height: '80%',
+                                  animation: 'barPulse3 1.8s ease-in-out infinite alternate'
+                                }}
+                              ></div>
+                              <div 
+                                className="w-1.5 rounded-t transition-all duration-1100"
+                                style={{
+                                  backgroundColor: '#3481bd',
+                                  height: '50%',
+                                  animation: 'barPulse4 2.2s ease-in-out infinite alternate'
+                                }}
+                              ></div>
+                              <div 
+                                className="w-1.5 rounded-t transition-all duration-1000"
+                                style={{
+                                  backgroundColor: '#3481bd',
+                                  height: '70%',
+                                  animation: 'barPulse5 1.9s ease-in-out infinite alternate'
+                                }}
+                              ></div>
+                            </div>
+                          </div>
 
                           {/* Text Lines Below Chart */}
                           <div className="mt-3 space-y-1.5">
