@@ -29,12 +29,12 @@ const Services = () => {
   const selectedServiceData = services.find(s => s.id === selectedService);
 
   return (
-    <section id="services" className="py-12 sm:py-16 bg-gradient-to-b from-gray-300 via-gray-200 to-gray-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <h2 className="text-xl sm:text-2xl text-center mb-8 sm:mb-12">Nossos Serviços</h2>
+    <section id="services" className="py-16 bg-gradient-to-b from-gray-300 via-gray-200 to-gray-100">
+      <div className="max-w-7xl mx-auto px-4">
+        <h2 className="text-2xl text-center mb-12">Nossos Serviços</h2>
 
-        {/* Service Cards - Stack on mobile */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mb-8 sm:mb-12">
+        {/* Service Cards */}
+        <div className="grid md:grid-cols-3 gap-8 mb-12">
           {services.map((service, index) => {
             const icons = [Building2, BarChart3, Wrench];
             const IconComponent = icons[index];
@@ -50,9 +50,9 @@ const Services = () => {
                 }`}
                 onClick={() => setSelectedService(service.id)}
               >
-                <CardHeader className="pb-3 sm:pb-4">
-                  <div className="flex justify-center mb-3 sm:mb-4">
-                    <div className={`w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center transition-colors ${
+                <CardHeader>
+                  <div className="flex justify-center mb-4">
+                    <div className={`w-16 h-16 flex items-center justify-center transition-colors ${
                       isSelected ? "text-primary" : "text-muted-foreground"
                     }`}>
                       {index === 0 ? (
@@ -86,7 +86,7 @@ const Services = () => {
                       )}
                     </div>
                   </div>
-                  <CardTitle className={`text-center text-lg sm:text-xl transition-colors ${
+                  <CardTitle className={`text-center text-lg transition-colors ${
                     isSelected ? "text-foreground" : "text-muted-foreground"
                   }`}>
                     {service.title}
@@ -98,11 +98,11 @@ const Services = () => {
         </div>
 
         {/* Content Area */}
-        <div className="bg-card rounded-lg p-4 sm:p-6 lg:p-8 shadow-sm border">
-          <h3 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-foreground">
+        <div className="bg-card rounded-lg p-8 shadow-sm border">
+          <h3 className="text-xl font-semibold mb-4 text-foreground">
             {selectedServiceData?.title}
           </h3>
-          <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+          <p className="text-muted-foreground leading-relaxed">
             {selectedServiceData?.detailedContent}
           </p>
         </div>

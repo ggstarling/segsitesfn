@@ -8,18 +8,18 @@ const Partners = () => {
   ];
 
   return (
-    <section className="pt-6 sm:pt-8 pb-0 bg-gray-200">
+    <section className="pt-8 pb-0 bg-gray-200">
       <div className="w-full">
-        <h2 className="text-sm sm:text-base font-normal text-center -mb-4 -mt-2 relative z-10 text-gray-500 px-4">Parceiros que confiam em nosso trabalho</h2>
+        <h2 className="text-base font-normal text-center -mb-4 -mt-2 relative z-10 text-gray-500">Parceiros que confiam em nosso trabalho</h2>
 
         <div className="overflow-hidden">
-          <div className="flex animate-scroll-infinite space-x-12 sm:space-x-24 items-center">
+          <div className="flex animate-scroll-infinite space-x-24 items-center">
             {[...partners, ...partners, ...partners].map((partner, index) => (
               <div key={index} className="flex-shrink-0 flex items-center justify-center">
                 <img
                   src={partner.logo}
                   alt={partner.name}
-                  className="h-32 sm:h-48 w-auto max-w-[300px] sm:max-w-[400px] object-contain opacity-80 hover:opacity-100 transition-all duration-300 filter grayscale hover:grayscale-0 hover:scale-105"
+                  className="h-48 w-auto max-w-[400px] object-contain opacity-80 hover:opacity-100 transition-all duration-300 filter grayscale hover:grayscale-0 hover:scale-105"
                 />
               </div>
             ))}
