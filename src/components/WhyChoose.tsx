@@ -222,7 +222,7 @@ const WhyChoose = () => {
 
                               {/* Bottom Right - Dynamic Data Matrix Block */}
                               <div className="rounded p-1" style={{backgroundColor: 'rgba(45, 55, 72, 0.8)'}}>
-                                <div className="grid grid-cols-3 gap-1 h-full">
+                                <div className="grid grid-cols-3 gap-0.5 h-full p-1.5">
                                   <div 
                                     className="rounded transition-all duration-500" 
                                     style={{
