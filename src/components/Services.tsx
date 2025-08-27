@@ -52,37 +52,40 @@ const Services = () => {
               >
                 <CardHeader>
                   <div className="flex justify-center mb-4">
-                    {index === 0 ? (
-                      // Bridge Icon for Monitoramento Estrutural
-                      <div className={`w-12 h-12 flex items-center justify-center transition-colors ${
-                        isSelected ? "text-primary" : "text-muted-foreground"
-                      }`}>
+                    <div className={`w-12 h-12 flex items-center justify-center transition-colors ${
+                      isSelected ? "text-primary" : "text-muted-foreground"
+                    }`}>
+                      {index === 0 ? (
+                        // Bridge silhouette for Monitoramento Estrutural
                         <svg viewBox="0 0 48 48" className="w-full h-full" fill="currentColor">
-                          {/* Bridge base */}
-                          <rect x="4" y="32" width="40" height="2" rx="1"/>
-                          {/* Left support */}
-                          <rect x="8" y="16" width="1.5" height="16" rx="0.5"/>
-                          {/* Center support */}
-                          <rect x="23" y="12" width="2" height="20" rx="0.5"/>
-                          {/* Right support */}
-                          <rect x="38" y="16" width="1.5" height="16" rx="0.5"/>
-                          {/* Bridge deck */}
-                          <rect x="6" y="30" width="36" height="1" rx="0.5"/>
-                          {/* Cables - left side */}
-                          <line x1="24" y1="12" x2="10" y2="30" stroke="currentColor" strokeWidth="0.5" opacity="0.8"/>
-                          <line x1="24" y1="12" x2="15" y2="30" stroke="currentColor" strokeWidth="0.5" opacity="0.6"/>
-                          {/* Cables - right side */}
-                          <line x1="24" y1="12" x2="38" y2="30" stroke="currentColor" strokeWidth="0.5" opacity="0.8"/>
-                          <line x1="24" y1="12" x2="33" y2="30" stroke="currentColor" strokeWidth="0.5" opacity="0.6"/>
-                          {/* Foundation */}
-                          <rect x="22" y="34" width="4" height="2" rx="1" opacity="0.7"/>
+                          <path d="M6 30h36v2H6z"/>
+                          <path d="M8 30h2V18h-2z"/>
+                          <path d="M22 30h4V14h-4z"/>
+                          <path d="M38 30h2V18h-2z"/>
+                          <path d="M10 18l14-4 14 4v2l-14-4-14 4z"/>
                         </svg>
-                      </div>
-                    ) : (
-                      <IconComponent className={`w-12 h-12 transition-colors ${
-                        isSelected ? "text-primary" : "text-muted-foreground"
-                      }`} />
-                    )}
+                      ) : index === 1 ? (
+                        // Truck silhouette for B-WIM
+                        <svg viewBox="0 0 48 48" className="w-full h-full" fill="currentColor">
+                          <path d="M8 28h24v4H8z"/>
+                          <path d="M8 20h16v8H8z"/>
+                          <path d="M24 24h8v8h-8z"/>
+                          <path d="M32 26h4v6h-4z"/>
+                          <circle cx="14" cy="34" r="3"/>
+                          <circle cx="28" cy="34" r="3"/>
+                          <path d="M6 28h2v4H6z"/>
+                          <path d="M36 28h2v4h-2z"/>
+                        </svg>
+                      ) : (
+                        // Lightbulb silhouette for Modelos de Desempenho
+                        <svg viewBox="0 0 48 48" className="w-full h-full" fill="currentColor">
+                          <path d="M24 8c-5.5 0-10 4.5-10 10 0 3 1.3 5.7 3.5 7.5L19 30h10l1.5-4.5c2.2-1.8 3.5-4.5 3.5-7.5 0-5.5-4.5-10-10-10z"/>
+                          <path d="M20 32h8v2h-8z"/>
+                          <path d="M21 36h6v2h-6z"/>
+                          <path d="M22 40h4v2h-4z"/>
+                        </svg>
+                      )}
+                    </div>
                   </div>
                   <CardTitle className={`text-center text-lg transition-colors ${
                     isSelected ? "text-foreground" : "text-muted-foreground"
