@@ -85,15 +85,15 @@ const ContactForm = () => {
                   }}
                 />
                 {/* Pulsing dots positioned within Brazil silhouette */}
-                <div className="absolute top-[12%] left-[25%] w-3 h-3 bg-blue-400 rounded-full animate-pulse opacity-80"></div>
-                <div className="absolute top-[18%] left-[35%] w-2.5 h-2.5 bg-blue-500 rounded-full animate-pulse opacity-70" style={{ animationDelay: '0.2s' }}></div>
-                <div className="absolute top-[28%] left-[42%] w-3 h-3 bg-blue-600 rounded-full animate-pulse opacity-85" style={{ animationDelay: '0.4s' }}></div>
-                <div className="absolute top-[35%] left-[28%] w-2 h-2 bg-blue-400 rounded-full animate-pulse opacity-75" style={{ animationDelay: '0.6s' }}></div>
-                <div className="absolute top-[45%] left-[38%] w-2.5 h-2.5 bg-blue-500 rounded-full animate-pulse opacity-80" style={{ animationDelay: '0.8s' }}></div>
-                <div className="absolute top-[52%] left-[45%] w-3 h-3 bg-blue-600 rounded-full animate-pulse opacity-70" style={{ animationDelay: '1.0s' }}></div>
-                <div className="absolute top-[58%] left-[32%] w-2 h-2 bg-blue-400 rounded-full animate-pulse opacity-85" style={{ animationDelay: '1.2s' }}></div>
-                <div className="absolute top-[65%] left-[40%] w-2.5 h-2.5 bg-blue-500 rounded-full animate-pulse opacity-75" style={{ animationDelay: '1.4s' }}></div>
-                <div className="absolute top-[72%] left-[35%] w-3 h-3 bg-blue-600 rounded-full animate-pulse opacity-80" style={{ animationDelay: '1.6s' }}></div>
+                <div className="absolute top-[12%] left-[35%] w-3 h-3 bg-primary rounded-full animate-ping" style={{ animationDelay: '0.2s' }}></div>
+                <div className="absolute top-[18%] left-[49%] w-3 h-3 bg-primary rounded-full animate-ping" style={{ animationDelay: '0.4s' }}></div>
+                <div className="absolute top-[28%] left-[59%] w-3 h-3 bg-primary rounded-full animate-ping" style={{ animationDelay: '0.6s' }}></div>
+                <div className="absolute top-[35%] left-[39%] w-3 h-3 bg-primary rounded-full animate-ping" style={{ animationDelay: '0.8s' }}></div>
+                <div className="absolute top-[45%] left-[53%] w-3 h-3 bg-primary rounded-full animate-ping" style={{ animationDelay: '1.0s' }}></div>
+                <div className="absolute top-[52%] left-[63%] w-3 h-3 bg-primary rounded-full animate-ping" style={{ animationDelay: '1.2s' }}></div>
+                <div className="absolute top-[58%] left-[45%] w-3 h-3 bg-primary rounded-full animate-ping" style={{ animationDelay: '1.4s' }}></div>
+                <div className="absolute top-[65%] left-[56%] w-3 h-3 bg-primary rounded-full animate-ping" style={{ animationDelay: '1.6s' }}></div>
+                <div className="absolute top-[72%] left-[49%] w-3 h-3 bg-primary rounded-full animate-ping" style={{ animationDelay: '1.8s' }}></div>
               </div>
             </div>
           </div>
