@@ -105,7 +105,7 @@ const WhyChoose = () => {
                     <div className="w-full h-full rounded-xl relative shadow-lg" style={{backgroundColor: '#3481bd'}}>
                       {/* Screen Area */}
                       <div className="absolute inset-2 rounded-lg bg-black/80 p-2">
-                        {/* Screen Content - Dashboard */}
+                          {/* Screen Content - Dashboard */}
                          <div className="w-full h-full rounded bg-white/98 p-2 overflow-hidden">
                            
                            {/* Dashboard Header */}
@@ -118,196 +118,129 @@ const WhyChoose = () => {
                              <div className="h-0.5 w-10 rounded" style={{backgroundColor: '#3481bd', opacity: 0.15}}></div>
                            </div>
                            
-                           {/* Dashboard Content */}
-                           <div className="grid grid-cols-5 gap-2 h-full">
-                             {/* Animated Bar Chart - Continuous Growth/Shrink */}
-                             <div className="col-span-3 p-1 rounded" style={{backgroundColor: '#3481bd', opacity: 0.06}}>
-                               <div className="flex items-end justify-between h-full px-1 space-x-1">
-                                 <div 
-                                   className="w-2 rounded-t transition-all duration-1000 ease-in-out" 
-                                   style={{
-                                     backgroundColor: '#3481bd', 
-                                     opacity: 0.6,
-                                     height: '40%',
-                                     animation: 'pulse 4s ease-in-out infinite alternate'
-                                   }}
-                                 ></div>
-                                 <div 
-                                   className="w-2 rounded-t transition-all duration-1000 ease-in-out" 
-                                   style={{
-                                     backgroundColor: '#3481bd', 
-                                     opacity: 0.7,
-                                     height: '70%',
-                                     animation: 'pulse 3.5s ease-in-out infinite alternate',
-                                     animationDelay: '0.5s'
-                                   }}
-                                 ></div>
-                                 <div 
-                                   className="w-2 rounded-t transition-all duration-1000 ease-in-out" 
-                                   style={{
-                                     backgroundColor: '#3481bd', 
-                                     opacity: 0.8,
-                                     height: '55%',
-                                     animation: 'pulse 4.5s ease-in-out infinite alternate',
-                                     animationDelay: '1s'
-                                   }}
-                                 ></div>
-                                 <div 
-                                   className="w-2 rounded-t transition-all duration-1000 ease-in-out" 
-                                   style={{
-                                     backgroundColor: '#3481bd', 
-                                     opacity: 0.75,
-                                     height: '85%',
-                                     animation: 'pulse 3.8s ease-in-out infinite alternate',
-                                     animationDelay: '1.5s'
-                                   }}
-                                 ></div>
-                                 <div 
-                                   className="w-2 rounded-t transition-all duration-1000 ease-in-out" 
-                                   style={{
-                                     backgroundColor: '#3481bd', 
-                                     opacity: 0.65,
-                                     height: '50%',
-                                     animation: 'pulse 4.2s ease-in-out infinite alternate',
-                                     animationDelay: '2s'
-                                   }}
-                                 ></div>
-                               </div>
-                             </div>
-                             
-                             {/* Right Panel */}
-                             <div className="col-span-2 space-y-2">
-                               {/* Flowing Line Chart */}
-                               <div className="h-16 p-1 rounded" style={{backgroundColor: '#3481bd', opacity: 0.04}}>
-                                 <svg className="w-full h-full" viewBox="0 0 120 60">
-                                   <path 
-                                     d="M8,45 Q25,20 40,30 T75,15 T108,35" 
-                                     stroke="#3481bd" 
-                                     strokeWidth="1.5" 
-                                     fill="none"
-                                     strokeDasharray="4,4"
-                                     opacity="0.7"
-                                     style={{
-                                       animation: 'pulse 3s ease-in-out infinite'
-                                     }}
-                                   />
-                                   <path 
-                                     d="M8,50 Q25,35 40,40 T75,25 T108,45" 
-                                     stroke="#3481bd" 
-                                     strokeWidth="1" 
-                                     fill="none"
-                                     strokeDasharray="2,3"
-                                     opacity="0.5"
-                                     style={{
-                                       animation: 'pulse 3.5s ease-in-out infinite',
-                                       animationDelay: '1s'
-                                     }}
-                                   />
-                                   <path 
-                                     d="M8,40 Q25,25 40,35 T75,20 T108,40" 
-                                     stroke="#3481bd" 
-                                     strokeWidth="0.8" 
-                                     fill="none"
-                                     strokeDasharray="1,2"
-                                     opacity="0.3"
-                                     style={{
-                                       animation: 'pulse 4s ease-in-out infinite',
-                                       animationDelay: '1.5s'
-                                     }}
-                                   />
-                                 </svg>
-                               </div>
-                               
-                               {/* Circular Progress Indicators - Fill/Empty */}
-                               <div className="flex justify-center space-x-3">
-                                 <div className="w-8 h-8 relative">
-                                   <svg className="w-full h-full transform -rotate-90" viewBox="0 0 32 32">
-                                     <circle
-                                       cx="16"
-                                       cy="16"
-                                       r="12"
-                                       stroke="#3481bd"
-                                       strokeWidth="1.5"
-                                       fill="none"
-                                       opacity="0.15"
-                                     />
-                                     <circle
-                                       cx="16"
-                                       cy="16"
-                                       r="12"
-                                       stroke="#3481bd"
-                                       strokeWidth="1.5"
-                                       fill="none"
-                                       strokeDasharray="75.4"
-                                       strokeDashoffset="50"
-                                       opacity="0.8"
-                                       style={{
-                                         animation: 'pulse 5s ease-in-out infinite alternate'
-                                       }}
-                                     />
-                                   </svg>
-                                 </div>
-                                 
-                                 <div className="w-8 h-8 relative">
-                                   <svg className="w-full h-full transform -rotate-90" viewBox="0 0 32 32">
-                                     <circle
-                                       cx="16"
-                                       cy="16"
-                                       r="12"
-                                       stroke="#3481bd"
-                                       strokeWidth="1.5"
-                                       fill="none"
-                                       opacity="0.15"
-                                     />
-                                     <circle
-                                       cx="16"
-                                       cy="16"
-                                       r="12"
-                                       stroke="#3481bd"
-                                       strokeWidth="1.5"
-                                       fill="none"
-                                       strokeDasharray="75.4"
-                                       strokeDashoffset="25"
-                                       opacity="0.9"
-                                       style={{
-                                         animation: 'pulse 4.5s ease-in-out infinite alternate',
-                                         animationDelay: '1s'
-                                       }}
-                                     />
-                                   </svg>
-                                 </div>
-                                 
-                                 <div className="w-6 h-6 relative mt-1">
-                                   <svg className="w-full h-full transform -rotate-90" viewBox="0 0 24 24">
-                                     <circle
-                                       cx="12"
-                                       cy="12"
-                                       r="9"
-                                       stroke="#3481bd"
-                                       strokeWidth="1.5"
-                                       fill="none"
-                                       opacity="0.15"
-                                     />
-                                     <circle
-                                       cx="12"
-                                       cy="12"
-                                       r="9"
-                                       stroke="#3481bd"
-                                       strokeWidth="1.5"
-                                       fill="none"
-                                       strokeDasharray="56.5"
-                                       strokeDashoffset="35"
-                                       opacity="0.7"
-                                       style={{
-                                         animation: 'pulse 6s ease-in-out infinite alternate',
-                                         animationDelay: '2s'
-                                       }}
-                                     />
-                                   </svg>
-                                 </div>
-                               </div>
-                             </div>
-                           </div>
+                            {/* Dashboard Content */}
+                            <div className="grid grid-cols-5 gap-2 h-full">
+                              {/* Animated Bar Chart - Moving Up/Down */}
+                              <div className="col-span-3 p-1 rounded" style={{backgroundColor: '#3481bd', opacity: 0.06}}>
+                                <div className="flex items-end justify-between h-full px-1 space-x-1">
+                                  <div 
+                                    className="w-2 rounded-t" 
+                                    style={{
+                                      backgroundColor: '#3481bd', 
+                                      opacity: 0.6,
+                                      animation: 'barMove1 3s ease-in-out infinite'
+                                    }}
+                                  ></div>
+                                  <div 
+                                    className="w-2 rounded-t" 
+                                    style={{
+                                      backgroundColor: '#3481bd', 
+                                      opacity: 0.7,
+                                      animation: 'barMove2 3.5s ease-in-out infinite'
+                                    }}
+                                  ></div>
+                                  <div 
+                                    className="w-2 rounded-t" 
+                                    style={{
+                                      backgroundColor: '#3481bd', 
+                                      opacity: 0.8,
+                                      animation: 'barMove3 4s ease-in-out infinite'
+                                    }}
+                                  ></div>
+                                  <div 
+                                    className="w-2 rounded-t" 
+                                    style={{
+                                      backgroundColor: '#3481bd', 
+                                      opacity: 0.75,
+                                      animation: 'barMove4 3.2s ease-in-out infinite'
+                                    }}
+                                  ></div>
+                                  <div 
+                                    className="w-2 rounded-t" 
+                                    style={{
+                                      backgroundColor: '#3481bd', 
+                                      opacity: 0.65,
+                                      animation: 'barMove5 4.5s ease-in-out infinite'
+                                    }}
+                                  ></div>
+                                </div>
+                              </div>
+                              
+                              {/* Right Panel */}
+                              <div className="col-span-2 space-y-2">
+                                {/* Flowing Line Chart - Wave Movement */}
+                                <div className="h-16 p-1 rounded" style={{backgroundColor: '#3481bd', opacity: 0.04}}>
+                                  <svg className="w-full h-full" viewBox="0 0 120 60">
+                                    <path 
+                                      d="M8,30 Q25,15 40,25 T75,20 T108,30" 
+                                      stroke="#3481bd" 
+                                      strokeWidth="1.5" 
+                                      fill="none"
+                                      opacity="0.7"
+                                      style={{
+                                        animation: 'waveFlow1 4s ease-in-out infinite'
+                                      }}
+                                    />
+                                    <path 
+                                      d="M8,35 Q25,20 40,30 T75,25 T108,35" 
+                                      stroke="#3481bd" 
+                                      strokeWidth="1" 
+                                      fill="none"
+                                      opacity="0.5"
+                                      style={{
+                                        animation: 'waveFlow2 4.5s ease-in-out infinite'
+                                      }}
+                                    />
+                                  </svg>
+                                </div>
+                                
+                                {/* Small Blocks/Icons - Fade and Scale */}
+                                <div className="grid grid-cols-3 gap-1 h-12">
+                                  <div 
+                                    className="rounded"
+                                    style={{
+                                      backgroundColor: '#3481bd',
+                                      animation: 'blockFade1 3s ease-in-out infinite'
+                                    }}
+                                  ></div>
+                                  <div 
+                                    className="rounded"
+                                    style={{
+                                      backgroundColor: '#3481bd',
+                                      animation: 'blockFade2 3.5s ease-in-out infinite'
+                                    }}
+                                  ></div>
+                                  <div 
+                                    className="rounded"
+                                    style={{
+                                      backgroundColor: '#3481bd',
+                                      animation: 'blockFade3 4s ease-in-out infinite'
+                                    }}
+                                  ></div>
+                                  <div 
+                                    className="rounded"
+                                    style={{
+                                      backgroundColor: '#3481bd',
+                                      animation: 'blockFade4 2.8s ease-in-out infinite'
+                                    }}
+                                  ></div>
+                                  <div 
+                                    className="rounded"
+                                    style={{
+                                      backgroundColor: '#3481bd',
+                                      animation: 'blockFade5 3.8s ease-in-out infinite'
+                                    }}
+                                  ></div>
+                                  <div 
+                                    className="rounded"
+                                    style={{
+                                      backgroundColor: '#3481bd',
+                                      animation: 'blockFade6 4.2s ease-in-out infinite'
+                                    }}
+                                  ></div>
+                                </div>
+                              </div>
+                            </div>
                          </div>
                        </div>
                        
