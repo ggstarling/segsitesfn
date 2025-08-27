@@ -11,7 +11,7 @@ const ContactForm = () => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="space-y-8">
           <div className="px-8">
-            <h3 className="text-3xl font-semibold text-foreground mb-8">Fale Conosco</h3>
+            <h3 className="text-3xl font-normal text-foreground mb-8">Fale Conosco</h3>
             <p className="text-gray-600 leading-relaxed mb-4 mt-6">
               Para um contato personalizado, informe-nos seus dados:
             </p>
