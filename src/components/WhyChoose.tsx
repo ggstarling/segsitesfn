@@ -104,183 +104,222 @@ const WhyChoose = () => {
                     {/* Notebook Body */}
                     <div className="w-full h-full rounded-xl relative shadow-lg" style={{backgroundColor: '#3481bd'}}>
                       {/* Screen Area */}
-                      <div className="absolute inset-3 rounded-lg bg-black/90 p-3">
+                      <div className="absolute inset-2 rounded-lg bg-black/80 p-2">
                         {/* Screen Content - Dashboard */}
-                        <div className="w-full h-full rounded bg-white/95 p-3 overflow-hidden">
-                          
-                          {/* Dashboard Header */}
-                          <div className="flex justify-between items-center mb-3">
-                            <div className="flex space-x-1">
-                              <div className="w-1.5 h-1.5 rounded-full" style={{backgroundColor: '#3481bd', opacity: 0.6}}></div>
-                              <div className="w-1.5 h-1.5 rounded-full" style={{backgroundColor: '#3481bd', opacity: 0.4}}></div>
-                              <div className="w-1.5 h-1.5 rounded-full" style={{backgroundColor: '#3481bd', opacity: 0.3}}></div>
-                            </div>
-                            <div className="h-1 w-12 rounded" style={{backgroundColor: '#3481bd', opacity: 0.2}}></div>
-                          </div>
-                          
-                          {/* Dashboard Content */}
-                          <div className="grid grid-cols-5 gap-2 h-full">
-                            {/* Animated Bar Chart */}
-                            <div className="col-span-3 p-1 rounded" style={{backgroundColor: '#3481bd', opacity: 0.08}}>
-                              <div className="flex items-end justify-between h-full px-1 space-x-1">
-                                <div 
-                                  className="w-2 rounded-t transition-all duration-2000 ease-in-out" 
-                                  style={{
-                                    backgroundColor: '#3481bd', 
-                                    opacity: 0.7,
-                                    height: '45%',
-                                    animation: 'pulse 3s ease-in-out infinite'
-                                  }}
-                                ></div>
-                                <div 
-                                  className="w-2 rounded-t transition-all duration-2000 ease-in-out" 
-                                  style={{
-                                    backgroundColor: '#3481bd', 
-                                    opacity: 0.8,
-                                    height: '75%',
-                                    animation: 'pulse 3s ease-in-out infinite',
-                                    animationDelay: '0.3s'
-                                  }}
-                                ></div>
-                                <div 
-                                  className="w-2 rounded-t transition-all duration-2000 ease-in-out" 
-                                  style={{
-                                    backgroundColor: '#3481bd', 
-                                    opacity: 0.9,
-                                    height: '60%',
-                                    animation: 'pulse 3s ease-in-out infinite',
-                                    animationDelay: '0.6s'
-                                  }}
-                                ></div>
-                                <div 
-                                  className="w-2 rounded-t transition-all duration-2000 ease-in-out" 
-                                  style={{
-                                    backgroundColor: '#3481bd', 
-                                    opacity: 0.85,
-                                    height: '90%',
-                                    animation: 'pulse 3s ease-in-out infinite',
-                                    animationDelay: '0.9s'
-                                  }}
-                                ></div>
-                                <div 
-                                  className="w-2 rounded-t transition-all duration-2000 ease-in-out" 
-                                  style={{
-                                    backgroundColor: '#3481bd', 
-                                    opacity: 0.75,
-                                    height: '55%',
-                                    animation: 'pulse 3s ease-in-out infinite',
-                                    animationDelay: '1.2s'
-                                  }}
-                                ></div>
-                              </div>
-                            </div>
-                            
-                            {/* Right Panel */}
-                            <div className="col-span-2 space-y-2">
-                              {/* Line Chart */}
-                              <div className="h-16 p-1 rounded" style={{backgroundColor: '#3481bd', opacity: 0.05}}>
-                                <svg className="w-full h-full" viewBox="0 0 120 60">
-                                  <path 
-                                    d="M8,45 Q25,20 40,30 T75,15 T108,35" 
-                                    stroke="#3481bd" 
-                                    strokeWidth="2" 
-                                    fill="none"
-                                    strokeDasharray="3,3"
-                                    opacity="0.8"
-                                    style={{
-                                      animation: 'pulse 2.5s ease-in-out infinite',
-                                      animationDelay: '0.5s'
-                                    }}
-                                  />
-                                  <path 
-                                    d="M8,50 Q25,35 40,40 T75,25 T108,45" 
-                                    stroke="#3481bd" 
-                                    strokeWidth="1.5" 
-                                    fill="none"
-                                    strokeDasharray="2,2"
-                                    opacity="0.5"
-                                    style={{
-                                      animation: 'pulse 2.5s ease-in-out infinite',
-                                      animationDelay: '1s'
-                                    }}
-                                  />
-                                </svg>
-                              </div>
-                              
-                              {/* Circular Progress Indicators */}
-                              <div className="flex justify-center space-x-2">
-                                <div className="w-8 h-8 relative">
-                                  <svg className="w-full h-full transform -rotate-90" viewBox="0 0 32 32">
-                                    <circle
-                                      cx="16"
-                                      cy="16"
-                                      r="12"
-                                      stroke="#3481bd"
-                                      strokeWidth="2"
-                                      fill="none"
-                                      opacity="0.2"
-                                    />
-                                    <circle
-                                      cx="16"
-                                      cy="16"
-                                      r="12"
-                                      stroke="#3481bd"
-                                      strokeWidth="2"
-                                      fill="none"
-                                      strokeDasharray="75.4"
-                                      strokeDashoffset="25"
-                                      opacity="0.8"
-                                      style={{
-                                        animation: 'pulse 2s ease-in-out infinite',
-                                        animationDelay: '0.2s'
-                                      }}
-                                    />
-                                  </svg>
-                                </div>
-                                
-                                <div className="w-8 h-8 relative">
-                                  <svg className="w-full h-full transform -rotate-90" viewBox="0 0 32 32">
-                                    <circle
-                                      cx="16"
-                                      cy="16"
-                                      r="12"
-                                      stroke="#3481bd"
-                                      strokeWidth="2"
-                                      fill="none"
-                                      opacity="0.2"
-                                    />
-                                    <circle
-                                      cx="16"
-                                      cy="16"
-                                      r="12"
-                                      stroke="#3481bd"
-                                      strokeWidth="2"
-                                      fill="none"
-                                      strokeDasharray="75.4"
-                                      strokeDashoffset="35"
-                                      opacity="0.9"
-                                      style={{
-                                        animation: 'pulse 2s ease-in-out infinite',
-                                        animationDelay: '0.8s'
-                                      }}
-                                    />
-                                  </svg>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      
-                      {/* Notebook Base */}
-                      <div 
-                        className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-24 h-2 rounded-b opacity-90"
-                        style={{backgroundColor: '#3481bd'}}
-                      ></div>
-                      <div 
-                        className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-1 rounded opacity-70"
-                        style={{backgroundColor: '#3481bd'}}
-                      ></div>
+                         <div className="w-full h-full rounded bg-white/98 p-2 overflow-hidden">
+                           
+                           {/* Dashboard Header */}
+                           <div className="flex justify-between items-center mb-2">
+                             <div className="flex space-x-1">
+                               <div className="w-1 h-1 rounded-full" style={{backgroundColor: '#3481bd', opacity: 0.4}}></div>
+                               <div className="w-1 h-1 rounded-full" style={{backgroundColor: '#3481bd', opacity: 0.3}}></div>
+                               <div className="w-1 h-1 rounded-full" style={{backgroundColor: '#3481bd', opacity: 0.2}}></div>
+                             </div>
+                             <div className="h-0.5 w-10 rounded" style={{backgroundColor: '#3481bd', opacity: 0.15}}></div>
+                           </div>
+                           
+                           {/* Dashboard Content */}
+                           <div className="grid grid-cols-5 gap-2 h-full">
+                             {/* Animated Bar Chart - Continuous Growth/Shrink */}
+                             <div className="col-span-3 p-1 rounded" style={{backgroundColor: '#3481bd', opacity: 0.06}}>
+                               <div className="flex items-end justify-between h-full px-1 space-x-1">
+                                 <div 
+                                   className="w-2 rounded-t transition-all duration-1000 ease-in-out" 
+                                   style={{
+                                     backgroundColor: '#3481bd', 
+                                     opacity: 0.6,
+                                     height: '40%',
+                                     animation: 'pulse 4s ease-in-out infinite alternate'
+                                   }}
+                                 ></div>
+                                 <div 
+                                   className="w-2 rounded-t transition-all duration-1000 ease-in-out" 
+                                   style={{
+                                     backgroundColor: '#3481bd', 
+                                     opacity: 0.7,
+                                     height: '70%',
+                                     animation: 'pulse 3.5s ease-in-out infinite alternate',
+                                     animationDelay: '0.5s'
+                                   }}
+                                 ></div>
+                                 <div 
+                                   className="w-2 rounded-t transition-all duration-1000 ease-in-out" 
+                                   style={{
+                                     backgroundColor: '#3481bd', 
+                                     opacity: 0.8,
+                                     height: '55%',
+                                     animation: 'pulse 4.5s ease-in-out infinite alternate',
+                                     animationDelay: '1s'
+                                   }}
+                                 ></div>
+                                 <div 
+                                   className="w-2 rounded-t transition-all duration-1000 ease-in-out" 
+                                   style={{
+                                     backgroundColor: '#3481bd', 
+                                     opacity: 0.75,
+                                     height: '85%',
+                                     animation: 'pulse 3.8s ease-in-out infinite alternate',
+                                     animationDelay: '1.5s'
+                                   }}
+                                 ></div>
+                                 <div 
+                                   className="w-2 rounded-t transition-all duration-1000 ease-in-out" 
+                                   style={{
+                                     backgroundColor: '#3481bd', 
+                                     opacity: 0.65,
+                                     height: '50%',
+                                     animation: 'pulse 4.2s ease-in-out infinite alternate',
+                                     animationDelay: '2s'
+                                   }}
+                                 ></div>
+                               </div>
+                             </div>
+                             
+                             {/* Right Panel */}
+                             <div className="col-span-2 space-y-2">
+                               {/* Flowing Line Chart */}
+                               <div className="h-16 p-1 rounded" style={{backgroundColor: '#3481bd', opacity: 0.04}}>
+                                 <svg className="w-full h-full" viewBox="0 0 120 60">
+                                   <path 
+                                     d="M8,45 Q25,20 40,30 T75,15 T108,35" 
+                                     stroke="#3481bd" 
+                                     strokeWidth="1.5" 
+                                     fill="none"
+                                     strokeDasharray="4,4"
+                                     opacity="0.7"
+                                     style={{
+                                       animation: 'pulse 3s ease-in-out infinite'
+                                     }}
+                                   />
+                                   <path 
+                                     d="M8,50 Q25,35 40,40 T75,25 T108,45" 
+                                     stroke="#3481bd" 
+                                     strokeWidth="1" 
+                                     fill="none"
+                                     strokeDasharray="2,3"
+                                     opacity="0.5"
+                                     style={{
+                                       animation: 'pulse 3.5s ease-in-out infinite',
+                                       animationDelay: '1s'
+                                     }}
+                                   />
+                                   <path 
+                                     d="M8,40 Q25,25 40,35 T75,20 T108,40" 
+                                     stroke="#3481bd" 
+                                     strokeWidth="0.8" 
+                                     fill="none"
+                                     strokeDasharray="1,2"
+                                     opacity="0.3"
+                                     style={{
+                                       animation: 'pulse 4s ease-in-out infinite',
+                                       animationDelay: '1.5s'
+                                     }}
+                                   />
+                                 </svg>
+                               </div>
+                               
+                               {/* Circular Progress Indicators - Fill/Empty */}
+                               <div className="flex justify-center space-x-3">
+                                 <div className="w-8 h-8 relative">
+                                   <svg className="w-full h-full transform -rotate-90" viewBox="0 0 32 32">
+                                     <circle
+                                       cx="16"
+                                       cy="16"
+                                       r="12"
+                                       stroke="#3481bd"
+                                       strokeWidth="1.5"
+                                       fill="none"
+                                       opacity="0.15"
+                                     />
+                                     <circle
+                                       cx="16"
+                                       cy="16"
+                                       r="12"
+                                       stroke="#3481bd"
+                                       strokeWidth="1.5"
+                                       fill="none"
+                                       strokeDasharray="75.4"
+                                       strokeDashoffset="50"
+                                       opacity="0.8"
+                                       style={{
+                                         animation: 'pulse 5s ease-in-out infinite alternate'
+                                       }}
+                                     />
+                                   </svg>
+                                 </div>
+                                 
+                                 <div className="w-8 h-8 relative">
+                                   <svg className="w-full h-full transform -rotate-90" viewBox="0 0 32 32">
+                                     <circle
+                                       cx="16"
+                                       cy="16"
+                                       r="12"
+                                       stroke="#3481bd"
+                                       strokeWidth="1.5"
+                                       fill="none"
+                                       opacity="0.15"
+                                     />
+                                     <circle
+                                       cx="16"
+                                       cy="16"
+                                       r="12"
+                                       stroke="#3481bd"
+                                       strokeWidth="1.5"
+                                       fill="none"
+                                       strokeDasharray="75.4"
+                                       strokeDashoffset="25"
+                                       opacity="0.9"
+                                       style={{
+                                         animation: 'pulse 4.5s ease-in-out infinite alternate',
+                                         animationDelay: '1s'
+                                       }}
+                                     />
+                                   </svg>
+                                 </div>
+                                 
+                                 <div className="w-6 h-6 relative mt-1">
+                                   <svg className="w-full h-full transform -rotate-90" viewBox="0 0 24 24">
+                                     <circle
+                                       cx="12"
+                                       cy="12"
+                                       r="9"
+                                       stroke="#3481bd"
+                                       strokeWidth="1.5"
+                                       fill="none"
+                                       opacity="0.15"
+                                     />
+                                     <circle
+                                       cx="12"
+                                       cy="12"
+                                       r="9"
+                                       stroke="#3481bd"
+                                       strokeWidth="1.5"
+                                       fill="none"
+                                       strokeDasharray="56.5"
+                                       strokeDashoffset="35"
+                                       opacity="0.7"
+                                       style={{
+                                         animation: 'pulse 6s ease-in-out infinite alternate',
+                                         animationDelay: '2s'
+                                       }}
+                                     />
+                                   </svg>
+                                 </div>
+                               </div>
+                             </div>
+                           </div>
+                         </div>
+                       </div>
+                       
+                       {/* Notebook Base - Thinner */}
+                       <div 
+                         className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-20 h-1.5 rounded-b opacity-85"
+                         style={{backgroundColor: '#3481bd'}}
+                       ></div>
+                       <div 
+                         className="absolute -bottom-1.5 left-1/2 transform -translate-x-1/2 w-28 h-0.5 rounded opacity-60"
+                         style={{backgroundColor: '#3481bd'}}
+                       ></div>
                     </div>
                   </div>
                 </div>
