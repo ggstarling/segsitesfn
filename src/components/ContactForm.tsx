@@ -11,8 +11,8 @@ const ContactForm = () => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="space-y-8">
           <div className="px-8">
-            <h3 className="text-3xl font-normal text-foreground mb-6">Fale Conosco</h3>
-            <p className="text-gray-600 leading-relaxed mb-8">
+            <h3 className="text-3xl font-normal text-foreground mb-8">Fale Conosco</h3>
+            <p className="text-gray-600 leading-relaxed mb-4">
               Para um contato personalizado, informe-nos seus dados:
             </p>
           </div>
@@ -74,7 +74,7 @@ const ContactForm = () => {
             </div>
             
             {/* Brazil silhouette */}
-            <div className="hidden lg:flex items-center justify-center p-8">
+            <div className="hidden lg:flex items-center justify-end pr-4 pl-12">
               <img 
                 src="/lovable-uploads/442e7f39-03b8-4a7b-8989-e8cc94dbf801.png"
                 alt="Brazil silhouette"
