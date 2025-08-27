@@ -110,42 +110,95 @@ const WhyChoose = () => {
                             {/* Dashboard with 3 Chart Blocks */}
                             <div className="grid grid-cols-2 grid-rows-2 gap-1 h-full">
                               
-                              {/* Top Left - Bar Chart Block */}
+                              {/* Top Left - Animated Bar Chart Block */}
                               <div className="rounded p-1" style={{backgroundColor: 'rgba(55, 65, 81, 0.8)'}}>
                                 <div className="h-full flex items-end justify-center space-x-0.5">
-                                  <div className="w-1 rounded-t" style={{backgroundColor: '#3481bd', height: '60%', animation: 'barGrow1 3s ease-in-out infinite'}}></div>
-                                  <div className="w-1 rounded-t" style={{backgroundColor: '#3481bd', height: '40%', animation: 'barGrow2 3.5s ease-in-out infinite'}}></div>
-                                  <div className="w-1 rounded-t" style={{backgroundColor: '#3481bd', height: '80%', animation: 'barGrow3 2.8s ease-in-out infinite'}}></div>
-                                  <div className="w-1 rounded-t" style={{backgroundColor: '#3481bd', height: '50%', animation: 'barGrow4 4s ease-in-out infinite'}}></div>
-                                  <div className="w-1 rounded-t" style={{backgroundColor: '#3481bd', height: '70%', animation: 'barGrow5 3.2s ease-in-out infinite'}}></div>
+                                  <div 
+                                    className="w-1 rounded-t transition-all duration-1000 ease-in-out" 
+                                    style={{
+                                      backgroundColor: '#3481bd', 
+                                      height: '60%', 
+                                      animation: 'barPulse1 2s ease-in-out infinite alternate'
+                                    }}
+                                  ></div>
+                                  <div 
+                                    className="w-1 rounded-t transition-all duration-1200 ease-in-out" 
+                                    style={{
+                                      backgroundColor: '#3481bd', 
+                                      height: '40%', 
+                                      animation: 'barPulse2 2.5s ease-in-out infinite alternate'
+                                    }}
+                                  ></div>
+                                  <div 
+                                    className="w-1 rounded-t transition-all duration-900 ease-in-out" 
+                                    style={{
+                                      backgroundColor: '#3481bd', 
+                                      height: '80%', 
+                                      animation: 'barPulse3 1.8s ease-in-out infinite alternate'
+                                    }}
+                                  ></div>
+                                  <div 
+                                    className="w-1 rounded-t transition-all duration-1100 ease-in-out" 
+                                    style={{
+                                      backgroundColor: '#3481bd', 
+                                      height: '50%', 
+                                      animation: 'barPulse4 2.2s ease-in-out infinite alternate'
+                                    }}
+                                  ></div>
+                                  <div 
+                                    className="w-1 rounded-t transition-all duration-1000 ease-in-out" 
+                                    style={{
+                                      backgroundColor: '#3481bd', 
+                                      height: '70%', 
+                                      animation: 'barPulse5 1.9s ease-in-out infinite alternate'
+                                    }}
+                                  ></div>
                                 </div>
                               </div>
                               
-                              {/* Top Right - Line Chart Block */}
+                              {/* Top Right - Flowing Line Chart Block */}
                               <div className="rounded p-1" style={{backgroundColor: 'rgba(30, 41, 59, 0.9)'}}>
                                 <div className="h-full">
                                   <svg className="w-full h-full" viewBox="0 0 40 20">
+                                    <defs>
+                                      <linearGradient id="lineGradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+                                        <stop offset="0%" stopColor="#3481bd" stopOpacity="0.3"/>
+                                        <stop offset="50%" stopColor="#3481bd" stopOpacity="1"/>
+                                        <stop offset="100%" stopColor="#3481bd" stopOpacity="0.3"/>
+                                      </linearGradient>
+                                    </defs>
                                     <path 
                                       d="M2,15 Q12,8 20,12 T38,6" 
-                                      stroke="#3481bd" 
+                                      stroke="url(#lineGradient1)" 
                                       strokeWidth="1.5" 
                                       fill="none"
-                                      opacity="0.9"
-                                      style={{animation: 'lineFlow1 4s ease-in-out infinite'}}
+                                      style={{
+                                        animation: 'lineWave1 3s ease-in-out infinite',
+                                        strokeDasharray: '2,2',
+                                        strokeDashoffset: '0'
+                                      }}
                                     />
                                     <path 
                                       d="M2,12 Q12,5 20,9 T38,4" 
                                       stroke="#3481bd" 
                                       strokeWidth="1" 
                                       fill="none"
-                                      opacity="0.6"
-                                      style={{animation: 'lineFlow2 5s ease-in-out infinite'}}
+                                      opacity="0.7"
+                                      style={{
+                                        animation: 'lineWave2 4s ease-in-out infinite',
+                                        strokeDasharray: '1,1',
+                                        strokeDashoffset: '0'
+                                      }}
                                     />
+                                    {/* Animated data points */}
+                                    <circle cx="8" cy="11" r="0.8" fill="#3481bd" opacity="0.8" style={{animation: 'pointPulse1 2s ease-in-out infinite'}}/>
+                                    <circle cx="20" cy="12" r="0.8" fill="#3481bd" opacity="0.8" style={{animation: 'pointPulse2 2.5s ease-in-out infinite'}}/>
+                                    <circle cx="32" cy="7" r="0.8" fill="#3481bd" opacity="0.8" style={{animation: 'pointPulse3 3s ease-in-out infinite'}}/>
                                   </svg>
                                 </div>
                               </div>
 
-                              {/* Bottom Left - Circular Progress Block */}
+                              {/* Bottom Left - Dynamic Circular Progress Block */}
                               <div className="rounded p-1 flex items-center justify-center" style={{backgroundColor: 'rgba(51, 65, 85, 0.7)'}}>
                                 <div className="relative w-8 h-8">
                                   <div className="absolute inset-0 rounded-full border-2 border-gray-600"></div>
@@ -154,22 +207,64 @@ const WhyChoose = () => {
                                     style={{
                                       borderTopColor: '#3481bd', 
                                       borderRightColor: '#3481bd',
-                                      animation: 'circularFill 3s ease-in-out infinite'
+                                      animation: 'circularProgress 3s ease-in-out infinite',
+                                      transformOrigin: 'center'
                                     }}
                                   ></div>
                                   <div className="absolute inset-1 rounded-full bg-black/20"></div>
+                                  {/* Center indicator */}
+                                  <div 
+                                    className="absolute inset-3 rounded-full bg-primary/60"
+                                    style={{animation: 'centerPulse 2s ease-in-out infinite'}}
+                                  ></div>
                                 </div>
                               </div>
 
-                              {/* Bottom Right - Data Points Block */}
+                              {/* Bottom Right - Dynamic Data Matrix Block */}
                               <div className="rounded p-1" style={{backgroundColor: 'rgba(45, 55, 72, 0.8)'}}>
                                 <div className="grid grid-cols-3 gap-1 h-full">
-                                  <div className="rounded" style={{backgroundColor: '#3481bd', opacity: 0.8, animation: 'dataFade1 2.5s ease-in-out infinite'}}></div>
-                                  <div className="rounded" style={{backgroundColor: '#3481bd', opacity: 0.6, animation: 'dataFade2 3s ease-in-out infinite'}}></div>
-                                  <div className="rounded" style={{backgroundColor: '#3481bd', opacity: 0.9, animation: 'dataFade3 3.5s ease-in-out infinite'}}></div>
-                                  <div className="rounded" style={{backgroundColor: '#3481bd', opacity: 0.7, animation: 'dataFade4 2.8s ease-in-out infinite'}}></div>
-                                  <div className="rounded" style={{backgroundColor: '#3481bd', opacity: 0.8, animation: 'dataFade5 4s ease-in-out infinite'}}></div>
-                                  <div className="rounded" style={{backgroundColor: '#3481bd', opacity: 0.5, animation: 'dataFade6 3.2s ease-in-out infinite'}}></div>
+                                  <div 
+                                    className="rounded transition-all duration-500" 
+                                    style={{
+                                      backgroundColor: '#3481bd', 
+                                      animation: 'matrixPulse1 2s ease-in-out infinite alternate'
+                                    }}
+                                  ></div>
+                                  <div 
+                                    className="rounded transition-all duration-700" 
+                                    style={{
+                                      backgroundColor: '#3481bd', 
+                                      animation: 'matrixPulse2 2.5s ease-in-out infinite alternate'
+                                    }}
+                                  ></div>
+                                  <div 
+                                    className="rounded transition-all duration-600" 
+                                    style={{
+                                      backgroundColor: '#3481bd', 
+                                      animation: 'matrixPulse3 1.8s ease-in-out infinite alternate'
+                                    }}
+                                  ></div>
+                                  <div 
+                                    className="rounded transition-all duration-800" 
+                                    style={{
+                                      backgroundColor: '#3481bd', 
+                                      animation: 'matrixPulse4 2.2s ease-in-out infinite alternate'
+                                    }}
+                                  ></div>
+                                  <div 
+                                    className="rounded transition-all duration-500" 
+                                    style={{
+                                      backgroundColor: '#3481bd', 
+                                      animation: 'matrixPulse5 1.9s ease-in-out infinite alternate'
+                                    }}
+                                  ></div>
+                                  <div 
+                                    className="rounded transition-all duration-900" 
+                                    style={{
+                                      backgroundColor: '#3481bd', 
+                                      animation: 'matrixPulse6 2.7s ease-in-out infinite alternate'
+                                    }}
+                                  ></div>
                                 </div>
                               </div>
                             </div>
