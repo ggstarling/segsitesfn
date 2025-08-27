@@ -77,6 +77,21 @@ const WhyChoose = () => {
                   }`}>
                     {item.title}
                   </h3>
+                  {index === 3 && (
+                    <div className="traffic-road-element">
+                      <div className="road-container">
+                        <div className="road-surface">
+                          <div className="lane left-lane">
+                            <div className="arrow arrow-up"></div>
+                          </div>
+                          <div className="center-line"></div>
+                          <div className="lane right-lane">
+                            <div className="arrow arrow-down"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
                 </div>
                 
                 <div className={`overflow-hidden transition-all duration-700 ease-out ${
