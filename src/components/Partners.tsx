@@ -13,7 +13,7 @@ const Partners = () => {
   return (
     <section className="pt-6 md:pt-8 pb-0 bg-gray-200">
       <div className="w-full">
-        <h2 className="text-xs md:text-base font-normal text-center mb-2 md:-mb-4 -mt-2 relative z-10 text-gray-500">Parceiros que confiam em nosso trabalho</h2>
+        <h2 className="text-xs md:text-base font-normal text-center mb-2 md:-mb-4 mt-1 relative z-10 text-gray-500">Parceiros que confiam em nosso trabalho</h2>
 
         <div className="overflow-hidden">
           {/* Desktop version */}
@@ -41,7 +41,7 @@ const Partners = () => {
                   <img
                     src={partner.logo}
                     alt={partner.name}
-                    className="h-40 w-full object-contain opacity-80 filter grayscale"
+                    className="h-44 w-full object-cover opacity-80 filter grayscale"
                   />
                 </div>
               ))}
@@ -55,7 +55,7 @@ const Partners = () => {
                   <img
                     src={partner.logo}
                     alt={partner.name}
-                    className="h-40 w-full object-contain opacity-80 filter grayscale"
+                    className="h-44 w-full object-cover opacity-80 filter grayscale"
                   />
                 </div>
               ))}
