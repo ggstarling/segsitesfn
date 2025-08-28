@@ -45,7 +45,9 @@ const Hero = ({ onOpenModal }: HeroProps) => {
         </div>
       </div>
       
-      <HorizontalWaves />
+      <div className="hidden md:block">
+        <HorizontalWaves />
+      </div>
     </section>
   );
 };

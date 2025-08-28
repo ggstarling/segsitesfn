@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import HorizontalWaves from "./HorizontalWaves";
+import MobileWaves from "./MobileWaves";
 
 interface MobileHeroProps {
   onOpenModal: () => void;
@@ -42,9 +42,7 @@ const MobileHero = ({ onOpenModal }: MobileHeroProps) => {
         </Button>
       </div>
       
-      <div className="absolute bottom-8 left-0 right-0 h-20 overflow-hidden">
-        <HorizontalWaves />
-      </div>
+      <MobileWaves />
     </section>
   );
 };
