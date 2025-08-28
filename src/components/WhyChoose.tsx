@@ -412,7 +412,7 @@ const WhyChoose = () => {
                   <div className="relative mx-auto w-81 h-54 mb-4 flex items-center justify-center">
                     <div className="predictive-eye">
                       {/* Eye Outline */}
-                      <div className="eye-shape">
+                      <div className="eye-shape md:scale-150">
                         {/* Eye Border */}
                         <div className="eye-border"></div>
                         
