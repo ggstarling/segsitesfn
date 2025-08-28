@@ -30,7 +30,7 @@ const Partners = () => {
           </div>
 
           {/* Mobile version - single horizontal track with duplicated sequence */}
-          <div className="md:hidden">
+          <div className="md:hidden -mt-1">
             <div className="flex animate-logo-scroll-mobile items-center">
               {duplicatedLogos.map((partner, index) => (
                 <div 
