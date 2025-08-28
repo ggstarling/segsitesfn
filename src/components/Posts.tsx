@@ -47,7 +47,9 @@ const Posts = () => {
               />
               <div className="p-4">
                 <h3 className="text-base leading-tight line-clamp-3 font-medium">
-                  {posts[mobileIndex].title}
+                  {posts[mobileIndex].id === 4 
+                    ? "A importância da Manutenção Preditiva e do Monitoramento Contínuo em..." 
+                    : posts[mobileIndex].title}
                 </h3>
               </div>
             </Link>
