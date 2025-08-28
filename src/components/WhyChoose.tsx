@@ -70,7 +70,7 @@ const WhyChoose = () => {
                   }`}>
                     <Check className="w-4 h-4" />
                   </div>
-                  <h3 className={`text-xl md:text-lg font-medium transition-colors duration-300 ${
+                  <h3 className={`text-lg font-medium transition-colors duration-300 ${
                     selectedItem === index 
                       ? 'text-foreground' 
                       : 'text-muted-foreground'
@@ -85,7 +85,7 @@ const WhyChoose = () => {
                     : 'max-h-0 opacity-0 transform -translate-y-2'
                 }`}>
                   <div className="pl-9 pr-4 pt-2 pb-4">
-                    <p className="text-lg md:text-base text-muted-foreground leading-relaxed">
+                    <p className="text-muted-foreground leading-relaxed">
                       {item.description}
                     </p>
                   </div>

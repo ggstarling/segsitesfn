@@ -56,25 +56,14 @@ const Services = () => {
                       isSelected ? "text-primary" : "text-muted-foreground"
                     }`}>
                       {index === 0 ? (
-                        <>
-                          {/* Bridge outlined silhouette for desktop */}
-                          <svg viewBox="0 0 48 48" className="w-full h-full hidden md:block" fill="none" stroke="currentColor" strokeWidth="2">
-                            <path d="M6 30h36"/>
-                            <path d="M9 30V18"/>
-                            <path d="M24 30V14"/>
-                            <path d="M39 30V18"/>
-                            <path d="M9 18L24 14L39 18"/>
-                          </svg>
-                          {/* Sensor outlined silhouette for mobile */}
-                          <svg viewBox="0 0 48 48" className="w-full h-full md:hidden" fill="none" stroke="currentColor" strokeWidth="2">
-                            <rect x="18" y="16" width="12" height="16" rx="2"/>
-                            <path d="M24 12v4"/>
-                            <path d="M24 32v4"/>
-                            <circle cx="24" cy="24" r="2"/>
-                            <path d="M14 20l4 4-4 4"/>
-                            <path d="M34 20l-4 4 4 4"/>
-                          </svg>
-                        </>
+                        // Bridge outlined silhouette for Monitoramento Estrutural
+                        <svg viewBox="0 0 48 48" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="2">
+                          <path d="M6 30h36"/>
+                          <path d="M9 30V18"/>
+                          <path d="M24 30V14"/>
+                          <path d="M39 30V18"/>
+                          <path d="M9 18L24 14L39 18"/>
+                        </svg>
                       ) : index === 1 ? (
                         // Truck outlined silhouette for B-WIM
                         <svg viewBox="0 0 48 48" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="2">
@@ -97,7 +86,7 @@ const Services = () => {
                       )}
                     </div>
                   </div>
-                  <CardTitle className={`text-center text-xl md:text-lg transition-colors ${
+                  <CardTitle className={`text-center text-lg transition-colors ${
                     isSelected ? "text-foreground" : "text-muted-foreground"
                   }`}>
                     {service.title}
@@ -110,10 +99,10 @@ const Services = () => {
 
         {/* Content Area */}
         <div className="bg-card rounded-lg p-4 md:p-8 shadow-sm border">
-          <h3 className="text-2xl md:text-xl font-semibold mb-4 text-foreground">
+          <h3 className="text-xl font-semibold mb-4 text-foreground">
             {selectedServiceData?.title}
           </h3>
-          <p className="text-lg md:text-base text-muted-foreground leading-relaxed">
+          <p className="text-muted-foreground leading-relaxed">
             {selectedServiceData?.detailedContent}
           </p>
         </div>
