@@ -21,7 +21,7 @@ const WhyChoose = () => {
     },
     {
       title: "Monitoramento sem interrupções do tráfego",
-      description: "Garanta o monitoramento sem interrupções do tráfego com tecnologia não invasiva, mantendo o fluxo contínuo sem paradas ou bloqueios."
+      description: "Garanta o monitoramento sem interrupções do tráfego, mantendo o fluxo contínuo: sem paradas ou bloqueios."
     }
   ];
 
