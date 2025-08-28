@@ -1,6 +1,6 @@
 const HorizontalWaves = () => {
   return (
-    <div className="absolute bottom-16 left-0 right-0 h-32 overflow-hidden">
+    <div className="relative w-full h-full overflow-hidden">
       {/* Bottom Wave - Dark Blue */}
       <div className="absolute bottom-0 w-[200%] h-full animate-scroll-fast">
         <svg
