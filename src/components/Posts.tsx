@@ -20,12 +20,12 @@ const Posts = () => {
   );
 
   return (
-    <section className="py-16">
+    <section className="py-8 md:py-16">
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-2xl text-center mb-12">Últimas Postagens</h2>
+        <h2 className="text-2xl text-center mb-8 md:mb-12">Últimas Postagens</h2>
 
         <div className="relative">
-          <div className="grid md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             {visiblePosts.map((post, index) => (
               <Link 
                 key={`${post.id}-${index}`} 

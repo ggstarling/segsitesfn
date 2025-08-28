@@ -29,12 +29,12 @@ const Services = () => {
   const selectedServiceData = services.find(s => s.id === selectedService);
 
   return (
-    <section id="services" className="py-16 bg-gradient-to-b from-gray-300 via-gray-200 to-gray-100">
+    <section id="services" className="py-8 md:py-16 bg-gradient-to-b from-gray-300 via-gray-200 to-gray-100">
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-2xl text-center mb-12">Nossos Serviços</h2>
+        <h2 className="text-2xl text-center mb-8 md:mb-12">Nossos Serviços</h2>
 
         {/* Service Cards */}
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-12">
           {services.map((service, index) => {
             const icons = [Building2, BarChart3, Wrench];
             const IconComponent = icons[index];
@@ -98,7 +98,7 @@ const Services = () => {
         </div>
 
         {/* Content Area */}
-        <div className="bg-card rounded-lg p-8 shadow-sm border">
+        <div className="bg-card rounded-lg p-4 md:p-8 shadow-sm border">
           <h3 className="text-xl font-semibold mb-4 text-foreground">
             {selectedServiceData?.title}
           </h3>
