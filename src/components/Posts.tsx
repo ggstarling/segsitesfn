@@ -34,44 +34,41 @@ const Posts = () => {
         <h2 className="text-2xl text-center mb-8 md:mb-12">Últimas Postagens</h2>
 
         {/* Mobile Single-Item Carousel */}
-        <div className="relative md:hidden">
-          <div className="flex justify-center">
-            <Link 
-              to={`/article/${posts[mobileIndex].slug}`}
-              className="bg-card rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer w-full max-w-sm"
-            >
-              <img
-                src={posts[mobileIndex].image}
-                alt={posts[mobileIndex].title}
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-4">
-                <h3 className="text-base leading-tight line-clamp-3 font-medium">
-                  {posts[mobileIndex].id === 4 
-                    ? "A importância da Manutenção Preditiva e do Monitoramento Contínuo em..." 
-                    : posts[mobileIndex].title}
-                </h3>
-              </div>
-            </Link>
-          </div>
-
-          <Button
-            variant="outline"
-            size="icon"
+        <div className="relative md:hidden flex items-center justify-center">
+          {/* Left Arrow */}
+          <button
             onClick={prevMobileSlide}
-            className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-background/80 backdrop-blur-sm border-2"
+            className="flex-shrink-0 mr-4 text-2xl font-bold text-[#3481bd] hover:text-[#2a6ba0] transition-colors duration-200"
           >
-            <ChevronLeft className="w-5 h-5" />
-          </Button>
+            &lt;
+          </button>
 
-          <Button
-            variant="outline"
-            size="icon"
-            onClick={nextMobileSlide}
-            className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-background/80 backdrop-blur-sm border-2"
+          {/* News Item */}
+          <Link 
+            to={`/article/${posts[mobileIndex].slug}`}
+            className="bg-card rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer w-full max-w-xs"
           >
-            <ChevronRight className="w-5 h-5" />
-          </Button>
+            <img
+              src={posts[mobileIndex].image}
+              alt={posts[mobileIndex].title}
+              className="w-full h-32 object-cover"
+            />
+            <div className="p-3">
+              <h3 className="text-sm leading-tight line-clamp-2 font-medium">
+                {posts[mobileIndex].id === 4 
+                  ? "A importância da Manutenção Preditiva e do Monitoramento Contínuo em..." 
+                  : posts[mobileIndex].title}
+              </h3>
+            </div>
+          </Link>
+
+          {/* Right Arrow */}
+          <button
+            onClick={nextMobileSlide}
+            className="flex-shrink-0 ml-4 text-2xl font-bold text-[#3481bd] hover:text-[#2a6ba0] transition-colors duration-200"
+          >
+            &gt;
+          </button>
         </div>
 
         {/* Desktop Multi-Item Carousel */}
