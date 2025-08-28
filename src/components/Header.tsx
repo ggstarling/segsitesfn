@@ -218,7 +218,7 @@ const Header = () => {
             <span className={`text-lg font-normal ${(location.pathname === "/about" || location.pathname === "/blog") ? "text-[#3481bd]" : "text-gray-700"}`}>
               Sobre Nós
             </span>
-            <div className="pl-2 space-y-3">
+            <div className="pl-0 space-y-3">
               <button 
                 onClick={() => navigateToPage("/about")}
                 className="block text-left text-base text-gray-600 hover:text-[#3481bd] transition-colors"

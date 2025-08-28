@@ -98,7 +98,7 @@ const Posts = () => {
               className="w-full h-32 object-cover"
             />
             <div className="p-3">
-              <h3 className="text-sm leading-tight line-clamp-2 font-medium">
+              <h3 className="text-sm leading-tight line-clamp-2 font-normal">
                 {posts[mobileIndex].id === 4 
                   ? "A importância da Manutenção Preditiva e do Monitoramento Contínuo em..." 
                   : posts[mobileIndex].title}
