@@ -2,6 +2,7 @@ import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
+import MobileHero from "@/components/MobileHero";
 import Partners from "@/components/Partners";
 import WhyChoose from "@/components/WhyChoose";
 import Services from "@/components/Services";
@@ -16,6 +17,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <Hero onOpenModal={() => setIsModalOpen(true)} />
+      <MobileHero onOpenModal={() => setIsModalOpen(true)} />
       <Partners />
       <WhyChoose />
       <Services />
