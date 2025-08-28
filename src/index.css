@@ -118,7 +118,7 @@ All colors MUST be HSL.
   }
   
   .animate-logo-scroll-mobile {
-    animation: logo-scroll-mobile 9s linear infinite;
+    animation: logo-scroll-mobile 6s linear infinite;
   }
   
   .animate-wave-fast {

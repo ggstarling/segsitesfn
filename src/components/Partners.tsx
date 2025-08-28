@@ -35,13 +35,13 @@ const Partners = () => {
               {duplicatedLogos.map((partner, index) => (
                 <div 
                   key={index} 
-                  className="flex-shrink-0 flex items-center justify-center mr-[18px]"
-                  style={{ width: '110px' }}
+                  className="flex-shrink-0 flex items-center justify-center mr-[8px]"
+                  style={{ width: '120px' }}
                 >
                   <img
                     src={partner.logo}
                     alt={partner.name}
-                    className="h-32 w-full object-contain opacity-80 filter grayscale"
+                    className="h-40 w-full object-contain opacity-80 filter grayscale"
                   />
                 </div>
               ))}
@@ -49,13 +49,13 @@ const Partners = () => {
               {duplicatedLogos.map((partner, index) => (
                 <div 
                   key={`loop-${index}`} 
-                  className="flex-shrink-0 flex items-center justify-center mr-[18px]"
-                  style={{ width: '110px' }}
+                  className="flex-shrink-0 flex items-center justify-center mr-[8px]"
+                  style={{ width: '120px' }}
                 >
                   <img
                     src={partner.logo}
                     alt={partner.name}
-                    className="h-32 w-full object-contain opacity-80 filter grayscale"
+                    className="h-40 w-full object-contain opacity-80 filter grayscale"
                   />
                 </div>
               ))}
