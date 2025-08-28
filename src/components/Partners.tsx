@@ -13,7 +13,7 @@ const Partners = () => {
         <h2 className="text-sm md:text-base font-normal text-center -mb-4 -mt-2 relative z-10 text-gray-500">Parceiros que confiam em nosso trabalho</h2>
 
         <div className="overflow-hidden">
-          <div className="flex animate-scroll-infinite space-x-1 md:space-x-24 items-center">
+          <div className="flex animate-scroll-infinite space-x-[16px] md:space-x-24 items-center">
             {[...partners, ...partners, ...partners, ...partners].map((partner, index) => (
               <div key={index} className="flex-shrink-0 flex items-center justify-center">
                 <img
