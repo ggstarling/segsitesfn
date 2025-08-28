@@ -44,7 +44,7 @@ const HorizontalWaves = () => {
       </div>
 
       {/* Top Wave - Light Blue - Halved wavelength, slightly increased amplitude */}
-      <div className="absolute bottom-0 w-[200%] h-full animate-scroll-medium">
+      <div className="absolute bottom-[45%] w-[200%] h-full animate-scroll-medium">
         <svg
           viewBox="0 0 1200 128"
           className="w-full h-full"
