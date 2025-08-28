@@ -64,17 +64,17 @@ const Services = () => {
                             <path d="M12 12c6.6-6.6 17.4-6.6 24 0"/>
                             <path d="M36 36c-6.6 6.6-17.4 6.6-24 0"/>
                           </svg>
-                      ) : index === 1 ? (
-                        // Truck outlined silhouette for B-WIM
-                        <svg viewBox="0 0 48 48" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="2">
-                          <rect x="8" y="20" width="16" height="8"/>
-                          <rect x="24" y="24" width="8" height="8"/>
-                          <path d="M32 26h4v6h-4V26z"/>
-                          <circle cx="14" cy="34" r="3"/>
-                          <circle cx="28" cy="34" r="3"/>
-                          <path d="M8 28H6v4h2"/>
-                          <path d="M32 28h4v4h-4"/>
-                        </svg>
+                        ) : index === 1 ? (
+                          // Weight in motion outlined silhouette for B-WIM - three arrows above platform
+                          <svg viewBox="0 0 48 48" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="2">
+                            {/* Three downward arrows */}
+                            <path d="M16 12v8m0 0l-3-3m3 3l3-3"/>
+                            <path d="M24 10v10m0 0l-3-3m3 3l3-3"/>
+                            <path d="M32 12v8m0 0l-3-3m3 3l3-3"/>
+                            {/* Platform/base line */}
+                            <line x1="10" y1="32" x2="38" y2="32"/>
+                            <line x1="12" y1="36" x2="36" y2="36"/>
+                          </svg>
                       ) : (
                         // Lightbulb outlined silhouette for Modelos de Desempenho
                         <svg viewBox="0 0 48 48" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="2">
@@ -136,17 +136,17 @@ const Services = () => {
                               <path d="M12 12c6.6-6.6 17.4-6.6 24 0"/>
                               <path d="M36 36c-6.6 6.6-17.4 6.6-24 0"/>
                             </svg>
-                        ) : index === 1 ? (
-                          // Truck outlined silhouette for B-WIM
-                          <svg viewBox="0 0 48 48" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="2">
-                            <rect x="8" y="20" width="16" height="8"/>
-                            <rect x="24" y="24" width="8" height="8"/>
-                            <path d="M32 26h4v6h-4V26z"/>
-                            <circle cx="14" cy="34" r="3"/>
-                            <circle cx="28" cy="34" r="3"/>
-                            <path d="M8 28H6v4h2"/>
-                            <path d="M32 28h4v4h-4"/>
-                          </svg>
+                          ) : index === 1 ? (
+                            // Weight in motion outlined silhouette for B-WIM - three arrows above platform
+                            <svg viewBox="0 0 48 48" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="2">
+                              {/* Three downward arrows */}
+                              <path d="M16 12v8m0 0l-3-3m3 3l3-3"/>
+                              <path d="M24 10v10m0 0l-3-3m3 3l3-3"/>
+                              <path d="M32 12v8m0 0l-3-3m3 3l3-3"/>
+                              {/* Platform/base line */}
+                              <line x1="10" y1="32" x2="38" y2="32"/>
+                              <line x1="12" y1="36" x2="36" y2="36"/>
+                            </svg>
                         ) : (
                           // Lightbulb outlined silhouette for Modelos de Desempenho
                           <svg viewBox="0 0 48 48" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="2">
