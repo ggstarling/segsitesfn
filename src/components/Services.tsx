@@ -33,78 +33,154 @@ const Services = () => {
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-2xl text-center mb-8 md:mb-12">Nossos Serviços</h2>
 
-        {/* Service Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-12">
-          {services.map((service, index) => {
-            const icons = [Building2, BarChart3, Wrench];
-            const IconComponent = icons[index];
-            const isSelected = selectedService === service.id;
-
-            return (
-              <Card
-                key={service.id}
-                className={`cursor-pointer transition-all duration-300 ${
-                  isSelected 
-                    ? "ring-2 ring-primary shadow-lg scale-105 bg-card" 
-                    : "opacity-60 hover:opacity-80 bg-card/80"
-                }`}
-                onClick={() => setSelectedService(service.id)}
-              >
-                <CardHeader>
-                  <div className="flex justify-center mb-4">
-                    <div className={`w-16 h-16 flex items-center justify-center transition-colors ${
-                      isSelected ? "text-primary" : "text-muted-foreground"
-                    }`}>
-                      {index === 0 ? (
-                        // Bridge outlined silhouette for Monitoramento Estrutural
-                        <svg viewBox="0 0 48 48" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="2">
-                          <path d="M6 30h36"/>
-                          <path d="M9 30V18"/>
-                          <path d="M24 30V14"/>
-                          <path d="M39 30V18"/>
-                          <path d="M9 18L24 14L39 18"/>
-                        </svg>
-                      ) : index === 1 ? (
-                        // Truck outlined silhouette for B-WIM
-                        <svg viewBox="0 0 48 48" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="2">
-                          <rect x="8" y="20" width="16" height="8"/>
-                          <rect x="24" y="24" width="8" height="8"/>
-                          <path d="M32 26h4v6h-4V26z"/>
-                          <circle cx="14" cy="34" r="3"/>
-                          <circle cx="28" cy="34" r="3"/>
-                          <path d="M8 28H6v4h2"/>
-                          <path d="M32 28h4v4h-4"/>
-                        </svg>
-                      ) : (
-                        // Lightbulb outlined silhouette for Modelos de Desempenho
-                        <svg viewBox="0 0 48 48" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="2">
-                          <path d="M24 8c-5.5 0-10 4.5-10 10 0 3 1.3 5.7 3.5 7.5L19 30h10l1.5-4.5c2.2-1.8 3.5-4.5 3.5-7.5 0-5.5-4.5-10-10-10z"/>
-                          <path d="M20 32h8"/>
-                          <path d="M21 36h6"/>
-                          <path d="M22 40h4"/>
-                        </svg>
-                      )}
-                    </div>
+        {/* Mobile Layout */}
+        <div className="md:hidden space-y-6">
+          {/* First Service: Monitoramento Estrutural - Active */}
+          <div className="space-y-4">
+            <Card className="ring-2 ring-primary shadow-lg bg-card">
+              <CardHeader>
+                <div className="flex justify-center mb-4">
+                  <div className="w-16 h-16 flex items-center justify-center text-primary">
+                    <svg viewBox="0 0 48 48" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M6 30h36"/>
+                      <path d="M9 30V18"/>
+                      <path d="M24 30V14"/>
+                      <path d="M39 30V18"/>
+                      <path d="M9 18L24 14L39 18"/>
+                    </svg>
                   </div>
-                  <CardTitle className={`text-center text-lg transition-colors ${
-                    isSelected ? "text-foreground" : "text-muted-foreground"
-                  }`}>
-                    {service.title}
-                  </CardTitle>
-                </CardHeader>
-              </Card>
-            );
-          })}
+                </div>
+                <CardTitle className="text-center text-lg text-foreground">
+                  Monitoramento Estrutural
+                </CardTitle>
+              </CardHeader>
+            </Card>
+            
+            {/* Active Service Content */}
+            <div className="bg-card rounded-lg p-4 shadow-sm border">
+              <p className="text-muted-foreground leading-relaxed">
+                Oferecemos soluções personalizadas de monitoramento estrutural contínuo que acompanham o comportamento da estrutura ao longo do tempo. Por meio de tecnologias avançadas de sensoriamento e aprendizado de máquina, nossa plataforma oferece relatórios automáticos, emite alertas inteligentes e prevê comportamentos atípicos da estrutura, gerando diagnósticos precisos e embasados em dados reais.
+              </p>
+            </div>
+          </div>
+
+          {/* Second Service: B-WIM - Inactive */}
+          <Card className="opacity-60 bg-card/80">
+            <CardHeader>
+              <div className="flex justify-center mb-4">
+                <div className="w-16 h-16 flex items-center justify-center text-muted-foreground">
+                  <svg viewBox="0 0 48 48" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="2">
+                    <rect x="8" y="20" width="16" height="8"/>
+                    <rect x="24" y="24" width="8" height="8"/>
+                    <path d="M32 26h4v6h-4V26z"/>
+                    <circle cx="14" cy="34" r="3"/>
+                    <circle cx="28" cy="34" r="3"/>
+                    <path d="M8 28H6v4h2"/>
+                    <path d="M32 28h4v4h-4"/>
+                  </svg>
+                </div>
+              </div>
+              <CardTitle className="text-center text-lg text-muted-foreground">
+                B-WIM
+              </CardTitle>
+            </CardHeader>
+          </Card>
+
+          {/* Third Service: Modelos de Desempenho - Inactive */}
+          <Card className="opacity-60 bg-card/80">
+            <CardHeader>
+              <div className="flex justify-center mb-4">
+                <div className="w-16 h-16 flex items-center justify-center text-muted-foreground">
+                  <svg viewBox="0 0 48 48" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M24 8c-5.5 0-10 4.5-10 10 0 3 1.3 5.7 3.5 7.5L19 30h10l1.5-4.5c2.2-1.8 3.5-4.5 3.5-7.5 0-5.5-4.5-10-10-10z"/>
+                    <path d="M20 32h8"/>
+                    <path d="M21 36h6"/>
+                    <path d="M22 40h4"/>
+                  </svg>
+                </div>
+              </div>
+              <CardTitle className="text-center text-lg text-muted-foreground">
+                Modelos de Desempenho
+              </CardTitle>
+            </CardHeader>
+          </Card>
         </div>
 
-        {/* Content Area */}
-        <div className="bg-card rounded-lg p-4 md:p-8 shadow-sm border">
-          <h3 className="text-xl font-semibold mb-4 text-foreground">
-            {selectedServiceData?.title}
-          </h3>
-          <p className="text-muted-foreground leading-relaxed">
-            {selectedServiceData?.detailedContent}
-          </p>
+        {/* Desktop Layout */}
+        <div className="hidden md:block">
+          {/* Service Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-12">
+            {services.map((service, index) => {
+              const icons = [Building2, BarChart3, Wrench];
+              const IconComponent = icons[index];
+              const isSelected = selectedService === service.id;
+
+              return (
+                <Card
+                  key={service.id}
+                  className={`cursor-pointer transition-all duration-300 ${
+                    isSelected 
+                      ? "ring-2 ring-primary shadow-lg scale-105 bg-card" 
+                      : "opacity-60 hover:opacity-80 bg-card/80"
+                  }`}
+                  onClick={() => setSelectedService(service.id)}
+                >
+                  <CardHeader>
+                    <div className="flex justify-center mb-4">
+                      <div className={`w-16 h-16 flex items-center justify-center transition-colors ${
+                        isSelected ? "text-primary" : "text-muted-foreground"
+                      }`}>
+                        {index === 0 ? (
+                          // Bridge outlined silhouette for Monitoramento Estrutural
+                          <svg viewBox="0 0 48 48" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="2">
+                            <path d="M6 30h36"/>
+                            <path d="M9 30V18"/>
+                            <path d="M24 30V14"/>
+                            <path d="M39 30V18"/>
+                            <path d="M9 18L24 14L39 18"/>
+                          </svg>
+                        ) : index === 1 ? (
+                          // Truck outlined silhouette for B-WIM
+                          <svg viewBox="0 0 48 48" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="2">
+                            <rect x="8" y="20" width="16" height="8"/>
+                            <rect x="24" y="24" width="8" height="8"/>
+                            <path d="M32 26h4v6h-4V26z"/>
+                            <circle cx="14" cy="34" r="3"/>
+                            <circle cx="28" cy="34" r="3"/>
+                            <path d="M8 28H6v4h2"/>
+                            <path d="M32 28h4v4h-4"/>
+                          </svg>
+                        ) : (
+                          // Lightbulb outlined silhouette for Modelos de Desempenho
+                          <svg viewBox="0 0 48 48" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="2">
+                            <path d="M24 8c-5.5 0-10 4.5-10 10 0 3 1.3 5.7 3.5 7.5L19 30h10l1.5-4.5c2.2-1.8 3.5-4.5 3.5-7.5 0-5.5-4.5-10-10-10z"/>
+                            <path d="M20 32h8"/>
+                            <path d="M21 36h6"/>
+                            <path d="M22 40h4"/>
+                          </svg>
+                        )}
+                      </div>
+                    </div>
+                    <CardTitle className={`text-center text-lg transition-colors ${
+                      isSelected ? "text-foreground" : "text-muted-foreground"
+                    }`}>
+                      {service.title}
+                    </CardTitle>
+                  </CardHeader>
+                </Card>
+              );
+            })}
+          </div>
+
+          {/* Content Area */}
+          <div className="bg-card rounded-lg p-4 md:p-8 shadow-sm border">
+            <h3 className="text-xl font-semibold mb-4 text-foreground">
+              {selectedServiceData?.title}
+            </h3>
+            <p className="text-muted-foreground leading-relaxed">
+              {selectedServiceData?.detailedContent}
+            </p>
+          </div>
         </div>
       </div>
     </section>
