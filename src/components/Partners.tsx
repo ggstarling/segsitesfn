@@ -7,10 +7,8 @@ const Partners = () => {
     { name: "Fundo Catarina", logo: "/lovable-uploads/532a84b5-b3e0-4188-b585-cb1b277e4e64.png" },
   ];
 
-  // Calculate total width for seamless animation
-  // Mobile: ~85px per logo + 18px gap = ~103px per item
-  // Need enough copies to create seamless loop
-  const logosCopies = [...partners, ...partners, ...partners];
+  // Duplicate the logo sequence for longer, smoother animation
+  const duplicatedLogos = [...partners, ...partners];
 
   return (
     <section className="pt-6 md:pt-8 pb-0 bg-gray-200">
@@ -31,10 +29,10 @@ const Partners = () => {
             ))}
           </div>
 
-          {/* Mobile version - completely rebuilt */}
+          {/* Mobile version - single horizontal track with duplicated sequence */}
           <div className="md:hidden">
             <div className="flex animate-logo-scroll-mobile items-center">
-              {logosCopies.map((partner, index) => (
+              {duplicatedLogos.map((partner, index) => (
                 <div 
                   key={index} 
                   className="flex-shrink-0 flex items-center justify-center mr-[18px]"
@@ -47,10 +45,10 @@ const Partners = () => {
                   />
                 </div>
               ))}
-              {/* Duplicate for seamless loop */}
-              {logosCopies.map((partner, index) => (
+              {/* Additional duplicate for seamless infinite loop */}
+              {duplicatedLogos.map((partner, index) => (
                 <div 
-                  key={`duplicate-${index}`} 
+                  key={`loop-${index}`} 
                   className="flex-shrink-0 flex items-center justify-center mr-[18px]"
                   style={{ width: '85px' }}
                 >
