@@ -42,7 +42,7 @@ const MobileHero = ({ onOpenModal }: MobileHeroProps) => {
         </Button>
       </div>
       
-      <div className="absolute bottom-0 left-0 right-0 h-32 overflow-visible z-20">
+      <div className="absolute bottom-8 left-0 right-0 h-20 overflow-hidden">
         <HorizontalWaves />
       </div>
     </section>
