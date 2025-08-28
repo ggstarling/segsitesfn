@@ -173,7 +173,7 @@ const Header = () => {
             <div className="hidden lg:flex items-center space-x-6">
               <button 
                 onClick={() => scrollToSection("contact")} 
-                className="text-white hover:text-[#3481bd] transition-colors font-normal text-base bg-primary hover:bg-primary/90 px-4 py-2 rounded-md"
+                className="text-white transition-colors font-normal text-base bg-primary hover:bg-primary/90 px-4 py-2 rounded-md"
               >
                 Saiba Mais
               </button>
