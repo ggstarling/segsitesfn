@@ -55,15 +55,15 @@ const Services = () => {
                     <div className={`w-16 h-16 flex items-center justify-center transition-colors ${
                       isSelected ? "text-primary" : "text-muted-foreground"
                     }`}>
-                      {index === 0 ? (
-                        // Bridge outlined silhouette for Monitoramento Estrutural
-                        <svg viewBox="0 0 48 48" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="2">
-                          <path d="M6 30h36"/>
-                          <path d="M9 30V18"/>
-                          <path d="M24 30V14"/>
-                          <path d="M39 30V18"/>
-                          <path d="M9 18L24 14L39 18"/>
-                        </svg>
+                        {index === 0 ? (
+                          // Signal outlined silhouette for Monitoramento Estrutural
+                          <svg viewBox="0 0 48 48" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="2">
+                            <circle cx="24" cy="24" r="2"/>
+                            <path d="M16 16c4.4-4.4 11.6-4.4 16 0"/>
+                            <path d="M32 32c-4.4 4.4-11.6 4.4-16 0"/>
+                            <path d="M12 12c6.6-6.6 17.4-6.6 24 0"/>
+                            <path d="M36 36c-6.6 6.6-17.4 6.6-24 0"/>
+                          </svg>
                       ) : index === 1 ? (
                         // Truck outlined silhouette for B-WIM
                         <svg viewBox="0 0 48 48" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="2">
@@ -127,15 +127,15 @@ const Services = () => {
                       <div className={`w-16 h-16 flex items-center justify-center transition-colors ${
                         isSelected ? "text-primary" : "text-muted-foreground"
                       }`}>
-                        {index === 0 ? (
-                          // Bridge outlined silhouette for Monitoramento Estrutural
-                          <svg viewBox="0 0 48 48" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="2">
-                            <path d="M6 30h36"/>
-                            <path d="M9 30V18"/>
-                            <path d="M24 30V14"/>
-                            <path d="M39 30V18"/>
-                            <path d="M9 18L24 14L39 18"/>
-                          </svg>
+                          {index === 0 ? (
+                            // Signal outlined silhouette for Monitoramento Estrutural
+                            <svg viewBox="0 0 48 48" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="2">
+                              <circle cx="24" cy="24" r="2"/>
+                              <path d="M16 16c4.4-4.4 11.6-4.4 16 0"/>
+                              <path d="M32 32c-4.4 4.4-11.6 4.4-16 0"/>
+                              <path d="M12 12c6.6-6.6 17.4-6.6 24 0"/>
+                              <path d="M36 36c-6.6 6.6-17.4 6.6-24 0"/>
+                            </svg>
                         ) : index === 1 ? (
                           // Truck outlined silhouette for B-WIM
                           <svg viewBox="0 0 48 48" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="2">
