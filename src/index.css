@@ -65,6 +65,15 @@ All colors MUST be HSL.
       transform: translateX(-33.333%);
     }
   }
+
+  @keyframes logo-scroll-mobile {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
   
   @keyframes wave-flow {
     0% {
@@ -108,10 +117,8 @@ All colors MUST be HSL.
     animation: scroll-infinite 20s linear infinite;
   }
   
-  @media (max-width: 767px) {
-    .animate-scroll-infinite {
-      animation: scroll-infinite 9s linear infinite;
-    }
+  .animate-logo-scroll-mobile {
+    animation: logo-scroll-mobile 9s linear infinite;
   }
   
   .animate-wave-fast {
