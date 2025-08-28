@@ -208,26 +208,26 @@ const Header = () => {
           {/* Mobile Navigation Links */}
           <button 
             onClick={() => scrollToTop()}
-            className={`text-left text-lg font-normal ${isHomeActive ? "text-[#3481bd]" : "text-gray-700"}`}
+            className={`text-right text-lg font-normal ${isHomeActive ? "text-[#3481bd]" : "text-gray-700"}`}
           >
             Início
           </button>
 
           {/* Mobile Sobre Nós Section */}
-          <div className="space-y-4">
+          <div className="space-y-4 text-right">
             <span className={`text-lg font-normal ${(location.pathname === "/about" || location.pathname === "/blog") ? "text-[#3481bd]" : "text-gray-700"}`}>
               Sobre Nós
             </span>
-            <div className="pl-4 space-y-3">
+            <div className="pr-4 space-y-3">
               <button 
                 onClick={() => navigateToPage("/about")}
-                className="block text-left text-base text-gray-600 hover:text-[#3481bd] transition-colors"
+                className="block text-right text-base text-gray-600 hover:text-[#3481bd] transition-colors w-full"
               >
                 Sobre
               </button>
               <button 
                 onClick={() => navigateToPage("/blog")}
-                className="block text-left text-base text-gray-600 hover:text-[#3481bd] transition-colors"
+                className="block text-right text-base text-gray-600 hover:text-[#3481bd] transition-colors w-full"
               >
                 Blog
               </button>
@@ -236,14 +236,14 @@ const Header = () => {
 
           <button
             onClick={() => scrollToSection("services")}
-            className={`text-left text-lg font-normal ${isServicesActive ? "text-[#3481bd]" : "text-gray-700"}`}
+            className={`text-right text-lg font-normal ${isServicesActive ? "text-[#3481bd]" : "text-gray-700"}`}
           >
             Serviços
           </button>
 
           <button
             onClick={() => scrollToSection("contact")}
-            className={`text-left text-lg font-normal ${isContactActive ? "text-[#3481bd]" : "text-gray-700"}`}
+            className={`text-right text-lg font-normal ${isContactActive ? "text-[#3481bd]" : "text-gray-700"}`}
           >
             Contato
           </button>
