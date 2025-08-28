@@ -31,41 +31,9 @@ const Partners = () => {
             ))}
           </div>
 
-          {/* Mobile version - double track carousel */}
-          <div className="md:hidden space-y-3">
-            {/* First track - scrolling left to right */}
+          {/* Mobile version - completely rebuilt */}
+          <div className="md:hidden">
             <div className="flex animate-logo-scroll-mobile items-center">
-              {logosCopies.map((partner, index) => (
-                <div 
-                  key={index} 
-                  className="flex-shrink-0 flex items-center justify-center mr-[18px]"
-                  style={{ width: '85px' }}
-                >
-                  <img
-                    src={partner.logo}
-                    alt={partner.name}
-                    className="h-24 w-full object-contain opacity-80 filter grayscale"
-                  />
-                </div>
-              ))}
-              {/* Duplicate for seamless loop */}
-              {logosCopies.map((partner, index) => (
-                <div 
-                  key={`duplicate-${index}`} 
-                  className="flex-shrink-0 flex items-center justify-center mr-[18px]"
-                  style={{ width: '85px' }}
-                >
-                  <img
-                    src={partner.logo}
-                    alt={partner.name}
-                    className="h-24 w-full object-contain opacity-80 filter grayscale"
-                  />
-                </div>
-              ))}
-            </div>
-
-            {/* Second track - scrolling right to left with offset */}
-            <div className="flex animate-logo-scroll-mobile-reverse items-center">
               {logosCopies.map((partner, index) => (
                 <div 
                   key={index} 
