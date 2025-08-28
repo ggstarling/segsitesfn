@@ -110,7 +110,7 @@ All colors MUST be HSL.
   
   @media (max-width: 767px) {
     .animate-scroll-infinite {
-      animation: scroll-infinite 15s linear infinite;
+      animation: scroll-infinite 8s linear infinite;
     }
   }
   
