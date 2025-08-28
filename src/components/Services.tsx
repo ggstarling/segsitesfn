@@ -86,7 +86,7 @@ const Services = () => {
                       )}
                     </div>
                   </div>
-                  <CardTitle className={`text-center text-lg transition-colors ${
+                  <CardTitle className={`text-center text-xl md:text-lg transition-colors ${
                     isSelected ? "text-foreground" : "text-muted-foreground"
                   }`}>
                     {service.title}
@@ -99,10 +99,10 @@ const Services = () => {
 
         {/* Content Area */}
         <div className="bg-card rounded-lg p-4 md:p-8 shadow-sm border">
-          <h3 className="text-xl font-semibold mb-4 text-foreground">
+          <h3 className="text-2xl md:text-xl font-semibold mb-4 text-foreground">
             {selectedServiceData?.title}
           </h3>
-          <p className="text-muted-foreground leading-relaxed">
+          <p className="text-lg md:text-base text-muted-foreground leading-relaxed">
             {selectedServiceData?.detailedContent}
           </p>
         </div>

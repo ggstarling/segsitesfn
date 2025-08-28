@@ -181,14 +181,14 @@ const Header = () => {
 
             {/* Mobile hamburger menu */}
             <button
-              className="lg:hidden p-2"
+              className="lg:hidden p-3 md:p-2"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle mobile menu"
             >
               {isMobileMenuOpen ? (
-                <X className="h-6 w-6 text-gray-700" />
+                <X className="h-7 w-7 md:h-6 md:w-6 text-gray-700" />
               ) : (
-                <Menu className="h-6 w-6 text-gray-700" />
+                <Menu className="h-7 w-7 md:h-6 md:w-6 text-gray-700" />
               )}
             </button>
           </nav>
@@ -208,26 +208,26 @@ const Header = () => {
           {/* Mobile Navigation Links */}
           <button 
             onClick={() => scrollToTop()}
-            className={`text-left text-lg font-normal ${isHomeActive ? "text-[#3481bd]" : "text-gray-700"}`}
+            className={`text-left text-xl md:text-lg font-normal py-2 ${isHomeActive ? "text-[#3481bd]" : "text-gray-700"}`}
           >
             Início
           </button>
 
           {/* Mobile Sobre Nós Section */}
           <div className="space-y-4">
-            <span className={`text-lg font-normal ${(location.pathname === "/about" || location.pathname === "/blog") ? "text-[#3481bd]" : "text-gray-700"}`}>
+            <span className={`text-xl md:text-lg font-normal ${(location.pathname === "/about" || location.pathname === "/blog") ? "text-[#3481bd]" : "text-gray-700"}`}>
               Sobre Nós
             </span>
-            <div className="pl-4 space-y-3">
+            <div className="pl-4 space-y-4 md:space-y-3">
               <button 
                 onClick={() => navigateToPage("/about")}
-                className="block text-left text-base text-gray-600 hover:text-[#3481bd] transition-colors"
+                className="block text-left text-lg md:text-base text-gray-600 hover:text-[#3481bd] transition-colors py-1"
               >
                 Sobre
               </button>
               <button 
                 onClick={() => navigateToPage("/blog")}
-                className="block text-left text-base text-gray-600 hover:text-[#3481bd] transition-colors"
+                className="block text-left text-lg md:text-base text-gray-600 hover:text-[#3481bd] transition-colors py-1"
               >
                 Blog
               </button>
@@ -236,14 +236,14 @@ const Header = () => {
 
           <button
             onClick={() => scrollToSection("services")}
-            className={`text-left text-lg font-normal ${isServicesActive ? "text-[#3481bd]" : "text-gray-700"}`}
+            className={`text-left text-xl md:text-lg font-normal py-2 ${isServicesActive ? "text-[#3481bd]" : "text-gray-700"}`}
           >
             Serviços
           </button>
 
           <button
             onClick={() => scrollToSection("contact")}
-            className={`text-left text-lg font-normal ${isContactActive ? "text-[#3481bd]" : "text-gray-700"}`}
+            className={`text-left text-xl md:text-lg font-normal py-2 ${isContactActive ? "text-[#3481bd]" : "text-gray-700"}`}
           >
             Contato
           </button>
@@ -251,7 +251,7 @@ const Header = () => {
           {/* Mobile CTA button */}
           <button 
             onClick={() => scrollToSection("contact")} 
-            className="w-full text-white bg-primary hover:bg-primary/90 px-4 py-3 rounded-md text-lg font-normal transition-colors mt-8"
+            className="w-full text-white bg-primary hover:bg-primary/90 px-6 py-4 md:px-4 md:py-3 rounded-md text-xl md:text-lg font-normal transition-colors mt-8"
           >
             Saiba Mais
           </button>
