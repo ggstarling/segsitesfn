@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -7,6 +7,9 @@ import { posts } from "@/data/posts";
 const Posts = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [mobileIndex, setMobileIndex] = useState(0);
+  const mobileCarouselRef = useRef<HTMLDivElement>(null);
+  const touchStartX = useRef<number>(0);
+  const touchEndX = useRef<number>(0);
 
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev + 1) % posts.length);
@@ -24,6 +27,29 @@ const Posts = () => {
     setMobileIndex((prev) => (prev - 1 + posts.length) % posts.length);
   };
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.targetTouches[0].clientX;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.targetTouches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStartX.current || !touchEndX.current) return;
+    
+    const distance = touchStartX.current - touchEndX.current;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+
+    if (isLeftSwipe) {
+      nextMobileSlide();
+    }
+    if (isRightSwipe) {
+      prevMobileSlide();
+    }
+  };
+
   const visiblePosts = posts.slice(currentIndex, currentIndex + 4).concat(
     posts.slice(0, Math.max(0, currentIndex + 4 - posts.length))
   );
@@ -34,13 +60,31 @@ const Posts = () => {
         <h2 className="text-2xl text-center mb-8 md:mb-12">Últimas Postagens</h2>
 
         {/* Mobile Single-Item Carousel */}
-        <div className="relative md:hidden flex items-center justify-center">
+        <div 
+          ref={mobileCarouselRef}
+          className="relative md:hidden flex items-center justify-center"
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+        >
           {/* Left Arrow */}
           <button
             onClick={prevMobileSlide}
-            className="flex-shrink-0 mr-4 text-2xl font-bold text-[#3481bd] hover:text-[#2a6ba0] transition-colors duration-200"
+            className="flex-shrink-0 mr-4 transition-colors duration-200"
           >
-            &lt;
+            <svg 
+              width="24" 
+              height="24" 
+              viewBox="0 0 24 24" 
+              fill="none" 
+              stroke="currentColor" 
+              strokeWidth="1" 
+              strokeLinecap="round" 
+              strokeLinejoin="round"
+              className="text-gray-600 hover:text-gray-800"
+            >
+              <polyline points="15,18 9,12 15,6"></polyline>
+            </svg>
           </button>
 
           {/* News Item */}
@@ -65,9 +109,21 @@ const Posts = () => {
           {/* Right Arrow */}
           <button
             onClick={nextMobileSlide}
-            className="flex-shrink-0 ml-4 text-2xl font-bold text-[#3481bd] hover:text-[#2a6ba0] transition-colors duration-200"
+            className="flex-shrink-0 ml-4 transition-colors duration-200"
           >
-            &gt;
+            <svg 
+              width="24" 
+              height="24" 
+              viewBox="0 0 24 24" 
+              fill="none" 
+              stroke="currentColor" 
+              strokeWidth="1" 
+              strokeLinecap="round" 
+              strokeLinejoin="round"
+              className="text-gray-600 hover:text-gray-800"
+            >
+              <polyline points="9,18 15,12 9,6"></polyline>
+            </svg>
           </button>
         </div>
 
