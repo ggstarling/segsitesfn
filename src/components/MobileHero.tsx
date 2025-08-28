@@ -7,7 +7,7 @@ interface MobileHeroProps {
 
 const MobileHero = ({ onOpenModal }: MobileHeroProps) => {
   return (
-    <section className="relative min-h-screen flex items-center bg-gray-100 md:hidden px-4 py-16">
+    <section className="relative min-h-screen bg-gray-100 md:hidden px-4 pt-24 pb-16">
       <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-gray-100 to-gray-150">
         <div 
           className="absolute inset-0 opacity-40"
@@ -24,12 +24,12 @@ const MobileHero = ({ onOpenModal }: MobileHeroProps) => {
         ></div>
       </div>
 
-      <div className="relative z-10 w-full max-w-lg mx-auto text-center">
-        <h1 className="text-3xl font-semibold text-gray-900 mb-3 leading-tight">
+      <div className="relative z-10 w-full max-w-lg mx-auto text-center mt-16">
+        <h1 className="text-3xl font-semibold text-gray-900 mb-4 leading-tight">
           <span className="text-[#3481bd] drop-shadow-[0_0_8px_rgba(52,129,189,0.3)]">Inteligência</span> para a gestão de ativos viários no Brasil
         </h1>
 
-        <p className="text-base text-gray-700 mb-6 leading-relaxed">
+        <p className="text-base text-gray-700 mb-8 leading-relaxed">
           Somos uma plataforma de fusão de dados com inteligência artificial para a gestão de ativos de infraestrutura viária.
         </p>
 
