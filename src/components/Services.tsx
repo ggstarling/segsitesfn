@@ -28,7 +28,7 @@ const Services = () => {
     }
   ];
 
-  // Auto-selection on mobile when section comes into view
+  // Auto-selection when section comes into view (both mobile and desktop)
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -55,12 +55,6 @@ const Services = () => {
     };
   }, [hasAnimated]);
 
-  // Set default selection for desktop
-  useEffect(() => {
-    if (selectedService === null && window.innerWidth >= 768) {
-      setSelectedService("data-collection");
-    }
-  }, [selectedService]);
 
   const selectedServiceData = services.find(s => s.id === selectedService);
 
