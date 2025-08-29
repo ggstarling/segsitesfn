@@ -2,8 +2,6 @@ import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.56.1";
 import { Resend } from "npm:resend@2.0.0";
 
-const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
-
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers":
@@ -50,6 +48,15 @@ const handler = async (req: Request): Promise<Response> => {
       console.error("Database error:", dbError);
       throw new Error(`Database error: ${dbError.message}`);
     }
+
+    // Initialize Resend with API key
+    const resendApiKey = Deno.env.get("RESEND_API_KEY");
+    if (!resendApiKey) {
+      console.error("RESEND_API_KEY not found");
+      throw new Error("Email service not configured properly");
+    }
+    
+    const resend = new Resend(resendApiKey);
 
     // Format email content
     const emailSubject = `Nova mensagem de contato - ${name}`;
