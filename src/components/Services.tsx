@@ -59,7 +59,7 @@ const Services = () => {
   const selectedServiceData = services.find(s => s.id === selectedService);
 
   return (
-    <section ref={sectionRef} id="services" className="py-8 md:py-16 bg-gradient-to-b from-gray-300 via-gray-200 to-gray-100">
+    <section ref={sectionRef} id="services" className="py-8 md:py-16 bg-gradient-to-r md:bg-gradient-to-b from-gray-300 via-gray-200 to-gray-100">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-2xl text-center mb-8 md:mb-12">Nossos Serviços</h2>
 
