@@ -93,7 +93,7 @@ const Services = () => {
                     }`}>
                         {index === 0 ? (
                           // Signal outlined silhouette for Monitoramento Estrutural
-                           <svg viewBox="0 0 48 48" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="2" transform="rotate(180)">
+                           <svg viewBox="0 0 48 48" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="2" transform="rotate(90)">
                             <circle cx="24" cy="24" r="2"/>
                             <path d="M16 16c4.4-4.4 11.6-4.4 16 0"/>
                             <path d="M32 32c-4.4 4.4-11.6 4.4-16 0"/>
@@ -165,7 +165,7 @@ const Services = () => {
                       }`}>
                           {index === 0 ? (
                             // Signal outlined silhouette for Monitoramento Estrutural
-                            <svg viewBox="0 0 48 48" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="2" transform="rotate(180)">
+                            <svg viewBox="0 0 48 48" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="2" transform="rotate(90)">
                               <circle cx="24" cy="24" r="2"/>
                               <path d="M16 16c4.4-4.4 11.6-4.4 16 0"/>
                               <path d="M32 32c-4.4 4.4-11.6 4.4-16 0"/>
