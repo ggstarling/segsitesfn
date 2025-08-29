@@ -4,8 +4,57 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/components/ui/use-toast";
 
 const ContactForm = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    industry: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const { data, error } = await supabase.functions.invoke('submit-contact-form', {
+        body: {
+          name: formData.name,
+          email: formData.email,
+          industry: formData.industry,
+          message: formData.message,
+          formType: 'contact'
+        }
+      });
+
+      if (error) throw error;
+
+      toast({
+        title: "Mensagem enviada!",
+        description: "Obrigado pelo contato. Retornaremos em breve.",
+      });
+
+      // Reset form
+      setFormData({ name: '', email: '', industry: '', message: '' });
+
+    } catch (error) {
+      console.error('Form submission error:', error);
+      toast({
+        title: "Erro ao enviar",
+        description: "Ocorreu um erro. Tente novamente.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section id="contact" className="pt-16 pb-8 bg-gradient-to-r from-gray-300 via-gray-200 to-gray-100">
       <div className="max-w-7xl mx-auto px-4">
@@ -20,7 +69,7 @@ const ContactForm = () => {
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Contact Form */}
             <div className="p-8 pt-4">
-              <form className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="space-y-4">
                   <Input 
                     id="name" 
@@ -28,6 +77,8 @@ const ContactForm = () => {
                     placeholder="Nome"
                     maxLength={74}
                     required 
+                    value={formData.name}
+                    onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
                     className="h-12 px-4 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                   />
                   
@@ -37,21 +88,23 @@ const ContactForm = () => {
                     placeholder="E-mail"
                     maxLength={50}
                     required 
+                    value={formData.email}
+                    onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
                     className="h-12 px-4 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                   />
                   
-                  <Select>
+                  <Select value={formData.industry} onValueChange={(value) => setFormData(prev => ({ ...prev, industry: value }))}>
                     <SelectTrigger className="h-12 px-4 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900">
                       <SelectValue placeholder="Setor da Indústria" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="construction">Construção Civil</SelectItem>
-                      <SelectItem value="infrastructure">Infraestrutura</SelectItem>
-                      <SelectItem value="transport">Transporte</SelectItem>
-                      <SelectItem value="energy">Energia</SelectItem>
-                      <SelectItem value="data-science">Ciência de Dados</SelectItem>
-                      <SelectItem value="environment">Meio Ambiente</SelectItem>
-                      <SelectItem value="other">Outro</SelectItem>
+                      <SelectItem value="Construção Civil">Construção Civil</SelectItem>
+                      <SelectItem value="Infraestrutura">Infraestrutura</SelectItem>
+                      <SelectItem value="Transporte">Transporte</SelectItem>
+                      <SelectItem value="Energia">Energia</SelectItem>
+                      <SelectItem value="Ciência de Dados">Ciência de Dados</SelectItem>
+                      <SelectItem value="Meio Ambiente">Meio Ambiente</SelectItem>
+                      <SelectItem value="Outro">Outro</SelectItem>
                     </SelectContent>
                   </Select>
                   
@@ -59,16 +112,19 @@ const ContactForm = () => {
                     id="message" 
                     placeholder="Mensagem"
                     rows={4} 
+                    value={formData.message}
+                    onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
                     className="p-4 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-none"
                   />
                 </div>
                 
                 <Button 
                   type="submit" 
+                  disabled={isSubmitting}
                   style={{ backgroundColor: '#3481bd' }}
                   className="w-full h-12 hover:opacity-90 text-white font-medium rounded-lg transition-all duration-200"
                 >
-                  Enviar Mensagem
+                  {isSubmitting ? "Enviando..." : "Enviar Mensagem"}
                 </Button>
               </form>
             </div>
