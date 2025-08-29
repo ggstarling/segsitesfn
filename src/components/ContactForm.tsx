@@ -7,7 +7,7 @@ import { Mail, Phone, MapPin } from "lucide-react";
 
 const ContactForm = () => {
   return (
-    <section id="contact" className="pt-16 pb-8 bg-gradient-to-b from-gray-300 via-gray-200 to-gray-100">
+    <section id="contact" className="pt-16 pb-8 bg-gradient-to-r from-gray-300 via-gray-200 to-gray-100">
       <div className="max-w-7xl mx-auto px-4">
         <div className="space-y-8">
           <div className="px-8">
