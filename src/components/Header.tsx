@@ -105,7 +105,7 @@ const Header = () => {
         <div className="w-full px-6 py-4">
           <nav className="flex items-center justify-between">
             {/* Logo */}
-            <button onClick={scrollToTop} className="flex items-center">
+            <button onClick={scrollToTop} className="flex items-center lg:ml-[15%]">
               <img
                 src="/lovable-uploads/81b574cd-6dab-4603-aa73-5b5fc5e0766e.png"
                 alt="Safena Logo"
@@ -170,7 +170,7 @@ const Header = () => {
             </div>
 
             {/* Desktop CTA button */}
-            <div className="hidden lg:flex items-center space-x-6">
+            <div className="hidden lg:flex items-center space-x-6 lg:mr-[15%]">
               <button 
                 onClick={() => scrollToSection("contact")} 
                 className="text-white transition-colors font-normal text-base bg-primary hover:bg-primary/90 px-4 py-2 rounded-md"
