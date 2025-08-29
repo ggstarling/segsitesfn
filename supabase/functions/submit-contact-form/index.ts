@@ -51,9 +51,19 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Initialize Resend with API key
     const resendApiKey = Deno.env.get("RESEND_API_KEY");
+    console.log("RESEND_API_KEY found:", resendApiKey ? "YES" : "NO");
+    console.log("RESEND_API_KEY length:", resendApiKey ? resendApiKey.length : 0);
+    console.log("RESEND_API_KEY starts with 're_':", resendApiKey ? resendApiKey.startsWith("re_") : false);
+    
     if (!resendApiKey) {
-      console.error("RESEND_API_KEY not found");
-      throw new Error("Email service not configured properly");
+      console.error("RESEND_API_KEY not found in environment variables");
+      console.error("Available env vars:", Object.keys(Deno.env.toObject()));
+      throw new Error("Email service not configured properly - API key missing");
+    }
+    
+    if (!resendApiKey.startsWith("re_")) {
+      console.error("RESEND_API_KEY does not start with 're_' - invalid format");
+      throw new Error("Email service not configured properly - invalid API key format");
     }
     
     const resend = new Resend(resendApiKey);
