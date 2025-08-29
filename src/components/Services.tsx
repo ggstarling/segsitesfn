@@ -67,10 +67,10 @@ const Services = () => {
                         ) : index === 1 ? (
                           // Weight in motion outlined silhouette for B-WIM - three arrows above platform
                           <svg viewBox="0 0 48 48" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="2">
-                            {/* Three downward arrows */}
-                            <path d="M16 12v8m0 0l-3-3m3 3l3-3"/>
-                            <path d="M24 10v10m0 0l-3-3m3 3l3-3"/>
-                            <path d="M32 12v8m0 0l-3-3m3 3l3-3"/>
+                            {/* Three downward arrows - longer with sharper tips */}
+                            <path d="M16 10v16m0 0l-2-4m2 4l2-4"/>
+                            <path d="M24 8v18m0 0l-2-4m2 4l2-4"/>
+                            <path d="M32 10v16m0 0l-2-4m2 4l2-4"/>
                             {/* Platform/base line */}
                             <line x1="10" y1="32" x2="38" y2="32"/>
                             <line x1="12" y1="36" x2="36" y2="36"/>
@@ -139,10 +139,10 @@ const Services = () => {
                           ) : index === 1 ? (
                             // Weight in motion outlined silhouette for B-WIM - three arrows above platform
                             <svg viewBox="0 0 48 48" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="2">
-                              {/* Three downward arrows */}
-                              <path d="M16 12v8m0 0l-3-3m3 3l3-3"/>
-                              <path d="M24 10v10m0 0l-3-3m3 3l3-3"/>
-                              <path d="M32 12v8m0 0l-3-3m3 3l3-3"/>
+                              {/* Three downward arrows - longer with sharper tips */}
+                              <path d="M16 10v16m0 0l-2-4m2 4l2-4"/>
+                              <path d="M24 8v18m0 0l-2-4m2 4l2-4"/>
+                              <path d="M32 10v16m0 0l-2-4m2 4l2-4"/>
                               {/* Platform/base line */}
                               <line x1="10" y1="32" x2="38" y2="32"/>
                               <line x1="12" y1="36" x2="36" y2="36"/>
