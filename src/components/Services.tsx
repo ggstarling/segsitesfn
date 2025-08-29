@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Building2, BarChart3, Wrench } from "lucide-react";
 
 const Services = () => {
-  const [selectedService, setSelectedService] = useState<string>("data-collection");
+  const [selectedService, setSelectedService] = useState<string | null>(null);
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
 
   const services = [
     {
@@ -26,10 +28,44 @@ const Services = () => {
     }
   ];
 
+  // Auto-selection on mobile when section comes into view
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimated) {
+            setTimeout(() => {
+              setSelectedService("data-collection");
+              setHasAnimated(true);
+            }, 750);
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, [hasAnimated]);
+
+  // Set default selection for desktop
+  useEffect(() => {
+    if (selectedService === null && window.innerWidth >= 768) {
+      setSelectedService("data-collection");
+    }
+  }, [selectedService]);
+
   const selectedServiceData = services.find(s => s.id === selectedService);
 
   return (
-    <section id="services" className="py-8 md:py-16 bg-gradient-to-b from-gray-300 via-gray-200 to-gray-100">
+    <section ref={sectionRef} id="services" className="py-8 md:py-16 bg-gradient-to-b from-gray-300 via-gray-200 to-gray-100">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-2xl text-center mb-8 md:mb-12">Nossos Serviços</h2>
 
