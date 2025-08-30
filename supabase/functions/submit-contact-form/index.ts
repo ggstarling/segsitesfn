@@ -26,6 +26,7 @@ const handler = async (req: Request): Promise<Response> => {
     const { name, email, industry, message, formType }: ContactFormRequest = await req.json();
 
     console.log("Received form submission:", { name, email, industry, formType });
+    console.log("Function deployment timestamp:", new Date().toISOString());
 
     // Initialize Supabase client
     const supabase = createClient(
