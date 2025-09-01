@@ -50,65 +50,8 @@ const handler = async (req: Request): Promise<Response> => {
       throw new Error(`Database error: ${dbError.message}`);
     }
 
-    // Initialize Resend with API key
-    const resendApiKey = Deno.env.get("RESEND_API_KEY");
-    console.log("RESEND_API_KEY found:", resendApiKey ? "YES" : "NO");
-    console.log("RESEND_API_KEY length:", resendApiKey ? resendApiKey.length : 0);
-    console.log("RESEND_API_KEY starts with 're_':", resendApiKey ? resendApiKey.startsWith("re_") : false);
-    
-    if (!resendApiKey) {
-      console.error("RESEND_API_KEY not found in environment variables");
-      console.error("Available env vars:", Object.keys(Deno.env.toObject()));
-      throw new Error("Email service not configured properly - API key missing");
-    }
-    
-    if (!resendApiKey.startsWith("re_")) {
-      console.error("RESEND_API_KEY does not start with 're_' - invalid format");
-      throw new Error("Email service not configured properly - invalid API key format");
-    }
-    
-    const resend = new Resend(resendApiKey);
-
-    // Format email content
-    const emailSubject = `Nova mensagem de contato - ${name}`;
-    const emailHtml = `
-      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-        <h2 style="color: #2563eb; border-bottom: 2px solid #2563eb; padding-bottom: 10px;">
-          Nova Mensagem de Contato
-        </h2>
-        
-        <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin: 20px 0;">
-          <h3 style="color: #1e293b; margin-top: 0;">Informações do Contato:</h3>
-          
-          <p><strong>Nome:</strong> ${name}</p>
-          <p><strong>E-mail:</strong> <a href="mailto:${email}">${email}</a></p>
-          ${industry ? `<p><strong>Setor da Indústria:</strong> ${industry}</p>` : ''}
-          <p><strong>Formulário:</strong> ${formType === 'modal' ? 'Pop-up Hero' : 'Fale Conosco'}</p>
-        </div>
-
-        ${message ? `
-          <div style="background-color: #ffffff; padding: 20px; border-left: 4px solid #2563eb; margin: 20px 0;">
-            <h3 style="color: #1e293b; margin-top: 0;">Mensagem:</h3>
-            <p style="line-height: 1.6;">${message}</p>
-          </div>
-        ` : ''}
-
-        <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #e2e8f0; font-size: 12px; color: #64748b;">
-          <p>Esta mensagem foi enviada através do formulário de contato do site Safena.</p>
-          <p>Data: ${new Date().toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' })}</p>
-        </div>
-      </div>
-    `;
-
-    // Send email using Resend
-    const emailResponse = await resend.emails.send({
-      from: "Safena Site <noreply@resend.dev>",
-      to: ["contato.safena@gmail.com"],
-      subject: emailSubject,
-      html: emailHtml,
-    });
-
-    console.log("Email sent successfully:", emailResponse);
+    // TEMPORARY: Email sending disabled - data saved to database only
+    console.log("Form data saved successfully to database. Email notification temporarily disabled.");
 
     return new Response(
       JSON.stringify({ 
