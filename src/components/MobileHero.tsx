@@ -34,7 +34,7 @@ const MobileHero = ({ onOpenModal }: MobileHeroProps) => {
 
           {/* Subtitle with enhanced readability */}
           <p className="text-lg sm:text-xl text-gray-700 leading-relaxed px-2 font-light">
-            Somos uma plataforma de fusão de dados com inteligência artificial para a gestão de ativos de infraestrutura viária.
+            Transformamos a gestão de ativos de infraestrutura viária com fusão de dados e inteligência artificial.
           </p>
 
           {/* CTA button with optimized touch target */}
