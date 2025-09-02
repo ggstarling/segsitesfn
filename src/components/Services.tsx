@@ -37,7 +37,7 @@ const Services = () => {
             setTimeout(() => {
               setSelectedService("data-collection");
               setHasAnimated(true);
-            }, 750);
+            }, 1000);
           }
         });
       },
@@ -128,7 +128,9 @@ const Services = () => {
         </div>
 
         {/* Desktop: Content Area */}
-        <div className="hidden md:block bg-card rounded-lg p-8 shadow-sm border">
+        <div className={`hidden md:block bg-card rounded-lg p-8 shadow-sm border transition-all duration-500 ease-in-out ${
+          selectedServiceData ? 'opacity-100 transform translate-y-0 scale-100' : 'opacity-0 transform translate-y-4 scale-95'
+        }`}>
           <h3 className="text-xl font-semibold mb-4 text-foreground">
             {selectedServiceData?.title}
           </h3>
@@ -197,10 +199,10 @@ const Services = () => {
                 </Card>
 
                 {/* Mobile: Expandable Content */}
-                <div className={`overflow-hidden transition-all duration-300 ${
+                <div className={`overflow-hidden transition-all duration-500 ease-in-out ${
                   isSelected 
-                    ? "max-h-96 opacity-100" 
-                    : "max-h-0 opacity-0"
+                    ? "max-h-96 opacity-100 transform translate-y-0 scale-100" 
+                    : "max-h-0 opacity-0 transform -translate-y-4 scale-95"
                 }`}>
                   <div className="bg-card rounded-lg p-4 shadow-sm border">
                     <p className="text-muted-foreground leading-relaxed">

@@ -33,7 +33,7 @@ const WhyChoose = () => {
             setTimeout(() => {
               setSelectedItem(0);
               setHasAnimated(true);
-            }, 750);
+            }, 1000);
           }
         });
       },
@@ -79,10 +79,10 @@ const WhyChoose = () => {
                   </h3>
                 </div>
                 
-                <div className={`overflow-hidden transition-all duration-700 ease-out ${
+                <div className={`overflow-hidden transition-all duration-500 ease-in-out ${
                   selectedItem === index 
-                    ? 'max-h-32 opacity-100 transform translate-y-0' 
-                    : 'max-h-0 opacity-0 transform -translate-y-2'
+                    ? 'max-h-32 opacity-100 transform translate-y-0 scale-100' 
+                    : 'max-h-0 opacity-0 transform -translate-y-4 scale-95'
                 }`}>
                   <div className="pl-9 pr-4 pt-2 pb-4">
                     <p className="text-muted-foreground leading-relaxed">
