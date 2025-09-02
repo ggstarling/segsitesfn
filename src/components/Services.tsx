@@ -24,7 +24,7 @@ const Services = () => {
       id: "dashboards",
       title: "Modelos de Desempenho",
       description: "Desenvolvemos modelos de desempenho que acompanham a evolução das condições dos ativos e estimam seu ciclo de vida.",
-      detailedContent: "Desenvolvemos modelos de desempenho que acompanham a evolução das condições dos ativos e estimam seu ciclo de vida. Com base em dados históricos, inspeções e análises preditivas, nossa metodologia apoia a gestão eficiente de ativos de infraestrutura, oferecendo previsões sobre degradação, custos futuros e momento ideal para intervenção."
+      detailedContent: "Desenvolvemos modelos de desempenho que acompanham evolução das condições dos ativos e estimam seu ciclo de vida com o uso de inteligência artificial. Com base em dados históricos, inspeções e análises preditivas, nossa metodologia apoia a gestão eficiente de ativos de infraestrutura, oferecendo previsões sobre degradação, custos futuros e momento ideal para intervenção."
     }
   ];
 
