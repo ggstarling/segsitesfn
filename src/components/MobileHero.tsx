@@ -25,7 +25,7 @@ const MobileHero = ({ onOpenModal }: MobileHeroProps) => {
       </div>
 
       {/* Main content area - optimized vertical centering */}
-      <div className="relative z-10 flex-1 flex flex-col justify-center">
+      <div className="relative z-10 flex-1 flex flex-col justify-center -translate-y-4">
         <div className="w-full max-w-md mx-auto text-center space-y-8">
           {/* Title with improved typography and spacing */}
           <h1 className="text-4xl sm:text-[2.75rem] font-semibold text-gray-900 leading-[1.15] tracking-tight">
