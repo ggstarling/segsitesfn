@@ -32,7 +32,7 @@ const Hero = ({ onOpenModal }: HeroProps) => {
           </h1>
 
           <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-            Transformamos a gestão de ativos de infraestrutura viária com fusão de dados e inteligência artificial.
+            Transformamos a gestão de ativos de infraestrutura viária com inteligência de dados.
           </p>
 
           <Button
