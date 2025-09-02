@@ -38,7 +38,7 @@ const Hero = ({ onOpenModal }: HeroProps) => {
           <Button
             onClick={onOpenModal}
             size="lg"
-            className="text-base px-8 py-4 font-normal"
+            className="text-base px-8 py-4 font-normal mt-2"
           >
             Agende uma conversa
           </Button>
