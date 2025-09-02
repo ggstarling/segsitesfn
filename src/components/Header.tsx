@@ -3,10 +3,12 @@ import { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, Menu, X } from "lucide-react";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 
 const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileSobreOpen, setIsMobileSobreOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const location = useLocation();
   const navigate = useNavigate();
@@ -213,12 +215,15 @@ const Header = () => {
             Início
           </button>
 
-          {/* Mobile Sobre Nós Section */}
-          <div className="space-y-4">
-            <span className={`text-lg font-normal ${(location.pathname === "/about" || location.pathname === "/blog") ? "text-[#3481bd]" : "text-gray-700"}`}>
-              Sobre Nós
-            </span>
-            <div className="pl-0 space-y-3">
+          {/* Mobile Sobre Nós Collapsible Section */}
+          <Collapsible open={isMobileSobreOpen} onOpenChange={setIsMobileSobreOpen}>
+            <CollapsibleTrigger className="flex items-center justify-between w-full text-left">
+              <span className={`text-lg font-normal ${(location.pathname === "/about" || location.pathname === "/blog") ? "text-[#3481bd]" : "text-gray-700"}`}>
+                Sobre Nós
+              </span>
+              <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isMobileSobreOpen ? 'rotate-180' : ''} ${(location.pathname === "/about" || location.pathname === "/blog") ? "text-[#3481bd]" : "text-gray-500"}`} />
+            </CollapsibleTrigger>
+            <CollapsibleContent className="mt-4 pl-0 space-y-3">
               <button 
                 onClick={() => navigateToPage("/about")}
                 className="block text-left text-base text-gray-600 hover:text-[#3481bd] transition-colors"
@@ -231,8 +236,8 @@ const Header = () => {
               >
                 Blog
               </button>
-            </div>
-          </div>
+            </CollapsibleContent>
+          </Collapsible>
 
           <button
             onClick={() => scrollToSection("services")}

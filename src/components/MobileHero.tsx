@@ -32,20 +32,23 @@ const MobileHero = ({ onOpenModal }: MobileHeroProps) => {
             <span className="text-[#3481bd] drop-shadow-[0_0_8px_rgba(52,129,189,0.3)]">Inteligência</span> para a gestão de ativos viários no Brasil
           </h1>
 
-          {/* Subtitle with enhanced readability */}
-          <p className="text-lg sm:text-xl text-gray-700 leading-relaxed px-2 font-light">
-            Transformamos a gestão de ativos de infraestrutura viária com inteligência de dados.
-          </p>
+          {/* Subtitle and CTA grouped with upward positioning */}
+          <div className="space-y-6 -translate-y-3">
+            {/* Subtitle with enhanced readability */}
+            <p className="text-lg sm:text-xl text-gray-700 leading-relaxed px-2 font-light">
+              Transformamos a gestão de ativos de infraestrutura viária com inteligência de dados.
+            </p>
 
-          {/* CTA button with optimized touch target */}
-          <div className="pt-4">
-            <Button
-              onClick={onOpenModal}
-              size="lg"
-              className="text-base px-8 py-4 font-medium min-h-[52px] min-w-[200px] shadow-lg hover:shadow-xl transition-all duration-300"
-            >
-              Agende uma conversa
-            </Button>
+            {/* CTA button with optimized touch target */}
+            <div className="pt-4">
+              <Button
+                onClick={onOpenModal}
+                size="lg"
+                className="text-base px-8 py-4 font-medium min-h-[52px] min-w-[200px] shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                Agende uma conversa
+              </Button>
+            </div>
           </div>
         </div>
       </div>
