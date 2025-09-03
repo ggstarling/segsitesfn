@@ -69,36 +69,30 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
         </DialogHeader>
 
         <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="grid md:grid-cols-2 gap-4">
-            <div className="space-y-3">
-              <Label htmlFor="modal-name">Nome</Label>
-              <Input 
-                id="modal-name" 
-                type="text" 
-                maxLength={74} 
-                required 
-                value={formData.name}
-                onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
-              />
-            </div>
-            <div className="space-y-3">
-              <Label htmlFor="modal-email">E-mail</Label>
-              <Input 
-                id="modal-email" 
-                type="email" 
-                maxLength={50} 
-                required 
-                value={formData.email}
-                onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
-              />
-            </div>
-          </div>
+          <div className="space-y-6">
+            <Input 
+              id="modal-name" 
+              type="text" 
+              placeholder="Nome"
+              maxLength={74} 
+              required 
+              value={formData.name}
+              onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
+            />
+            
+            <Input 
+              id="modal-email" 
+              type="email" 
+              placeholder="E-mail"
+              maxLength={50} 
+              required 
+              value={formData.email}
+              onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
+            />
 
-          <div className="space-y-3">
-            <Label htmlFor="modal-industry">Setor da Indústria</Label>
             <Select value={formData.industry} onValueChange={(value) => setFormData(prev => ({ ...prev, industry: value }))}>
               <SelectTrigger>
-                <SelectValue placeholder="Selecione..." />
+                <SelectValue placeholder="Setor da Indústria" />
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="Construção Civil">Construção Civil</SelectItem>
@@ -110,12 +104,10 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                 <SelectItem value="Outro">Outro</SelectItem>
               </SelectContent>
             </Select>
-          </div>
 
-          <div className="space-y-3">
-            <Label htmlFor="modal-message">Mensagem</Label>
             <Textarea 
               id="modal-message" 
+              placeholder="Mensagem"
               rows={3} 
               value={formData.message}
               onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
