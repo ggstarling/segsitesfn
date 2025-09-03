@@ -2,8 +2,9 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { HamburgerIcon } from "@/components/ui/hamburger-icon";
 
 const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -187,11 +188,7 @@ const Header = () => {
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle mobile menu"
             >
-              {isMobileMenuOpen ? (
-                <X className="h-6 w-6 text-gray-700" />
-              ) : (
-                <Menu className="h-6 w-6 text-gray-700" />
-              )}
+              <HamburgerIcon isOpen={isMobileMenuOpen} />
             </button>
           </nav>
         </div>
@@ -199,12 +196,12 @@ const Header = () => {
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden" onClick={() => setIsMobileMenuOpen(false)} />
+        <div className="fixed inset-0 bg-black bg-opacity-30 z-40 lg:hidden transition-opacity duration-500 ease-out" onClick={() => setIsMobileMenuOpen(false)} />
       )}
 
       {/* Mobile Menu */}
-      <div className={`fixed top-[73px] right-0 h-full w-80 max-w-[80vw] bg-white transform transition-transform duration-300 ease-in-out z-50 lg:hidden ${
-        isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+      <div className={`fixed top-[73px] right-0 h-full w-80 max-w-[80vw] bg-white transform transition-all duration-500 ease-out z-50 lg:hidden ${
+        isMobileMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
       }`}>
         <div className="flex flex-col p-6 space-y-6">
           {/* Mobile Navigation Links */}
@@ -217,7 +214,7 @@ const Header = () => {
 
           {/* Mobile Sobre Nós Collapsible Section */}
           <Collapsible open={isMobileSobreOpen} onOpenChange={setIsMobileSobreOpen}>
-            <CollapsibleTrigger className="flex items-center justify-between w-full text-left">
+            <CollapsibleTrigger className="flex items-center gap-2 w-full text-left">
               <span className={`text-lg font-normal ${(location.pathname === "/about" || location.pathname === "/blog") ? "text-[#3481bd]" : "text-gray-700"}`}>
                 Sobre Nós
               </span>
