@@ -63,7 +63,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-2xl">
+      <DialogContent className="max-w-lg">
         <DialogHeader className="pb-6">
           <DialogTitle className="text-2xl">Agende uma conversa</DialogTitle>
         </DialogHeader>
@@ -108,7 +108,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
             <Textarea 
               id="modal-message" 
               placeholder="Mensagem"
-              rows={3} 
+              rows={5} 
               value={formData.message}
               onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
             />
