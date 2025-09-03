@@ -7,7 +7,7 @@ interface MobileHeroProps {
 
 const MobileHero = ({ onOpenModal }: MobileHeroProps) => {
   return (
-    <section className="relative min-h-screen bg-gray-100 md:hidden px-6 pt-20 pb-8 flex flex-col justify-between">
+    <section className="relative min-h-screen bg-gray-100 md:hidden px-6 pt-20 pb-2 flex flex-col justify-between">
       <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-gray-100 to-gray-150">
         <div 
           className="absolute inset-0 opacity-40"
