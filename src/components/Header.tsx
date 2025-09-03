@@ -200,8 +200,8 @@ const Header = () => {
       )}
 
       {/* Mobile Menu */}
-      <div className={`fixed top-[73px] right-0 h-full w-80 max-w-[80vw] bg-white transform transition-all duration-500 ease-out z-50 lg:hidden ${
-        isMobileMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
+      <div className={`fixed top-[73px] right-0 h-full w-80 max-w-[80vw] bg-white transform transition-transform duration-500 ease-out z-50 lg:hidden ${
+        isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
       }`}>
         <div className="flex flex-col p-6 space-y-6">
           {/* Mobile Navigation Links */}
