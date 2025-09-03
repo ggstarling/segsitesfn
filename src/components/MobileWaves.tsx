@@ -1,6 +1,6 @@
 const MobileWaves = () => {
   return (
-    <div className="absolute left-0 right-0 h-16 overflow-hidden" style={{ bottom: 'calc(8.3rem - 10%)' }}>
+    <div className="absolute left-0 right-0 h-16 overflow-hidden" style={{ bottom: '8.3rem' }}>
       {/* Bottom Wave - Dark Blue */}
       <div className="absolute bottom-0 w-[200%] h-full animate-scroll-fast">
         <svg
