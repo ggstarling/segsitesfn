@@ -112,7 +112,7 @@ const Header = () => {
               <img
                 src="/lovable-uploads/81b574cd-6dab-4603-aa73-5b5fc5e0766e.png"
                 alt="Safena Logo"
-                className="h-8 w-auto"
+                className="h-7 w-auto"
               />
             </button>
 
