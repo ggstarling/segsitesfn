@@ -19,8 +19,8 @@ const Article = () => {
       <main className="pt-32 pb-16 px-4">
         <div className="max-w-4xl mx-auto">
           <article>
-            <header className="mb-8">
-              <h1 className="text-xl font-semibold mb-12 leading-tight text-left">
+            <header className="mb-8 text-center">
+              <h1 className="text-2xl font-semibold mb-12 leading-tight">
                 {post.title}
               </h1>
               <img
