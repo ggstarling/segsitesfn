@@ -93,7 +93,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
             />
 
             <Select value={formData.industry} onValueChange={(value) => setFormData(prev => ({ ...prev, industry: value }))}>
-              <SelectTrigger className="[&>span]:placeholder:text-muted-foreground sm:[&>span]:placeholder:text-muted-foreground">
+              <SelectTrigger className="[&>span]:text-muted-foreground sm:[&>span]:text-muted-foreground">
                 <SelectValue placeholder="Setor da Indústria" />
               </SelectTrigger>
               <SelectContent>
