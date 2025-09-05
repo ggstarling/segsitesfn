@@ -1,5 +1,4 @@
-import { Linkedin, Instagram } from "lucide-react";
-import whatsappIcon from "@/assets/whatsapp-icon.png";
+import { Linkedin, Instagram, MessageCircle } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -25,7 +24,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
             <div className="flex space-x-4">
               <a href="https://wa.me/5548988397540" target="_blank" rel="noopener noreferrer" className="text-white hover:text-primary transition-colors">
-                <img src={whatsappIcon} alt="WhatsApp" className="h-6 w-6" />
+                <MessageCircle className="h-6 w-6" />
               </a>
               <a href="https://www.linkedin.com/company/safenaeng" target="_blank" rel="noopener noreferrer" className="text-white hover:text-primary transition-colors">
                 <Linkedin className="h-6 w-6" />
