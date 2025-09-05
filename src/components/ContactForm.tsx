@@ -94,7 +94,7 @@ const ContactForm = () => {
                   />
                   
                   <Select value={formData.industry} onValueChange={(value) => setFormData(prev => ({ ...prev, industry: value }))}>
-                    <SelectTrigger className="h-12 px-4 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900 [&>span]:text-muted-foreground sm:[&>span]:text-gray-500">
+                    <SelectTrigger className="h-12 px-4 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900 [&>span]:placeholder:text-muted-foreground [&>span]:sm:placeholder:text-gray-500">
                       <SelectValue placeholder="Setor da Indústria" />
                     </SelectTrigger>
                     <SelectContent>
