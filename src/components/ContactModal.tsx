@@ -78,6 +78,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
               required 
               value={formData.name}
               onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
+              className="placeholder:text-muted-foreground sm:placeholder:text-muted-foreground"
             />
             
             <Input 
@@ -88,20 +89,21 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
               required 
               value={formData.email}
               onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
+              className="placeholder:text-muted-foreground sm:placeholder:text-muted-foreground"
             />
 
             <Select value={formData.industry} onValueChange={(value) => setFormData(prev => ({ ...prev, industry: value }))}>
-              <SelectTrigger>
+              <SelectTrigger className="[&>span]:placeholder:text-muted-foreground sm:[&>span]:placeholder:text-muted-foreground">
                 <SelectValue placeholder="Setor da Indústria" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="Construção Civil" className="text-muted-foreground">Construção Civil</SelectItem>
-                <SelectItem value="Infraestrutura" className="text-muted-foreground">Infraestrutura</SelectItem>
-                <SelectItem value="Transporte" className="text-muted-foreground">Transporte</SelectItem>
-                <SelectItem value="Energia" className="text-muted-foreground">Energia</SelectItem>
-                <SelectItem value="Ciência de Dados" className="text-muted-foreground">Ciência de Dados</SelectItem>
-                <SelectItem value="Meio Ambiente" className="text-muted-foreground">Meio Ambiente</SelectItem>
-                <SelectItem value="Outro" className="text-muted-foreground">Outro</SelectItem>
+                <SelectItem value="Construção Civil" className="text-muted-foreground sm:text-muted-foreground">Construção Civil</SelectItem>
+                <SelectItem value="Infraestrutura" className="text-muted-foreground sm:text-muted-foreground">Infraestrutura</SelectItem>
+                <SelectItem value="Transporte" className="text-muted-foreground sm:text-muted-foreground">Transporte</SelectItem>
+                <SelectItem value="Energia" className="text-muted-foreground sm:text-muted-foreground">Energia</SelectItem>
+                <SelectItem value="Ciência de Dados" className="text-muted-foreground sm:text-muted-foreground">Ciência de Dados</SelectItem>
+                <SelectItem value="Meio Ambiente" className="text-muted-foreground sm:text-muted-foreground">Meio Ambiente</SelectItem>
+                <SelectItem value="Outro" className="text-muted-foreground sm:text-muted-foreground">Outro</SelectItem>
               </SelectContent>
             </Select>
 
@@ -111,6 +113,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
               rows={5} 
               value={formData.message}
               onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
+              className="placeholder:text-muted-foreground sm:placeholder:text-muted-foreground"
             />
           </div>
 

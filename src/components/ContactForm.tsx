@@ -79,7 +79,7 @@ const ContactForm = () => {
                     required 
                     value={formData.name}
                     onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
-                    className="h-12 px-4 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                    className="h-12 px-4 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 placeholder:text-muted-foreground sm:placeholder:text-gray-500"
                   />
                   
                   <Input 
@@ -90,21 +90,21 @@ const ContactForm = () => {
                     required 
                     value={formData.email}
                     onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
-                    className="h-12 px-4 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                    className="h-12 px-4 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 placeholder:text-muted-foreground sm:placeholder:text-gray-500"
                   />
                   
                   <Select value={formData.industry} onValueChange={(value) => setFormData(prev => ({ ...prev, industry: value }))}>
-                    <SelectTrigger className="h-12 px-4 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900">
+                    <SelectTrigger className="h-12 px-4 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900 [&>span]:placeholder:text-muted-foreground sm:[&>span]:placeholder:text-gray-500">
                       <SelectValue placeholder="Setor da Indústria" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="Construção Civil" className="text-muted-foreground">Construção Civil</SelectItem>
-                      <SelectItem value="Infraestrutura" className="text-muted-foreground">Infraestrutura</SelectItem>
-                      <SelectItem value="Transporte" className="text-muted-foreground">Transporte</SelectItem>
-                      <SelectItem value="Energia" className="text-muted-foreground">Energia</SelectItem>
-                      <SelectItem value="Ciência de Dados" className="text-muted-foreground">Ciência de Dados</SelectItem>
-                      <SelectItem value="Meio Ambiente" className="text-muted-foreground">Meio Ambiente</SelectItem>
-                      <SelectItem value="Outro" className="text-muted-foreground">Outro</SelectItem>
+                      <SelectItem value="Construção Civil" className="text-muted-foreground sm:text-gray-700">Construção Civil</SelectItem>
+                      <SelectItem value="Infraestrutura" className="text-muted-foreground sm:text-gray-700">Infraestrutura</SelectItem>
+                      <SelectItem value="Transporte" className="text-muted-foreground sm:text-gray-700">Transporte</SelectItem>
+                      <SelectItem value="Energia" className="text-muted-foreground sm:text-gray-700">Energia</SelectItem>
+                      <SelectItem value="Ciência de Dados" className="text-muted-foreground sm:text-gray-700">Ciência de Dados</SelectItem>
+                      <SelectItem value="Meio Ambiente" className="text-muted-foreground sm:text-gray-700">Meio Ambiente</SelectItem>
+                      <SelectItem value="Outro" className="text-muted-foreground sm:text-gray-700">Outro</SelectItem>
                     </SelectContent>
                   </Select>
                   
@@ -114,7 +114,7 @@ const ContactForm = () => {
                     rows={4} 
                     value={formData.message}
                     onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
-                    className="p-4 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-none"
+                    className="p-4 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-none placeholder:text-muted-foreground sm:placeholder:text-gray-500"
                   />
                 </div>
                 
