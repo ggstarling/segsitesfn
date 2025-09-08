@@ -128,39 +128,18 @@ const Posts = () => {
         </div>
 
         {/* Desktop Multi-Item Carousel */}
-        <div className="hidden md:flex items-center justify-center gap-8">
-          {/* Left Arrow */}
-          <button
-            onClick={prevSlide}
-            className="flex-shrink-0 p-4 transition-colors duration-200 hover:text-[#3481bd]"
-          >
-            <svg 
-              width="24" 
-              height="24" 
-              viewBox="0 0 24 24" 
-              fill="none" 
-              stroke="currentColor" 
-              strokeWidth="1" 
-              strokeLinecap="round" 
-              strokeLinejoin="round"
-              className="text-gray-600"
-            >
-              <polyline points="15,18 9,12 15,6"></polyline>
-            </svg>
-          </button>
-
-          {/* News Grid */}
-          <div className="grid grid-cols-4 gap-4">
+        <div className="relative hidden md:block">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             {visiblePosts.map((post, index) => (
               <Link 
                 key={`${post.id}-${index}`} 
                 to={`/article/${post.slug}`}
-                className="bg-card rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow cursor-pointer w-full max-w-[200px]"
+                className="bg-card rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow cursor-pointer"
               >
                 <img
                   src={post.image}
                   alt={post.title}
-                  className="w-full h-28 object-cover"
+                  className="w-full h-32 object-cover"
                 />
                 <div className="p-3">
                   <h3 className="text-sm leading-tight line-clamp-3">
@@ -171,25 +150,23 @@ const Posts = () => {
             ))}
           </div>
 
-          {/* Right Arrow */}
-          <button
-            onClick={nextSlide}
-            className="flex-shrink-0 p-4 transition-colors duration-200 hover:text-[#3481bd]"
+          <Button
+            variant="outline"
+            size="icon"
+            onClick={prevSlide}
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4"
           >
-            <svg 
-              width="24" 
-              height="24" 
-              viewBox="0 0 24 24" 
-              fill="none" 
-              stroke="currentColor" 
-              strokeWidth="1" 
-              strokeLinecap="round" 
-              strokeLinejoin="round"
-              className="text-gray-600"
-            >
-              <polyline points="9,18 15,12 9,6"></polyline>
-            </svg>
-          </button>
+            <ChevronLeft className="w-4 h-4" />
+          </Button>
+
+          <Button
+            variant="outline"
+            size="icon"
+            onClick={nextSlide}
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4"
+          >
+            <ChevronRight className="w-4 h-4" />
+          </Button>
         </div>
       </div>
     </section>
