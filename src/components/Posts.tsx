@@ -150,7 +150,7 @@ const Posts = () => {
           </button>
 
           {/* News Grid */}
-          <div className="grid grid-cols-4 gap-6 flex-1 max-w-4xl">
+          <div className="grid grid-cols-4 gap-12 flex-1 max-w-4xl">
             {visiblePosts.map((post, index) => (
               <Link 
                 key={`${post.id}-${index}`} 
