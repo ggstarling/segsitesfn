@@ -150,7 +150,7 @@ const Posts = () => {
           </button>
 
           {/* News Grid */}
-          <div className="grid grid-cols-4 gap-4 flex-1 max-w-4xl">
+          <div className="grid grid-cols-4 gap-6 flex-1 max-w-4xl">
             {visiblePosts.map((post, index) => (
               <Link 
                 key={`${post.id}-${index}`} 
@@ -162,8 +162,8 @@ const Posts = () => {
                   alt={post.title}
                   className="w-full h-28 object-cover"
                 />
-                <div className="p-2.5">
-                  <h3 className="text-xs leading-tight line-clamp-3">
+                <div className="p-2">
+                  <h3 className="text-xs leading-tight line-clamp-2">
                     {post.title}
                   </h3>
                 </div>
