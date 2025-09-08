@@ -12,19 +12,34 @@ const Services = () => {
       id: "data-collection",
       title: "Monitoramento Estrutural",
       description: "Oferecemos soluções personalizadas de monitoramento estrutural contínuo.",
-      detailedContent: "Oferecemos soluções personalizadas de monitoramento estrutural contínuo que acompanham o comportamento da estrutura ao longo do tempo. Por meio de tecnologias avançadas de sensoriamento e aprendizado de máquina, nossa plataforma oferece relatórios automáticos, emite alertas inteligentes e prevê comportamentos atípicos da estrutura, gerando diagnósticos precisos e embasados em dados reais."
+      detailedContent: (
+        <div className="space-y-4">
+          <p>Oferecemos soluções personalizadas de monitoramento estrutural contínuo que acompanham o comportamento da estrutura ao longo do tempo.</p>
+          <p>Por meio de tecnologias avançadas de sensoriamento e aprendizado de máquina, nossa plataforma oferece relatórios automáticos, emite alertas inteligentes e prevê comportamentos atípicos da estrutura, gerando diagnósticos precisos e embasados em dados reais.</p>
+        </div>
+      )
     },
     {
       id: "diagnostics",
       title: "B-WIM",
       description: "Implementamos sistemas de B-WIM para monitoramento inteligente do tráfego sobre pontes e viadutos.",
-      detailedContent: "Implementamos sistemas de B-WIM (Bridge Weigh-In-Motion) para monitoramento inteligente do tráfego sobre pontes e viadutos. Essa tecnologia permite identificar e pesar veículos em movimento, sem a necessidade de intervenção no tráfego. Através de sensores e algoritmos avançados, fornecemos informações detalhadas sobre cargas aplicadas, fluxo de veículos e padrões de uso da estrutura."
+      detailedContent: (
+        <div className="space-y-4">
+          <p>Implementamos sistemas de B-WIM (Bridge Weigh-In-Motion) para monitoramento inteligente do tráfego sobre pontes e viadutos. Essa tecnologia permite identificar e pesar veículos em movimento, sem a necessidade de intervenção no tráfego.</p>
+          <p>Através de sensores e algoritmos avançados, fornecemos informações detalhadas sobre cargas aplicadas, fluxo de veículos e padrões de uso da estrutura.</p>
+        </div>
+      )
     },
     {
       id: "dashboards",
       title: "Modelos de Desempenho",
       description: "Desenvolvemos modelos de desempenho que acompanham a evolução das condições dos ativos e estimam seu ciclo de vida.",
-      detailedContent: "Desenvolvemos modelos de desempenho que acompanham a evolução das condições dos ativos e estimam seu ciclo de vida com uso de inteligência artificial. Com base em dados históricos, inspeções e análises preditivas, nossa metodologia apoia a gestão eficiente de ativos de infraestrutura, oferecendo previsões sobre degradação, custos futuros e momento ideal para intervenção."
+      detailedContent: (
+        <div className="space-y-4">
+          <p>Desenvolvemos modelos de desempenho que acompanham a evolução das condições dos ativos e estimam seu ciclo de vida com uso de inteligência artificial.</p>
+          <p>Com base em dados históricos, inspeções e análises preditivas, nossa metodologia apoia a gestão eficiente de ativos de infraestrutura, oferecendo previsões sobre degradação, custos futuros e momento ideal para intervenção.</p>
+        </div>
+      )
     }
   ];
 
@@ -134,9 +149,9 @@ const Services = () => {
           <h3 className="text-xl font-semibold mb-4 text-foreground">
             {selectedServiceData?.title}
           </h3>
-          <p className="text-muted-foreground leading-relaxed">
+          <div className="text-muted-foreground leading-relaxed">
             {selectedServiceData?.detailedContent}
-          </p>
+          </div>
         </div>
 
         {/* Mobile: Accordion Layout */}
@@ -205,9 +220,9 @@ const Services = () => {
                     : "max-h-0 opacity-0 transform -translate-y-4 scale-95"
                 }`}>
                   <div className="bg-card rounded-lg p-4 shadow-sm border">
-                    <p className="text-muted-foreground leading-relaxed">
+                    <div className="text-muted-foreground leading-relaxed">
                       {service.detailedContent}
-                    </p>
+                    </div>
                   </div>
                 </div>
               </div>
