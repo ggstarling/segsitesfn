@@ -97,13 +97,13 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                 <SelectValue placeholder="Setor da Indústria" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="Construção Civil" className="text-muted-foreground sm:text-muted-foreground">Construção Civil</SelectItem>
-                <SelectItem value="Infraestrutura" className="text-muted-foreground sm:text-muted-foreground">Infraestrutura</SelectItem>
-                <SelectItem value="Transporte" className="text-muted-foreground sm:text-muted-foreground">Transporte</SelectItem>
-                <SelectItem value="Energia" className="text-muted-foreground sm:text-muted-foreground">Energia</SelectItem>
                 <SelectItem value="Ciência de Dados" className="text-muted-foreground sm:text-muted-foreground">Ciência de Dados</SelectItem>
+                <SelectItem value="Construção Civil" className="text-muted-foreground sm:text-muted-foreground">Construção Civil</SelectItem>
+                <SelectItem value="Energia" className="text-muted-foreground sm:text-muted-foreground">Energia</SelectItem>
+                <SelectItem value="Infraestrutura" className="text-muted-foreground sm:text-muted-foreground">Infraestrutura</SelectItem>
                 <SelectItem value="Meio Ambiente" className="text-muted-foreground sm:text-muted-foreground">Meio Ambiente</SelectItem>
                 <SelectItem value="Outro" className="text-muted-foreground sm:text-muted-foreground">Outro</SelectItem>
+                <SelectItem value="Transporte" className="text-muted-foreground sm:text-muted-foreground">Transporte</SelectItem>
               </SelectContent>
             </Select>
 

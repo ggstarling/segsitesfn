@@ -98,13 +98,13 @@ const ContactForm = () => {
                       <SelectValue placeholder="Setor da Indústria" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="Construção Civil" className="text-muted-foreground sm:text-gray-700">Construção Civil</SelectItem>
-                      <SelectItem value="Infraestrutura" className="text-muted-foreground sm:text-gray-700">Infraestrutura</SelectItem>
-                      <SelectItem value="Transporte" className="text-muted-foreground sm:text-gray-700">Transporte</SelectItem>
-                      <SelectItem value="Energia" className="text-muted-foreground sm:text-gray-700">Energia</SelectItem>
                       <SelectItem value="Ciência de Dados" className="text-muted-foreground sm:text-gray-700">Ciência de Dados</SelectItem>
+                      <SelectItem value="Construção Civil" className="text-muted-foreground sm:text-gray-700">Construção Civil</SelectItem>
+                      <SelectItem value="Energia" className="text-muted-foreground sm:text-gray-700">Energia</SelectItem>
+                      <SelectItem value="Infraestrutura" className="text-muted-foreground sm:text-gray-700">Infraestrutura</SelectItem>
                       <SelectItem value="Meio Ambiente" className="text-muted-foreground sm:text-gray-700">Meio Ambiente</SelectItem>
                       <SelectItem value="Outro" className="text-muted-foreground sm:text-gray-700">Outro</SelectItem>
+                      <SelectItem value="Transporte" className="text-muted-foreground sm:text-gray-700">Transporte</SelectItem>
                     </SelectContent>
                   </Select>
                   
