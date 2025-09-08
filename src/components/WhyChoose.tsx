@@ -17,11 +17,11 @@ const WhyChoose = () => {
     },
     {
       title: "Análise preditiva, não reativa",
-      description: "Antecipe falhas antes que elas ocorram e reduza custos com uma gestão orientada por previsões."
+      description: "Antecipe falhas e reduza custos com uma gestão orientada por previsões."
     },
     {
-      title: "Monitoramento sem interrupções do tráfego",
-      description: "Garanta o monitoramento sem interrupções do tráfego, mantendo o fluxo contínuo: sem paradas ou bloqueios."
+      title: "Monitoramento sem interrupção do tráfego",
+      description: "Garanta o monitoramento mantendo o fluxo contínuo: sem paradas ou bloqueios."
     }
   ];
 
