@@ -103,8 +103,8 @@ const ContactForm = () => {
                       <SelectItem value="Energia" className="text-muted-foreground sm:text-gray-700">Energia</SelectItem>
                       <SelectItem value="Infraestrutura" className="text-muted-foreground sm:text-gray-700">Infraestrutura</SelectItem>
                       <SelectItem value="Meio Ambiente" className="text-muted-foreground sm:text-gray-700">Meio Ambiente</SelectItem>
-                      <SelectItem value="Outro" className="text-muted-foreground sm:text-gray-700">Outro</SelectItem>
                       <SelectItem value="Transporte" className="text-muted-foreground sm:text-gray-700">Transporte</SelectItem>
+                      <SelectItem value="Outro" className="text-muted-foreground sm:text-gray-700">Outro</SelectItem>
                     </SelectContent>
                   </Select>
                   

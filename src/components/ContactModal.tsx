@@ -102,8 +102,8 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                 <SelectItem value="Energia" className="text-muted-foreground sm:text-muted-foreground">Energia</SelectItem>
                 <SelectItem value="Infraestrutura" className="text-muted-foreground sm:text-muted-foreground">Infraestrutura</SelectItem>
                 <SelectItem value="Meio Ambiente" className="text-muted-foreground sm:text-muted-foreground">Meio Ambiente</SelectItem>
-                <SelectItem value="Outro" className="text-muted-foreground sm:text-muted-foreground">Outro</SelectItem>
                 <SelectItem value="Transporte" className="text-muted-foreground sm:text-muted-foreground">Transporte</SelectItem>
+                <SelectItem value="Outro" className="text-muted-foreground sm:text-muted-foreground">Outro</SelectItem>
               </SelectContent>
             </Select>
 
