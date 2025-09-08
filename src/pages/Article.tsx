@@ -20,14 +20,14 @@ const Article = () => {
         <div className="max-w-4xl mx-auto">
           <article>
             <header className="mb-8 text-center">
-              <h1 className="text-2xl font-semibold mb-12 leading-tight">
-                {post.title}
-              </h1>
               <img
                 src={post.image}
                 alt={post.title}
-                className="w-full max-w-2xl mx-auto h-64 object-cover rounded-lg"
+                className="w-full max-w-2xl mx-auto h-64 object-cover rounded-lg mb-12"
               />
+              <h1 className="text-2xl font-semibold leading-tight">
+                {post.title}
+              </h1>
             </header>
             
             <div className="prose prose-lg mx-auto">
