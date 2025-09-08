@@ -9,7 +9,7 @@ export interface Post {
 export const posts: Post[] = [
   {
     id: 1,
-    title: "SHM no setor ferroviário: da inspeção visual ao Monitoramento Inteligente",
+    title: "SHM no setor ferroviário: da inspeção visual ao monitoramento inteligente",
     image: "https://images.unsplash.com/photo-1729606883845-95ded8f9e3c5?q=80&w=1167&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     slug: "shm-setor-ferroviario",
     content: "A segurança e a eficiência de uma malha ferroviária dependem da integridade da via permanente. Historicamente, a inspeção visual e medições periódicas em intervalos prolongados eram os métodos mais utilizados. Porém, estes se mostram insuficientes para detectar falhas críticas não visíveis, como microfraturas ou desgastes acelerados. Essa limitação resulta em uma detecção tardia, quando o problema já está instalado.\n\nNesse contexto, a Engenharia 4.0 oferece a solução: Sistemas de Monitoramento da Saúde Estrutural — do inglês 𝘚𝘵𝘳𝘶𝘤𝘵𝘶𝘳𝘢𝘭 𝘏𝘦𝘢𝘭𝘵𝘩 𝘔𝘰𝘯𝘪𝘵𝘰𝘳𝘪𝘯𝘨 (𝘚𝘏𝘔) — baseados em sensores, IoT e Inteligência Artificial (IA) permitem coletar dados contínuos, antes inacessíveis. Essa análise contínua dos dados possibilita a previsão de falhas e desgastes com uma precisão inédita.\n\nA tecnologia transforma a manutenção reativa em preditiva. Com o SHM, a segurança das ferrovias pode estar sempre um passo à frente, garantindo a previsibilidade necessária para uma malha ferroviária mais segura e eficiente."
@@ -30,7 +30,7 @@ export const posts: Post[] = [
   },
   {
     id: 4,
-    title: "A importância da Manutenção Preditiva e do Monitoramento Contínuo em infraestruturas",
+    title: "A importância da manutenção preditiva e do monitoramento contínuo em infraestruturas",
     image: "https://images.unsplash.com/photo-1485310818226-f01c4269687f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     slug: "manutencao-preditiva-monitoramento",
     content: "Manutenção preditiva é uma estratégia que consiste em realizar intervenções programadas com base na condição real de uma estrutura, evitando falhas antes que elas ocorram.\n\nNa Safena, utilizamos sensores e sistemas de monitoramento contínuo para identificar alterações no desempenho estrutural ao longo do tempo, o que viabiliza essas intervenções de forma mais precisa e eficaz.\n\nDiferente da manutenção preventiva, ela atua somente quando necessário, com base em evidências concretas de desgaste ou anomalias, reduzindo custos com manutenções corretivas e aumentando a segurança da infraestrutura."
