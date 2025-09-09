@@ -25,7 +25,7 @@ const Article = () => {
                 alt={post.title}
                 className="w-full max-w-2xl mx-auto h-64 object-cover rounded-lg mb-12"
               />
-              <h1 className="text-2xl font-semibold leading-tight text-left sm:text-center">
+              <h1 className="text-2xl font-semibold leading-tight">
                 {post.title}
               </h1>
             </header>
