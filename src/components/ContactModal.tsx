@@ -64,8 +64,8 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-lg">
-        <DialogHeader className="pb-6">
-          <DialogTitle className="text-2xl">Agende uma conversa</DialogTitle>
+        <DialogHeader className="pb-6 text-left">
+          <DialogTitle className="text-2xl font-normal">Agende uma conversa</DialogTitle>
         </DialogHeader>
 
         <form onSubmit={handleSubmit} className="space-y-6">
