@@ -5,6 +5,7 @@ const Partners = () => {
     { name: "Kartado", logo: "/lovable-uploads/b00b9117-68a3-4507-9d1d-163b8339fc01.png" },
     { name: "CORE", logo: "/lovable-uploads/21b38f69-e678-4ff8-8af6-2b991e37ecbd.png" },
     { name: "Fundo Catarina", logo: "/lovable-uploads/532a84b5-b3e0-4188-b585-cb1b277e4e64.png" },
+    { name: "SEBRAEHUB", logo: "/lovable-uploads/sebraehub-logo.png" },
   ];
 
   // Duplicate the logo sequence for longer, smoother animation
