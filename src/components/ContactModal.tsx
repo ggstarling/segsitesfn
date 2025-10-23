@@ -45,6 +45,18 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Validate phone number has exactly 11 digits
+    const phoneDigits = formData.phone.replace(/\D/g, '');
+    if (phoneDigits.length !== 11) {
+      toast({
+        title: "Telefone inválido",
+        description: "Por favor, preencha o telefone completo (XX) XXXXX-XXXX",
+        variant: "destructive",
+      });
+      return;
+    }
+    
     setIsSubmitting(true);
 
     try {
