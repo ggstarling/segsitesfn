@@ -11,6 +11,7 @@ const corsHeaders = {
 interface ContactFormRequest {
   name: string;
   email: string;
+  phone?: string;
   industry?: string;
   message?: string;
   formType: 'contact' | 'modal';
@@ -23,9 +24,9 @@ const handler = async (req: Request): Promise<Response> => {
   }
 
   try {
-    const { name, email, industry, message, formType }: ContactFormRequest = await req.json();
+    const { name, email, phone, industry, message, formType }: ContactFormRequest = await req.json();
 
-    console.log("Received form submission:", { name, email, industry, formType });
+    console.log("Received form submission:", { name, email, phone, industry, formType });
     console.log("Function deployment timestamp:", new Date().toISOString());
 
     // Initialize Supabase client
@@ -40,6 +41,7 @@ const handler = async (req: Request): Promise<Response> => {
       .insert({
         name,
         email,
+        phone: phone || null,
         industry: industry || null,
         message: message || null,
         form_type: formType

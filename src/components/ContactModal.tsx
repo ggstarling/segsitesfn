@@ -17,11 +17,31 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phone: '',
     industry: '',
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
+
+  const formatPhoneNumber = (value: string) => {
+    // Remove all non-digits
+    const numbers = value.replace(/\D/g, '');
+    
+    // Apply mask: (XX) XXXXX-XXXX
+    if (numbers.length <= 2) {
+      return numbers;
+    } else if (numbers.length <= 7) {
+      return `(${numbers.slice(0, 2)}) ${numbers.slice(2)}`;
+    } else {
+      return `(${numbers.slice(0, 2)}) ${numbers.slice(2, 7)}-${numbers.slice(7, 11)}`;
+    }
+  };
+
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const formatted = formatPhoneNumber(e.target.value);
+    setFormData(prev => ({ ...prev, phone: formatted }));
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -32,6 +52,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
         body: {
           name: formData.name,
           email: formData.email,
+          phone: formData.phone,
           industry: formData.industry,
           message: formData.message,
           formType: 'modal'
@@ -46,7 +67,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
       });
 
       // Reset form and close modal
-      setFormData({ name: '', email: '', industry: '', message: '' });
+      setFormData({ name: '', email: '', phone: '', industry: '', message: '' });
       onClose();
 
     } catch (error) {
@@ -89,6 +110,17 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
               required 
               value={formData.email}
               onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
+              className="placeholder:text-muted-foreground sm:placeholder:text-muted-foreground"
+            />
+
+            <Input 
+              id="modal-phone" 
+              type="tel" 
+              placeholder="Telefone"
+              maxLength={15}
+              required 
+              value={formData.phone}
+              onChange={handlePhoneChange}
               className="placeholder:text-muted-foreground sm:placeholder:text-muted-foreground"
             />
 
