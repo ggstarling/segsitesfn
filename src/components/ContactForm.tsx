@@ -12,14 +12,46 @@ const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phone: '',
     industry: '',
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
+  const formatPhoneNumber = (value: string) => {
+    // Remove all non-digits
+    const numbers = value.replace(/\D/g, '');
+    
+    // Apply mask: (XX) XXXXX-XXXX
+    if (numbers.length <= 2) {
+      return numbers;
+    } else if (numbers.length <= 7) {
+      return `(${numbers.slice(0, 2)}) ${numbers.slice(2)}`;
+    } else {
+      return `(${numbers.slice(0, 2)}) ${numbers.slice(2, 7)}-${numbers.slice(7, 11)}`;
+    }
+  };
+
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const formatted = formatPhoneNumber(e.target.value);
+    setFormData(prev => ({ ...prev, phone: formatted }));
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Validate phone number has exactly 11 digits
+    const phoneDigits = formData.phone.replace(/\D/g, '');
+    if (phoneDigits.length !== 11) {
+      toast({
+        title: "Telefone inválido",
+        description: "Por favor, preencha o telefone completo (XX) XXXXX-XXXX",
+        variant: "destructive",
+      });
+      return;
+    }
+    
     setIsSubmitting(true);
 
     try {
@@ -27,6 +59,7 @@ const ContactForm = () => {
         body: {
           name: formData.name,
           email: formData.email,
+          phone: formData.phone,
           industry: formData.industry,
           message: formData.message,
           formType: 'contact'
@@ -41,7 +74,7 @@ const ContactForm = () => {
       });
 
       // Reset form
-      setFormData({ name: '', email: '', industry: '', message: '' });
+      setFormData({ name: '', email: '', phone: '', industry: '', message: '' });
 
     } catch (error) {
       console.error('Form submission error:', error);
@@ -90,6 +123,17 @@ const ContactForm = () => {
                     required 
                     value={formData.email}
                     onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
+                    className="h-12 px-4 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 placeholder:text-muted-foreground sm:placeholder:text-gray-500"
+                  />
+
+                  <Input 
+                    id="phone" 
+                    type="tel" 
+                    placeholder="Telefone"
+                    maxLength={15}
+                    required 
+                    value={formData.phone}
+                    onChange={handlePhoneChange}
                     className="h-12 px-4 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 placeholder:text-muted-foreground sm:placeholder:text-gray-500"
                   />
                   
